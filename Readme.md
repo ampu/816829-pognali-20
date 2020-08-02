@@ -1,7 +1,7 @@
 # Личный проект «Погнали» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Андрей Акимутин](https://up.htmlacademy.ru/adaptive/20/user/816829).
-* Наставник: `Неизвестно`.
+* Наставник: [Андрей Грачев](https://up.htmlacademy.ru/adaptive/20/user/252055).
 
 ---
 
