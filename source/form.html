@@ -76,58 +76,62 @@
     <span class="page__title-inner">Направления</span>
   </h1>
 
-  <form class="user user--profile page__inner" method="post" action="https://echo.htmlacademy.ru/">
-    <div class="user__level user__level--profile level level--xl level--dark">
-      <span class="level__title level__title--lg level__title--inverse">level</span>
-      <span class="level__value level__value--lg">80</span>
-    </div>
+  <form method="post" action="https://echo.htmlacademy.ru/">
+    <section class="user user--profile page__inner">
+      <h2 class="visually-hidden">Петя Демин</h2>
 
-    <img class="user__avatar user__avatar--profile avatar avatar__image" src="https://via.placeholder.com/100x100" width="100" height="100" alt="Аватар «Петя Демин»">
-
-    <label class="user__upload-avatar">
-      <input class="user__upload-avatar-input visually-hidden" type="file" name="avatar">
-      <span class="user__upload-avatar-button">Сменить фото</span>
-    </label>
-
-    <label class="user__tags user__tags--profile">
-      <span class="user__tags-legend">Тэги</span>
-      <textarea class="user__tags-input user__tags-input--profile" name="tags" rows="2" placeholder="Коротко о себе в виде 5-8 хештэгов">#бургер #бар #футбол #концерт #крафт</textarea>
-    </label>
-
-    <fieldset class="user__transports transports--bordered transports">
-      <legend class="transports__legend">Транспорт</legend>
-      <div class="transports__list">
-        <label class="transports__item">
-          <input class="transports__check visually-hidden" type="checkbox" name="transports" value="plane" checked>
-          <span class="transports__icon transports__icon--plane transports__icon--white">
-            <span class="transports__text transports__text--iconic">Авиаперелет</span>
-          </span>
-        </label>
-
-        <label class="transports__item">
-          <input class="transports__check visually-hidden" type="checkbox" name="transports" value="bus" checked>
-          <span class="transports__icon transports__icon--bus transports__icon--white">
-            <span class="transports__text transports__text--iconic">Автотранспорт</span>
-          </span>
-        </label>
-
-        <label class="transports__item">
-          <input class="transports__check visually-hidden" type="checkbox" name="transports" value="bike">
-          <span class="transports__icon transports__icon--bike transports__icon--white">
-            <span class="transports__text transports__text--iconic">Велосипед</span>
-          </span>
-        </label>
-
-        <label class="transports__item">
-          <input class="transports__check visually-hidden" type="checkbox" name="transports" value="walk" checked>
-          <span class="transports__icon transports__icon--walk transports__icon--white">
-            <span class="transports__text transports__text--iconic">Пешком</span>
-          </span>
-        </label>
+      <div class="user__level user__level--profile level level--xl level--dark">
+        <span class="level__title level__title--lg level__title--inverse">level</span>
+        <span class="level__value level__value--lg">80</span>
       </div>
-    </fieldset>
 
-    <button class="user__save-button user__save-button--nojs" type="submit">Сохранить</button>
+      <img class="user__avatar user__avatar--profile avatar avatar__image" src="https://via.placeholder.com/100x100" width="100" height="100" alt="Аватар «Петя Демин»">
+
+      <label class="user__upload-avatar">
+        <input class="user__upload-avatar-input visually-hidden" type="file" name="avatar">
+        <span class="user__upload-avatar-button">Сменить фото</span>
+      </label>
+
+      <label class="user__tags user__tags--profile">
+        <span class="user__tags-legend">Тэги</span>
+        <textarea class="user__tags-input user__tags-input--profile" name="tags" rows="2" placeholder="Коротко о себе в виде 5-8 хештэгов">#бургер #бар #футбол #концерт #крафт</textarea>
+      </label>
+
+      <fieldset class="user__transports transports--bordered transports">
+        <legend class="transports__legend">Транспорт</legend>
+        <div class="transports__list">
+          <label class="transports__item">
+            <input class="transports__check visually-hidden" type="checkbox" name="transports" value="plane" checked>
+            <span class="transports__icon transports__icon--plane transports__icon--white">
+              <span class="transports__text transports__text--iconic">Авиаперелет</span>
+            </span>
+          </label>
+
+          <label class="transports__item">
+            <input class="transports__check visually-hidden" type="checkbox" name="transports" value="bus" checked>
+            <span class="transports__icon transports__icon--bus transports__icon--white">
+              <span class="transports__text transports__text--iconic">Автотранспорт</span>
+            </span>
+          </label>
+
+          <label class="transports__item">
+            <input class="transports__check visually-hidden" type="checkbox" name="transports" value="bike">
+            <span class="transports__icon transports__icon--bike transports__icon--white">
+              <span class="transports__text transports__text--iconic">Велосипед</span>
+            </span>
+          </label>
+
+          <label class="transports__item">
+            <input class="transports__check visually-hidden" type="checkbox" name="transports" value="walk" checked>
+            <span class="transports__icon transports__icon--walk transports__icon--white">
+              <span class="transports__text transports__text--iconic">Пешком</span>
+            </span>
+          </label>
+        </div>
+      </fieldset>
+
+      <button class="user__save-button user__save-button--nojs" type="submit">Сохранить</button>
+    </section>
   </form>
 
   <section class="page__layer-0 plans">
@@ -162,13 +166,13 @@
       <h2 class="add-plan__title">Добавить план</h2>
 
       <ol class="add-plan__menu add-plan__menu--nojs">
-        <li class="add-plan__menu-item add-plan__menu-item--active">
+        <li class="add-plan__menu-item add-plan__menu-item--active" data-hash="#add-plan-step-1">
           <span class="add-plan__menu-item-text">Даты</span>
         </li>
-        <li class="add-plan__menu-item">
+        <li class="add-plan__menu-item" data-hash="#add-plan-step-2">
           <span class="add-plan__menu-item-text">Маршрут</span>
         </li>
-        <li class="add-plan__menu-item">
+        <li class="add-plan__menu-item" data-hash="#add-plan-step-3">
           <span class="add-plan__menu-item-text">Развлечения</span>
         </li>
       </ol>
