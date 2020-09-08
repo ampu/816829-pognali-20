@@ -1,0 +1,44 @@
+.page-footer {
+  padding-top: 37px;
+  padding-bottom: 19px;
+  color: $grey;
+  background-color: $white;
+
+  @include tablet-desktop() {
+    padding-top: 46px;
+    padding-bottom: 32px;
+  }
+
+  @include desktop() {
+    padding-top: 47px;
+    padding-bottom: 43px;
+  }
+}
+
+.page-footer__copyright {
+  font: 400 16px/16px $font-family;
+
+  border-top: 1px solid $lightest-grey;
+
+  @include tablet-desktop() {
+    font: 400 20px/20px $font-family;
+
+    border: none;
+  }
+}
+
+.page-footer__academy-link {
+  display: block;
+}
+
+.page-footer__academy-image {
+  display: block;
+  width: 27px;
+  height: 33px;
+}
+
+.page-footer__socials-link {
+  &::before {
+    background-color: $yellow;
+  }
+}

@@ -1,0 +1,239 @@
+.calendar {
+  position: relative;
+}
+
+.calendar__title {
+  padding: 12px 30px 11px;
+  margin-bottom: 13px;
+
+  font: 700 20px/20px $font-family;
+  text-transform: none;
+  text-align: center;
+
+  border: 1px solid $lighter-blue;
+  border: {
+    left: none;
+    right: none;
+  }
+
+  color: $blue;
+
+  @include tablet-desktop() {
+    padding: 27px (17px + 19px +17px) 23px;
+    margin-bottom: 39px;
+
+    font: 700 36px/36px $font-family;
+  }
+
+  @include desktop() {
+    margin-bottom: 18px;
+  }
+}
+
+.calendar__next-month {
+  position: absolute;
+  right: 1px;
+  top: 0;
+  display: flex;
+  align-items: center;
+
+  @include tablet-desktop() {
+    right: 17px;
+  }
+
+  &::after {
+    content: "";
+    width: 15px;
+    height: 42px;
+
+    background: url("../img/month-arrow-right.svg") no-repeat center center / 15px 18px;
+
+    @include tablet-desktop() {
+      width: 19px;
+      height: 86px;
+
+      background-size: 19px 34px;
+    }
+
+    @include desktop() {
+      background-size: 16px 28px;
+    }
+  }
+}
+
+.calendar__prev-month {
+  position: absolute;
+  left: 1px;
+  top: 0;
+  display: flex;
+  align-items: center;
+
+  @include tablet-desktop() {
+    left: 17px;
+  }
+
+  &::before {
+    content: "";
+    width: 15px;
+    height: 42px;
+
+    background: url("../img/month-arrow-left.svg") no-repeat center center / 15px 18px;
+
+    @include tablet-desktop() {
+      width: 19px;
+      height: 86px;
+
+      background-size: 19px 34px;
+    }
+
+    @include desktop() {
+      background-size: 16px 28px;
+    }
+  }
+}
+
+.calendar__dates {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+
+  font: 400 14px/18px $font-family;
+  text-align: center;
+
+  @include tablet-desktop() {
+    font: 400 18px/18px $font-family;
+  }
+}
+
+.calendar__days-of-week {
+  display: contents;
+}
+
+.calendar__day-of-week {
+  min-height: 9px + 18px + 9px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &--weekend {
+    color: $dark-red;
+  }
+}
+
+.calendar__day-of-month {
+  position: relative;
+  margin-bottom: -1px;
+  margin-right: -1px;
+  min-width: 100%;
+  height: 31px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid $lighter-blue;
+  color: rgba($grey, 0.3);
+
+  cursor: pointer;
+  user-select: none;
+
+  @include tablet-desktop() {
+    height: 69px;
+  }
+
+  @include desktop() {
+    height: 70px;
+    padding: 15px;
+    justify-content: start;
+    align-items: start;
+
+    &--arrival {
+      &::after {
+        content: "Заезд";
+        margin-top: 4px;
+      }
+    }
+
+    &--departure {
+      &::after {
+        content: "Выезд";
+        margin-top: 4px;
+      }
+    }
+  }
+
+  &:hover {
+    color: $grey;
+  }
+
+  .calendar__input:checked + & {
+    font: 500 14px/18px $font-family;
+
+    border: 1px solid $much-light-blue;
+    color: $white;
+    background-color: $blue;
+
+    @include tablet-desktop() {
+      font: 500 20px/20px $font-family;
+    }
+
+    @include desktop() {
+      font: 500 18px/18px $font-family;
+    }
+  }
+
+  .calendar__input:checked ~ .calendar__input:not(:checked) + & {
+    font: 500 14px/18px $font-family;
+
+    border: 1px solid $much-light-blue;
+    color: $blue;
+    background-color: $much-lighter-blue;
+
+    @include tablet-desktop() {
+      font: 500 20px/20px $font-family;
+    }
+
+    @include desktop() {
+      font: 500 18px/18px $font-family;
+    }
+  }
+
+  .calendar__input:focus + & {
+    z-index: 1;
+
+    font: 500 14px/18px $font-family;
+
+    outline: none;
+    box-shadow: none;
+    border: 2px solid $dark-red;
+    color: $blue;
+
+    @include tablet-desktop() {
+      font: 500 18px/18px $font-family;
+    }
+  }
+
+  .calendar__input:focus:checked + & {
+    border: 2px solid $dark-red;
+    color: $white;
+
+    @include tablet-desktop() {
+      font: 500 20px/20px $font-family;
+    }
+
+    @include desktop() {
+      font: 500 18px/18px $font-family;
+    }
+  }
+
+  .calendar__input:checked ~ .calendar__input:not(:checked):focus + & {
+    border: 2px solid $dark-red;
+
+    @include tablet-desktop() {
+      font: 500 20px/20px $font-family;
+    }
+
+    @include desktop() {
+      font: 500 18px/18px $font-family;
+    }
+  }
+}

@@ -1,0 +1,438 @@
+@mixin outline($base-color, $title, $color:$white, $left-or-right:left, $top-or-bottom:top, $font:700 24px $font-family, $width:4px, $offset:-$width) {
+  position: relative;
+  outline: $width solid $base-color;
+  outline-offset: $offset;
+
+  &::after {
+    content: "." + $title;
+    position: absolute;
+    z-index: 9999;
+    #{$left-or-right}: 0;
+    #{$top-or-bottom}: 0;
+
+    font: $font;
+    text-transform: none;
+
+    background-color: $base-color;
+    color: $color;
+    pointer-events: none;
+  }
+}
+
+@mixin outline-element($base-color, $title, $color:$white, $left-or-right:right, $top-or-bottom:top, $font:700 16px $font-family, $width:4px, $offset:-$width) {
+  @include outline($base-color, $title, $color, $left-or-right, $top-or-bottom, $font, $width, $offset);
+}
+
+
+.page-header {
+  @include outline(tomato, page-header);
+}
+
+.page-header__logo {
+  @include outline-element(blue, page-header__logo);
+}
+
+.page-header__toggle {
+  @include outline-element(gold, page-header__toggle, $black);
+}
+
+.page-header__site-nav {
+  @include outline-element(cyan, page-header__site-nav, $black);
+}
+
+.page-header__user-nav {
+  @include outline-element(orange, page-header__user-nav);
+}
+
+.page-header__contacts {
+  @include outline-element(magenta, page-header__contacts);
+}
+
+.page-header__socials {
+  @include outline-element(green, page-header__socials);
+}
+
+
+.page-footer {
+  @include outline(tomato, page-footer);
+}
+
+.page-footer__logo {
+  @include outline-element(green, page-footer__logo);
+}
+
+.page-footer__socials {
+  @include outline-element(orange, page-footer__socials);
+}
+
+.page-footer__copyright {
+  @include outline-element(blue, page-footer__copyright);
+}
+
+
+.page__title {
+  @include outline(green, page__title);
+}
+
+.page__title-inner {
+  @include outline-element(orange, page__title-inner);
+}
+
+.page__title-button {
+  @include outline-element(blue, page__title-button);
+}
+
+
+.promo {
+  @include outline(cyan, promo, $black);
+}
+
+.promo__slogan {
+  @include outline-element(orange, promo__slogan);
+}
+
+.promo__inner {
+  @include outline-element(green, promo__inner);
+}
+
+.promo__review {
+  @include outline-element(tomato, promo__review);
+}
+
+.promo__actions {
+  @include outline-element(blue, promo__actions);
+}
+
+
+.about {
+  @include outline(gold, about, $black);
+}
+
+.about__title {
+  @include outline-element(blue, about__title);
+}
+
+.about__text {
+  @include outline-element(red, about__text);
+}
+
+.about__note {
+  @include outline-element(green, about__note);
+}
+
+.about__more {
+  @include outline-element(magenta, about__more);
+}
+
+
+.directions {
+  @include outline(green, directions);
+}
+
+.directions__title {
+  @include outline-element(blue, directions__title);
+}
+
+.directions__text {
+  @include outline-element(magenta, directions__text);
+}
+
+.directions__list {
+  @include outline-element(orange, directions__list);
+}
+
+.directions__more {
+  @include outline-element(tomato, directions__more);
+}
+
+
+.travellers {
+  @include outline(orange, travellers);
+}
+
+.travellers__title {
+  @include outline-element(blue, travellers__title);
+}
+
+.travellers__text {
+  @include outline-element(magenta, travellers__text);
+}
+
+.travellers__note {
+  @include outline-element(cyan, travellers__text, $black);
+}
+
+.travellers__list {
+  @include outline-element(orange, travellers__list);
+}
+
+.travellers__more {
+  @include outline-element(tomato, travellers__more);
+}
+
+
+.business {
+  @include outline(blue, business);
+}
+
+.business__title {
+  @include outline-element(cyan, business__title, $black);
+}
+
+.business__list {
+  @include outline-element(orange, business__list);
+}
+
+.business__close {
+  @include outline-element(green, business__close);
+}
+
+
+.rates {
+  @include outline(magenta, rates);
+}
+
+.rates__title {
+  @include outline-element(blue, rates__title);
+}
+
+.rates__fund {
+  @include outline-element(black, rates__fund);
+}
+
+.rates__list {
+  @include outline-element(orange, rates__list);
+}
+
+.rates__business {
+  @include outline-element(green, rates__business);
+}
+
+
+.feedback {
+  @include outline(wheat, feedback, $black);
+}
+
+.feedback__question {
+  @include outline-element(blue, feedback__question);
+}
+
+.feedback__answer {
+  @include outline-element(magenta, feedback__answer);
+}
+
+.feedback__signin-form {
+  @include outline-element(orange, feedback__signin-form);
+}
+
+.feedback__postscript {
+  @include outline-element(cyan, feedback__postscript, $black);
+}
+
+.feedback__contacts {
+  @include outline-element(tomato, feedback__contacts);
+}
+
+
+.office {
+  @include outline(green, office);
+}
+
+.office__address {
+  @include outline-element(blue, office__address);
+}
+
+.office__map-button {
+  @include outline-element(magenta, office__map-button);
+}
+
+.office__map-link {
+  @include outline-element(orange, office__map-link);
+}
+
+.office__map {
+  @include outline-element($white, office__map, $black);
+}
+
+
+.user-profile {
+  @include outline(blue, user-profile);
+}
+
+.user-profile__level {
+  @include outline-element(green, user-profile__level);
+}
+
+.user-profile__avatar {
+  @include outline-element(tomato, user-profile__avatar);
+}
+
+.user-profile__upload-avatar {
+  @include outline-element(black, user-profile__upload-avatar);
+}
+
+.user-profile__tags {
+  @include outline-element(orange, user-profile__tags);
+}
+
+.user-profile__transports {
+  @include outline-element(magenta, user-profile__transports);
+}
+
+.user-profile__save-button {
+  @include outline-element(black, user-profile__save-button);
+}
+
+
+.plans {
+  @include outline(orange, plans);
+}
+
+.plans__title {
+  @include outline-element(blue, plans__title);
+}
+
+.plans__list {
+  @include outline-element(green, plans__list, $white, left);
+}
+
+.plans__item {
+  @include outline-element(tomato, plans__item);
+}
+
+
+.add-plan {
+  @include outline(cyan, add-plan, $black);
+}
+
+.add-plan__title {
+  @include outline-element(blue, add-plan__title);
+}
+
+.add-plan__menu {
+  @include outline-element(black, add-plan__menu);
+}
+
+.add-plan__steps {
+  @include outline-element(green, add-plan__steps, $white, left);
+}
+
+.add-plan__step {
+  @include outline-element(tomato, add-plan__step);
+}
+
+.add-plan__step-title {
+  @include outline-element(magenta, add-plan__step-title);
+}
+
+.add-plan__step-intro {
+  @include outline-element(cyan, add-plan__step-title, $black);
+}
+
+.add-plan__group {
+  @include outline-element(orange, add-plan__group);
+}
+
+.add-plan__calendar {
+  @include outline-element(black, add-plan__calendar);
+}
+
+.add-plan__countries {
+  @include outline-element(black, add-plan__countries);
+}
+
+.add-plan__comments {
+  @include outline-element(black, add-plan__comments);
+}
+
+.add-plan__prev-step {
+  @include outline-element(tomato, add-plan__prev-step);
+}
+
+.add-plan__next-step {
+  @include outline-element(green, add-plan__next-step);
+}
+
+.add-plan__submit {
+  @include outline-element(green, add-plan__next-step);
+}
+
+
+.country-filter {
+  @include outline(magenta, country-filter);
+}
+
+.country-filter__title {
+  @include outline-element(blue, country-filter__title);
+}
+
+.country-filter__continents {
+  @include outline-element(tomato, country-filter__continents);
+}
+
+.country-filter__toggle--permanent {
+  @include outline-element(magenta, country-filter__toggle--permanent);
+}
+
+.country-filter__toggle--temporary {
+  @include outline-element(cyan, country-filter__toggle--temporary);
+}
+
+.country-filter__letters {
+  @include outline-element(orange, country-filter__letters);
+}
+
+.country-filter__countries {
+  @include outline-element(green, country-filter__countries);
+}
+
+
+.filter {
+  @include outline($white, filter, $black);
+}
+
+.filter__slogan {
+  @include outline-element(blue, filter__slogan);
+}
+
+.filter__fieldset {
+  @include outline-element(green, filter__fieldset);
+}
+
+.filter__submit {
+  @include outline-element($black, filter__submit);
+}
+
+
+.data {
+  @include outline($black, data, $white);
+}
+
+.data__list {
+  @include outline-element(orange, data__list);
+}
+
+.data__item {
+  @include outline-element(green, data__item);
+}
+
+
+.pagination {
+  @include outline(gold, pagination, $black);
+}
+
+.pagination__more {
+  @include outline-element(blue, pagination__more);
+}
+
+.pagination__prev {
+  @include outline-element(magenta, pagination__prev);
+}
+
+.pagination__next {
+  @include outline-element(cyan, pagination__next, $black);
+}
+
+.pagination__page {
+  @include outline-element(green, pagination__page);
+}

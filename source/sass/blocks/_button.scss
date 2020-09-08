@@ -1,0 +1,37 @@
+$button-next-url: url("../img/triangle-arrow-right.svg");
+$button-prev-url: url("../img/triangle-arrow-left.svg");
+
+.button {
+  display: flex;
+  align-items: center;
+  box-sizing: content-box;
+  min-height: 16px + 2 * 22px;
+  min-width: 16px + 2 * 22px;
+
+  font: 700 18px/18px $font-family;
+
+  border-radius: 10px;
+  color: $blue;
+  background: $yellow $button-next-url no-repeat calc(100% - 22px) center / 14px 16px;
+
+  @include tablet-desktop() {
+    border-radius: 15px;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &--bordered {
+    border: 3px solid $blue;
+  }
+
+  &--iconic {
+    background-position: center center;
+  }
+}
+
+.button__text {
+  padding-left: 22px;
+  padding-right: 16px + 2 * 22px;
+}

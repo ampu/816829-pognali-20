@@ -1,0 +1,118 @@
+@mixin contacts__link--tel-xxs {
+  &::before {
+    width: 40px;
+    height: 40px;
+
+    background-image: url("../img/topmenu-phone.svg");
+    background-size: 18px 18px;
+  }
+}
+
+@mixin contacts__link--email-xxs {
+  &::before {
+    width: 40px;
+    height: 40px;
+
+    background-image: url("../img/topmenu-mail.svg");
+    background-size: 18px 16px;
+  }
+}
+
+@mixin contacts__link--tel-sm {
+  &::before {
+    width: 50px;
+    height: 50px;
+
+    background-image: url("../img/topmenu-phone.svg");
+    background-size: 18px 18px;
+  }
+}
+
+@mixin contacts__link--email-sm {
+  &::before {
+    width: 50px;
+    height: 50px;
+
+    background-image: url("../img/topmenu-mail.svg");
+    background-size: 16px 14px;
+  }
+}
+
+.contacts {
+  font: 700 16px/18px $font-family;
+  text-transform: uppercase;
+
+  @include tablet-desktop() {
+    font: 700 28px/28px $font-family;
+  }
+}
+
+.contacts__link {
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: "";
+    flex-shrink: 0;
+    display: block;
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+    background-color: $much-more-darker-blue;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    @include tablet-desktop() {
+      width: 68px;
+      height: 68px;
+    }
+
+    @include desktop() {
+      width: 90px;
+      height: 90px;
+    }
+  }
+
+  &--feedback {
+    &::before {
+      margin-right: 16px;
+
+      @include tablet-desktop() {
+        margin-right: 22px;
+      }
+
+      @include desktop() {
+        margin-right: 31px;
+      }
+    }
+  }
+
+  &--tel {
+    &::before {
+      background-image: url("../img/contacts-phone.svg");
+      background-size: 16px 15px;
+
+      @include tablet-desktop() {
+        background-size: 27px 26px;
+      }
+
+      @include desktop() {
+        background-size: 36px 34px;
+      }
+    }
+  }
+
+  &--email::before {
+    background-image: url("../img/contacts-mail.svg");
+    background-size: 18px 13px;
+
+    @include tablet-desktop() {
+      background-size: 36px 38px;
+    }
+
+    @include desktop() {
+      background-size: 47px 50px;
+    }
+  }
+}

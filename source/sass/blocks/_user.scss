@@ -1,0 +1,58 @@
+.user {
+  text-align: center;
+  color: $blue;
+  background: $white;
+}
+
+.user__name {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user__title {
+  display: block;
+
+  font: 700 21px/21px $font-family;
+
+  @include tablet-desktop() {
+    font: 700 30px/30px $font-family;
+    white-space: normal;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.user__status {
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 6px;
+  margin-top: -3px;
+
+  &--offline {
+    background: $red;
+  }
+
+  &--online {
+    background: $green;
+  }
+}
+
+.user__transports {
+  @include tablet-desktop() {
+    border: none;
+  }
+}
+
+.user__transports-title {
+  @include visually-hidden();
+}

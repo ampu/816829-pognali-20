@@ -1,0 +1,20 @@
+.logo {
+  flex-shrink: 0;
+  display: block;
+}
+
+.logo__image {
+  display: block;
+  width: 100px;
+  height: 15px;
+
+  @include tablet-desktop() {
+    width: 164px;
+    height: 42px;
+  }
+
+  @include desktop() {
+    width: 200px;
+    height: 52px;
+  }
+}

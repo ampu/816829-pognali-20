@@ -1,0 +1,347 @@
+$flag-width: 35px + 2 * 9px;
+$flag-height: 42px;
+
+$flag-width--tablet: 25px + 70px + 41px;
+$flag-height--tablet: 70px;
+
+$flag-width--desktop: 85px + 70px + 112px;
+$flag-height--desktop: 70px;
+
+$empty-background: url("data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\"%3E%3C/svg%3E");
+$arrow-background: url("../img/small-arrow.svg") no-repeat calc(100% - #{$flag-width} + 4px) bottom / 8px 11px;
+
+$ring-background: url("../img/ring.svg") no-repeat calc(100% - #{$flag-width} + 4px) #{$flag-height / 2 - 4px} / 8px 8px;
+$ring-background--tablet: url("../img/ring.svg") no-repeat calc(100% - #{$flag-width--tablet} + 7px) #{$flag-height--tablet / 2 - 7px} / 14px 14px;
+$ring-background--desktop: url("../img/ring.svg") no-repeat calc(100% - #{$flag-width--desktop} + 7px) #{$flag-height--desktop / 2 - 7px} / 14px 14px;
+
+$ring-blue-background: url("../img/ring-blue.svg") no-repeat calc(100% - #{$flag-width} + 4px) #{$flag-height / 2 - 4px} / 8px 8px;
+$ring-blue-background--tablet: url("../img/ring-blue.svg") no-repeat calc(100% - #{$flag-width--tablet} + 7px) #{$flag-height--tablet / 2 - 7px} / 14px 14px;
+$ring-blue-background--desktop: url("../img/ring-blue.svg") no-repeat calc(100% - #{$flag-width--desktop} + 7px) #{$flag-height--desktop / 2 - 7px} / 14px 14px;
+
+$ring-background--active: url("../img/circle.svg") no-repeat calc(100% - #{$flag-width} + 4px) #{$flag-height / 2 - 4px} / 8px 8px;
+$ring-background--active-tablet: url("../img/circle.svg") no-repeat calc(100% - #{$flag-width--tablet} + 7px) #{$flag-height--tablet / 2 - 7px} / 14px 14px;
+$ring-background--active-desktop: url("../img/circle.svg") no-repeat calc(100% - #{$flag-width--desktop} + 7px) #{$flag-height--desktop / 2 - 7px} / 14px 14px;
+
+$plus-background: url("../img/qty-plus.svg") no-repeat calc(100% - 14px) #{$flag-height / 2 - 7px} / 14px 14px;
+$plus-background--tablet: url("../img/qty-plus.svg") no-repeat calc(100% - 25px) #{$flag-height--tablet / 2 - 11px} / 21px 21px;
+$plus-background--desktop: url("../img/qty-plus.svg") no-repeat calc(100% - 25px) #{$flag-height--desktop / 2 - 11px} / 21px 21px;
+
+$select-background: url("../img/select.svg") no-repeat calc(100% - 15px) center / 12px 9px;
+$select-background--tablet: url("../img/select.svg") no-repeat calc(100% - 25px) center / 20px 17px;
+$select-background--desktop: url("../img/select.svg") no-repeat calc(100% - 25px) center / 20px 17px;
+
+$select-background--active: url("../img/small-cross.svg") no-repeat calc(100% - 17px) center / 9px 9px;
+$select-background--active-tablet: url("../img/small-cross.svg") no-repeat calc(100% - 25px) center / 20px 17px;
+$select-background--active-desktop: url("../img/small-cross.svg") no-repeat calc(100% - 25px) center / 20px 17px;
+
+$fade-background: url("../img/country-fade-light-mobile@1x.png") no-repeat calc(100% - 4px) center / 50px 20px;
+$fade-background--tablet: url("../img/country-fade-light-mobile@1x.png") no-repeat calc(100% - 4px) center / 100px 40px;
+$fade-background--desktop: url("../img/country-fade-light-mobile@1x.png") no-repeat calc(100% - 4px) center / 100px 40px;
+
+$fade-background--active: url("../img/country-fade-dark-mobile@1x.png") no-repeat calc(100% - 4px) center / 50px 20px;
+$fade-background--active-tablet: url("../img/country-fade-dark-mobile@1x.png") no-repeat calc(100% - 4px) center / 100px 40px;
+$fade-background--active-desktop: url("../img/country-fade-dark-mobile@1x.png") no-repeat calc(100% - 4px) center / 100px 40px;
+
+$delete-background: #{$much-lighter-blue} url("../img/small-cross.svg") no-repeat center center / 9px 9px;
+$delete-background--tablet: url("../img/small-cross.svg") no-repeat center center / 22px 24px;
+$delete-background--desktop: url("../img/small-cross.svg") no-repeat center center / 22px 24px;
+
+.country-select {
+  position: relative;
+  display: flex;
+  flex-flow: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  height: $flag-height;
+
+  font: 500 14px/18px $font-family;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+
+  @include tablet-desktop() {
+    height: $flag-height--tablet;
+
+    font: 500 20px/20px $font-family;
+    letter-spacing: 0.1em;
+  }
+
+  @include desktop() {
+    height: $flag-height--desktop;
+  }
+
+  &::before {
+    content: "";
+    display: none;
+    flex-shrink: 0;
+    order: 1;
+    z-index: 1;
+    margin-left: -1px;
+    height: 100%;
+    width: $flag-width;
+
+    border-radius: 4px;
+    border: 1px solid $much-light-blue;
+
+    @include tablet-desktop() {
+      display: flex;
+      visibility: hidden;
+      width: $flag-width--tablet;
+
+      border: none;
+      background-position: 25px center;
+    }
+
+    @include desktop() {
+      width: $flag-width--desktop;
+      background-position: 40px center;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: calc(100% + 16px);
+
+    background: $ring-background, $arrow-background;
+    pointer-events: none;
+
+    @include tablet-desktop() {
+      background: $ring-background--tablet;
+    }
+
+    @include desktop() {
+      background: $ring-background--desktop;
+    }
+  }
+
+  &--selected {
+    &::before {
+      display: flex;
+      visibility: visible;
+    }
+
+    &::after {
+      background: $ring-background--active, $arrow-background;
+
+      @include tablet-desktop() {
+        background: $ring-background--active-tablet;
+      }
+
+      @include desktop() {
+        background: $ring-background--active-desktop;
+      }
+    }
+  }
+
+  &--active {
+    z-index: 2;
+
+    &::before {
+      display: none;
+
+      @include tablet-desktop() {
+        display: flex;
+      }
+    }
+
+    &::after {
+      background: $arrow-background;
+
+      @include tablet-desktop() {
+        background: none;
+      }
+    }
+  }
+}
+
+.country-select__inner {
+  position: relative;
+  height: 100%;
+  width: 100%;
+
+  @include tablet-desktop() {
+    margin-right: 27px;
+  }
+
+  @include desktop() {
+    margin-right: 45px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    background: $select-background, $fade-background;
+    pointer-events: none;
+
+    @include tablet-desktop() {
+      background: $select-background--tablet, $fade-background--tablet;
+    }
+
+    @include desktop() {
+      background: $select-background--desktop, $fade-background--desktop;
+    }
+  }
+
+  &--active {
+    &::after {
+      background: $select-background--active, $fade-background--active;
+
+      @include tablet-desktop() {
+        background: $select-background--active-tablet, $fade-background--active-tablet;
+      }
+
+      @include desktop() {
+        background: $select-background--active-desktop, $fade-background--active-desktop;
+      }
+    }
+  }
+}
+
+.country-select__select {
+  display: flex;
+  padding: 0 11px;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  border: 1px solid $much-light-blue;
+  color: $blue;
+  background: $white;
+  appearance: none;
+
+  @include tablet-desktop() {
+    padding: 24px 25px;
+  }
+
+  &--active {
+    border-color: $blue;
+    border-radius: 4px 4px 0 0;
+    background-color: $blue;
+    color: $white;
+  }
+}
+
+.country-select__select-item {
+  display: none;
+
+  &--nojs {
+    display: block;
+  }
+}
+
+.country-select__delete {
+  position: absolute;
+  z-index: 1;
+  right: -10.5px;
+  top: -10.5px;
+  width: 21px;
+  height: 21px;
+  display: none;
+
+  border-radius: 50%;
+  background: $delete-background;
+  cursor: pointer;
+
+  @include tablet-desktop() {
+    top: 23px;
+    right: -5px;
+
+    opacity: 0.1;
+    background: $delete-background--tablet;
+  }
+
+  @include desktop() {
+    right: 0;
+
+    background: $delete-background--desktop;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &--active {
+    display: unset;
+  }
+}
+
+.country-select__popup {
+  position: absolute;
+  z-index: 3;
+  top: calc(100% - 1px);
+  width: 100%;
+  display: none;
+  flex-flow: column;
+  align-items: flex-start;
+  margin-top: -1px;
+
+  border-radius: 0 0 4px 4px;
+  border: 1px solid $much-light-blue;
+  background-color: $white;
+
+  @include tablet-desktop() {
+    flex-flow: wrap;
+    padding: 35px 23px 33px 27px;
+  }
+
+  &--active {
+    display: flex;
+  }
+}
+
+.country-select__letter-button {
+  display: block;
+  width: 100%;
+  min-height: 40px;
+
+  font: 500 14px/14px $font-family;
+  text-transform: uppercase;
+
+  color: $blue;
+  background: $white;
+  border: 1px solid $much-light-blue;
+
+  @include tablet-desktop() {
+    min-height: 70px;
+
+    font: 500 20px/20px $font-family;
+  }
+
+  &:focus {
+    position: relative;
+  }
+
+  &--active {
+    background: $blue;
+    color: $white;
+    border: none;
+  }
+}
+
+.country-select__countries-list {
+  font: 400 16px/22px $font-family;
+  text-transform: none;
+
+  color: $grey;
+
+  @include tablet-desktop() {
+    font: 400 20px/30px $font-family;
+  }
+}
+
+.country-select__country {
+  text-align: left;
+
+  cursor: pointer;
+}

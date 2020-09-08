@@ -1,0 +1,90 @@
+@mixin visually-hidden() {
+  position: absolute;
+  z-index: -9999;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+
+  white-space: nowrap;
+  overflow: hidden;
+
+  border: none;
+}
+
+@mixin mobile {
+  @media (max-width: $width--tablet - 1px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: $width--tablet) and (max-width: $width--desktop - 1px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $width--desktop) {
+    @content;
+  }
+}
+
+@mixin mobile-tablet {
+  @media (max-width: $width--desktop - 1px) {
+    @content;
+  }
+}
+
+@mixin tablet-desktop {
+  @media (min-width: $width--tablet) {
+    @content;
+  }
+}
+
+@mixin ordered($child-class, $color:$more-dark-blue) {
+  .#{$child-class}::before {
+    color: $color;
+    background-color: $yellow;
+  }
+
+  &:nth-of-type(1) .#{$child-class}::before {
+    background-color: $orange;
+  }
+
+  &:nth-of-type(2) .#{$child-class}::before {
+    background-color: $dark-yellow;
+  }
+}
+
+@mixin ordered-inverse($child-class, $color:$yellow) {
+  .#{$child-class}::before {
+    color: $color;
+    background: $much-more-darker-blue;
+  }
+}
+
+@mixin _interactive($cursor:pointer) {
+  cursor: $cursor;
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px $outline, 0 0 0 3px $white;
+  }
+}
+
+@mixin _noninteractive($cursor:default) {
+  cursor: $cursor;
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+@mixin _workspace($base-color, $clip: content-box) {
+  background: rgba($base-color, 0.1);
+  background-clip: $clip;
+}

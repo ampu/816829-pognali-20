@@ -1,0 +1,14 @@
+.transports__legend {
+  font: 700 16px/18px $font-family;
+  text-transform: uppercase;
+
+  color: $blue;
+
+  @include tablet-desktop() {
+    font: 500 20px/20px $font-family;
+  }
+}
+
+.transports__text {
+  font: 400 20px/20px $font-family;
+}

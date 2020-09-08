@@ -1,0 +1,150 @@
+.user-profile {
+  position: relative;
+  padding-top: 24px + $radius;
+  padding-bottom: 34px + $radius;
+
+  text-align: center;
+
+  color: $blue;
+  background: $lightest-blue;
+
+  @include tablet-desktop() {
+    padding-top: 65px + $radius--tablet;
+    padding-bottom: 48px + $radius--tablet;
+  }
+
+  @include desktop() {
+    padding-top: 73px + $radius--desktop;
+    padding-bottom: 54 + $radius--desktop;
+  }
+}
+
+.user-profile__tags {
+  display: block;
+}
+
+.user-profile__tags-legend {
+  font: 700 16px/18px $font-family;
+  text-transform: uppercase;
+
+  background: $lightest-blue;
+
+  @include tablet-desktop() {
+    font: 500 20px/20px $font-family;
+  }
+}
+
+.user-profile__tags-input {
+  display: block;
+  width: 100%;
+  font: 400 16px/18px $font-family;
+
+  border: none;
+  color: rgba($grey, 0.6);
+  background: transparent;
+  resize: none;
+
+  @include tablet-desktop() {
+    font: 400 20px/22px $font-family;
+  }
+
+  &::placeholder {
+    color: rgba($grey, 0.6);
+  }
+}
+
+.user-profile__transports-title {
+  @include tablet-desktop() {
+    display: none;
+  }
+}
+
+.user-profile__transports-legend {
+  background-color: $lightest-blue;
+
+  @include tablet-desktop() {
+    font: 500 20px/20px $font-family;
+  }
+}
+
+.user-profile__avatar-image {
+  width: 100px;
+  height: 100px;
+
+  border-radius: 50%;
+
+  @include tablet-desktop() {
+    width: 94px;
+    height: 94px;
+
+    border-radius: 5px;
+  }
+
+  @include desktop() {
+    width: 190px;
+    height: 190px;
+
+    border-radius: 0;
+  }
+}
+
+.user-profile__upload-avatar {
+  display: block;
+}
+
+.user-profile__upload-avatar-button {
+  display: block;
+  padding: 12px 12px 9px;
+  width: 100%;
+
+  font: 500 20px/20px $font-family;
+  text-transform: uppercase;
+
+  border-radius: 20px;
+  color: $much-darker-blue;
+  background-color: $much-lighter-blue;
+
+  .user-profile__upload-avatar-input:focus + & {
+    background-color: $more-light-blue;
+  }
+
+  &:hover {
+    background-color: $more-light-blue;
+  }
+
+  &:active {
+    color: rgba($much-darker-blue, 0.3);
+    background-color: $much-lighter-blue;
+  }
+}
+
+.user-profile__save-button {
+  display: block;
+  padding: 12px 12px 9px;
+  width: 100%;
+
+  font: 500 20px/20px $font-family;
+  text-transform: uppercase;
+
+  border-radius: 20px;
+  color: $much-darker-blue;
+  background-color: $much-lighter-blue;
+
+  &--nojs {
+    display: block;
+  }
+
+  &:focus {
+    outline: none;
+    background-color: $more-light-blue;
+  }
+
+  &:hover {
+    background-color: $more-light-blue;
+  }
+
+  &:active {
+    color: rgba($much-darker-blue, 0.3);
+    background-color: $much-lighter-blue;
+  }
+}

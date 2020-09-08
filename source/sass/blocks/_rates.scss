@@ -1,0 +1,142 @@
+.rates {
+  position: relative;
+  background: $lightest-blue;
+}
+
+.rates__inner {
+  padding-top: 25px + 53px;
+  padding-bottom: 38px;
+  padding-left: 25px;
+  padding-right: 0;
+
+  @include tablet() {
+    padding-top: 74px + 54px;
+    padding-bottom: 63px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  @include desktop() {
+    padding-top: 60px + 107px;
+    padding-bottom: 165px;
+    padding-left: 130px - 60px + $padding--desktop;
+    padding-right: 244px - 60px + $padding--desktop;
+  }
+}
+
+.rates__title {
+  font: 700 24px/24px $font-family;
+  white-space: pre-line;
+
+  color: $orange;
+
+  @include tablet-desktop() {
+    font: 700 45px/45px $font-family;
+    white-space: normal;
+    text-align: center;
+  }
+}
+
+.rates__fund {
+  display: table;
+
+  border-radius: 50px;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 100px;
+
+    background: url("../img/rates@1x.png") no-repeat center center;
+    background-size: 100px 100px;
+
+    @include desktop() {
+      width: 198px;
+      height: 198px;
+
+      background-size: 198px 198px;
+    }
+  }
+}
+
+.rates__list {
+  counter-reset: rate;
+
+  font: 300 16px/22px $font-family;
+
+  color: $grey;
+
+  @include tablet-desktop() {
+    font: 300 28px/28px $font-family;
+  }
+}
+
+.rates__item {
+  counter-increment: rate;
+  position: relative;
+  min-height: 68px;
+
+  color: $grey;
+
+  &::before {
+    content: counter(rate);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 34px;
+    min-height: 34px;
+
+    border-radius: 50%;
+    color: $white;
+    background-color: $yellow;
+
+    @include tablet-desktop() {
+      width: 68px;
+      height: 68px;
+    }
+  }
+
+  &:nth-of-type(1) {
+    &::before {
+      background-color: $orange;
+    }
+  }
+
+  &:nth-of-type(2) {
+    &::before {
+      background-color: $dark-yellow;
+    }
+  }
+}
+
+.rates__item-value {
+  @include tablet-desktop() {
+    background-color: $more-lighter-blue;
+  }
+
+  @include desktop() {
+    width: 446px;
+    padding: 0 155px;
+  }
+}
+
+.rates__business {
+  font: 700 16px/16px $font-family;
+
+  color: $dark-blue;
+
+  @include tablet-desktop() {
+    font: 700 20px/20px $font-family;
+
+    &::before {
+      content: "";
+      width: 68px;
+      height: 68px;
+
+      border-radius: 50%;
+      background: $more-lighter-blue url("../img/business.svg") no-repeat center center;
+      background-size: 27px 27px;
+    }
+  }
+}
