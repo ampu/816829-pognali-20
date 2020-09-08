@@ -1,0 +1,33 @@
+.user-nav {
+  font: 700 17px/17px $font-family;
+  text-transform: uppercase;
+
+  @include tablet-desktop() {
+    font: 700 20px/20px $font-family;
+  }
+}
+
+.user-nav__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3px;
+  padding-left: 30px;
+  padding-right: 30px;
+  min-height: 50px;
+
+  text-align: center;
+
+  color: $much-darker-blue;
+  background-color: $yellow;
+  border-radius: 25px;
+
+  &:hover,
+  &:focus {
+    background-color: $dark-yellow;
+  }
+
+  &:active {
+    color: rgba($much-darker-blue, 0.3);
+  }
+}

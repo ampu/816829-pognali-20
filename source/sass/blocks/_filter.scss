@@ -1,0 +1,152 @@
+.filter {
+  padding: 26px 25px 20px;
+  background: $yellow;
+
+  @include tablet() {
+    padding: 37px 35px;
+  }
+}
+
+.filter__slogan {
+  font: 700 22px/22px $font-family;
+  letter-spacing: 0.02em;
+  white-space: pre-line;
+
+  color: $blue;
+
+  @include tablet() {
+    font: 700 30px/30px $font-family;
+    letter-spacing: 0;
+    white-space: normal;
+  }
+}
+
+.filter__fieldset {
+  position: relative;
+}
+
+.filter__legend {
+  display: block;
+
+  font: 700 16px/18px $font-family;
+  text-transform: uppercase;
+
+  border-top: 1px solid $darker-yellow;
+  color: $blue;
+
+  @include tablet() {
+    font: 500 20px/20px $font-family;
+
+    border: none;
+  }
+}
+
+.filter__fieldset-toggle {
+  width: 18px;
+  height: 18px;
+
+  background: url("../img/filter-expand.svg") no-repeat center center;
+  background-size: 10px 6px;
+
+  &--active {
+    background: url("../img/filter-collapse.svg") no-repeat center center;
+    background-size: 10px 6px;
+  }
+
+  &--nojs {
+    display: none;
+  }
+
+  @include tablet() {
+    display: none;
+  }
+}
+
+.filter__fieldset-inner {
+  font: 400 15px/20px $font-family;
+
+  color: $black;
+
+  @include tablet() {
+    font: 400 20px/20px $font-family;
+  }
+}
+
+.filter__label {
+  @include tablet() {
+    width: 33%;
+  }
+}
+
+.filter__text {
+  display: flex;
+  align-items: center;
+
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    width: 18px;
+    height: 18px;
+    margin-right: 9px;
+    margin-top: -1px;
+
+    border-radius: 4px;
+    background-color: $white;
+  }
+
+  .filter__check:checked + & {
+    &::before {
+      background-image: url("../img/tick.svg");
+      background-repeat: no-repeat;
+      background-size: 9px 9px;
+      background-position: calc(50% + 1px) calc(50% - 1px);
+    }
+  }
+}
+
+.filter__range-number {
+  display: block;
+  width: 100%;
+
+  font: 500 13px/14px $font-family;
+  letter-spacing: 0.06em;
+  text-align: center;
+
+  border: none;
+  color: $blue;
+
+  &--min {
+    border-radius: 4px 0 0 4px;
+    border: 1px solid $much-light-blue;
+    border-right: none;
+  }
+
+  &--max {
+    border-radius: 0 4px 4px 0;
+    border: 1px solid $much-light-blue;
+  }
+
+  &:focus {
+    position: relative;
+  }
+
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    display: none;
+  }
+}
+
+.filter__submit {
+  width: 100%;
+  display: block;
+  padding: 14px 0 12px;
+
+  font: 700 17px/17px $font-family;
+  text-transform: uppercase;
+  text-align: center;
+
+  border-radius: 25px;
+  color: $much-darker-blue;
+  background-color: $white;
+}

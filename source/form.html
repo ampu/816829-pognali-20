@@ -3,71 +3,86 @@
 <head>
   <meta charset="utf-8">
   <title>Погнали?</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page page__container">
-<header class="page__layer-9 page-header">
-  <nav class="page-header__nav page-header__nav--active page-header__nav--form page__container page__inner">
-    <div class="page-header__inner">
-      <a class="page-header__logo" href="index.html">
-        <img class="page-header__logo-image" src="https://via.placeholder.com/96x15" width="96" height="15" alt="Логотип «Погнали?»">
-        <img class="page-header__logo-image page-header__logo-image--active" src="https://via.placeholder.com/96x15" width="96" height="15" alt="Логотип «Погнали?»">
-      </a>
-      <button class="page-header__menu-toggle page-header__menu-toggle--nojs">
-        <span class="page-header__menu-toggle-inner page-header__menu-toggle-inner--open">
-          <span class="visually-hidden">Открыть меню</span>
-        </span>
-        <span class="page-header__menu-toggle-inner page-header__menu-toggle-inner--close page-header__menu-toggle-inner--active">
-          <span class="visually-hidden">Закрыть меню</span>
-        </span>
-      </button>
-    </div>
+<header class="page__layer-9 page-header page-header--nojs page__container">
+  <nav class="page-header__nav page-header__nav--active page-header__nav--form page-header__nav--form-active page__inner">
+    <a class="logo page-header__logo" href="index.html">
+      <picture>
+        <source srcset="img/logo-desktop-white@1x.png" media="(min-width: 1440px)">
+        <source srcset="img/logo-tablet-white@1x.png" media="(min-width: 768px) and (max-width: 1439px)">
+        <img class="logo__image page-header__logo-image--light page-header__logo-image" src="img/logo-mobile-white@1x.png" alt="Логотип «Погнали?»">
+      </picture>
+      <picture>
+        <source srcset="img/logo-desktop-blue@1x.png" media="(min-width: 1440px)">
+        <source srcset="img/logo-tablet-blue@1x.png" media="(min-width: 768px) and (max-width: 1439px)">
+        <img class="logo__image page-header__logo-image--active page-header__logo-image--dark page-header__logo-image" src="img/logo-mobile-blue@1x.png" alt="Логотип «Погнали?»">
+      </picture>
+    </a>
 
-    <div class="page-header__menu page-header__menu--nojs page-header__menu--active">
-      <ul class="page-header__site-nav">
-        <li class="page-header__site-nav-item">
-          <a class="page-header__site-nav-link" href="index.html" data-hover="О сервисе">О сервисе</a>
-        </li>
+    <button class="page-header__toggle page-header__toggle--nojs">
+      <span class="page-header__toggle-inner page-header__toggle-inner--open">
+        <span class="visually-hidden">Открыть меню</span>
+      </span>
+      <span class="page-header__toggle-inner page-header__toggle-inner--close page-header__toggle-inner--active">
+        <span class="visually-hidden">Закрыть меню</span>
+      </span>
+    </button>
 
-        <li class="page-header__site-nav-item">
-          <a class="page-header__site-nav-link page-header__site-nav-link--active">Направления</a>
-        </li>
+    <ul class="page-header__site-nav page-header__site-nav--active">
+      <li class="page-header__site-nav-item">
+        <a class="page-header__site-nav-link" href="index.html" data-hover="О сервисе">О сервисе</a>
+      </li>
 
-        <li class="page-header__site-nav-item">
-          <a class="page-header__site-nav-link" href="catalog.html" data-hover="Попутчики">Попутчики</a>
-        </li>
-      </ul>
+      <li class="page-header__site-nav-item">
+        <a class="page-header__site-nav-link page-header__site-nav-link--active">Направления</a>
+      </li>
 
-      <ul class="page-header__user-nav user-nav">
-        <li class="user-nav__item"><a class="user-nav__link" href="#">Авторизация</a></li>
-      </ul>
+      <li class="page-header__site-nav-item">
+        <a class="page-header__site-nav-link" href="catalog.html" data-hover="Попутчики">Попутчики</a>
+      </li>
+    </ul>
 
-      <ul class="page-header__contacts contacts">
-        <li class="contacts__item">
-          <a class="contacts__link contacts__link--tel" href="tel:+78005558628">8 800 555-86-28</a>
-        </li>
-        <li class="contacts__item">
-          <a class="contacts__link contacts__link--email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-        </li>
-      </ul>
+    <ul class="user-nav page-header__user-nav page-header__user-nav--active">
+      <li class="user-nav__item">
+        <a class="user-nav__link" href="#">Авторизация</a>
+      </li>
+    </ul>
 
-      <ul class="page-header__socials socials">
-        <li class="socials__item">
-          <a class="socials__link socials__link--fb" href="#">
-            <span class="visually-hidden">Facebook</span>
-          </a>
-        </li>
-        <li class="socials__item">
-          <a class="socials__link socials__link--vk" href="#">
-            <span class="visually-hidden">ВКонтакте</span>
-          </a>
-        </li>
-        <li class="socials__item">
-          <a class="socials__link socials__link--in" href="#">
-            <span class="visually-hidden">Instagram</span>
-          </a>
-        </li>
-      </ul>
-    </div>
+    <ul class="contacts page-header__contacts page-header__contacts--active">
+      <li class="contacts__item page-header__contacts-item">
+        <a class="contacts__link contacts__link--tel page-header__contacts-link page-header__contacts-link--tel" href="tel:+78005558628">
+          <span class="contacts__text page-header__contacts-text">8 800 555-86-28</span>
+        </a>
+      </li>
+
+      <li class="contacts__item page-header__contacts-item">
+        <a class="contacts__link contacts__link--email page-header__contacts-link page-header__contacts-link--email" href="mailto:mail@htmlacademy.ru">
+          <span class="contacts__text page-header__contacts-text">mail@htmlacademy.ru</span>
+        </a>
+      </li>
+    </ul>
+
+    <ul class="socials page-header__socials page-header__socials--active">
+      <li class="socials__item page-header__socials-item">
+        <a class="socials__link socials__link--fb page-header__socials-link" href="#">
+          <span class="visually-hidden">Facebook</span>
+        </a>
+      </li>
+
+      <li class="socials__item page-header__socials-item">
+        <a class="socials__link socials__link--vk page-header__socials-link" href="#">
+          <span class="visually-hidden">ВКонтакте</span>
+        </a>
+      </li>
+
+      <li class="socials__item page-header__socials-item">
+        <a class="socials__link socials__link--in page-header__socials-link" href="#">
+          <span class="visually-hidden">Instagram</span>
+        </a>
+      </li>
+    </ul>
   </nav>
 </header>
 
@@ -77,28 +92,34 @@
   </h1>
 
   <form method="post" action="https://echo.htmlacademy.ru/">
-    <section class="user user--profile page__inner">
+    <section class="user-profile page__inner">
       <h2 class="visually-hidden">Петя Демин</h2>
 
-      <div class="user__level user__level--profile level level--xl level--dark">
+      <div class="level user-profile__level level--xl level--dark">
         <span class="level__title level__title--lg level__title--inverse">level</span>
         <span class="level__value level__value--lg">80</span>
       </div>
 
-      <img class="user__avatar user__avatar--profile avatar avatar__image" src="https://via.placeholder.com/100x100" width="100" height="100" alt="Аватар «Петя Демин»">
+      <picture class="avatar user-profile__avatar">
+        <source srcset="img/demin-tablet@1x.jpg" media="(min-width: 768px)">
 
-      <label class="user__upload-avatar">
-        <input class="user__upload-avatar-input visually-hidden" type="file" name="avatar">
-        <span class="user__upload-avatar-button">Сменить фото</span>
+        <source srcset="img/demin-desktop@1x.jpg" media="(min-width: 1440px)">
+
+        <img class="avatar__image user-profile__avatar-image" src="img/demin-tablet@1x.jpg" alt="Аватар «Петя Демин»">
+      </picture>
+
+      <label class="user-profile__upload-avatar">
+        <input class="user-profile__upload-avatar-input visually-hidden" type="file" name="avatar">
+        <span class="user-profile__upload-avatar-button">Сменить фото</span>
       </label>
 
-      <label class="user__tags user__tags--profile">
-        <span class="user__tags-legend">Тэги</span>
-        <textarea class="user__tags-input user__tags-input--profile" name="tags" rows="2" placeholder="Коротко о себе в виде 5-8 хештэгов">#бургер #бар #футбол #концерт #крафт</textarea>
+      <label class="user-profile__tags">
+        <span class="user-profile__tags-legend">Тэги</span>
+        <textarea class="user-profile__tags-input" name="tags" rows="2" placeholder="Коротко о себе в виде 5-8 хештэгов">#бургер #бар #футбол #концерт #крафт</textarea>
       </label>
 
-      <fieldset class="user__transports transports--bordered transports">
-        <legend class="transports__legend">Транспорт</legend>
+      <fieldset class="user-profile__transports transports--bordered transports">
+        <legend class="transports__legend user-profile__transports-legend">Транспорт</legend>
         <div class="transports__list">
           <label class="transports__item">
             <input class="transports__check visually-hidden" type="checkbox" name="transports" value="plane" checked>
@@ -130,7 +151,7 @@
         </div>
       </fieldset>
 
-      <button class="user__save-button user__save-button--nojs" type="submit">Сохранить</button>
+      <button class="user-profile__save-button user-profile__save-button--nojs" type="submit">Сохранить</button>
     </section>
   </form>
 
@@ -149,7 +170,7 @@
       </li>
 
       <li class="plans__item plan">
-        <h3 class="plan__title">Таиланд, Индонезия</h3>
+        <h3 class="plan__title">Тайланд, Индонезия</h3>
         <p class="plan__companion">1 попутчик</p>
         <p class="plan__period">
           <time datetime="2020-07-01">1 июл</time>
@@ -165,7 +186,7 @@
     <section class="page__layer-0 add-plan page__inner">
       <h2 class="add-plan__title">Добавить план</h2>
 
-      <ol class="add-plan__menu add-plan__menu--nojs">
+      <ol class="add-plan__menu add-plan__menu--dynamic add-plan__menu--nojs">
         <li class="add-plan__menu-item add-plan__menu-item--active" data-hash="#add-plan-step-1">
           <span class="add-plan__menu-item-text">Даты</span>
         </li>
@@ -184,7 +205,19 @@
           <p class="add-plan__step-intro">Укажите предпочтительное количество попутчиков, которых
             вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
 
-          <fieldset class="add-plan__group">
+          <ol class="add-plan__menu add-plan__menu--static">
+            <li class="add-plan__menu-item add-plan__menu-item--active">
+              <span class="add-plan__menu-item-text">Даты</span>
+            </li>
+            <li class="add-plan__menu-item">
+              <span class="add-plan__menu-item-text">Маршрут</span>
+            </li>
+            <li class="add-plan__menu-item">
+              <span class="add-plan__menu-item-text">Развлечения</span>
+            </li>
+          </ol>
+
+          <fieldset class="add-plan__group add-plan__group--travellers">
             <legend class="add-plan__legend">Ищу попутчиков:</legend>
             <label class="add-plan__unit" for="add-plan__travellers">чел.</label>
             <input class="add-plan__input" id="add-plan__travellers" type="number" name="travellers" min="0" step="1" value="2">
@@ -196,7 +229,7 @@
             </button>
           </fieldset>
 
-          <fieldset class="add-plan__group">
+          <fieldset class="add-plan__group add-plan__group--duration">
             <legend class="add-plan__legend">Длительность:</legend>
             <label class="add-plan__unit" for="add-plan__duration">дн.</label>
             <input class="add-plan__input" id="add-plan__duration" type="number" name="duration" min="0" step="1" value="2">
@@ -208,13 +241,14 @@
             </button>
           </fieldset>
 
-          <label class="add-plan__group">
+          <label class="add-plan__group add-plan__group--with-children">
             <input class="add-plan__check visually-hidden" type="checkbox" name="with-children" value="1" checked>
             <span class="add-plan__check-text">Можно с детьми</span>
           </label>
 
           <div class="add-plan__calendar calendar">
             <p class="calendar__title">Март 2019</p>
+
             <button class="calendar__next-month" type="button">
               <span class="visually-hidden">Следующий месяц</span>
             </button>
@@ -375,9 +409,21 @@
             Маршрут</h3>
           <p class="add-plan__step-intro">Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.</p>
 
-          <div class="add-plan__countries">
-            <ul class="add-plan__countries-list">
-              <li class="add-plan__countries-item country-select country country--md country--bih">
+          <ol class="add-plan__menu add-plan__menu--static">
+            <li class="add-plan__menu-item">
+              <span class="add-plan__menu-item-text">Даты</span>
+            </li>
+            <li class="add-plan__menu-item add-plan__menu-item--active">
+              <span class="add-plan__menu-item-text">Маршрут</span>
+            </li>
+            <li class="add-plan__menu-item">
+              <span class="add-plan__menu-item-text">Развлечения</span>
+            </li>
+          </ol>
+
+          <ul class="add-plan__countries">
+            <li class="add-plan__countries-item country-select country-select--selected country country--bih">
+              <div class="country-select__inner">
                 <select class="country-select__select" name="countries" aria-label="Страна №1">
                   <option class="country-select__select-item country-select__select-item--nojs" value>Выберите страну</option>
 
@@ -406,150 +452,496 @@
                   </optgroup>
 
                   <optgroup class="country-select__select-item country-select__select-item--nojs" label="б">
-                    <option class="country-select__select-item country-select__select-item--nojs" value="bih" selected>Босния и Герцеговина</option>
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Багамские Острова</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Бангладеш</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Барбадос</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Бахрейн</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Белоруссия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Белиз</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Бельгия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Бенин</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Болгария</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Боливия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value="bih" selected>Босния и Герцеговина и Босния и Герцеговина и Босния и Герцеговина и Босния и Герцеговина</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Ботсвана</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Бразилия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Бруней</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Буркина-Фасо</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Бурунди</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Бутан</option>
+                  </optgroup>
+
+                  <optgroup class="country-select__select-item country-select__select-item--nojs" label="в">
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Вануату</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Великобритания</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Венгрия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Венесуэла</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Восточный Тимор</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Вьетнам</option>
+                  </optgroup>
+
+                  <optgroup class="country-select__select-item country-select__select-item--nojs" label="г">
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Габон</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Гаити</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Гайана</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Гамбия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Гана</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Гватемала</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Гвинея</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Гвинея-Бисау</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Германия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Гондурас</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Гренада</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Греция</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Грузия</option>
+                  </optgroup>
+
+                  <optgroup class="country-select__select-item country-select__select-item--nojs" label="д">
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Дания</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Джибути</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Доминика</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Доминикана</option>
+                  </optgroup>
+
+                  <optgroup class="country-select__select-item country-select__select-item--nojs" label="е">
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Египет</option>
+                  </optgroup>
+
+                  <optgroup class="country-select__select-item country-select__select-item--nojs" label="з">
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Замбия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Зимбабве</option>
+                  </optgroup>
+
+                  <optgroup class="country-select__select-item country-select__select-item--nojs" label="и">
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Израиль</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Индия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Индонезия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Иордания</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Ирак</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Иран</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Ирландия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Исландия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Испания</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Италия</option>
+                  </optgroup>
+
+                  <optgroup class="country-select__select-item country-select__select-item--nojs" label="к">
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Кабо-Верде</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Казахстан</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Камбоджа</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Камерун</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Канада</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Катар</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Кения</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Кипр</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Киргизия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Кирибати</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Китай</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Колумбия</option>
+                  </optgroup>
+
+                  <optgroup class="country-select__select-item country-select__select-item--nojs" label="л">
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Лаос</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Латвия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Лесото</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Либерия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Ливан</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Ливия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Литва</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Лихтенштейн</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Люксембург</option>
+                  </optgroup>
+
+                  <optgroup class="country-select__select-item country-select__select-item--nojs" label="м">
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Маврикий</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Мавритания</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Мадагаскар</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Малави</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Малайзия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Мали</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Мальдивы</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Мальта</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Марокко</option>
+                  </optgroup>
+
+                  <optgroup class="country-select__select-item country-select__select-item--nojs" label="н">
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Намибия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Науру</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Непал</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Нигер</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Нигерия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Нидерланды</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Никарагуа</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Новая Зеландия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Норвегия</option>
+                  </optgroup>
+
+                  <optgroup class="country-select__select-item country-select__select-item--nojs" label="о">
+                    <option class="country-select__select-item country-select__select-item--nojs" value>ОАЭ</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Оман</option>
+                  </optgroup>
+
+                  <optgroup class="country-select__select-item country-select__select-item--nojs" label="п">
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Пакистан</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Палау</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Панама</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Папуа - Новая Гвинея</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Парагвай</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Перу</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Польша</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Португалия</option>
+                  </optgroup>
+
+                  <optgroup class="country-select__select-item country-select__select-item--nojs" label="р">
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Руанда</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Румыния</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Россия</option>
+                  </optgroup>
+
+                  <optgroup class="country-select__select-item country-select__select-item--nojs" label="с">
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Сальвадор</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Самоа</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Сан-Марино</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Саудовская Аравия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Сейшелы</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Сенегал</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Сербия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Сингапур</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Сирия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Словакия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Словения</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>США</option>
+                  </optgroup>
+
+                  <optgroup class="country-select__select-item country-select__select-item--nojs" label="т">
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Таджикистан</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Тайланд</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Танзания</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Того</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Тонга</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Тринидад и Тобаго</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Тувалу</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Тунис</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Туркмения</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Турция</option>
+                  </optgroup>
+
+                  <optgroup class="country-select__select-item country-select__select-item--nojs" label="у">
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Уганда</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Узбекистан</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Украина</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Уругвай</option>
+                  </optgroup>
+
+                  <optgroup class="country-select__select-item country-select__select-item--nojs" label="ф">
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Фиджи</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Филиппины</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Финляндия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Франция</option>
+                  </optgroup>
+
+                  <optgroup class="country-select__select-item country-select__select-item--nojs" label="х">
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Хорватия</option>
                   </optgroup>
 
                   <optgroup class="country-select__select-item country-select__select-item--nojs" label="ч">
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Чад</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Черногория</option>
+
                     <option class="country-select__select-item country-select__select-item--nojs" value="cze">Чехия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Чили</option>
+                  </optgroup>
+
+                  <optgroup class="country-select__select-item country-select__select-item--nojs" label="ш">
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Швейцария</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Швеция</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Шри-Ланка</option>
+                  </optgroup>
+
+                  <optgroup class="country-select__select-item country-select__select-item--nojs" label="э">
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Эквадор</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Эритрея</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Эсватини</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Эстония</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Эфиопия</option>
+                  </optgroup>
+
+                  <optgroup class="country-select__select-item country-select__select-item--nojs" label="ю">
+                    <option class="country-select__select-item country-select__select-item--nojs" value>ЮАР</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Южный Судан</option>
+                  </optgroup>
+
+                  <optgroup class="country-select__select-item country-select__select-item--nojs" label="я">
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Ямайка</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Япония</option>
                   </optgroup>
                 </select>
+              </div>
 
-                <button class="country-select__delete country-select__delete--active" type="button">
-                  <span class="visually-hidden">Удалить страну</span>
-                </button>
+              <button class="country-select__delete country-select__delete--active" type="button">
+                <span class="visually-hidden">Удалить страну</span>
+              </button>
 
-                <div class="country-select__popup">
-                  <ul class="country-select__letters">
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button country-select__letter-button--active" type="button">а</button>
-                    </li>
+              <div class="country-select__popup">
+                <ul class="country-select__letters">
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button country-select__letter-button--active" type="button">а</button>
+                  </li>
 
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button" type="button">б</button>
-                    </li>
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button" type="button">б</button>
+                  </li>
 
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button" type="button">в</button>
-                    </li>
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button" type="button">в</button>
+                  </li>
 
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button" type="button">г</button>
-                    </li>
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button" type="button">г</button>
+                  </li>
 
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button" type="button">д</button>
-                    </li>
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button" type="button">д</button>
+                  </li>
 
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button" type="button">е</button>
-                    </li>
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button" type="button">е</button>
+                  </li>
 
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button" type="button">з</button>
-                    </li>
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button" type="button">з</button>
+                  </li>
 
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button" type="button">и</button>
-                    </li>
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button" type="button">и</button>
+                  </li>
 
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button" type="button">к</button>
-                    </li>
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button" type="button">к</button>
+                  </li>
 
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button" type="button">л</button>
-                    </li>
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button" type="button">л</button>
+                  </li>
 
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button" type="button">м</button>
-                    </li>
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button" type="button">м</button>
+                  </li>
 
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button" type="button">н</button>
-                    </li>
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button" type="button">н</button>
+                  </li>
 
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button" type="button">о</button>
-                    </li>
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button" type="button">о</button>
+                  </li>
 
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button" type="button">п</button>
-                    </li>
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button" type="button">п</button>
+                  </li>
 
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button" type="button">р</button>
-                    </li>
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button" type="button">р</button>
+                  </li>
 
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button" type="button">с</button>
-                    </li>
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button" type="button">с</button>
+                  </li>
 
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button" type="button">т</button>
-                    </li>
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button" type="button">т</button>
+                  </li>
 
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button" type="button">у</button>
-                    </li>
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button" type="button">у</button>
+                  </li>
 
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button" type="button">ф</button>
-                    </li>
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button" type="button">ф</button>
+                  </li>
 
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button" type="button">х</button>
-                    </li>
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button" type="button">х</button>
+                  </li>
 
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button" type="button">ч</button>
-                    </li>
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button" type="button">ч</button>
+                  </li>
 
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button" type="button">ш</button>
-                    </li>
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button" type="button">ш</button>
+                  </li>
 
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button" type="button">э</button>
-                    </li>
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button" type="button">э</button>
+                  </li>
 
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button" type="button">ю</button>
-                    </li>
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button" type="button">ю</button>
+                  </li>
 
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button" type="button">я</button>
-                    </li>
-                  </ul>
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button" type="button">я</button>
+                  </li>
+                </ul>
 
-                  <ul class="country-select__countries">
-                    <li class="country-select__countries-list">
-                      <button class="country-select__country" type="button">Австралия</button>
+                <ul class="country-select__countries">
+                  <li class="country-select__countries-list">
+                    <button class="country-select__country" type="button">Австралия</button>
 
-                      <button class="country-select__country" type="button">Австрия</button>
+                    <button class="country-select__country" type="button">Австрия</button>
 
-                      <button class="country-select__country" type="button">Азербайджан</button>
+                    <button class="country-select__country" type="button">Азербайджан</button>
 
-                      <button class="country-select__country" type="button">Албания</button>
+                    <button class="country-select__country" type="button">Албания</button>
 
-                      <button class="country-select__country" type="button">Алжир</button>
+                    <button class="country-select__country" type="button">Алжир</button>
 
-                      <button class="country-select__country" type="button">Ангола</button>
+                    <button class="country-select__country" type="button">Ангола</button>
 
-                      <button class="country-select__country" type="button">Андорра</button>
+                    <button class="country-select__country" type="button">Андорра</button>
 
-                      <button class="country-select__country" type="button">Антигуа и Барбуда</button>
+                    <button class="country-select__country" type="button">Антигуа и Барбуда</button>
 
-                      <button class="country-select__country" type="button">Аргентина</button>
+                    <button class="country-select__country" type="button">Аргентина</button>
 
-                      <button class="country-select__country" type="button">Армения</button>
+                    <button class="country-select__country" type="button">Армения</button>
 
-                      <button class="country-select__country" type="button">Афганистан</button>
-                    </li>
-                  </ul>
-                </div>
-              </li>
+                    <button class="country-select__country" type="button">Афганистан</button>
+                  </li>
+                </ul>
+              </div>
+            </li>
 
-              <li class="add-plan__countries-item country-select country country--md country--cze">
+            <li class="add-plan__countries-item country-select country-select--selected country country--cze">
+              <div class="country-select__inner">
                 <select class="country-select__select" name="countries" aria-label="Страна №2">
                   <option class="country-select__select-item country-select__select-item--nojs" value>Выберите страну</option>
 
@@ -578,150 +970,496 @@
                   </optgroup>
 
                   <optgroup class="country-select__select-item country-select__select-item--nojs" label="б">
-                    <option class="country-select__select-item country-select__select-item--nojs" value="bih">Босния и Герцеговина</option>
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Багамские Острова</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Бангладеш</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Барбадос</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Бахрейн</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Белоруссия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Белиз</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Бельгия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Бенин</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Болгария</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Боливия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value="bih">Босния и Герцеговина и Босния и Герцеговина и Босния и Герцеговина и Босния и Герцеговина</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Ботсвана</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Бразилия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Бруней</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Буркина-Фасо</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Бурунди</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Бутан</option>
+                  </optgroup>
+
+                  <optgroup class="country-select__select-item country-select__select-item--nojs" label="в">
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Вануату</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Великобритания</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Венгрия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Венесуэла</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Восточный Тимор</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Вьетнам</option>
+                  </optgroup>
+
+                  <optgroup class="country-select__select-item country-select__select-item--nojs" label="г">
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Габон</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Гаити</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Гайана</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Гамбия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Гана</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Гватемала</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Гвинея</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Гвинея-Бисау</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Германия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Гондурас</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Гренада</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Греция</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Грузия</option>
+                  </optgroup>
+
+                  <optgroup class="country-select__select-item country-select__select-item--nojs" label="д">
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Дания</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Джибути</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Доминика</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Доминикана</option>
+                  </optgroup>
+
+                  <optgroup class="country-select__select-item country-select__select-item--nojs" label="е">
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Египет</option>
+                  </optgroup>
+
+                  <optgroup class="country-select__select-item country-select__select-item--nojs" label="з">
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Замбия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Зимбабве</option>
+                  </optgroup>
+
+                  <optgroup class="country-select__select-item country-select__select-item--nojs" label="и">
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Израиль</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Индия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Индонезия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Иордания</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Ирак</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Иран</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Ирландия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Исландия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Испания</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Италия</option>
+                  </optgroup>
+
+                  <optgroup class="country-select__select-item country-select__select-item--nojs" label="к">
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Кабо-Верде</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Казахстан</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Камбоджа</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Камерун</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Канада</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Катар</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Кения</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Кипр</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Киргизия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Кирибати</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Китай</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Колумбия</option>
+                  </optgroup>
+
+                  <optgroup class="country-select__select-item country-select__select-item--nojs" label="л">
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Лаос</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Латвия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Лесото</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Либерия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Ливан</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Ливия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Литва</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Лихтенштейн</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Люксембург</option>
+                  </optgroup>
+
+                  <optgroup class="country-select__select-item country-select__select-item--nojs" label="м">
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Маврикий</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Мавритания</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Мадагаскар</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Малави</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Малайзия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Мали</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Мальдивы</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Мальта</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Марокко</option>
+                  </optgroup>
+
+                  <optgroup class="country-select__select-item country-select__select-item--nojs" label="н">
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Намибия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Науру</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Непал</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Нигер</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Нигерия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Нидерланды</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Никарагуа</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Новая Зеландия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Норвегия</option>
+                  </optgroup>
+
+                  <optgroup class="country-select__select-item country-select__select-item--nojs" label="о">
+                    <option class="country-select__select-item country-select__select-item--nojs" value>ОАЭ</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Оман</option>
+                  </optgroup>
+
+                  <optgroup class="country-select__select-item country-select__select-item--nojs" label="п">
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Пакистан</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Палау</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Панама</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Папуа - Новая Гвинея</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Парагвай</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Перу</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Польша</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Португалия</option>
+                  </optgroup>
+
+                  <optgroup class="country-select__select-item country-select__select-item--nojs" label="р">
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Руанда</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Румыния</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Россия</option>
+                  </optgroup>
+
+                  <optgroup class="country-select__select-item country-select__select-item--nojs" label="с">
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Сальвадор</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Самоа</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Сан-Марино</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Саудовская Аравия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Сейшелы</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Сенегал</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Сербия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Сингапур</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Сирия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Словакия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Словения</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>США</option>
+                  </optgroup>
+
+                  <optgroup class="country-select__select-item country-select__select-item--nojs" label="т">
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Таджикистан</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Тайланд</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Танзания</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Того</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Тонга</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Тринидад и Тобаго</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Тувалу</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Тунис</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Туркмения</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Турция</option>
+                  </optgroup>
+
+                  <optgroup class="country-select__select-item country-select__select-item--nojs" label="у">
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Уганда</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Узбекистан</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Украина</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Уругвай</option>
+                  </optgroup>
+
+                  <optgroup class="country-select__select-item country-select__select-item--nojs" label="ф">
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Фиджи</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Филиппины</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Финляндия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Франция</option>
+                  </optgroup>
+
+                  <optgroup class="country-select__select-item country-select__select-item--nojs" label="х">
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Хорватия</option>
                   </optgroup>
 
                   <optgroup class="country-select__select-item country-select__select-item--nojs" label="ч">
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Чад</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Черногория</option>
+
                     <option class="country-select__select-item country-select__select-item--nojs" value="cze" selected>Чехия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Чили</option>
+                  </optgroup>
+
+                  <optgroup class="country-select__select-item country-select__select-item--nojs" label="ш">
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Швейцария</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Швеция</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Шри-Ланка</option>
+                  </optgroup>
+
+                  <optgroup class="country-select__select-item country-select__select-item--nojs" label="э">
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Эквадор</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Эритрея</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Эсватини</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Эстония</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Эфиопия</option>
+                  </optgroup>
+
+                  <optgroup class="country-select__select-item country-select__select-item--nojs" label="ю">
+                    <option class="country-select__select-item country-select__select-item--nojs" value>ЮАР</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Южный Судан</option>
+                  </optgroup>
+
+                  <optgroup class="country-select__select-item country-select__select-item--nojs" label="я">
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Ямайка</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Япония</option>
                   </optgroup>
                 </select>
+              </div>
 
-                <button class="country-select__delete country-select__delete--active" type="button">
-                  <span class="visually-hidden">Удалить страну</span>
-                </button>
+              <button class="country-select__delete country-select__delete--active" type="button">
+                <span class="visually-hidden">Удалить страну</span>
+              </button>
 
-                <div class="country-select__popup">
-                  <ul class="country-select__letters">
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button country-select__letter-button--active" type="button">а</button>
-                    </li>
+              <div class="country-select__popup">
+                <ul class="country-select__letters">
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button country-select__letter-button--active" type="button">а</button>
+                  </li>
 
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button" type="button">б</button>
-                    </li>
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button" type="button">б</button>
+                  </li>
 
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button" type="button">в</button>
-                    </li>
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button" type="button">в</button>
+                  </li>
 
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button" type="button">г</button>
-                    </li>
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button" type="button">г</button>
+                  </li>
 
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button" type="button">д</button>
-                    </li>
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button" type="button">д</button>
+                  </li>
 
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button" type="button">е</button>
-                    </li>
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button" type="button">е</button>
+                  </li>
 
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button" type="button">з</button>
-                    </li>
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button" type="button">з</button>
+                  </li>
 
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button" type="button">и</button>
-                    </li>
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button" type="button">и</button>
+                  </li>
 
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button" type="button">к</button>
-                    </li>
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button" type="button">к</button>
+                  </li>
 
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button" type="button">л</button>
-                    </li>
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button" type="button">л</button>
+                  </li>
 
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button" type="button">м</button>
-                    </li>
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button" type="button">м</button>
+                  </li>
 
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button" type="button">н</button>
-                    </li>
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button" type="button">н</button>
+                  </li>
 
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button" type="button">о</button>
-                    </li>
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button" type="button">о</button>
+                  </li>
 
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button" type="button">п</button>
-                    </li>
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button" type="button">п</button>
+                  </li>
 
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button" type="button">р</button>
-                    </li>
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button" type="button">р</button>
+                  </li>
 
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button" type="button">с</button>
-                    </li>
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button" type="button">с</button>
+                  </li>
 
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button" type="button">т</button>
-                    </li>
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button" type="button">т</button>
+                  </li>
 
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button" type="button">у</button>
-                    </li>
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button" type="button">у</button>
+                  </li>
 
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button" type="button">ф</button>
-                    </li>
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button" type="button">ф</button>
+                  </li>
 
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button" type="button">х</button>
-                    </li>
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button" type="button">х</button>
+                  </li>
 
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button" type="button">ч</button>
-                    </li>
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button" type="button">ч</button>
+                  </li>
 
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button" type="button">ш</button>
-                    </li>
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button" type="button">ш</button>
+                  </li>
 
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button" type="button">э</button>
-                    </li>
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button" type="button">э</button>
+                  </li>
 
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button" type="button">ю</button>
-                    </li>
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button" type="button">ю</button>
+                  </li>
 
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button" type="button">я</button>
-                    </li>
-                  </ul>
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button" type="button">я</button>
+                  </li>
+                </ul>
 
-                  <ul class="country-select__countries">
-                    <li class="country-select__countries-list">
-                      <button class="country-select__country" type="button">Австралия</button>
+                <ul class="country-select__countries">
+                  <li class="country-select__countries-list">
+                    <button class="country-select__country" type="button">Австралия</button>
 
-                      <button class="country-select__country" type="button">Австрия</button>
+                    <button class="country-select__country" type="button">Австрия</button>
 
-                      <button class="country-select__country" type="button">Азербайджан</button>
+                    <button class="country-select__country" type="button">Азербайджан</button>
 
-                      <button class="country-select__country" type="button">Албания</button>
+                    <button class="country-select__country" type="button">Албания</button>
 
-                      <button class="country-select__country" type="button">Алжир</button>
+                    <button class="country-select__country" type="button">Алжир</button>
 
-                      <button class="country-select__country" type="button">Ангола</button>
+                    <button class="country-select__country" type="button">Ангола</button>
 
-                      <button class="country-select__country" type="button">Андорра</button>
+                    <button class="country-select__country" type="button">Андорра</button>
 
-                      <button class="country-select__country" type="button">Антигуа и Барбуда</button>
+                    <button class="country-select__country" type="button">Антигуа и Барбуда</button>
 
-                      <button class="country-select__country" type="button">Аргентина</button>
+                    <button class="country-select__country" type="button">Аргентина</button>
 
-                      <button class="country-select__country" type="button">Армения</button>
+                    <button class="country-select__country" type="button">Армения</button>
 
-                      <button class="country-select__country" type="button">Афганистан</button>
-                    </li>
-                  </ul>
-                </div>
-              </li>
+                    <button class="country-select__country" type="button">Афганистан</button>
+                  </li>
+                </ul>
+              </div>
+            </li>
 
-              <li class="add-plan__countries-item country-select">
+            <li class="add-plan__countries-item country-select">
+              <div class="country-select__inner">
                 <select class="country-select__select" name="countries" aria-label="Страна №3">
                   <option class="country-select__select-item country-select__select-item--nojs" value>Выберите страну</option>
 
@@ -750,151 +1488,500 @@
                   </optgroup>
 
                   <optgroup class="country-select__select-item country-select__select-item--nojs" label="б">
-                    <option class="country-select__select-item country-select__select-item--nojs" value="bih">Босния и Герцеговина</option>
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Багамские Острова</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Бангладеш</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Барбадос</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Бахрейн</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Белоруссия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Белиз</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Бельгия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Бенин</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Болгария</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Боливия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value="bih">Босния и Герцеговина и Босния и Герцеговина и Босния и Герцеговина и Босния и Герцеговина</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Ботсвана</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Бразилия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Бруней</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Буркина-Фасо</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Бурунди</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Бутан</option>
+                  </optgroup>
+
+                  <optgroup class="country-select__select-item country-select__select-item--nojs" label="в">
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Вануату</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Великобритания</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Венгрия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Венесуэла</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Восточный Тимор</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Вьетнам</option>
+                  </optgroup>
+
+                  <optgroup class="country-select__select-item country-select__select-item--nojs" label="г">
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Габон</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Гаити</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Гайана</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Гамбия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Гана</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Гватемала</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Гвинея</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Гвинея-Бисау</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Германия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Гондурас</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Гренада</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Греция</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Грузия</option>
+                  </optgroup>
+
+                  <optgroup class="country-select__select-item country-select__select-item--nojs" label="д">
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Дания</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Джибути</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Доминика</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Доминикана</option>
+                  </optgroup>
+
+                  <optgroup class="country-select__select-item country-select__select-item--nojs" label="е">
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Египет</option>
+                  </optgroup>
+
+                  <optgroup class="country-select__select-item country-select__select-item--nojs" label="з">
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Замбия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Зимбабве</option>
+                  </optgroup>
+
+                  <optgroup class="country-select__select-item country-select__select-item--nojs" label="и">
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Израиль</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Индия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Индонезия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Иордания</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Ирак</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Иран</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Ирландия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Исландия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Испания</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Италия</option>
+                  </optgroup>
+
+                  <optgroup class="country-select__select-item country-select__select-item--nojs" label="к">
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Кабо-Верде</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Казахстан</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Камбоджа</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Камерун</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Канада</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Катар</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Кения</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Кипр</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Киргизия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Кирибати</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Китай</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Колумбия</option>
+                  </optgroup>
+
+                  <optgroup class="country-select__select-item country-select__select-item--nojs" label="л">
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Лаос</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Латвия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Лесото</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Либерия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Ливан</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Ливия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Литва</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Лихтенштейн</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Люксембург</option>
+                  </optgroup>
+
+                  <optgroup class="country-select__select-item country-select__select-item--nojs" label="м">
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Маврикий</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Мавритания</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Мадагаскар</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Малави</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Малайзия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Мали</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Мальдивы</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Мальта</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Марокко</option>
+                  </optgroup>
+
+                  <optgroup class="country-select__select-item country-select__select-item--nojs" label="н">
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Намибия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Науру</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Непал</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Нигер</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Нигерия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Нидерланды</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Никарагуа</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Новая Зеландия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Норвегия</option>
+                  </optgroup>
+
+                  <optgroup class="country-select__select-item country-select__select-item--nojs" label="о">
+                    <option class="country-select__select-item country-select__select-item--nojs" value>ОАЭ</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Оман</option>
+                  </optgroup>
+
+                  <optgroup class="country-select__select-item country-select__select-item--nojs" label="п">
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Пакистан</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Палау</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Панама</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Папуа - Новая Гвинея</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Парагвай</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Перу</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Польша</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Португалия</option>
+                  </optgroup>
+
+                  <optgroup class="country-select__select-item country-select__select-item--nojs" label="р">
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Руанда</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Румыния</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Россия</option>
+                  </optgroup>
+
+                  <optgroup class="country-select__select-item country-select__select-item--nojs" label="с">
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Сальвадор</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Самоа</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Сан-Марино</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Саудовская Аравия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Сейшелы</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Сенегал</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Сербия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Сингапур</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Сирия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Словакия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Словения</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>США</option>
+                  </optgroup>
+
+                  <optgroup class="country-select__select-item country-select__select-item--nojs" label="т">
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Таджикистан</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Тайланд</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Танзания</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Того</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Тонга</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Тринидад и Тобаго</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Тувалу</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Тунис</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Туркмения</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Турция</option>
+                  </optgroup>
+
+                  <optgroup class="country-select__select-item country-select__select-item--nojs" label="у">
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Уганда</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Узбекистан</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Украина</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Уругвай</option>
+                  </optgroup>
+
+                  <optgroup class="country-select__select-item country-select__select-item--nojs" label="ф">
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Фиджи</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Филиппины</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Финляндия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Франция</option>
+                  </optgroup>
+
+                  <optgroup class="country-select__select-item country-select__select-item--nojs" label="х">
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Хорватия</option>
                   </optgroup>
 
                   <optgroup class="country-select__select-item country-select__select-item--nojs" label="ч">
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Чад</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Черногория</option>
+
                     <option class="country-select__select-item country-select__select-item--nojs" value="cze">Чехия</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Чили</option>
+                  </optgroup>
+
+                  <optgroup class="country-select__select-item country-select__select-item--nojs" label="ш">
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Швейцария</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Швеция</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Шри-Ланка</option>
+                  </optgroup>
+
+                  <optgroup class="country-select__select-item country-select__select-item--nojs" label="э">
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Эквадор</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Эритрея</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Эсватини</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Эстония</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Эфиопия</option>
+                  </optgroup>
+
+                  <optgroup class="country-select__select-item country-select__select-item--nojs" label="ю">
+                    <option class="country-select__select-item country-select__select-item--nojs" value>ЮАР</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Южный Судан</option>
+                  </optgroup>
+
+                  <optgroup class="country-select__select-item country-select__select-item--nojs" label="я">
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Ямайка</option>
+
+                    <option class="country-select__select-item country-select__select-item--nojs" value>Япония</option>
                   </optgroup>
                 </select>
+              </div>
 
-                <button class="country-select__delete country-select__delete--active" type="button">
-                  <span class="visually-hidden">Удалить страну</span>
-                </button>
+              <button class="country-select__delete country-select__delete--active" type="button">
+                <span class="visually-hidden">Удалить страну</span>
+              </button>
 
-                <div class="country-select__popup">
-                  <ul class="country-select__letters">
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button country-select__letter-button--active" type="button">а</button>
-                    </li>
+              <div class="country-select__popup">
+                <ul class="country-select__letters">
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button country-select__letter-button--active" type="button">а</button>
+                  </li>
 
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button" type="button">б</button>
-                    </li>
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button" type="button">б</button>
+                  </li>
 
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button" type="button">в</button>
-                    </li>
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button" type="button">в</button>
+                  </li>
 
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button" type="button">г</button>
-                    </li>
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button" type="button">г</button>
+                  </li>
 
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button" type="button">д</button>
-                    </li>
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button" type="button">д</button>
+                  </li>
 
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button" type="button">е</button>
-                    </li>
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button" type="button">е</button>
+                  </li>
 
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button" type="button">з</button>
-                    </li>
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button" type="button">з</button>
+                  </li>
 
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button" type="button">и</button>
-                    </li>
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button" type="button">и</button>
+                  </li>
 
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button" type="button">к</button>
-                    </li>
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button" type="button">к</button>
+                  </li>
 
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button" type="button">л</button>
-                    </li>
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button" type="button">л</button>
+                  </li>
 
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button" type="button">м</button>
-                    </li>
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button" type="button">м</button>
+                  </li>
 
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button" type="button">н</button>
-                    </li>
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button" type="button">н</button>
+                  </li>
 
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button" type="button">о</button>
-                    </li>
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button" type="button">о</button>
+                  </li>
 
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button" type="button">п</button>
-                    </li>
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button" type="button">п</button>
+                  </li>
 
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button" type="button">р</button>
-                    </li>
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button" type="button">р</button>
+                  </li>
 
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button" type="button">с</button>
-                    </li>
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button" type="button">с</button>
+                  </li>
 
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button" type="button">т</button>
-                    </li>
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button" type="button">т</button>
+                  </li>
 
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button" type="button">у</button>
-                    </li>
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button" type="button">у</button>
+                  </li>
 
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button" type="button">ф</button>
-                    </li>
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button" type="button">ф</button>
+                  </li>
 
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button" type="button">х</button>
-                    </li>
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button" type="button">х</button>
+                  </li>
 
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button" type="button">ч</button>
-                    </li>
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button" type="button">ч</button>
+                  </li>
 
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button" type="button">ш</button>
-                    </li>
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button" type="button">ш</button>
+                  </li>
 
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button" type="button">э</button>
-                    </li>
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button" type="button">э</button>
+                  </li>
 
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button" type="button">ю</button>
-                    </li>
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button" type="button">ю</button>
+                  </li>
 
-                    <li class="country-select__letter">
-                      <button class="country-select__letter-button" type="button">я</button>
-                    </li>
-                  </ul>
+                  <li class="country-select__letter">
+                    <button class="country-select__letter-button" type="button">я</button>
+                  </li>
+                </ul>
 
-                  <ul class="country-select__countries">
-                    <li class="country-select__countries-list">
-                      <button class="country-select__country" type="button">Австралия</button>
+                <ul class="country-select__countries">
+                  <li class="country-select__countries-list">
+                    <button class="country-select__country" type="button">Австралия</button>
 
-                      <button class="country-select__country" type="button">Австрия</button>
+                    <button class="country-select__country" type="button">Австрия</button>
 
-                      <button class="country-select__country" type="button">Азербайджан</button>
+                    <button class="country-select__country" type="button">Азербайджан</button>
 
-                      <button class="country-select__country" type="button">Албания</button>
+                    <button class="country-select__country" type="button">Албания</button>
 
-                      <button class="country-select__country" type="button">Алжир</button>
+                    <button class="country-select__country" type="button">Алжир</button>
 
-                      <button class="country-select__country" type="button">Ангола</button>
+                    <button class="country-select__country" type="button">Ангола</button>
 
-                      <button class="country-select__country" type="button">Андорра</button>
+                    <button class="country-select__country" type="button">Андорра</button>
 
-                      <button class="country-select__country" type="button">Антигуа и Барбуда</button>
+                    <button class="country-select__country" type="button">Антигуа и Барбуда</button>
 
-                      <button class="country-select__country" type="button">Аргентина</button>
+                    <button class="country-select__country" type="button">Аргентина</button>
 
-                      <button class="country-select__country" type="button">Армения</button>
+                    <button class="country-select__country" type="button">Армения</button>
 
-                      <button class="country-select__country" type="button">Афганистан</button>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-            </ul>
-            <button class="add-plan__countries-add" type="button">Добавить страну</button>
-          </div>
+                    <button class="country-select__country" type="button">Афганистан</button>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="country-select add-plan__countries-item add-plan__countries-item--add">
+              <div class="country-select__inner add-plan__countries-add-inner">
+                <button class="add-plan__countries-add-button" type="button">Добавить страну</button>
+              </div>
+            </li>
+          </ul>
 
           <a class="add-plan__next-step" href="#add-plan-step-3">Следующий шаг</a>
           <a class="add-plan__prev-step" href="#add-plan-step-1">На шаг назад</a>
@@ -903,20 +1990,32 @@
         <li class="add-plan__step" id="add-plan-step-3">
           <h3 class="add-plan__step-title">Шаг 3.
             Развлечения</h3>
-          <p class="add-plan__step-intro">Наконец, расскажите о своих планах время провождения.
+          <p class="add-plan__step-intro">Наконец, расскажите о своих планах времяпровождения.
             Можно писать в свободной форме и ставить тэги.</p>
+
+          <ol class="add-plan__menu add-plan__menu--static">
+            <li class="add-plan__menu-item">
+              <span class="add-plan__menu-item-text">Даты</span>
+            </li>
+            <li class="add-plan__menu-item">
+              <span class="add-plan__menu-item-text">Маршрут</span>
+            </li>
+            <li class="add-plan__menu-item add-plan__menu-item--active">
+              <span class="add-plan__menu-item-text">Развлечения</span>
+            </li>
+          </ol>
 
           <ol class="add-plan__comments">
             <li class="add-plan__comment">
               <span class="add-plan__comment-route"></span>
               <label class="add-plan__comment-title">
-                <span class="add-plan__comment-country country country--md country--bih">Босния и Герцеговина Герцеговина</span>
+                <span class="add-plan__comment-country country country--bih">Босния и Герцеговина и Босния и Герцеговина и Босния и Герцеговина и Босния и Герцеговина</span>
                 <textarea class="add-plan__comment-text" name="comments" rows="10" placeholder="План действий"></textarea>
               </label>
             </li>
             <li class="add-plan__comment">
               <label class="add-plan__comment-title">
-                <span class="add-plan__comment-country country country--md country--cze">Чехия</span>
+                <span class="add-plan__comment-country country country--cze">Чехия</span>
                 <textarea class="add-plan__comment-text" name="comments" rows="10" placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
               </label>
             </li>
@@ -930,23 +2029,30 @@
   </form>
 </main>
 
-<footer class="page__layer-9 page-footer page__container">
-  <a class="page-footer__logo" href="index.html">
-    <img class="page-footer__logo-image" src="https://via.placeholder.com/96x15" width="96" height="15" alt="Логотип «Погнали?»">
+<footer class="page__layer-9 page-footer page__container page__inner">
+  <a class="logo page-footer__logo" href="index.html">
+    <picture>
+      <source srcset="img/logo-desktop-blue@1x.png" media="(min-width: 1440px)">
+      <source srcset="img/logo-tablet-blue@1x.png" media="(min-width: 768px) and (max-width: 1439px)">
+      <img class="logo__image page-footer__logo-image" src="img/logo-mobile-blue@1x.png" alt="Логотип «Погнали?»">
+    </picture>
   </a>
-  <ul class="page-footer__socials socials">
-    <li class="socials__item">
-      <a class="socials__link socials__link--inverse socials__link--fb" href="#">
+
+  <ul class="socials page-footer__socials">
+    <li class="socials__item page-footer__socials-item">
+      <a class="socials__link socials__link--fb page-footer__socials-link" href="#">
         <span class="visually-hidden">Facebook</span>
       </a>
     </li>
-    <li class="socials__item">
-      <a class="socials__link socials__link--inverse socials__link--vk" href="#">
+
+    <li class="socials__item page-footer__socials-item">
+      <a class="socials__link socials__link--vk page-footer__socials-link" href="#">
         <span class="visually-hidden">ВКонтакте</span>
       </a>
     </li>
-    <li class="socials__item">
-      <a class="socials__link socials__link--inverse socials__link--in" href="#">
+
+    <li class="socials__item page-footer__socials-item">
+      <a class="socials__link socials__link--in page-footer__socials-link" href="#">
         <span class="visually-hidden">Instagram</span>
       </a>
     </li>
@@ -954,7 +2060,7 @@
 
   <p class="page-footer__copyright">Разработано
     <a class="page-footer__academy-link" href="https://htmlacademy.ru/intensive/adaptive">
-      <img class="page-footer__academy-image" src="https://via.placeholder.com/27x34" width="27" height="34" alt="Логотип «HTML Academy»">
+      <img class="page-footer__academy-image" src="img/htmlacademy.svg" width="27" height="33" alt="Логотип «HTML Academy»">
     </a>
   </p>
 </footer>

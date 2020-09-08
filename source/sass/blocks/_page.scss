@@ -1,0 +1,117 @@
+.page {
+  box-sizing: border-box;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+
+  font: 300 16px/22px $font-family;
+
+  background-color: rgba($blue, 0.5); /* todo: replace with $light-grey*/
+}
+
+.page__container {
+  margin: 0 auto;
+  width: $width;
+
+  &--catalog {
+    background: $lightest-blue;
+  }
+
+  @include tablet() {
+    width: $width--tablet;
+  }
+
+  @include desktop() {
+    width: $width--desktop;
+  }
+}
+
+.page__inner {
+  padding: 0 $padding;
+
+  @include tablet() {
+    padding: 0 $padding--tablet;
+  }
+
+  @include desktop() {
+    padding: 0 $padding--desktop;
+  }
+}
+
+/* stylelint-disable */
+@for $z from 0 to 10 {
+  .page__layer-#{$z} {
+    position: relative;
+    z-index: $z;
+  }
+}
+
+/* stylelint-enable */
+
+.page__title {
+  padding: 16px 25px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  color: $white;
+  background-color: $darker-blue;
+
+  @include tablet-desktop() {
+    padding: 152px 74px 0;
+  }
+}
+
+.page__title-inner {
+  display: flex;
+  flex-flow: column;
+
+  font: 700 36px/36px $font-family;
+
+  @include tablet-desktop() {
+    font: 700 60px/60px $font-family;
+  }
+
+  &::before {
+    content: "";
+    order: 1;
+    width: 100%;
+    height: 4px;
+    margin-top: 12px;
+    margin-bottom: -2px;
+
+    border-radius: 2px;
+    background-color: $orange;
+
+    @include tablet-desktop() {
+      margin-top: 85px;
+      height: 8px;
+      margin-bottom: -4px;
+
+      border-radius: 4px;
+    }
+  }
+}
+
+.page__title-button {
+  display: none;
+  align-items: baseline;
+
+  font: 700 20px/20px $font-family;
+  text-transform: uppercase;
+
+  @include tablet-desktop() {
+    position: relative;
+    top: -8px;
+    display: flex;
+  }
+
+  &::before {
+    content: "";
+    order: 1;
+    width: 32px;
+    height: 16px;
+    margin-left: 28px;
+
+    background: url("../img/return.svg") no-repeat center center / 32px 16px;
+  }
+}

@@ -1,0 +1,58 @@
+.business__inner {
+  padding-top: 34px;
+  background: $white;
+  box-shadow: 0 2px 8px $modal-shadow;
+
+  @include tablet-desktop() {
+    padding-top: 54px;
+
+    box-shadow: 0 4px 22px $modal-shadow;
+  }
+
+  @include desktop() {
+    border-radius: 30px;
+  }
+}
+
+.business__title {
+  font: 700 24px/24px $font-family;
+  white-space: pre-line;
+  text-align: center;
+
+  color: $orange;
+
+  @include tablet-desktop() {
+    font: 700 45px/45px $font-family;
+    white-space: normal;
+    text-align: center;
+  }
+}
+
+.business__list {
+  font: 300 16px/22px $font-family;
+
+  color: $grey;
+
+  @include tablet-desktop() {
+    font: 300 22px/28px $font-family;
+  }
+}
+
+.business__close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 21px 25px 15px;
+
+  font: 700 16px/24px $font-family;
+  text-transform: uppercase;
+  background: $most-lightest-blue;
+
+  @include tablet-desktop() {
+    padding: 41px 40px 35px;
+
+    font: 700 24px/24px $font-family;
+    text-transform: none;
+  }
+}

@@ -1,0 +1,34 @@
+.plans {
+  padding: 28px 25px (30px + $radius);
+  background: $much-lighter-blue;
+
+  @include tablet-desktop() {
+    padding: 57px 75px (76px + $radius--tablet);
+  }
+
+  @include desktop() {
+    padding: 54px $padding--desktop (64px + $radius--desktop) 124px;
+  }
+}
+
+.plans__title {
+  font: 700 24px/24px $font-family;
+
+  color: $blue;
+
+  @include tablet-desktop() {
+    font: 700 36px/36px $font-family;
+  }
+
+  &::after {
+    content: ":";
+  }
+}
+
+.plans__list {
+  counter-reset: plan;
+}
+
+.plans__item {
+  counter-increment: plan;
+}

@@ -1,0 +1,123 @@
+.directions {
+  position: relative;
+  background-color: $lightest-blue;
+
+  @include tablet-desktop() {
+    padding: (73px + 54px) 76px 80px 75px;
+    background: url("../img/flags-back@1x.png") no-repeat calc(100% - 40px) #{54px + 80px} / 289px 575px;
+    background-color: $lightest-blue;
+  }
+
+  @include desktop() {
+    padding: (166px + 60px) 140px 138px (861px - 60px + $padding--desktop);
+  }
+
+  &::before {
+    @include tablet-desktop() {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 406px + 54px;
+      left: 40px;
+      width: 141px;
+      height: 141px;
+
+      border-radius: 20px;
+      background-color: $more-lighter-blue;
+    }
+
+    @include desktop() {
+      top: 90px + 60px;
+      left: $padding--desktop;
+    }
+  }
+}
+
+.directions__title {
+  font: 700 24px/24px $font-family;
+
+  color: $orange;
+
+  @include tablet-desktop() {
+    font: 700 45px/45px $font-family;
+  }
+}
+
+.directions__text {
+  font: 300 16px/22px $font-family;
+  white-space: pre-line;
+
+  color: $grey;
+
+  @include tablet-desktop() {
+    font: 300 28px/33px $font-family;
+  }
+}
+
+.directions__item {
+  border-radius: 10px;
+  background-color: $white;
+
+  @include tablet-desktop() {
+    overflow: hidden;
+
+    border-radius: 20px;
+  }
+}
+
+.directions__item-image {
+  width: 270px;
+  height: 110px;
+
+  border-radius: 10px;
+
+  @include tablet-desktop() {
+    width: 186px;
+    height: 140px;
+
+    border-radius: 0;
+  }
+}
+
+.directions__item-title {
+  font: 700 21px/21px $font-family;
+
+  color: $black;
+
+  @include tablet-desktop() {
+    font: 700 24px/24px $font-family;
+  }
+}
+
+.directions__item-slogan {
+  font: 500 16px/18px $font-family;
+
+  color: $grey;
+  opacity: 0.3;
+
+  @include tablet-desktop() {
+    font: 500 20px/20px $font-family;
+  }
+}
+
+.directions__item-counter {
+  font: 500 16px/20px $font-family;
+
+  color: $much-darker-blue;
+  opacity: 0.3;
+
+  @include tablet-desktop() {
+    font: 500 20px/20px $font-family;
+  }
+}
+
+.directions__more {
+  font: 700 18px/18px $font-family;
+
+  @include tablet-desktop() {
+    font: 700 24px/24px $font-family;
+
+    border-radius: 20px;
+    background-position: calc(100% - 32px) center;
+  }
+}

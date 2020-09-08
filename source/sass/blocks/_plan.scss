@@ -1,0 +1,79 @@
+.plan {
+  color: $blue;
+  background: $white;
+}
+
+.plan__title {
+  font: 700 16px/16px $font-family;
+
+  @include tablet-desktop() {
+    font: 700 24px/24px $font-family;
+
+    border-bottom: 1px solid rgba($much-light-blue, 0.3);
+  }
+
+  @include desktop() {
+    border: none;
+  }
+
+  &::before {
+    content: counter(plan) ".";
+
+    font: 500 16px/16px $font-family;
+
+    @include tablet-desktop() {
+      font: 500 20px/20px $font-family;
+    }
+  }
+}
+
+.plan__companion {
+  font: 500 14px/14px $font-family;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  @include tablet-desktop() {
+    font: 500 20px/20px $font-family;
+    letter-spacing: 0.1em;
+  }
+
+  @include desktop() {
+    letter-spacing: 0.09em;
+  }
+}
+
+.plan__period {
+  font: 500 14px/14px $font-family;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  @include tablet-desktop() {
+    font: 500 20px/20px $font-family;
+  }
+}
+
+.plan__edit {
+  font: 500 14px/14px $font-family;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: rgba($black, 0.3);
+
+  @include tablet-desktop() {
+    font: 500 20px/20px $font-family;
+    letter-spacing: 0.1em;
+  }
+
+  @include desktop() {
+    letter-spacing: 0.08em;
+  }
+
+  &:hover,
+  &:focus {
+    color: rgba($black, 0.6);
+  }
+
+  &:active {
+    color: rgba($black, 0.1);
+  }
+}

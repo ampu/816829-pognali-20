@@ -1,0 +1,123 @@
+.feedback {
+  padding-top: 72px + 25px;
+  padding-bottom: 25px;
+
+  text-align: center;
+  color: $white;
+  background-color: $more-dark-blue;
+
+  @include tablet() {
+    padding-top: 76px + 54px;
+    padding-bottom: 60px;
+  }
+
+  @include desktop() {
+    padding-top: 109px + 60px;
+    padding-bottom: 102px;
+  }
+}
+
+.feedback__question {
+  font: 700 24px/24px $font-family;
+
+  color: $orange;
+
+  @include tablet() {
+    font: 700 45px/45px $font-family;
+  }
+
+  @include desktop() {
+    font: 700 45px/45px $font-family;
+  }
+}
+
+.feedback__answer {
+  font: 300 16px/24px $font-family;
+  white-space: pre-line;
+
+  @include tablet() {
+    font: 300 28px/32px $font-family;
+    white-space: normal;
+  }
+
+  @include desktop() {
+    font: 300 28px/31px $font-family;
+    white-space: normal;
+  }
+}
+
+.feedback__signin {
+  text-decoration: underline;
+
+  color: $yellow;
+}
+
+.feedback__signin-input {
+  display: block;
+  width: 100%;
+  padding: 20px;
+  padding-right: 60px + 20px;
+
+  border: none;
+  border-radius: 10px;
+  font: 700 18px/18px $font-family;
+
+  @include tablet() {
+    padding: 28px 36px;
+
+    font: 700 24px/24px $font-family;
+
+    border-radius: 15px 0 0 15px;
+  }
+
+  @include desktop() {
+    padding: 28px 36px;
+
+    font: 700 24px/24px $font-family;
+
+    border-radius: 15px 0 0 15px;
+  }
+
+  &::placeholder {
+    opacity: 0.3;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.feedback__signin-submit {
+  @include tablet() {
+    border-radius: 0 15px 15px 0;
+    background-position: center center;
+  }
+
+  @include desktop() {
+    border-radius: 0 15px 15px 0;
+  }
+}
+
+.feedback__signin-submit-text {
+  @include mobile-tablet() {
+    @include visually-hidden();
+  }
+
+  @include desktop() {
+    font: 700 24px/24px $font-family;
+  }
+}
+
+.feedback__postscript {
+  font: 300 16px/22px $font-family;
+  white-space: pre-line;
+
+  @include tablet-desktop() {
+    font: 300 28px/30px $font-family;
+    white-space: normal;
+  }
+}
+
+.feedback__contacts {
+  color: $yellow;
+}

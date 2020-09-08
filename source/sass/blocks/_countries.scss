@@ -1,0 +1,13 @@
+.countries__list {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-right: -20px;
+  margin-bottom: -10px;
+}
+
+.countries__item {
+  margin-right: 20px;
+  margin-bottom: 10px;
+}

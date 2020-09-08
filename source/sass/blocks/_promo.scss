@@ -1,0 +1,167 @@
+.promo {
+  padding-top: 95px;
+  padding-bottom: 39px;
+
+  background: url("../img/traveller-illustration-mobile@1x.png") no-repeat calc(50% + 20px) 220px / 192px 255px, url("../img/globe-back-mobile@1x.jpg") no-repeat center top / 320px 569px;
+  background-color: $much-darker-blue;
+  color: $white;
+
+  @include tablet-desktop() {
+    padding-top: 162px;
+    padding-bottom: 96px;
+
+    background: url("../img/traveller-illustration-tablet@1x.png") no-repeat calc(50% + 20px) 404px / 372px 451px, url("../img/globe-back-tablet@1x.jpg") no-repeat center 382px / 1479px 612px;
+    background-color: $darker-blue;
+  }
+
+  @include desktop() {
+    padding-top: 209px;
+    padding-bottom: 123px;
+
+    background: url("../img/traveller-illustration-desktop@1x.png") no-repeat calc(50% + 20px) 110px / 431px 640px, url("../img/globe-back-desktop@1x.jpg") no-repeat center top / 1800px 750px;
+    background-color: $much-darker-blue;
+  }
+}
+
+.promo__slogan {
+  margin-bottom: 245px;
+
+  font: 700 36px/40px $font-family;
+  white-space: pre-line;
+  text-align: center;
+
+  @include tablet-desktop() {
+    font: 700 60px/70px $font-family;
+  }
+
+  @include desktop() {
+    text-align: left;
+  }
+}
+
+.promo__inner {
+  background: linear-gradient(transparent 20px, $much-darker-blue 20px);
+
+  @include desktop() {
+    display: none;
+  }
+}
+
+.promo__contacts {
+  @include tablet() {
+    display: none;
+  }
+}
+
+.promo__contacts-item {
+  @include ordered(promo__contacts-link);
+}
+
+.promo__contacts-link {
+  &--tel {
+    @include contacts__link--tel-xxs();
+  }
+
+  &--email {
+    @include contacts__link--email-xxs();
+  }
+}
+
+.promo__contacts-text {
+  @include visually-hidden();
+}
+
+.promo__user-nav {
+  @include tablet() {
+    display: none;
+  }
+}
+
+.promo__user-nav-link {
+  min-height: 40px;
+
+  border-radius: 20px;
+}
+
+.promo__review {
+  background-color: $much-darker-blue;
+
+  @include tablet() {
+    background: none;
+  }
+
+  @include desktop() {
+    background: none;
+  }
+}
+
+.promo__review-author {
+  font: 700 16px/22px $font-family;
+  white-space: pre-line;
+
+  @include tablet-desktop() {
+    font: 700 21px/25px $font-family;
+  }
+
+  @include desktop() {
+    font: 700 21px/24px $font-family;
+  }
+}
+
+.promo__review-text {
+  font: 300 16px/22px $font-family;
+  white-space: pre-line;
+
+  @include tablet-desktop() {
+    font: 300 28px/33px $font-family;
+  }
+
+  @include desktop() {
+    font: 300 28px/32px $font-family;
+  }
+}
+
+.promo__actions {
+  counter-reset: promo-action;
+
+  color: $much-darker-blue;
+}
+
+.promo__action {
+  counter-increment: promo-action;
+
+  font: 700 18px/18px $font-family;
+  white-space: pre-line;
+
+  border-radius: 10px;
+  background-color: $yellow;
+
+  &:nth-of-type(1) {
+    background-color: $orange;
+  }
+
+  &:nth-of-type(2) {
+    background-color: $light-orange;
+  }
+
+  &:nth-of-type(3) {
+    background-color: $dark-yellow;
+  }
+
+  @include tablet() {
+    font: 700 24px/24px $font-family;
+
+    border-radius: 20px;
+  }
+
+  @include desktop() {
+    font: 700 24px/24px $font-family;
+
+    border-radius: 20px;
+  }
+
+  &::after {
+    content: counter(promo-action);
+    color: $white;
+  }
+}

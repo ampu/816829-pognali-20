@@ -1,0 +1,148 @@
+.office__inner {
+  padding-top: 31px + 25px;
+  padding-bottom: 35px;
+  color: $blue;
+  background-color: $yellow;
+
+  @include tablet() {
+    padding-top: 70px + 54px;
+    padding-bottom: 84px;
+    padding-left: $padding--tablet + 35px;
+    padding-right: $padding--tablet + 35px;
+  }
+
+  @include desktop() {
+    padding-top: 55px + 54px;
+    padding-bottom: 56px;
+  }
+}
+
+.office__address {
+  font: 700 16px/22px $font-family;
+  text-transform: uppercase;
+  white-space: pre-line;
+
+  @include tablet-desktop() {
+    font: 700 28px/28px $font-family;
+    white-space: normal;
+  }
+
+  &::before {
+    content: "";
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+    background: $much-more-darker-blue url("../img/contacts-location.svg") no-repeat center center;
+    background-size: 21px 21px;
+
+    @include tablet() {
+      width: 68px;
+      height: 68px;
+
+      background-size: 32px 32px;
+    }
+
+    @include desktop() {
+      width: 90px;
+      height: 90px;
+
+      background-size: 42px 42px;
+    }
+  }
+}
+
+.office__map-button {
+  font: 700 18px/18px $font-family;
+
+  @include tablet() {
+    font: 700 24px/24px $font-family;
+  }
+
+  @include desktop() {
+    font: 700 24px/24px $font-family;
+  }
+}
+
+.office__map-link {
+  position: relative;
+  z-index: -1;
+  display: block;
+}
+
+.office__map {
+  position: relative;
+}
+
+.office__map-image {
+  display: block;
+  width: 320px;
+  height: 424px;
+
+  @include tablet() {
+    width: 768px;
+    height: 581px;
+  }
+
+  @include desktop() {
+    width: 1440px;
+    height: 584px;
+  }
+}
+
+.office__map-marker {
+  content: "";
+  position: absolute;
+  top: 158px;
+  left: calc(50% - 40px / 2);
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+  background: $black url("../img/map-marker.svg") no-repeat center center;
+  background-size: 40px 40px;
+
+  @include tablet() {
+    top: 234px;
+    left: calc(50% - 54px / 2);
+    width: 54px;
+    height: 54px;
+
+    background-size: 54px 54px;
+  }
+
+  @include desktop() {
+    top: 267px;
+    left: calc(50% - 54px / 2);
+    width: 54px;
+    height: 54px;
+
+    background-size: 54px 54px;
+  }
+}
+
+.office__map-frame {
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: block;
+  margin: auto;
+
+  border: none;
+
+  width: 320px;
+  height: 424px;
+
+  @include tablet() {
+    width: 768px;
+    height: 581px;
+  }
+
+  @include desktop() {
+    width: 1440px;
+    height: 584px;
+  }
+}

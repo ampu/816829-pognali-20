@@ -1,0 +1,211 @@
+.user-actions {
+  position: relative;
+  color: $blue;
+  background: $white;
+
+  @include tablet-desktop() {
+    width: 100%;
+  }
+}
+
+.user-actions__label {
+  font: 400 15px/16px $font-family;
+  text-transform: lowercase;
+  white-space: nowrap;
+
+  border: none;
+  color: $grey;
+  background-color: $white;
+
+  &::after {
+    content: ":";
+  }
+}
+
+.user-actions__name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include desktop() {
+    justify-content: flex-start;
+  }
+}
+
+.user-actions__title {
+  display: block;
+
+  font: 700 21px/21px $font-family;
+
+  @include tablet-desktop() {
+    font: 700 30px/30px $font-family;
+    white-space: normal;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.user-actions__status {
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 6px;
+  margin-top: -3px;
+
+  &--offline {
+    background: $red;
+  }
+
+  &--online {
+    background: $green;
+  }
+}
+
+.user-actions__countries-title {
+  @include visually-hidden();
+}
+
+.user-actions__tags {
+  font: 400 15px/18px $font-family;
+
+  @include tablet-desktop() {
+    max-width: 220px;
+
+    font: 400 20px/23px $font-family;
+  }
+}
+
+.user-actions__transports-title {
+  @include tablet-desktop() {
+    display: none;
+  }
+}
+
+.user-actions__transports-legend {
+  background-color: $lightest-blue;
+
+  @include tablet-desktop() {
+    font: 500 20px/20px $font-family;
+  }
+}
+
+.user-actions__level {
+  @include tablet-desktop() {
+    align-self: center;
+    border-top: none;
+  }
+}
+
+.user-actions__level-title {
+  @include tablet-desktop() {
+    display: none;
+  }
+}
+
+.user-actions__avatar {
+  @include desktop() {
+    width: 285px;
+  }
+}
+
+.user-actions__avatar-image {
+  width: 70px;
+  height: 70px;
+
+  border-radius: 50%;
+
+  @include tablet-desktop() {
+    width: 190px;
+    height: 190px;
+
+    border-radius: 20px;
+  }
+
+  @include desktop() {
+    width: 285px;
+    height: 285px;
+
+    border-radius: 20px 0 0 20px;
+  }
+}
+
+.user-actions__invite {
+  display: block;
+
+  font: 700 17px/17px $font-family;
+  text-transform: uppercase;
+  text-align: center;
+
+  border-radius: 25px;
+  background-color: $yellow;
+
+  @include tablet-desktop() {
+    font: 700 20px/20px $font-family;
+  }
+}
+
+.user-actions__like-counter {
+  font: 700 14px/16px $font-family;
+  white-space: nowrap;
+
+  color: $much-darker-blue;
+
+  @include tablet-desktop() {
+    font: 700 20px/20px $font-family;
+  }
+}
+
+.user-actions__like-action {
+  display: flex;
+}
+
+.user-actions__like-submit {
+  font: inherit;
+
+  border-radius: 50%;
+}
+
+.user-actions__like-text {
+  display: none;
+  width: 30px;
+  height: 30px;
+
+  border-radius: 15px;
+
+  @include tablet-desktop() {
+    width: 50px;
+    height: 50px;
+
+    border-radius: 25px;
+  }
+
+  &--active {
+    display: block;
+  }
+
+  &--like {
+    background: $much-light-blue url("../img/heart.svg") no-repeat center center;
+    background-size: 13px 11px;
+
+    @include tablet-desktop() {
+      background-size: 20px 17px;
+      background-color: $lightest-blue;
+    }
+  }
+
+  &--dislike {
+    background: $light-red url("../img/heart-active.svg") no-repeat center center;
+    background-size: 13px 11px;
+
+    @include tablet-desktop() {
+      background-size: 20px 17px;
+    }
+  }
+}
