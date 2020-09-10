@@ -1,7 +1,13 @@
 .travellers {
+  @include adaptive-overlap();
+  @include adaptive-border-radius();
+
   position: relative;
+  display: flex;
+  flex-flow: column;
   padding-top: 102px;
   padding-bottom: 31px;
+
   color: $white;
   background: $more-dark-blue url("../img/travellers-back-mobile@1x.png") no-repeat calc(100% - 25px) #{34px + 25px} / 295px 344px;
 
@@ -10,6 +16,7 @@
     padding-bottom: 87px;
     padding-left: 76px;
     padding-right: 76px;
+
     background: $more-dark-blue url("../img/travellers-back-tablet@1x.png") no-repeat calc(100% - 74px) #{71px + 54px} / 654px 498px;
   }
 
@@ -19,34 +26,76 @@
     padding-left: 129px - 60px + $padding--desktop;
     padding-right: 750px - 60px + $padding--desktop;
     min-height: 130px + 60px + 134px + 285px;
+
     background: $more-dark-blue url("../img/travellers-back-desktop@1x.png") no-repeat #{60px - $padding--desktop} #{70px + 60px} / 630px 601px;
   }
 }
 
 .travellers__title {
+  padding: 0 25px;
+  margin-bottom: 19px;
+
   font: 700 24px/24px $font-family;
 
   color: $orange;
 
   @include tablet-desktop() {
+    padding: 0;
+    margin-bottom: 55px;
+
     font: 700 45px/45px $font-family;
   }
 }
 
 .travellers__text {
+  padding: 0 25px;
+  margin-bottom: 25px;
+
   font: 300 16px/22px $font-family;
 
   @include tablet-desktop() {
+    padding: 0;
+    margin-bottom: 39px;
+    width: 427px;
+
     font: 300 28px/34px $font-family;
   }
 }
 
 .travellers__note {
+  padding: 0 25px;
+  margin-bottom: 54px;
+
   font: 700 16px/22px $font-family;
 
   @include tablet-desktop() {
+    padding: 0;
+    width: 260px;
+
     font: 700 21px/24px $font-family;
   }
+}
+
+.travellers__list {
+  display: flex;
+  flex-flow: wrap;
+  margin-bottom: 20px;
+  margin-left: -46px;
+
+  @include tablet-desktop() {
+    margin-bottom: 81px - 9px;
+  }
+
+  @include desktop() {
+    position: absolute;
+    top: 134px + 60px;
+    right: $padding--desktop;
+  }
+}
+
+.travellers__item {
+  margin-bottom: 9px;
+  margin-left: 46px;
 }
 
 .travellers__more {
@@ -56,5 +105,9 @@
 
   @include tablet-desktop() {
     font: 700 24px/24px $font-family;
+  }
+
+  @include desktop() {
+    width: 280px;
   }
 }

@@ -1,11 +1,16 @@
 .directions {
+  @include adaptive-overlap();
+  @include adaptive-border-radius();
+
   position: relative;
+  padding: 71px 25px 34px;
+
   background-color: $lightest-blue;
 
   @include tablet-desktop() {
     padding: (73px + 54px) 76px 80px 75px;
-    background: url("../img/flags-back@1x.png") no-repeat calc(100% - 40px) #{54px + 80px} / 289px 575px;
-    background-color: $lightest-blue;
+
+    background: url("../img/flags-back@1x.png") no-repeat calc(100% - 40px) #{54px + 80px} / 289px 575px, $lightest-blue;
   }
 
   @include desktop() {
@@ -34,44 +39,104 @@
 }
 
 .directions__title {
+  margin-bottom: 17px;
+  padding-left: 25px;
+
   font: 700 24px/24px $font-family;
 
   color: $orange;
 
   @include tablet-desktop() {
+    margin-bottom: 57px;
+    padding-left: 0;
+
     font: 700 45px/45px $font-family;
   }
 }
 
 .directions__text {
+  margin-bottom: 60px;
+  padding-left: 25px;
+
   font: 300 16px/22px $font-family;
   white-space: pre-line;
 
   color: $grey;
 
   @include tablet-desktop() {
+    margin-bottom: 104px;
+    padding-left: 0;
+
     font: 300 28px/33px $font-family;
   }
 }
 
+.directions__list {
+  margin-bottom: 27px;
+  padding-top: 1px;
+
+  @include tablet() {
+    margin-bottom: 44px;
+  }
+
+  @include desktop() {
+    position: absolute;
+    left: $padding--desktop + 71px;
+    top: 161px + 60px;
+    width: 559px;
+  }
+}
+
 .directions__item {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  margin-top: 110px;
+  margin-bottom: 11px;
+  padding: 25px 24px;
+
   border-radius: 10px;
   background-color: $white;
 
   @include tablet-desktop() {
+    margin-top: 0;
+    padding: 30px 29px 20px;
     overflow: hidden;
 
     border-radius: 20px;
   }
+
+  &:last-of-type {
+    &::after {
+      @include tablet-desktop() {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 94px;
+
+        background: url("../img/directions-fade-tablet@1x.png") repeat-x center bottom;
+      }
+    }
+  }
 }
 
 .directions__item-image {
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: -100px;
   width: 270px;
   height: 110px;
 
   border-radius: 10px;
 
   @include tablet-desktop() {
+    z-index: 0;
+    left: unset;
+    right: 0;
+    top: 0;
     width: 186px;
     height: 140px;
 
@@ -80,12 +145,38 @@
 }
 
 .directions__item-title {
+  @include country--md();
+
+  margin-top: -39px;
+  margin-bottom: 2px;
+  max-width: 60%;
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+
   font: 700 21px/21px $font-family;
 
   color: $black;
 
   @include tablet-desktop() {
+    @include country--lg();
+
+    max-width: unset;
+    margin-bottom: 5px;
+    margin-top: 0;
+
     font: 700 24px/24px $font-family;
+  }
+
+  &::before {
+    margin-bottom: 15px;
+
+    @include tablet-desktop() {
+      position: absolute;
+      z-index: 1;
+      top: -12px;
+      right: 150px - 29px;
+    }
   }
 }
 
@@ -96,18 +187,44 @@
   opacity: 0.3;
 
   @include tablet-desktop() {
+    margin-bottom: 17px;
+
     font: 500 20px/20px $font-family;
   }
 }
 
 .directions__item-counter {
+  position: absolute;
+  top: 28px;
+  right: 24px;
+  display: flex;
+
   font: 500 16px/20px $font-family;
 
   color: $much-darker-blue;
   opacity: 0.3;
 
   @include tablet-desktop() {
+    position: static;
     font: 500 20px/20px $font-family;
+  }
+
+  &::before {
+    content: "";
+    width: 14px;
+    height: 14px;
+    margin-right: 5px;
+
+    background: url("../img/user.svg") no-repeat left top;
+    background-size: 11px 12px;
+
+    @include tablet-desktop() {
+      width: 18px;
+      height: 20px;
+      margin-right: 11px;
+
+      background-size: 18px 20px;
+    }
   }
 }
 
@@ -115,9 +232,16 @@
   font: 700 18px/18px $font-family;
 
   @include tablet-desktop() {
+    padding: 0 10px;
+    min-height: 82px;
+
     font: 700 24px/24px $font-family;
 
     border-radius: 20px;
     background-position: calc(100% - 32px) center;
+  }
+
+  @include desktop() {
+    width: 275px;
   }
 }

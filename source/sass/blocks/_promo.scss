@@ -1,5 +1,5 @@
 .promo {
-  padding-top: 95px;
+  padding-top: #{21px + 73px};
   padding-bottom: 39px;
 
   background: url("../img/traveller-illustration-mobile@1x.png") no-repeat calc(50% + 20px) 220px / 192px 255px, url("../img/globe-back-mobile@1x.jpg") no-repeat center top / 320px 569px;
@@ -7,10 +7,10 @@
   color: $white;
 
   @include tablet-desktop() {
-    padding-top: 162px;
+    padding-top: #{30px + 132px};
     padding-bottom: 96px;
 
-    background: url("../img/traveller-illustration-tablet@1x.png") no-repeat calc(50% + 20px) 404px / 372px 451px, url("../img/globe-back-tablet@1x.jpg") no-repeat center 382px / 1479px 612px;
+    background: url("../img/traveller-illustration-tablet@1x.png") no-repeat calc(50% + 87px) 404px / 372px 451px, url("../img/globe-back-tablet@1x.jpg") no-repeat center 382px / 1479px 612px;
     background-color: $darker-blue;
   }
 
@@ -18,8 +18,21 @@
     padding-top: 209px;
     padding-bottom: 123px;
 
-    background: url("../img/traveller-illustration-desktop@1x.png") no-repeat calc(50% + 20px) 110px / 431px 640px, url("../img/globe-back-desktop@1x.jpg") no-repeat center top / 1800px 750px;
+    background: url("../img/traveller-illustration-desktop@1x.png") no-repeat calc(50% + 123px) 110px / 431px 640px, url("../img/globe-back-desktop@1x.jpg") no-repeat center top / 1800px 750px;
     background-color: $much-darker-blue;
+  }
+}
+
+.promo__inner {
+  @include page__container();
+  @include page__inner();
+
+  display: flex;
+  flex-flow: column;
+
+  @include desktop() {
+    flex-flow: wrap;
+    justify-content: space-between;
   }
 }
 
@@ -31,30 +44,34 @@
   text-align: center;
 
   @include tablet-desktop() {
+    margin-bottom: 86px;
+
     font: 700 60px/70px $font-family;
   }
 
   @include desktop() {
+    padding-left: 67px;
+    margin-bottom: 101px;
+
     text-align: left;
   }
 }
 
-.promo__inner {
+.promo__contacts-wrapper {
+  position: relative;
+  top: 20px;
+  display: flex;
+  flex-flow: wrap;
   background: linear-gradient(transparent 20px, $much-darker-blue 20px);
 
-  @include desktop() {
-    display: none;
-  }
-}
-
-.promo__contacts {
-  @include tablet() {
+  @include tablet-desktop() {
+    position: static;
     display: none;
   }
 }
 
 .promo__contacts-item {
-  @include ordered(promo__contacts-link);
+  @include list(promo__contacts-link);
 }
 
 .promo__contacts-link {
@@ -72,9 +89,7 @@
 }
 
 .promo__user-nav {
-  @include tablet() {
-    display: none;
-  }
+  flex-grow: 1;
 }
 
 .promo__user-nav-link {
@@ -84,13 +99,29 @@
 }
 
 .promo__review {
+  @include page__outer();
+
+  margin-bottom: 29px;
+  padding-top: 48px;
+  padding-left: 50px;
+  padding-right: 25px;
+  display: flex;
+  flex-flow: column;
+
   background-color: $much-darker-blue;
 
   @include tablet() {
+    margin-bottom: 211px;
+    padding: 0;
+    padding-left: 73px;
+
     background: none;
   }
 
   @include desktop() {
+    margin-bottom: 116px;
+    padding: 0;
+
     background: none;
   }
 }
@@ -109,10 +140,15 @@
 }
 
 .promo__review-text {
+  order: -1;
+  margin-bottom: 18px;
+
   font: 300 16px/22px $font-family;
   white-space: pre-line;
 
   @include tablet-desktop() {
+    margin-bottom: 45px;
+
     font: 300 28px/33px $font-family;
   }
 
@@ -122,13 +158,22 @@
 }
 
 .promo__actions {
+  width: 100%;
   counter-reset: promo-action;
+  display: flex;
+  flex-flow: wrap;
+  align-items: stretch;
 
   color: $much-darker-blue;
 }
 
 .promo__action {
   counter-increment: promo-action;
+  padding: 22px 21px (24px + 20px) 24px;
+  margin-bottom: -20px;
+  flex: 0 0 100%;
+  display: flex;
+  justify-content: space-between;
 
   font: 700 18px/18px $font-family;
   white-space: pre-line;
@@ -140,28 +185,123 @@
     background-color: $orange;
   }
 
-  &:nth-of-type(2) {
+  &:nth-of-type(3n+2) {
     background-color: $light-orange;
   }
 
-  &:nth-of-type(3) {
+  &:nth-of-type(3n+3) {
     background-color: $dark-yellow;
   }
 
-  @include tablet() {
+  &:nth-last-of-type(1) {
+    padding-bottom: 24px;
+    margin-bottom: 0;
+  }
+
+  @include tablet-desktop() {
+    flex-flow: column;
+    justify-content: flex-start;
+
     font: 700 24px/24px $font-family;
 
-    border-radius: 20px;
+    &:nth-of-type(n) {
+      flex-basis: 50%;
+      padding: 31px #{20px + 33px} #{20px + 22px} 33px;
+      margin-bottom: -20px;
+      margin-right: -20px;
+
+      border-radius: 20px;
+    }
+
+    &:nth-last-of-type(1),
+    &:nth-last-of-type(2) {
+      margin-bottom: 0;
+      padding-bottom: 22px;
+    }
+
+    &:nth-of-type(2n+1) {
+      flex-basis: calc(50% + 20px);
+
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    &:nth-of-type(n+3) {
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+    }
+
+    &:nth-of-type(1):last-of-type {
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+
+    &:nth-of-type(2n+1):last-of-type {
+      border-bottom-right-radius: 20px;
+    }
   }
 
   @include desktop() {
-    font: 700 24px/24px $font-family;
+    flex-flow: row;
+    justify-content: space-between;
 
-    border-radius: 20px;
+    &:nth-of-type(n) {
+      flex-basis: 25%;
+      padding: 29px #{20px + 32px} #{20px + 31px} 31px;
+      margin-bottom: -20px;
+      margin-right: -20px;
+
+      border-radius: 20px;
+    }
+
+    &:nth-last-of-type(1),
+    &:nth-last-of-type(2),
+    &:nth-last-of-type(3),
+    &:nth-last-of-type(4) {
+      margin-bottom: 0;
+      padding-bottom: 31px;
+    }
+
+    &:nth-of-type(4n+1),
+    &:nth-of-type(4n+2),
+    &:nth-of-type(4n+3) {
+      flex-basis: calc(25% + 20px);
+
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    &:nth-of-type(4n+4) {
+      padding-right: 32px;
+    }
+
+    &:nth-of-type(n+5) {
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+    }
+
+    &:nth-of-type(1):last-of-type,
+    &:nth-of-type(2):last-of-type,
+    &:nth-of-type(3):last-of-type {
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+
+    &:nth-of-type(4n+1):last-of-type,
+    &:nth-of-type(4n+2):last-of-type,
+    &:nth-of-type(4n+3):last-of-type {
+      border-bottom-right-radius: 20px;
+    }
   }
 
   &::after {
     content: counter(promo-action);
     color: $white;
+    margin-left: 24px;
+
+    @include tablet() {
+      margin-left: 0;
+      padding-top: 10px;
+    }
   }
 }

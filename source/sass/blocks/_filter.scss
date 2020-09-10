@@ -1,13 +1,22 @@
 .filter {
+  margin-bottom: 28px;
   padding: 26px 25px 20px;
+  border-radius: 20px;
   background: $yellow;
 
   @include tablet() {
+    margin-bottom: 40px;
     padding: 37px 35px;
+  }
+
+  @include desktop() {
+    min-width: 285px;
   }
 }
 
 .filter__slogan {
+  margin-bottom: 23px;
+
   font: 700 22px/22px $font-family;
   letter-spacing: 0.02em;
   white-space: pre-line;
@@ -15,6 +24,8 @@
   color: $blue;
 
   @include tablet() {
+    margin-bottom: 38px;
+
     font: 700 30px/30px $font-family;
     letter-spacing: 0;
     white-space: normal;
@@ -27,6 +38,9 @@
 
 .filter__legend {
   display: block;
+  width: 100%;
+  padding-top: 12px;
+  margin-bottom: 15px;
 
   font: 700 16px/18px $font-family;
   text-transform: uppercase;
@@ -35,6 +49,13 @@
   color: $blue;
 
   @include tablet() {
+    padding-top: 0;
+    margin-bottom: 0;
+    width: 126px;
+    height: 100%;
+    padding-right: 10px;
+    float: left;
+
     font: 500 20px/20px $font-family;
 
     border: none;
@@ -42,6 +63,9 @@
 }
 
 .filter__fieldset-toggle {
+  position: absolute;
+  right: 0;
+  margin-top: -36px;
   width: 18px;
   height: 18px;
 
@@ -63,16 +87,36 @@
 }
 
 .filter__fieldset-inner {
+  display: none;
+  flex-flow: column;
+  margin-bottom: 21px;
+
   font: 400 15px/20px $font-family;
 
   color: $black;
 
   @include tablet() {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: wrap;
+
     font: 400 20px/20px $font-family;
+  }
+
+  &--horizontal {
+    flex-flow: row wrap;
+    justify-content: flex-start;
+  }
+
+  &--active {
+    display: flex;
   }
 }
 
 .filter__label {
+  margin-bottom: 12px;
+
   @include tablet() {
     width: 33%;
   }
@@ -105,9 +149,47 @@
   }
 }
 
+.filter__range-numbers {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: wrap;
+  margin-bottom: 20px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: 16px;
+    height: 10px;
+
+    background-color: $white;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: 16px;
+    height: 1px;
+
+    background-color: $much-light-blue;
+  }
+}
+
+.filter__range-label {
+  width: 50%;
+
+  @include tablet() {
+    width: (146px / 2);
+  }
+}
+
 .filter__range-number {
   display: block;
   width: 100%;
+  padding: 13px 8px;
 
   font: 500 13px/14px $font-family;
   letter-spacing: 0.06em;
@@ -134,6 +216,15 @@
   &::-webkit-inner-spin-button,
   &::-webkit-outer-spin-button {
     display: none;
+  }
+}
+
+.filter__range-slider {
+  margin-bottom: 21px;
+
+  @include tablet() {
+    order: -1;
+    width: 284px;
   }
 }
 

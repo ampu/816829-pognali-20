@@ -1,9 +1,13 @@
 .rates {
+  @include adaptive-overlap();
+  @include adaptive-border-radius();
+
   position: relative;
   background: $lightest-blue;
 }
 
 .rates__inner {
+  position: relative;
   padding-top: 25px + 53px;
   padding-bottom: 38px;
   padding-left: 25px;
@@ -25,22 +29,46 @@
 }
 
 .rates__title {
+  margin-bottom: 44px;
+
   font: 700 24px/24px $font-family;
   white-space: pre-line;
 
   color: $orange;
 
   @include tablet-desktop() {
+    margin-bottom: 74px;
+
     font: 700 45px/45px $font-family;
     white-space: normal;
     text-align: center;
   }
+
+  @include desktop() {
+    margin-bottom: 134px;
+  }
 }
 
 .rates__fund {
-  display: table;
+  position: absolute;
+  z-index: 1;
+  top: 37px + 25px;
+  right: 0;
+  display: flex;
+  align-items: center;
 
   border-radius: 50px;
+
+  @include tablet() {
+    top: unset;
+    bottom: 45px;
+    right: 45px;
+  }
+
+  @include desktop() {
+    top: 287px + 60px;
+    right: 133px - $padding--desktop;
+  }
 
   &::before {
     content: "";
@@ -62,12 +90,15 @@
 
 .rates__list {
   counter-reset: rate;
+  margin-bottom: -32px + 46px;
 
   font: 300 16px/22px $font-family;
 
   color: $grey;
 
   @include tablet-desktop() {
+    margin-bottom: 30px;
+
     font: 300 28px/28px $font-family;
   }
 }
@@ -75,25 +106,33 @@
 .rates__item {
   counter-increment: rate;
   position: relative;
+  margin-bottom: 32px;
   min-height: 68px;
 
   color: $grey;
 
   &::before {
     content: counter(rate);
+    position: absolute;
+    top: 0;
+    right: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 34px;
     min-height: 34px;
+    padding-top: 3px;
 
     border-radius: 50%;
     color: $white;
     background-color: $yellow;
 
     @include tablet-desktop() {
+      position: static;
       width: 68px;
       height: 68px;
+      margin-right: 22px;
+      margin-bottom: 1px;
     }
   }
 
@@ -108,10 +147,32 @@
       background-color: $dark-yellow;
     }
   }
+
+  @include tablet-desktop() {
+    display: flex;
+    margin-bottom: -1px;
+  }
+}
+
+.rates__item-title {
+  @include tablet-desktop() {
+    flex: 1;
+    display: flex;
+    align-items: center;
+
+    border-top: 1px solid $much-more-lighter-grey;
+    border-bottom: 1px solid $much-more-lighter-grey;
+  }
 }
 
 .rates__item-value {
   @include tablet-desktop() {
+    width: 198px;
+    padding: 0 34px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
     background-color: $more-lighter-blue;
   }
 
@@ -119,9 +180,28 @@
     width: 446px;
     padding: 0 155px;
   }
+
+  &--first {
+    margin-top: -43px;
+    padding-top: 43px;
+
+    border-radius: 20px 20px 0 0;
+  }
+
+  &--last {
+    margin-bottom: -43px;
+    padding-bottom: 43px;
+
+    border-radius: 0 0 20px 20px;
+  }
 }
 
 .rates__business {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+
   font: 700 16px/16px $font-family;
 
   color: $dark-blue;
@@ -133,6 +213,7 @@
       content: "";
       width: 68px;
       height: 68px;
+      margin-right: 21px;
 
       border-radius: 50%;
       background: $more-lighter-blue url("../img/business.svg") no-repeat center center;

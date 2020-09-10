@@ -1,4 +1,8 @@
 .plans {
+  @include page__container();
+  @include adaptive-overlap();
+  @include adaptive-border-radius(top);
+
   padding: 28px 25px (30px + $radius);
   background: $much-lighter-blue;
 
@@ -12,12 +16,20 @@
 }
 
 .plans__title {
+  margin-bottom: 29px;
+
   font: 700 24px/24px $font-family;
 
   color: $blue;
 
   @include tablet-desktop() {
+    margin-bottom: 48px;
+
     font: 700 36px/36px $font-family;
+  }
+
+  @include desktop() {
+    margin-bottom: 54px;
   }
 
   &::after {
@@ -27,8 +39,26 @@
 
 .plans__list {
   counter-reset: plan;
+  margin-bottom: -10px;
+
+  @include tablet-desktop() {
+    margin-bottom: -11px;
+  }
+
+  @include desktop() {
+    margin-bottom: -15px;
+  }
 }
 
 .plans__item {
   counter-increment: plan;
+  margin-bottom: 10px;
+
+  @include tablet-desktop() {
+    margin-bottom: 11px;
+  }
+
+  @include desktop() {
+    margin-bottom: 15px;
+  }
 }

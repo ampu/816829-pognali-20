@@ -1,14 +1,106 @@
 .user-actions {
   position: relative;
+  width: 270px;
+  padding: 15px 20px 22px;
+  display: grid;
+  justify-content: start;
+  align-content: start;
+  align-items: start;
+  grid-column-gap: 16px;
+
+  grid-template-columns: auto 1fr auto;
+
+  grid-template-rows:
+    auto
+    auto
+    13px
+    auto
+    16px
+    auto
+    18px
+    auto
+    13px;
+
+  grid-template-areas:
+    "avatar name name"
+    "avatar like-counter like-action"
+    ". . ."
+    "tags tags ."
+    ". . ."
+    "countries countries countries"
+    ". . ."
+    "transports transports level"
+    ". . ."
+    ". . ."
+    "invite invite invite";
+  border-radius: 20px;
   color: $blue;
   background: $white;
 
   @include tablet-desktop() {
-    width: 100%;
+    width: auto;
+    padding: 35px 25px 25px 35px;
+    justify-content: start;
+    grid-gap: 0;
+
+    grid-template-columns: auto 29px auto auto auto 1fr auto;
+
+    grid-template-rows:
+      auto 19px
+      auto 46px
+      auto 22px
+      auto;
+
+    grid-template-areas:
+      "avatar . name name name . transports"
+      "avatar . . . . . transports"
+      "avatar . tags tags tags . transports"
+      "avatar . . . . . transports"
+      "avatar . invite like-action like-counter . level"
+      ". . . . . . ."
+      "countries countries countries countries countries countries countries";
+  }
+
+  @include desktop() {
+    padding: 0;
+    align-items: center;
+    grid-template-columns: auto 62px min-content min-content 114px 13px auto 13px min-content;
+
+    grid-template-rows:
+      46px
+      min-content 20px
+      min-content 40px
+      min-content 46px;
+
+    grid-template-areas:
+      "avatar . . . . . . . ."
+      "avatar . name name name . countries countries countries"
+      "avatar . . . . . countries countries countries"
+      "avatar . tags tags tags . countries countries countries"
+      "avatar . . . . . . . ."
+      "avatar . invite like-action like-counter . transports . level"
+      "avatar . . . . . . . .";
+  }
+}
+
+.user-actions__section {
+  position: relative;
+  margin: 0 -20px;
+  padding: 8px 20px 0;
+  border-top: 1px solid $much-lighter-blue;
+
+  @include tablet-desktop() {
+    border: none;
+    padding: 0;
+    margin: 0;
   }
 }
 
 .user-actions__label {
+  position: absolute;
+  top: -8px;
+  padding: 0 10px;
+
   font: 400 15px/16px $font-family;
   text-transform: lowercase;
   white-space: nowrap;
@@ -23,9 +115,12 @@
 }
 
 .user-actions__name {
+  grid-area: name;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: -(6px + 16px);
 
   @include desktop() {
     justify-content: flex-start;
@@ -34,6 +129,7 @@
 
 .user-actions__title {
   display: block;
+  padding: 0 16px;
 
   font: 700 21px/21px $font-family;
 
@@ -53,6 +149,7 @@
 }
 
 .user-actions__status {
+  order: -1;
   display: block;
   width: 6px;
   height: 6px;
@@ -68,17 +165,53 @@
   }
 }
 
+.user-actions__countries {
+  grid-area: countries;
+}
+
 .user-actions__countries-title {
   @include visually-hidden();
 }
 
+.user-actions__countries-list {
+  flex-flow: column;
+  align-items: flex-start;
+
+  @include tablet-desktop() {
+    flex-flow: wrap;
+    justify-content: flex-start;
+  }
+
+  @include desktop() {
+    flex-flow: column;
+  }
+}
+
+.user-actions__country {
+  @include country--md();
+
+  justify-content: center;
+}
+
 .user-actions__tags {
+  position: relative;
+  grid-area: tags;
+
   font: 400 15px/18px $font-family;
 
   @include tablet-desktop() {
     max-width: 220px;
 
     font: 400 20px/23px $font-family;
+  }
+}
+
+.user-actions__transports {
+  grid-area: transports;
+  justify-content: center;
+
+  @include tablet-desktop() {
+    border: none;
   }
 }
 
@@ -89,14 +222,35 @@
 }
 
 .user-actions__transports-legend {
+  padding: 0 17px;
+
   background-color: $lightest-blue;
 
   @include tablet-desktop() {
+    padding: 0 20px;
+
     font: 500 20px/20px $font-family;
   }
 }
 
+.user-actions__transports-list {
+  margin-top: 8px;
+  justify-content: flex-start;
+
+  @include tablet-desktop() {
+    margin-top: 0;
+    flex-flow: column;
+    align-items: center;
+  }
+
+  @include desktop() {
+    flex-flow: wrap;
+  }
+}
+
 .user-actions__level {
+  grid-area: level;
+
   @include tablet-desktop() {
     align-self: center;
     border-top: none;
@@ -110,6 +264,8 @@
 }
 
 .user-actions__avatar {
+  grid-area: avatar;
+
   @include desktop() {
     width: 285px;
   }
@@ -137,7 +293,9 @@
 }
 
 .user-actions__invite {
+  grid-area: invite;
   display: block;
+  padding: 14px 14px 12px;
 
   font: 700 17px/17px $font-family;
   text-transform: uppercase;
@@ -147,29 +305,48 @@
   background-color: $yellow;
 
   @include tablet-desktop() {
+    padding: 16px 32px 13px;
+
     font: 700 20px/20px $font-family;
   }
 }
 
 .user-actions__like-counter {
+  grid-area: like-counter;
+
   font: 700 14px/16px $font-family;
   white-space: nowrap;
 
   color: $much-darker-blue;
 
   @include tablet-desktop() {
+    align-self: center;
+
     font: 700 20px/20px $font-family;
   }
 }
 
 .user-actions__like-action {
+  grid-area: like-action;
   display: flex;
 }
 
 .user-actions__like-submit {
+  position: absolute;
+  left: 67px;
+  top: 54px;
+
   font: inherit;
 
   border-radius: 50%;
+
+  &:focus {
+    outline: none;
+  }
+
+  @include tablet-desktop() {
+    position: static;
+  }
 }
 
 .user-actions__like-text {

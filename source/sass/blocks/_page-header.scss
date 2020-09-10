@@ -1,53 +1,140 @@
+.page-header {
+  @include page__container();
+  min-height: 73px;
+
+  @include tablet-desktop() {
+    min-height: 132px;
+  }
+
+  @include desktop() {
+    min-height: 90px;
+  }
+}
+
 .page-header__nav {
-  color: $white;
-  background-color: $much-darker-blue;
+  position: fixed;
 
-  &--form,
-  &--catalog {
+  &--nojs {
+    position: relative;
+  }
+
+  @mixin default-colors {
+    color: $white;
     background-color: $darker-blue;
-  }
-
-  &--active {
-    color: $more-dark-blue;
-    background-color: $white;
 
     @include desktop() {
-      color: $white;
+      background-color: $more-dark-blue;
+    }
+
+    &--index {
       background-color: $much-darker-blue;
+
+      @include tablet() {
+        background-color: $more-dark-blue;
+      }
     }
   }
 
-  &--form-active,
-  &--catalog-active {
-    @include desktop() {
-      color: $white;
-      background-color: $darker-blue;
-    }
-  }
-
-  &--sticky {
+  @mixin active-colors {
     color: $more-dark-blue;
     background-color: $white;
+  }
+
+  @include default-colors();
+
+  &--nojs,
+  &--active,
+  &--sticky {
+    @include active-colors();
+  }
+
+  @include desktop() {
+    @include default-colors();
+
+    &--sticky {
+      @include active-colors();
+    }
+  }
+}
+
+.page-header__inner {
+  @include page__container();
+  @include page__inner();
+
+  min-height: 73px;
+
+  display: grid;
+  align-items: center;
+
+  grid-template-columns: 1fr auto;
+  grid-template-rows: 25px min-content 25px;
+  grid-template-areas:
+    ". ."
+    "logo toggle" ". ."
+    "site-nav site-nav" ". ."
+    "user-nav user-nav" ". ."
+    "contacts contacts" ". ."
+    "socials socials" ". .";
+
+  &--nojs,
+  &--active {
+    grid-template-rows:
+      25px
+      min-content 76px
+      min-content 51px
+      min-content 51px
+      min-content #{41px - (45px - 21px) / 2}
+      min-content #{41px - (45px - 21px) / 2};
+  }
+
+  color: inherit;
+  background-color: inherit;
+
+  @include tablet-desktop() {
+    min-height: 132px;
+
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: 45px min-content 45px;
+    grid-template-areas:
+      ". . ."
+      "logo toggle user-nav" ". . ."
+      "site-nav site-nav site-nav" ". . ."
+      "contacts contacts contacts" ". . ."
+      "socials socials socials" ". . .";
+
+    &--nojs,
+    &--active {
+      grid-template-rows:
+        45px
+        min-content #{45px + 53px}
+        min-content 144px
+        min-content #{129px - (62px - 28px) / 2}
+        min-content #{91px - (62px - 28px) / 2};
+    }
+  }
+
+  @include desktop() {
+    min-height: 90px;
+    padding-top: 47px;
+    padding-bottom: 11px;
+
+    grid-template-columns: auto 40px min-content 45px 1fr auto auto;
+    grid-template-rows: min-content;
+    grid-template-areas: "logo . toggle . site-nav contacts user-nav";
+
+    &--nojs,
+    &--sticky {
+      padding-top: 17px;
+      padding-bottom: 13px;
+    }
   }
 }
 
 .page-header__logo {
+  grid-area: logo;
   position: relative;
   display: flex;
   align-items: center;
-
-  @include desktop() {
-    &::after {
-      content: "";
-      display: block;
-      width: 60px;
-      height: 2px;
-      margin-left: 40px;
-      margin-right: 45px;
-
-      background-color: $blue;
-    }
-  }
 }
 
 .page-header__logo-image {
@@ -90,11 +177,8 @@
 }
 
 .page-header__toggle {
+  grid-area: toggle;
   position: relative;
-
-  @include desktop() {
-    display: none;
-  }
 
   &:focus {
     outline: none;
@@ -102,6 +186,20 @@
 
   &--nojs {
     display: none;
+  }
+
+  @include desktop() {
+    display: block;
+    width: 60px;
+    height: 2px;
+    margin-top: -5px;
+
+    background-color: $white;
+    pointer-events: none;
+
+    &--sticky {
+      background-color: $blue;
+    }
   }
 }
 
@@ -145,32 +243,55 @@
     opacity: 1;
     pointer-events: auto;
   }
+
+  @include desktop() {
+    display: none;
+  }
 }
 
 .page-header__site-nav {
+  grid-area: site-nav;
   display: none;
+  flex-flow: column;
+  align-items: center;
 
   font: 500 30px/30px $font-family;
   text-transform: uppercase;
 
   @include tablet-desktop() {
+    align-items: flex-start;
+
     font: 500 60px/71px $font-family;
   }
 
   @include desktop() {
+    display: flex;
+    margin-right: -34px;
+    flex-flow: wrap;
+
     font: 500 20px/20px $font-family;
   }
 
   &--active {
-    display: block;
+    display: flex;
   }
 }
 
 .page-header__site-nav-item {
   display: block;
+  margin-bottom: 5px;
+  height: 1em;
+  overflow: hidden;
+
+  @include desktop() {
+    margin-bottom: 0;
+    margin-right: 34px;
+  }
 }
 
 .page-header__site-nav-link {
+  @include slide-in-same-text-animation(attr(data-hover), $yellow);
+
   &:not([href]) {
     cursor: default;
   }
@@ -182,10 +303,12 @@
 }
 
 .page-header__user-nav {
+  grid-area: user-nav;
   display: none;
 
   @include tablet-desktop() {
     display: block;
+    margin-left: auto;
   }
 
   &--active {
@@ -199,28 +322,47 @@
 }
 
 .page-header__contacts {
+  grid-area: contacts;
   display: none;
+  flex-flow: column;
 
   @include tablet() {
     flex-flow: column;
   }
 
   @include desktop() {
-    display: block;
+    display: flex;
+    flex-flow: wrap;
   }
 
   &--active {
-    display: block;
+    display: flex;
   }
 }
 
 .page-header__contacts-item {
   @include desktop() {
-    @include ordered(contacts__link, $much-darker-blue);
+    @include list(contacts__link, $much-darker-blue);
   }
 }
 
 .page-header__contacts-link {
+  &::before {
+    margin-right: 16px;
+
+    color: $yellow;
+
+    @include tablet-desktop() {
+      margin-right: 23px;
+    }
+
+    @include desktop() {
+      margin-right: 0;
+
+      color: $much-darker-blue;
+    }
+  }
+
   &--tel {
     @include desktop() {
       @include contacts__link--tel-sm();
@@ -241,6 +383,7 @@
 }
 
 .page-header__socials {
+  grid-area: socials;
   display: none;
 
   @include tablet-desktop() {

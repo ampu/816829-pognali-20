@@ -44,47 +44,255 @@
   }
 }
 
-@mixin ordered($child-class, $color:$more-dark-blue) {
+@mixin adaptive-border-radius($top-or-bottom:bottom) {
+  border-#{$top-or-bottom}-left-radius: $radius;
+  border-#{$top-or-bottom}-right-radius: $radius;
+
+  @include tablet-desktop() {
+    border-#{$top-or-bottom}-left-radius: $radius--tablet;
+    border-#{$top-or-bottom}-right-radius: $radius--tablet;
+  }
+
+  @include desktop() {
+    border-#{$top-or-bottom}-left-radius: $radius--desktop;
+    border-#{$top-or-bottom}-right-radius: $radius--desktop;
+  }
+}
+
+@mixin adaptive-overlap($top-or-bottom:bottom) {
+  margin-#{$top-or-bottom}: -$radius;
+
+  @include tablet-desktop() {
+    margin-#{$top-or-bottom}: -$radius--tablet;
+  }
+
+  @include desktop() {
+    margin-#{$top-or-bottom}: -$radius--desktop;
+  }
+}
+
+@mixin list($child-class, $color:$more-dark-blue) {
   .#{$child-class}::before {
     color: $color;
     background-color: $yellow;
   }
 
-  &:nth-of-type(1) .#{$child-class}::before {
+  &:nth-of-type(3n+1) .#{$child-class}::before {
     background-color: $orange;
   }
 
-  &:nth-of-type(2) .#{$child-class}::before {
+  &:nth-of-type(3n+2) .#{$child-class}::before {
     background-color: $dark-yellow;
   }
 }
 
-@mixin ordered-inverse($child-class, $color:$yellow) {
+@mixin list--inverse($child-class, $color:$yellow) {
   .#{$child-class}::before {
     color: $color;
     background: $much-more-darker-blue;
   }
 }
 
-@mixin _interactive($cursor:pointer) {
-  cursor: $cursor;
+@mixin slide-in-same-text-animation($content, $color) {
+  position: relative;
+  display: block;
 
-  &:focus {
-    outline: none;
-    box-shadow: 0 0 0 2px $outline, 0 0 0 3px $white;
+  transition: transform 0.3s;
+
+  &[href]::before {
+    content: $content;
+    position: absolute;
+    transform: translateY(100%);
+
+    color: $color;
+  }
+
+  &[href]:hover,
+  &[href]:focus {
+    transform: translateY(-100%);
   }
 }
 
-@mixin _noninteractive($cursor:default) {
-  cursor: $cursor;
+@mixin page__container {
+  margin-left: auto;
+  margin-right: auto;
+  width: $width;
 
-  &:focus {
-    outline: none;
-    box-shadow: none;
+  @include tablet() {
+    width: $width--tablet;
+  }
+
+  @include desktop() {
+    width: $width--desktop;
   }
 }
 
-@mixin _workspace($base-color, $clip: content-box) {
-  background: rgba($base-color, 0.1);
-  background-clip: $clip;
+@mixin page__inner {
+  padding-left: $padding;
+  padding-right: $padding;
+
+  @include tablet() {
+    padding-left: $padding--tablet;
+    padding-right: $padding--tablet;
+  }
+
+  @include desktop() {
+    padding-left: $padding--desktop;
+    padding-right: $padding--desktop;
+  }
+}
+
+@mixin page__outer {
+  margin-left: -$padding;
+  margin-right: -$padding;
+
+  @include tablet() {
+    margin-left: -$padding--tablet;
+    margin-right: -$padding--tablet;
+  }
+
+  @include desktop() {
+    margin-left: -$padding--desktop;
+    margin-right: -$padding--desktop;
+  }
+}
+
+@mixin country--sm {
+  font: 500 15px/16px $font-family;
+  white-space: nowrap;
+
+  &::before {
+    width: 26px;
+    height: 18px;
+
+    background-size: 26px 18px;
+  }
+}
+
+@mixin country--md {
+  font: 500 20px/20px $font-family;
+  white-space: nowrap;
+
+  &::before {
+    width: 35px;
+    height: 24px;
+
+    background-size: 35px 24px;
+  }
+}
+
+@mixin country--lg {
+  font: 500 20px/20px $font-family;
+  white-space: nowrap;
+
+  &::before {
+    width: 70px;
+    height: 47px;
+
+    background-size: 70px 47px;
+  }
+}
+
+@mixin country__title--iconic {
+  position: absolute;
+  top: 100%;
+  display: none;
+  margin-left: 0;
+  margin-top: 10px;
+  padding: 18px 20px 15px;
+
+  color: $white;
+  background-color: $darkest-blue;
+
+  .country:hover & {
+    z-index: 1;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    width: 7px;
+    height: 7px;
+
+    background-color: $darkest-blue;
+
+    transform: rotate(45deg);
+  }
+}
+
+@mixin contacts__link--tel-xxs {
+  &::before {
+    width: 40px;
+    height: 40px;
+
+    background-image: url("../img/topmenu-phone.svg");
+    background-size: 18px 18px;
+  }
+}
+
+@mixin contacts__link--email-xxs {
+  &::before {
+    width: 40px;
+    height: 40px;
+
+    background-image: url("../img/topmenu-mail.svg");
+    background-size: 18px 16px;
+  }
+}
+
+@mixin contacts__link--tel-sm {
+  &::before {
+    width: 50px;
+    height: 50px;
+
+    background-image: url("../img/topmenu-phone.svg");
+    background-size: 18px 18px;
+  }
+}
+
+@mixin contacts__link--email-sm {
+  &::before {
+    width: 50px;
+    height: 50px;
+
+    background-image: url("../img/topmenu-mail.svg");
+    background-size: 16px 14px;
+  }
+}
+
+@mixin outline($base-color, $title, $color:$white, $left-or-right:left, $top-or-bottom:top, $font:700 24px $font-family, $width:4px, $offset:-$width) {
+  position: relative;
+  outline: $width solid $base-color;
+  outline-offset: $offset;
+
+  &::after {
+    content: "." + $title;
+    position: absolute;
+    z-index: 9999;
+    #{$left-or-right}: 0;
+    #{$top-or-bottom}: 0;
+
+    font: $font;
+    text-transform: none;
+
+    background-color: $base-color;
+    color: $color;
+    pointer-events: none;
+
+    @include tablet-desktop() {
+      #{$top-or-bottom}: $radius--tablet;
+    }
+
+    @include desktop() {
+      #{$top-or-bottom}: $radius--desktop;
+    }
+  }
+}
+
+@mixin outline-element($base-color, $title, $color:$white, $left-or-right:right, $top-or-bottom:top, $font:700 16px $font-family, $width:4px, $offset:-$width) {
+  @include outline($base-color, $title, $color, $left-or-right, $top-or-bottom, $font, $width, $offset);
 }

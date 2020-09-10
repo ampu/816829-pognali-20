@@ -1,6 +1,10 @@
 .feedback {
+  @include adaptive-overlap();
+  @include adaptive-border-radius();
+
   padding-top: 72px + 25px;
   padding-bottom: 25px;
+  overflow-x: hidden;
 
   text-align: center;
   color: $white;
@@ -18,29 +22,41 @@
 }
 
 .feedback__question {
+  margin-bottom: 19px;
+
   font: 700 24px/24px $font-family;
 
   color: $orange;
 
   @include tablet() {
+    margin-bottom: 59px;
+
     font: 700 45px/45px $font-family;
   }
 
   @include desktop() {
+    margin-bottom: 57px;
+
     font: 700 45px/45px $font-family;
   }
 }
 
 .feedback__answer {
+  margin-bottom: 29px;
+
   font: 300 16px/24px $font-family;
   white-space: pre-line;
 
   @include tablet() {
+    margin-bottom: 65px;
+
     font: 300 28px/32px $font-family;
     white-space: normal;
   }
 
   @include desktop() {
+    margin-bottom: 60px;
+
     font: 300 28px/31px $font-family;
     white-space: normal;
   }
@@ -50,6 +66,32 @@
   text-decoration: underline;
 
   color: $yellow;
+}
+
+.feedback__signin-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  margin-bottom: 20px;
+
+  @include tablet() {
+    margin-bottom: 60px;
+  }
+
+  @include desktop() {
+    margin-bottom: 70px;
+    padding-left: 73px;
+    padding-right: 73px;
+  }
+}
+
+.feedback__signin-label {
+  width: 100%;
+  margin-right: -60px;
+
+  @include tablet-desktop() {
+    margin-right: 0;
+  }
 }
 
 .feedback__signin-input {
@@ -89,11 +131,15 @@
 
 .feedback__signin-submit {
   @include tablet() {
+    min-width: 80px;
+
     border-radius: 0 15px 15px 0;
     background-position: center center;
   }
 
   @include desktop() {
+    min-width: 330px;
+
     border-radius: 0 15px 15px 0;
   }
 }
@@ -109,15 +155,34 @@
 }
 
 .feedback__postscript {
+  margin-bottom: 17px;
+
   font: 300 16px/22px $font-family;
   white-space: pre-line;
 
   @include tablet-desktop() {
+    margin-bottom: 40px;
+
     font: 300 28px/30px $font-family;
     white-space: normal;
+  }
+
+  @include desktop() {
+    margin-bottom: 44px;
   }
 }
 
 .feedback__contacts {
   color: $yellow;
+
+  @include desktop() {
+    justify-content: center;
+    margin-right: -110px;
+  }
+}
+
+.feedback__contacts-item {
+  @include desktop() {
+    margin-right: 110px;
+  }
 }

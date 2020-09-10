@@ -1,53 +1,102 @@
 .plan {
+  display: flex;
+  flex-flow: column;
+  padding: 23px 23px 20px;
+  border-radius: 10px;
   color: $blue;
   background: $white;
+
+  @include tablet-desktop() {
+    flex-flow: wrap;
+    justify-content: space-between;
+    padding: 40px 31px 15px 36px;
+  }
+
+  @include desktop() {
+    padding: 37px 42px;
+  }
 }
 
 .plan__title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+
   font: 700 16px/16px $font-family;
 
   @include tablet-desktop() {
+    flex-flow: row-reverse;
+    justify-content: space-between;
+    box-sizing: content-box;
+    width: 100%;
+    padding-bottom: 30px;
+    padding-left: 31px;
+    padding-right: 36px;
+    margin-left: -31px;
+    margin-right: -36px;
+
     font: 700 24px/24px $font-family;
 
     border-bottom: 1px solid rgba($much-light-blue, 0.3);
   }
 
   @include desktop() {
+    flex-flow: row;
+    justify-content: flex-start;
+    margin-bottom: 0;
+    width: 584px;
+
     border: none;
   }
 
   &::before {
     content: counter(plan) ".";
+    margin-right: 5px;
 
     font: 500 16px/16px $font-family;
 
     @include tablet-desktop() {
       font: 500 20px/20px $font-family;
     }
+
+    @include desktop() {
+      margin-right: 35px;
+    }
   }
 }
 
 .plan__companion {
+  margin-bottom: 5px;
+
   font: 500 14px/14px $font-family;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 
   @include tablet-desktop() {
+    width: 184px;
+
     font: 500 20px/20px $font-family;
     letter-spacing: 0.1em;
   }
 
   @include desktop() {
+    margin-bottom: 0;
+    width: 177px;
+
     letter-spacing: 0.09em;
   }
 }
 
 .plan__period {
+  margin-bottom: 24px;
+
   font: 500 14px/14px $font-family;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 
   @include tablet-desktop() {
+    margin-bottom: 0;
+
     font: 500 20px/20px $font-family;
   }
 }
