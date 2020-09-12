@@ -1,10 +1,21 @@
+.office {
+  @include page__container();
+}
+
 .office__inner {
+  @include adaptive-border-radius();
+
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-flow: column;
   padding-top: 31px + 25px;
   padding-bottom: 35px;
   color: $blue;
   background-color: $yellow;
 
   @include tablet() {
+    flex-flow: wrap;
     padding-top: 70px + 54px;
     padding-bottom: 84px;
     padding-left: $padding--tablet + 35px;
@@ -12,23 +23,40 @@
   }
 
   @include desktop() {
+    flex-flow: wrap;
+    justify-content: space-between;
+    align-items: center;
     padding-top: 55px + 54px;
     padding-bottom: 56px;
   }
 }
 
 .office__address {
+  display: flex;
+  align-items: center;
+  margin-bottom: 33px;
+
   font: 700 16px/22px $font-family;
   text-transform: uppercase;
   white-space: pre-line;
 
   @include tablet-desktop() {
+    margin-bottom: 44px;
+
     font: 700 28px/28px $font-family;
     white-space: normal;
   }
 
+  @include desktop() {
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   &::before {
     content: "";
+    flex-shrink: 0;
+    margin-right: 16px;
     width: 45px;
     height: 45px;
 
@@ -39,6 +67,7 @@
     @include tablet() {
       width: 68px;
       height: 68px;
+      margin-right: 26px;
 
       background-size: 32px 32px;
     }
@@ -46,6 +75,7 @@
     @include desktop() {
       width: 90px;
       height: 90px;
+      margin-right: 31px;
 
       background-size: 42px 42px;
     }
@@ -53,6 +83,8 @@
 }
 
 .office__map-button {
+  flex: 1 1 auto;
+
   font: 700 18px/18px $font-family;
 
   @include tablet() {
@@ -60,14 +92,27 @@
   }
 
   @include desktop() {
+    flex: 0 1 auto;
+    margin-right: 75px;
+
     font: 700 24px/24px $font-family;
   }
 }
 
 .office__map-link {
   position: relative;
-  z-index: -1;
+  z-index: 0;
   display: block;
+  margin-top: -52px;
+  margin-bottom: -110px;
+
+  @include tablet() {
+    margin-top: -54px;
+  }
+
+  @include desktop() {
+    margin-top: -60px;
+  }
 }
 
 .office__map {
@@ -123,7 +168,7 @@
 
 .office__map-frame {
   position: absolute;
-  z-index: -1;
+  z-index: 1;
   left: 0;
   right: 0;
   top: 0;

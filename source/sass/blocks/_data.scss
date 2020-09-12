@@ -1,3 +1,24 @@
 .data {
+  flex-grow: 1;
   margin-bottom: 18px;
+
+  @include desktop() {
+    grid-row: 1;
+  }
+}
+
+.data__list {
+  margin-bottom: -10px;
+
+  @include desktop() {
+    margin-bottom: -30px;
+  }
+}
+
+.data__item {
+  margin-bottom: 10px;
+
+  @include desktop() {
+    margin-bottom: 30px;
+  }
 }

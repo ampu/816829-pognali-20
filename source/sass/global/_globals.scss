@@ -8,86 +8,90 @@
   @include visually-hidden();
 }
 
-img {
+.reset-img {
   max-width: 100%;
   height: auto;
 }
 
-html {
+.reset-html {
   height: 100%;
 }
 
-a {
+.reset-a {
   text-decoration: none;
   color: inherit;
+
+  &:focus {
+    outline: none;
+  }
 }
 
-button {
+.reset-button {
   padding: 0;
   margin: 0;
 
-  border: none;
-  background: none;
-  color: inherit;
-  font: inherit;
-  text-transform: inherit;
-  letter-spacing: inherit;
-}
-
-select {
-  border: none;
-  background: none;
-  color: inherit;
   font: inherit;
   text-transform: inherit;
   letter-spacing: inherit;
 
-  @include _interactive();
+  border: none;
+  background: none;
+  color: inherit;
 }
 
-ul,
-ol {
+.reset-select {
+  font: inherit;
+  text-transform: inherit;
+  letter-spacing: inherit;
+
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+.reset-ul,
+.reset-ol {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-p {
+.reset-p {
   margin: 0;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+.reset-h1,
+.reset-h2,
+.reset-h3,
+.reset-h4,
+.reset-h5,
+.reset-h6 {
   margin: 0;
 }
 
-form {
+.reset-form {
   margin: 0;
 }
 
-dl {
+.reset-dl {
   margin: 0;
 }
 
-dd {
+.reset-dd {
   margin: 0;
 }
 
-blockquote {
+.reset-blockquote {
   margin: 0;
   font-style: normal;
 }
 
-cite {
+.reset-cite {
   display: block;
   font-style: normal;
 }
 
-fieldset {
+.reset-fieldset {
   margin: 0;
   padding: 0;
   border: none;

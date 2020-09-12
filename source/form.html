@@ -1,101 +1,108 @@
 <!doctype html>
-<html lang="ru">
+<html lang="ru" class="reset-html">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Погнали?</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="page page__container">
-<header class="page__layer-9 page-header page-header--nojs page__container">
-  <nav class="page-header__nav page-header__nav--active page-header__nav--form page-header__nav--form-active page__inner">
-    <a class="logo page-header__logo" href="index.html">
-      <picture>
-        <source srcset="img/logo-desktop-white@1x.png" media="(min-width: 1440px)">
-        <source srcset="img/logo-tablet-white@1x.png" media="(min-width: 768px) and (max-width: 1439px)">
-        <img class="logo__image page-header__logo-image--light page-header__logo-image" src="img/logo-mobile-white@1x.png" alt="Логотип «Погнали?»">
-      </picture>
-      <picture>
-        <source srcset="img/logo-desktop-blue@1x.png" media="(min-width: 1440px)">
-        <source srcset="img/logo-tablet-blue@1x.png" media="(min-width: 768px) and (max-width: 1439px)">
-        <img class="logo__image page-header__logo-image--active page-header__logo-image--dark page-header__logo-image" src="img/logo-mobile-blue@1x.png" alt="Логотип «Погнали?»">
-      </picture>
-    </a>
+<body class="page page--form">
+<header class="page__layer-9 page-header--form page-header--active page-header">
+  <nav class="page-header__nav--form page-header__nav page-header__nav--active page-header__nav--nojs">
+    <div class="page-header__inner page-header__inner--active page-header__inner--nojs">
+      <a class="logo page-header__logo reset-a" href="index.html">
+        <picture>
+          <source srcset="img/logo-desktop-white@1x.png" media="(min-width: 1440px)">
+          <source srcset="img/logo-tablet-white@1x.png" media="(min-width: 768px) and (max-width: 1439px)">
+          <img class="logo__image page-header__logo-image--light page-header__logo-image reset-img" src="img/logo-mobile-white@1x.png" alt="Логотип «Погнали?»">
+        </picture>
+        <picture>
+          <source srcset="img/logo-desktop-blue@1x.png" media="(min-width: 1440px)">
+          <source srcset="img/logo-tablet-blue@1x.png" media="(min-width: 768px) and (max-width: 1439px)">
+          <img class="logo__image page-header__logo-image--active page-header__logo-image--dark page-header__logo-image reset-img" src="img/logo-mobile-blue@1x.png" alt="Логотип «Погнали?»">
+        </picture>
+      </a>
 
-    <button class="page-header__toggle page-header__toggle--nojs">
-      <span class="page-header__toggle-inner page-header__toggle-inner--open">
-        <span class="visually-hidden">Открыть меню</span>
-      </span>
-      <span class="page-header__toggle-inner page-header__toggle-inner--close page-header__toggle-inner--active">
-        <span class="visually-hidden">Закрыть меню</span>
-      </span>
-    </button>
+      <button class="page-header__toggle page-header__toggle--nojs reset-button">
+        <span class="page-header__toggle-inner page-header__toggle-inner--open">
+          <span class="visually-hidden">Открыть меню</span>
+        </span>
+        <span class="page-header__toggle-inner page-header__toggle-inner--close page-header__toggle-inner--active">
+          <span class="visually-hidden">Закрыть меню</span>
+        </span>
+      </button>
 
-    <ul class="page-header__site-nav page-header__site-nav--active">
-      <li class="page-header__site-nav-item">
-        <a class="page-header__site-nav-link" href="index.html" data-hover="О сервисе">О сервисе</a>
-      </li>
+      <ul class="page-header__site-nav page-header__site-nav--active reset-ul">
+        <li class="page-header__site-nav-item">
+          <a class="page-header__site-nav-link reset-a" href="index.html" data-hover="О сервисе">О сервисе</a>
+        </li>
 
-      <li class="page-header__site-nav-item">
-        <a class="page-header__site-nav-link page-header__site-nav-link--active">Направления</a>
-      </li>
+        <li class="page-header__site-nav-item">
+          <a class="page-header__site-nav-link page-header__site-nav-link--active reset-a">Направления</a>
+        </li>
 
-      <li class="page-header__site-nav-item">
-        <a class="page-header__site-nav-link" href="catalog.html" data-hover="Попутчики">Попутчики</a>
-      </li>
-    </ul>
+        <li class="page-header__site-nav-item">
+          <a class="page-header__site-nav-link reset-a" href="catalog.html" data-hover="Попутчики">Попутчики</a>
+        </li>
+      </ul>
 
-    <ul class="user-nav page-header__user-nav page-header__user-nav--active">
-      <li class="user-nav__item">
-        <a class="user-nav__link" href="#">Авторизация</a>
-      </li>
-    </ul>
+      <ul class="user-nav page-header__user-nav page-header__user-nav--active reset-ul">
+        <li class="user-nav__item">
+          <a class="user-nav__link reset-a" href="#">Авторизация</a>
+        </li>
+      </ul>
 
-    <ul class="contacts page-header__contacts page-header__contacts--active">
-      <li class="contacts__item page-header__contacts-item">
-        <a class="contacts__link contacts__link--tel page-header__contacts-link page-header__contacts-link--tel" href="tel:+78005558628">
-          <span class="contacts__text page-header__contacts-text">8 800 555-86-28</span>
-        </a>
-      </li>
+      <ul class="contacts page-header__contacts page-header__contacts--active reset-ul">
+        <li class="contacts__item page-header__contacts-item">
+          <a class="contacts__link contacts__link--tel page-header__contacts-link page-header__contacts-link--tel reset-a" href="tel:+78005558628">
+            <span class="contacts__text page-header__contacts-text">8 800 555-86-28</span>
+          </a>
+        </li>
 
-      <li class="contacts__item page-header__contacts-item">
-        <a class="contacts__link contacts__link--email page-header__contacts-link page-header__contacts-link--email" href="mailto:mail@htmlacademy.ru">
-          <span class="contacts__text page-header__contacts-text">mail@htmlacademy.ru</span>
-        </a>
-      </li>
-    </ul>
+        <li class="contacts__item page-header__contacts-item">
+          <a class="contacts__link contacts__link--email page-header__contacts-link page-header__contacts-link--email reset-a" href="mailto:mail@htmlacademy.ru">
+            <span class="contacts__text page-header__contacts-text">mail@htmlacademy.ru</span>
+          </a>
+        </li>
+      </ul>
 
-    <ul class="socials page-header__socials page-header__socials--active">
-      <li class="socials__item page-header__socials-item">
-        <a class="socials__link socials__link--fb page-header__socials-link" href="#">
-          <span class="visually-hidden">Facebook</span>
-        </a>
-      </li>
+      <ul class="socials page-header__socials page-header__socials--active reset-ul">
+        <li class="socials__item page-header__socials-item">
+          <a class="socials__link socials__link--fb page-header__socials-link reset-a" href="#">
+            <span class="visually-hidden">Facebook</span>
+          </a>
+        </li>
 
-      <li class="socials__item page-header__socials-item">
-        <a class="socials__link socials__link--vk page-header__socials-link" href="#">
-          <span class="visually-hidden">ВКонтакте</span>
-        </a>
-      </li>
+        <li class="socials__item page-header__socials-item">
+          <a class="socials__link socials__link--vk page-header__socials-link reset-a" href="#">
+            <span class="visually-hidden">ВКонтакте</span>
+          </a>
+        </li>
 
-      <li class="socials__item page-header__socials-item">
-        <a class="socials__link socials__link--in page-header__socials-link" href="#">
-          <span class="visually-hidden">Instagram</span>
-        </a>
-      </li>
-    </ul>
+        <li class="socials__item page-header__socials-item">
+          <a class="socials__link socials__link--in page-header__socials-link reset-a" href="#">
+            <span class="visually-hidden">Instagram</span>
+          </a>
+        </li>
+      </ul>
+    </div>
   </nav>
 </header>
 
-<main class="page__container">
-  <h1 class="page__title page__layer-1">
-    <span class="page__title-inner">Направления</span>
-  </h1>
+<main>
+  <header class="page__layer-1 page__title">
+    <h1 class="page__title-inner reset-h1">Направления</h1>
+  </header>
 
-  <form method="post" action="https://echo.htmlacademy.ru/">
+  <form method="post" action="https://echo.htmlacademy.ru/" class="reset-form">
     <section class="user-profile page__inner">
-      <h2 class="visually-hidden">Петя Демин</h2>
+      <h2 class="visually-hidden reset-h2">Петя Демин</h2>
 
       <div class="level user-profile__level level--xl level--dark">
+        <svg class="level__svg" width="100" height="100">
+          <circle class="level__ring" cx="50" cy="50" r="48.5" fill="transparent" stroke-width="3" stroke-linecap="square" stroke-dashoffset="76" stroke-dasharray="243 60"></circle>
+        </svg>
+
         <span class="level__title level__title--lg level__title--inverse">level</span>
         <span class="level__value level__value--lg">80</span>
       </div>
@@ -105,7 +112,7 @@
 
         <source srcset="img/demin-desktop@1x.jpg" media="(min-width: 1440px)">
 
-        <img class="avatar__image user-profile__avatar-image" src="img/demin-tablet@1x.jpg" alt="Аватар «Петя Демин»">
+        <img class="avatar__image user-profile__avatar-image reset-img" src="img/demin-tablet@1x.jpg" alt="Аватар «Петя Демин»">
       </picture>
 
       <label class="user-profile__upload-avatar">
@@ -118,7 +125,7 @@
         <textarea class="user-profile__tags-input" name="tags" rows="2" placeholder="Коротко о себе в виде 5-8 хештэгов">#бургер #бар #футбол #концерт #крафт</textarea>
       </label>
 
-      <fieldset class="user-profile__transports transports--bordered transports">
+      <fieldset class="user-profile__transports transports--bordered transports reset-fieldset">
         <legend class="transports__legend user-profile__transports-legend">Транспорт</legend>
         <div class="transports__list">
           <label class="transports__item">
@@ -151,42 +158,42 @@
         </div>
       </fieldset>
 
-      <button class="user-profile__save-button user-profile__save-button--nojs" type="submit">Сохранить</button>
+      <button class="user-profile__save-button user-profile__save-button--nojs reset-button" type="submit">Сохранить</button>
     </section>
   </form>
 
   <section class="page__layer-0 plans">
-    <h2 class="plans__title">Мои планы</h2>
-    <ol class="plans__list">
+    <h2 class="plans__title reset-h2">Мои планы</h2>
+    <ol class="plans__list reset-ol">
       <li class="plans__item plan">
-        <h3 class="plan__title">Франция, Италия</h3>
-        <p class="plan__companion">3 попутчика</p>
-        <p class="plan__period">
+        <h3 class="plan__title reset-h3">Франция, Италия</h3>
+        <p class="plan__companion reset-p">3 попутчика</p>
+        <p class="plan__period reset-p">
           <time datetime="2020-03-26">26 мар</time>
           —
           <time datetime="2020-03-29">29 мар</time>
         </p>
-        <a class="plan__edit" href="#">Изменить</a>
+        <a class="plan__edit reset-a" href="#">Изменить</a>
       </li>
 
       <li class="plans__item plan">
-        <h3 class="plan__title">Тайланд, Индонезия</h3>
-        <p class="plan__companion">1 попутчик</p>
-        <p class="plan__period">
+        <h3 class="plan__title reset-h3">Тайланд, Индонезия</h3>
+        <p class="plan__companion reset-p">1 попутчик</p>
+        <p class="plan__period reset-p">
           <time datetime="2020-07-01">1 июл</time>
           —
           <time datetime="2020-07-15">15 июл</time>
         </p>
-        <a class="plan__edit" href="#">Изменить</a>
+        <a class="plan__edit reset-a" href="#">Изменить</a>
       </li>
     </ol>
   </section>
 
-  <form method="post" action="https://echo.htmlacademy.ru/">
+  <form method="post" action="https://echo.htmlacademy.ru/" class="reset-form">
     <section class="page__layer-0 add-plan page__inner">
-      <h2 class="add-plan__title">Добавить план</h2>
+      <h2 class="add-plan__title reset-h2">Добавить план</h2>
 
-      <ol class="add-plan__menu add-plan__menu--dynamic add-plan__menu--nojs">
+      <ol class="add-plan__menu add-plan__menu--dynamic add-plan__menu--nojs reset-ol">
         <li class="add-plan__menu-item add-plan__menu-item--active" data-hash="#add-plan-step-1">
           <span class="add-plan__menu-item-text">Даты</span>
         </li>
@@ -198,14 +205,14 @@
         </li>
       </ol>
 
-      <ol class="add-plan__steps">
+      <ol class="add-plan__steps reset-ol">
         <li class="add-plan__step" id="add-plan-step-1">
-          <h3 class="add-plan__step-title">Шаг 1.
+          <h3 class="add-plan__step-title reset-h3">Шаг 1.
             Даты пребывания</h3>
-          <p class="add-plan__step-intro">Укажите предпочтительное количество попутчиков, которых
+          <p class="add-plan__step-intro reset-p">Укажите предпочтительное количество попутчиков, которых
             вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
 
-          <ol class="add-plan__menu add-plan__menu--static">
+          <ol class="add-plan__menu add-plan__menu--static reset-ol">
             <li class="add-plan__menu-item add-plan__menu-item--active">
               <span class="add-plan__menu-item-text">Даты</span>
             </li>
@@ -217,26 +224,26 @@
             </li>
           </ol>
 
-          <fieldset class="add-plan__group add-plan__group--travellers">
+          <fieldset class="add-plan__group add-plan__group--travellers reset-fieldset">
             <legend class="add-plan__legend">Ищу попутчиков:</legend>
             <label class="add-plan__unit" for="add-plan__travellers">чел.</label>
             <input class="add-plan__input" id="add-plan__travellers" type="number" name="travellers" min="0" step="1" value="2">
-            <button class="add-plan__incr" type="button">
+            <button class="add-plan__incr reset-button" type="button">
               <span class="visually-hidden">+</span>
             </button>
-            <button class="add-plan__decr" type="button">
+            <button class="add-plan__decr reset-button" type="button">
               <span class="visually-hidden">-</span>
             </button>
           </fieldset>
 
-          <fieldset class="add-plan__group add-plan__group--duration">
+          <fieldset class="add-plan__group add-plan__group--duration reset-fieldset">
             <legend class="add-plan__legend">Длительность:</legend>
             <label class="add-plan__unit" for="add-plan__duration">дн.</label>
             <input class="add-plan__input" id="add-plan__duration" type="number" name="duration" min="0" step="1" value="2">
-            <button class="add-plan__incr" type="button">
+            <button class="add-plan__incr reset-button" type="button">
               <span class="visually-hidden">+</span>
             </button>
-            <button class="add-plan__decr" type="button">
+            <button class="add-plan__decr reset-button" type="button">
               <span class="visually-hidden">-</span>
             </button>
           </fieldset>
@@ -247,17 +254,17 @@
           </label>
 
           <div class="add-plan__calendar calendar">
-            <p class="calendar__title">Март 2019</p>
+            <p class="calendar__title reset-p">Март 2019</p>
 
-            <button class="calendar__next-month" type="button">
+            <button class="calendar__next-month reset-button" type="button">
               <span class="visually-hidden">Следующий месяц</span>
             </button>
-            <button class="calendar__prev-month" type="button">
+            <button class="calendar__prev-month reset-button" type="button">
               <span class="visually-hidden">Предыдущий месяц</span>
             </button>
 
             <div class="calendar__dates">
-              <ul class="calendar__days-of-week">
+              <ul class="calendar__days-of-week reset-ul">
                 <li class="calendar__day-of-week">Пн</li>
 
                 <li class="calendar__day-of-week">Вт</li>
@@ -401,15 +408,15 @@
             </div>
           </div>
 
-          <a class="add-plan__next-step" href="#add-plan-step-2">Следующий шаг</a>
+          <a class="add-plan__next-step reset-a" href="#add-plan-step-2">Следующий шаг</a>
         </li>
 
         <li class="add-plan__step" id="add-plan-step-2">
-          <h3 class="add-plan__step-title">Шаг 2.
+          <h3 class="add-plan__step-title reset-h3">Шаг 2.
             Маршрут</h3>
-          <p class="add-plan__step-intro">Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.</p>
+          <p class="add-plan__step-intro reset-p">Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.</p>
 
-          <ol class="add-plan__menu add-plan__menu--static">
+          <ol class="add-plan__menu add-plan__menu--static reset-ol">
             <li class="add-plan__menu-item">
               <span class="add-plan__menu-item-text">Даты</span>
             </li>
@@ -421,10 +428,10 @@
             </li>
           </ol>
 
-          <ul class="add-plan__countries">
+          <ul class="add-plan__countries reset-ul">
             <li class="add-plan__countries-item country-select country-select--selected country country--bih">
               <div class="country-select__inner">
-                <select class="country-select__select" name="countries" aria-label="Страна №1">
+                <select class="country-select__select reset-select" name="countries" aria-label="Страна №1">
                   <option class="country-select__select-item country-select__select-item--nojs" value>Выберите страну</option>
 
                   <optgroup class="country-select__select-item country-select__select-item--nojs" label="а">
@@ -805,136 +812,136 @@
                 </select>
               </div>
 
-              <button class="country-select__delete country-select__delete--active" type="button">
+              <button class="country-select__delete country-select__delete--active reset-button" type="button">
                 <span class="visually-hidden">Удалить страну</span>
               </button>
 
               <div class="country-select__popup">
-                <ul class="country-select__letters">
+                <ul class="country-select__letters reset-ul">
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button country-select__letter-button--active" type="button">а</button>
+                    <button class="country-select__letter-button country-select__letter-button--active reset-button" type="button">а</button>
                   </li>
 
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button" type="button">б</button>
+                    <button class="country-select__letter-button reset-button" type="button">б</button>
                   </li>
 
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button" type="button">в</button>
+                    <button class="country-select__letter-button reset-button" type="button">в</button>
                   </li>
 
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button" type="button">г</button>
+                    <button class="country-select__letter-button reset-button" type="button">г</button>
                   </li>
 
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button" type="button">д</button>
+                    <button class="country-select__letter-button reset-button" type="button">д</button>
                   </li>
 
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button" type="button">е</button>
+                    <button class="country-select__letter-button reset-button" type="button">е</button>
                   </li>
 
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button" type="button">з</button>
+                    <button class="country-select__letter-button reset-button" type="button">з</button>
                   </li>
 
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button" type="button">и</button>
+                    <button class="country-select__letter-button reset-button" type="button">и</button>
                   </li>
 
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button" type="button">к</button>
+                    <button class="country-select__letter-button reset-button" type="button">к</button>
                   </li>
 
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button" type="button">л</button>
+                    <button class="country-select__letter-button reset-button" type="button">л</button>
                   </li>
 
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button" type="button">м</button>
+                    <button class="country-select__letter-button reset-button" type="button">м</button>
                   </li>
 
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button" type="button">н</button>
+                    <button class="country-select__letter-button reset-button" type="button">н</button>
                   </li>
 
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button" type="button">о</button>
+                    <button class="country-select__letter-button reset-button" type="button">о</button>
                   </li>
 
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button" type="button">п</button>
+                    <button class="country-select__letter-button reset-button" type="button">п</button>
                   </li>
 
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button" type="button">р</button>
+                    <button class="country-select__letter-button reset-button" type="button">р</button>
                   </li>
 
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button" type="button">с</button>
+                    <button class="country-select__letter-button reset-button" type="button">с</button>
                   </li>
 
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button" type="button">т</button>
+                    <button class="country-select__letter-button reset-button" type="button">т</button>
                   </li>
 
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button" type="button">у</button>
+                    <button class="country-select__letter-button reset-button" type="button">у</button>
                   </li>
 
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button" type="button">ф</button>
+                    <button class="country-select__letter-button reset-button" type="button">ф</button>
                   </li>
 
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button" type="button">х</button>
+                    <button class="country-select__letter-button reset-button" type="button">х</button>
                   </li>
 
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button" type="button">ч</button>
+                    <button class="country-select__letter-button reset-button" type="button">ч</button>
                   </li>
 
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button" type="button">ш</button>
+                    <button class="country-select__letter-button reset-button" type="button">ш</button>
                   </li>
 
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button" type="button">э</button>
+                    <button class="country-select__letter-button reset-button" type="button">э</button>
                   </li>
 
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button" type="button">ю</button>
+                    <button class="country-select__letter-button reset-button" type="button">ю</button>
                   </li>
 
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button" type="button">я</button>
+                    <button class="country-select__letter-button reset-button" type="button">я</button>
                   </li>
                 </ul>
 
-                <ul class="country-select__countries">
+                <ul class="country-select__countries reset-ul">
                   <li class="country-select__countries-list">
-                    <button class="country-select__country" type="button">Австралия</button>
+                    <button class="country-select__country reset-button" type="button">Австралия</button>
 
-                    <button class="country-select__country" type="button">Австрия</button>
+                    <button class="country-select__country reset-button" type="button">Австрия</button>
 
-                    <button class="country-select__country" type="button">Азербайджан</button>
+                    <button class="country-select__country reset-button" type="button">Азербайджан</button>
 
-                    <button class="country-select__country" type="button">Албания</button>
+                    <button class="country-select__country reset-button" type="button">Албания</button>
 
-                    <button class="country-select__country" type="button">Алжир</button>
+                    <button class="country-select__country reset-button" type="button">Алжир</button>
 
-                    <button class="country-select__country" type="button">Ангола</button>
+                    <button class="country-select__country reset-button" type="button">Ангола</button>
 
-                    <button class="country-select__country" type="button">Андорра</button>
+                    <button class="country-select__country reset-button" type="button">Андорра</button>
 
-                    <button class="country-select__country" type="button">Антигуа и Барбуда</button>
+                    <button class="country-select__country reset-button" type="button">Антигуа и Барбуда</button>
 
-                    <button class="country-select__country" type="button">Аргентина</button>
+                    <button class="country-select__country reset-button" type="button">Аргентина</button>
 
-                    <button class="country-select__country" type="button">Армения</button>
+                    <button class="country-select__country reset-button" type="button">Армения</button>
 
-                    <button class="country-select__country" type="button">Афганистан</button>
+                    <button class="country-select__country reset-button" type="button">Афганистан</button>
                   </li>
                 </ul>
               </div>
@@ -942,7 +949,7 @@
 
             <li class="add-plan__countries-item country-select country-select--selected country country--cze">
               <div class="country-select__inner">
-                <select class="country-select__select" name="countries" aria-label="Страна №2">
+                <select class="country-select__select reset-select" name="countries" aria-label="Страна №2">
                   <option class="country-select__select-item country-select__select-item--nojs" value>Выберите страну</option>
 
                   <optgroup class="country-select__select-item country-select__select-item--nojs" label="а">
@@ -1323,136 +1330,136 @@
                 </select>
               </div>
 
-              <button class="country-select__delete country-select__delete--active" type="button">
+              <button class="country-select__delete country-select__delete--active reset-button" type="button">
                 <span class="visually-hidden">Удалить страну</span>
               </button>
 
               <div class="country-select__popup">
-                <ul class="country-select__letters">
+                <ul class="country-select__letters reset-ul">
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button country-select__letter-button--active" type="button">а</button>
+                    <button class="country-select__letter-button country-select__letter-button--active reset-button" type="button">а</button>
                   </li>
 
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button" type="button">б</button>
+                    <button class="country-select__letter-button reset-button" type="button">б</button>
                   </li>
 
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button" type="button">в</button>
+                    <button class="country-select__letter-button reset-button" type="button">в</button>
                   </li>
 
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button" type="button">г</button>
+                    <button class="country-select__letter-button reset-button" type="button">г</button>
                   </li>
 
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button" type="button">д</button>
+                    <button class="country-select__letter-button reset-button" type="button">д</button>
                   </li>
 
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button" type="button">е</button>
+                    <button class="country-select__letter-button reset-button" type="button">е</button>
                   </li>
 
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button" type="button">з</button>
+                    <button class="country-select__letter-button reset-button" type="button">з</button>
                   </li>
 
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button" type="button">и</button>
+                    <button class="country-select__letter-button reset-button" type="button">и</button>
                   </li>
 
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button" type="button">к</button>
+                    <button class="country-select__letter-button reset-button" type="button">к</button>
                   </li>
 
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button" type="button">л</button>
+                    <button class="country-select__letter-button reset-button" type="button">л</button>
                   </li>
 
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button" type="button">м</button>
+                    <button class="country-select__letter-button reset-button" type="button">м</button>
                   </li>
 
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button" type="button">н</button>
+                    <button class="country-select__letter-button reset-button" type="button">н</button>
                   </li>
 
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button" type="button">о</button>
+                    <button class="country-select__letter-button reset-button" type="button">о</button>
                   </li>
 
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button" type="button">п</button>
+                    <button class="country-select__letter-button reset-button" type="button">п</button>
                   </li>
 
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button" type="button">р</button>
+                    <button class="country-select__letter-button reset-button" type="button">р</button>
                   </li>
 
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button" type="button">с</button>
+                    <button class="country-select__letter-button reset-button" type="button">с</button>
                   </li>
 
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button" type="button">т</button>
+                    <button class="country-select__letter-button reset-button" type="button">т</button>
                   </li>
 
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button" type="button">у</button>
+                    <button class="country-select__letter-button reset-button" type="button">у</button>
                   </li>
 
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button" type="button">ф</button>
+                    <button class="country-select__letter-button reset-button" type="button">ф</button>
                   </li>
 
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button" type="button">х</button>
+                    <button class="country-select__letter-button reset-button" type="button">х</button>
                   </li>
 
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button" type="button">ч</button>
+                    <button class="country-select__letter-button reset-button" type="button">ч</button>
                   </li>
 
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button" type="button">ш</button>
+                    <button class="country-select__letter-button reset-button" type="button">ш</button>
                   </li>
 
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button" type="button">э</button>
+                    <button class="country-select__letter-button reset-button" type="button">э</button>
                   </li>
 
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button" type="button">ю</button>
+                    <button class="country-select__letter-button reset-button" type="button">ю</button>
                   </li>
 
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button" type="button">я</button>
+                    <button class="country-select__letter-button reset-button" type="button">я</button>
                   </li>
                 </ul>
 
-                <ul class="country-select__countries">
+                <ul class="country-select__countries reset-ul">
                   <li class="country-select__countries-list">
-                    <button class="country-select__country" type="button">Австралия</button>
+                    <button class="country-select__country reset-button" type="button">Австралия</button>
 
-                    <button class="country-select__country" type="button">Австрия</button>
+                    <button class="country-select__country reset-button" type="button">Австрия</button>
 
-                    <button class="country-select__country" type="button">Азербайджан</button>
+                    <button class="country-select__country reset-button" type="button">Азербайджан</button>
 
-                    <button class="country-select__country" type="button">Албания</button>
+                    <button class="country-select__country reset-button" type="button">Албания</button>
 
-                    <button class="country-select__country" type="button">Алжир</button>
+                    <button class="country-select__country reset-button" type="button">Алжир</button>
 
-                    <button class="country-select__country" type="button">Ангола</button>
+                    <button class="country-select__country reset-button" type="button">Ангола</button>
 
-                    <button class="country-select__country" type="button">Андорра</button>
+                    <button class="country-select__country reset-button" type="button">Андорра</button>
 
-                    <button class="country-select__country" type="button">Антигуа и Барбуда</button>
+                    <button class="country-select__country reset-button" type="button">Антигуа и Барбуда</button>
 
-                    <button class="country-select__country" type="button">Аргентина</button>
+                    <button class="country-select__country reset-button" type="button">Аргентина</button>
 
-                    <button class="country-select__country" type="button">Армения</button>
+                    <button class="country-select__country reset-button" type="button">Армения</button>
 
-                    <button class="country-select__country" type="button">Афганистан</button>
+                    <button class="country-select__country reset-button" type="button">Афганистан</button>
                   </li>
                 </ul>
               </div>
@@ -1460,7 +1467,7 @@
 
             <li class="add-plan__countries-item country-select">
               <div class="country-select__inner">
-                <select class="country-select__select" name="countries" aria-label="Страна №3">
+                <select class="country-select__select reset-select" name="countries" aria-label="Страна №3">
                   <option class="country-select__select-item country-select__select-item--nojs" value>Выберите страну</option>
 
                   <optgroup class="country-select__select-item country-select__select-item--nojs" label="а">
@@ -1841,136 +1848,136 @@
                 </select>
               </div>
 
-              <button class="country-select__delete country-select__delete--active" type="button">
+              <button class="country-select__delete country-select__delete--active reset-button" type="button">
                 <span class="visually-hidden">Удалить страну</span>
               </button>
 
               <div class="country-select__popup">
-                <ul class="country-select__letters">
+                <ul class="country-select__letters reset-ul">
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button country-select__letter-button--active" type="button">а</button>
+                    <button class="country-select__letter-button country-select__letter-button--active reset-button" type="button">а</button>
                   </li>
 
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button" type="button">б</button>
+                    <button class="country-select__letter-button reset-button" type="button">б</button>
                   </li>
 
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button" type="button">в</button>
+                    <button class="country-select__letter-button reset-button" type="button">в</button>
                   </li>
 
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button" type="button">г</button>
+                    <button class="country-select__letter-button reset-button" type="button">г</button>
                   </li>
 
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button" type="button">д</button>
+                    <button class="country-select__letter-button reset-button" type="button">д</button>
                   </li>
 
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button" type="button">е</button>
+                    <button class="country-select__letter-button reset-button" type="button">е</button>
                   </li>
 
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button" type="button">з</button>
+                    <button class="country-select__letter-button reset-button" type="button">з</button>
                   </li>
 
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button" type="button">и</button>
+                    <button class="country-select__letter-button reset-button" type="button">и</button>
                   </li>
 
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button" type="button">к</button>
+                    <button class="country-select__letter-button reset-button" type="button">к</button>
                   </li>
 
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button" type="button">л</button>
+                    <button class="country-select__letter-button reset-button" type="button">л</button>
                   </li>
 
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button" type="button">м</button>
+                    <button class="country-select__letter-button reset-button" type="button">м</button>
                   </li>
 
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button" type="button">н</button>
+                    <button class="country-select__letter-button reset-button" type="button">н</button>
                   </li>
 
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button" type="button">о</button>
+                    <button class="country-select__letter-button reset-button" type="button">о</button>
                   </li>
 
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button" type="button">п</button>
+                    <button class="country-select__letter-button reset-button" type="button">п</button>
                   </li>
 
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button" type="button">р</button>
+                    <button class="country-select__letter-button reset-button" type="button">р</button>
                   </li>
 
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button" type="button">с</button>
+                    <button class="country-select__letter-button reset-button" type="button">с</button>
                   </li>
 
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button" type="button">т</button>
+                    <button class="country-select__letter-button reset-button" type="button">т</button>
                   </li>
 
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button" type="button">у</button>
+                    <button class="country-select__letter-button reset-button" type="button">у</button>
                   </li>
 
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button" type="button">ф</button>
+                    <button class="country-select__letter-button reset-button" type="button">ф</button>
                   </li>
 
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button" type="button">х</button>
+                    <button class="country-select__letter-button reset-button" type="button">х</button>
                   </li>
 
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button" type="button">ч</button>
+                    <button class="country-select__letter-button reset-button" type="button">ч</button>
                   </li>
 
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button" type="button">ш</button>
+                    <button class="country-select__letter-button reset-button" type="button">ш</button>
                   </li>
 
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button" type="button">э</button>
+                    <button class="country-select__letter-button reset-button" type="button">э</button>
                   </li>
 
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button" type="button">ю</button>
+                    <button class="country-select__letter-button reset-button" type="button">ю</button>
                   </li>
 
                   <li class="country-select__letter">
-                    <button class="country-select__letter-button" type="button">я</button>
+                    <button class="country-select__letter-button reset-button" type="button">я</button>
                   </li>
                 </ul>
 
-                <ul class="country-select__countries">
+                <ul class="country-select__countries reset-ul">
                   <li class="country-select__countries-list">
-                    <button class="country-select__country" type="button">Австралия</button>
+                    <button class="country-select__country reset-button" type="button">Австралия</button>
 
-                    <button class="country-select__country" type="button">Австрия</button>
+                    <button class="country-select__country reset-button" type="button">Австрия</button>
 
-                    <button class="country-select__country" type="button">Азербайджан</button>
+                    <button class="country-select__country reset-button" type="button">Азербайджан</button>
 
-                    <button class="country-select__country" type="button">Албания</button>
+                    <button class="country-select__country reset-button" type="button">Албания</button>
 
-                    <button class="country-select__country" type="button">Алжир</button>
+                    <button class="country-select__country reset-button" type="button">Алжир</button>
 
-                    <button class="country-select__country" type="button">Ангола</button>
+                    <button class="country-select__country reset-button" type="button">Ангола</button>
 
-                    <button class="country-select__country" type="button">Андорра</button>
+                    <button class="country-select__country reset-button" type="button">Андорра</button>
 
-                    <button class="country-select__country" type="button">Антигуа и Барбуда</button>
+                    <button class="country-select__country reset-button" type="button">Антигуа и Барбуда</button>
 
-                    <button class="country-select__country" type="button">Аргентина</button>
+                    <button class="country-select__country reset-button" type="button">Аргентина</button>
 
-                    <button class="country-select__country" type="button">Армения</button>
+                    <button class="country-select__country reset-button" type="button">Армения</button>
 
-                    <button class="country-select__country" type="button">Афганистан</button>
+                    <button class="country-select__country reset-button" type="button">Афганистан</button>
                   </li>
                 </ul>
               </div>
@@ -1978,22 +1985,22 @@
 
             <li class="country-select add-plan__countries-item add-plan__countries-item--add">
               <div class="country-select__inner add-plan__countries-add-inner">
-                <button class="add-plan__countries-add-button" type="button">Добавить страну</button>
+                <button class="add-plan__countries-add-button reset-button" type="button">Добавить страну</button>
               </div>
             </li>
           </ul>
 
-          <a class="add-plan__next-step" href="#add-plan-step-3">Следующий шаг</a>
-          <a class="add-plan__prev-step" href="#add-plan-step-1">На шаг назад</a>
+          <a class="add-plan__next-step reset-a" href="#add-plan-step-3">Следующий шаг</a>
+          <a class="add-plan__prev-step reset-a" href="#add-plan-step-1">На шаг назад</a>
         </li>
 
         <li class="add-plan__step" id="add-plan-step-3">
-          <h3 class="add-plan__step-title">Шаг 3.
+          <h3 class="add-plan__step-title reset-h3">Шаг 3.
             Развлечения</h3>
-          <p class="add-plan__step-intro">Наконец, расскажите о своих планах времяпровождения.
+          <p class="add-plan__step-intro reset-p">Наконец, расскажите о своих планах времяпровождения.
             Можно писать в свободной форме и ставить тэги.</p>
 
-          <ol class="add-plan__menu add-plan__menu--static">
+          <ol class="add-plan__menu add-plan__menu--static reset-ol">
             <li class="add-plan__menu-item">
               <span class="add-plan__menu-item-text">Даты</span>
             </li>
@@ -2005,7 +2012,7 @@
             </li>
           </ol>
 
-          <ol class="add-plan__comments">
+          <ol class="add-plan__comments reset-ol">
             <li class="add-plan__comment">
               <span class="add-plan__comment-route"></span>
               <label class="add-plan__comment-title">
@@ -2021,46 +2028,46 @@
             </li>
           </ol>
 
-          <button class="add-plan__submit" type="submit" name="action" value="submit">Отправить</button>
-          <a class="add-plan__prev-step" href="#add-plan-step-2">На шаг назад</a>
+          <button class="add-plan__submit reset-button" type="submit" name="action" value="submit">Отправить</button>
+          <a class="add-plan__prev-step reset-a" href="#add-plan-step-2">На шаг назад</a>
         </li>
       </ol>
     </section>
   </form>
 </main>
 
-<footer class="page__layer-9 page-footer page__container page__inner">
-  <a class="logo page-footer__logo" href="index.html">
+<footer class="page__layer-9 page-footer">
+  <a class="logo page-footer__logo reset-a" href="index.html">
     <picture>
       <source srcset="img/logo-desktop-blue@1x.png" media="(min-width: 1440px)">
       <source srcset="img/logo-tablet-blue@1x.png" media="(min-width: 768px) and (max-width: 1439px)">
-      <img class="logo__image page-footer__logo-image" src="img/logo-mobile-blue@1x.png" alt="Логотип «Погнали?»">
+      <img class="logo__image page-footer__logo-image reset-img" src="img/logo-mobile-blue@1x.png" alt="Логотип «Погнали?»">
     </picture>
   </a>
 
-  <ul class="socials page-footer__socials">
+  <ul class="socials page-footer__socials reset-ul">
     <li class="socials__item page-footer__socials-item">
-      <a class="socials__link socials__link--fb page-footer__socials-link" href="#">
+      <a class="socials__link socials__link--fb page-footer__socials-link reset-a" href="#">
         <span class="visually-hidden">Facebook</span>
       </a>
     </li>
 
     <li class="socials__item page-footer__socials-item">
-      <a class="socials__link socials__link--vk page-footer__socials-link" href="#">
+      <a class="socials__link socials__link--vk page-footer__socials-link reset-a" href="#">
         <span class="visually-hidden">ВКонтакте</span>
       </a>
     </li>
 
     <li class="socials__item page-footer__socials-item">
-      <a class="socials__link socials__link--in page-footer__socials-link" href="#">
+      <a class="socials__link socials__link--in page-footer__socials-link reset-a" href="#">
         <span class="visually-hidden">Instagram</span>
       </a>
     </li>
   </ul>
 
-  <p class="page-footer__copyright">Разработано
-    <a class="page-footer__academy-link" href="https://htmlacademy.ru/intensive/adaptive">
-      <img class="page-footer__academy-image" src="img/htmlacademy.svg" width="27" height="33" alt="Логотип «HTML Academy»">
+  <p class="page-footer__copyright reset-p">Разработано
+    <a class="page-footer__academy-link reset-a" href="https://htmlacademy.ru/intensive/adaptive">
+      <img class="page-footer__academy-image reset-img" src="img/htmlacademy.svg" width="27" height="33" alt="Логотип «HTML Academy»">
     </a>
   </p>
 </footer>

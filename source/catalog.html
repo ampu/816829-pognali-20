@@ -1,917 +1,920 @@
 <!doctype html>
-<html lang="ru">
+<html lang="ru" class="reset-html">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Погнали?</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="page page__container">
-<header class="page__layer-9 page-header page-header--nojs page__container">
-  <nav class="page-header__nav page-header__nav--active page-header__nav--catalog page-header__nav--catalog-active page__inner">
-    <a class="logo page-header__logo" href="index.html">
-      <picture>
-        <source srcset="img/logo-desktop-white@1x.png" media="(min-width: 1440px)">
-        <source srcset="img/logo-tablet-white@1x.png" media="(min-width: 768px) and (max-width: 1439px)">
-        <img class="logo__image page-header__logo-image--light page-header__logo-image" src="img/logo-mobile-white@1x.png" alt="Логотип «Погнали?»">
-      </picture>
-      <picture>
-        <source srcset="img/logo-desktop-blue@1x.png" media="(min-width: 1440px)">
-        <source srcset="img/logo-tablet-blue@1x.png" media="(min-width: 768px) and (max-width: 1439px)">
-        <img class="logo__image page-header__logo-image--active page-header__logo-image--dark page-header__logo-image" src="img/logo-mobile-blue@1x.png" alt="Логотип «Погнали?»">
-      </picture>
-    </a>
+<body class="page page--catalog">
+<header class="page__layer-9 page-header--catalog page-header--active page-header">
+  <nav class="page-header__nav--catalog page-header__nav page-header__nav--active page-header__nav--nojs">
+    <div class="page-header__inner page-header__inner--active page-header__inner--nojs">
+      <a class="logo page-header__logo reset-a" href="index.html">
+        <picture>
+          <source srcset="img/logo-desktop-white@1x.png" media="(min-width: 1440px)">
+          <source srcset="img/logo-tablet-white@1x.png" media="(min-width: 768px) and (max-width: 1439px)">
+          <img class="logo__image page-header__logo-image--light page-header__logo-image reset-img" src="img/logo-mobile-white@1x.png" alt="Логотип «Погнали?»">
+        </picture>
+        <picture>
+          <source srcset="img/logo-desktop-blue@1x.png" media="(min-width: 1440px)">
+          <source srcset="img/logo-tablet-blue@1x.png" media="(min-width: 768px) and (max-width: 1439px)">
+          <img class="logo__image page-header__logo-image--active page-header__logo-image--dark page-header__logo-image reset-img" src="img/logo-mobile-blue@1x.png" alt="Логотип «Погнали?»">
+        </picture>
+      </a>
 
-    <button class="page-header__toggle page-header__toggle--nojs">
-      <span class="page-header__toggle-inner page-header__toggle-inner--open">
-        <span class="visually-hidden">Открыть меню</span>
-      </span>
-      <span class="page-header__toggle-inner page-header__toggle-inner--close page-header__toggle-inner--active">
-        <span class="visually-hidden">Закрыть меню</span>
-      </span>
-    </button>
+      <button class="page-header__toggle page-header__toggle--nojs reset-button">
+        <span class="page-header__toggle-inner page-header__toggle-inner--open">
+          <span class="visually-hidden">Открыть меню</span>
+        </span>
+        <span class="page-header__toggle-inner page-header__toggle-inner--close page-header__toggle-inner--active">
+          <span class="visually-hidden">Закрыть меню</span>
+        </span>
+      </button>
 
-    <ul class="page-header__site-nav page-header__site-nav--active">
-      <li class="page-header__site-nav-item">
-        <a class="page-header__site-nav-link" href="index.html" data-hover="О сервисе">О сервисе</a>
-      </li>
+      <ul class="page-header__site-nav page-header__site-nav--active reset-ul">
+        <li class="page-header__site-nav-item">
+          <a class="page-header__site-nav-link reset-a" href="index.html" data-hover="О сервисе">О сервисе</a>
+        </li>
 
-      <li class="page-header__site-nav-item">
-        <a class="page-header__site-nav-link" href="form.html" data-hover="Направления">Направления</a>
-      </li>
+        <li class="page-header__site-nav-item">
+          <a class="page-header__site-nav-link reset-a" href="form.html" data-hover="Направления">Направления</a>
+        </li>
 
-      <li class="page-header__site-nav-item">
-        <a class="page-header__site-nav-link page-header__site-nav-link--active">Попутчики</a>
-      </li>
-    </ul>
+        <li class="page-header__site-nav-item">
+          <a class="page-header__site-nav-link page-header__site-nav-link--active reset-a">Попутчики</a>
+        </li>
+      </ul>
 
-    <ul class="user-nav page-header__user-nav page-header__user-nav--active">
-      <li class="user-nav__item">
-        <a class="user-nav__link" href="#">Авторизация</a>
-      </li>
-    </ul>
+      <ul class="user-nav page-header__user-nav page-header__user-nav--active reset-ul">
+        <li class="user-nav__item">
+          <a class="user-nav__link reset-a" href="#">Авторизация</a>
+        </li>
+      </ul>
 
-    <ul class="contacts page-header__contacts page-header__contacts--active">
-      <li class="contacts__item page-header__contacts-item">
-        <a class="contacts__link contacts__link--tel page-header__contacts-link page-header__contacts-link--tel" href="tel:+78005558628">
-          <span class="contacts__text page-header__contacts-text">8 800 555-86-28</span>
-        </a>
-      </li>
+      <ul class="contacts page-header__contacts page-header__contacts--active reset-ul">
+        <li class="contacts__item page-header__contacts-item">
+          <a class="contacts__link contacts__link--tel page-header__contacts-link page-header__contacts-link--tel reset-a" href="tel:+78005558628">
+            <span class="contacts__text page-header__contacts-text">8 800 555-86-28</span>
+          </a>
+        </li>
 
-      <li class="contacts__item page-header__contacts-item">
-        <a class="contacts__link contacts__link--email page-header__contacts-link page-header__contacts-link--email" href="mailto:mail@htmlacademy.ru">
-          <span class="contacts__text page-header__contacts-text">mail@htmlacademy.ru</span>
-        </a>
-      </li>
-    </ul>
+        <li class="contacts__item page-header__contacts-item">
+          <a class="contacts__link contacts__link--email page-header__contacts-link page-header__contacts-link--email reset-a" href="mailto:mail@htmlacademy.ru">
+            <span class="contacts__text page-header__contacts-text">mail@htmlacademy.ru</span>
+          </a>
+        </li>
+      </ul>
 
-    <ul class="socials page-header__socials page-header__socials--active">
-      <li class="socials__item page-header__socials-item">
-        <a class="socials__link socials__link--fb page-header__socials-link" href="#">
-          <span class="visually-hidden">Facebook</span>
-        </a>
-      </li>
+      <ul class="socials page-header__socials page-header__socials--active reset-ul">
+        <li class="socials__item page-header__socials-item">
+          <a class="socials__link socials__link--fb page-header__socials-link reset-a" href="#">
+            <span class="visually-hidden">Facebook</span>
+          </a>
+        </li>
 
-      <li class="socials__item page-header__socials-item">
-        <a class="socials__link socials__link--vk page-header__socials-link" href="#">
-          <span class="visually-hidden">ВКонтакте</span>
-        </a>
-      </li>
+        <li class="socials__item page-header__socials-item">
+          <a class="socials__link socials__link--vk page-header__socials-link reset-a" href="#">
+            <span class="visually-hidden">ВКонтакте</span>
+          </a>
+        </li>
 
-      <li class="socials__item page-header__socials-item">
-        <a class="socials__link socials__link--in page-header__socials-link" href="#">
-          <span class="visually-hidden">Instagram</span>
-        </a>
-      </li>
-    </ul>
+        <li class="socials__item page-header__socials-item">
+          <a class="socials__link socials__link--in page-header__socials-link reset-a" href="#">
+            <span class="visually-hidden">Instagram</span>
+          </a>
+        </li>
+      </ul>
+    </div>
   </nav>
 </header>
 
-<main class="page__container page__container--catalog">
+<main>
   <header class="page__layer-8 page__title">
-    <h1 class="page__title-inner">Попутчики</h1>
+    <h1 class="page__title-inner reset-h1">Попутчики</h1>
 
-    <a class="page__title-button" href="index.html">На главную</a>
+    <a class="page__title-button reset-a" href="index.html">На главную</a>
   </header>
 
   <section class="page__layer-3 country-filter page__container">
-    <h2 class="country-filter__title">Фильтрация по странам:</h2>
+    <h2 class="country-filter__title reset-h2">Фильтрация по странам:</h2>
 
-    <ul class="country-filter__continents country-filter__continents--active">
+    <ul class="country-filter__continents country-filter__continents--active reset-ul">
       <li class="country-filter__continent">
-        <a class="country-filter__continent-button country-filter__continent-button--active">Европа</a>
+        <a class="country-filter__continent-button country-filter__continent-button--active reset-a">Европа</a>
       </li>
 
       <li class="country-filter__continent">
-        <a class="country-filter__continent-button" href="asia">Азия</a>
+        <a class="country-filter__continent-button reset-a" href="asia">Азия</a>
       </li>
 
       <li class="country-filter__continent">
-        <a class="country-filter__continent-button" href="america">Америка</a>
+        <a class="country-filter__continent-button reset-a" href="america">Америка</a>
       </li>
 
       <li class="country-filter__continent">
-        <a class="country-filter__continent-button" href="islands">Острова</a>
+        <a class="country-filter__continent-button reset-a" href="islands">Острова</a>
       </li>
     </ul>
 
-    <button class="country-filter__toggle country-filter__toggle--nojs country-filter__toggle--permanent country-filter__toggle--permanent-active" type="button">
+    <button class="country-filter__toggle country-filter__toggle--nojs country-filter__toggle--permanent country-filter__toggle--permanent-active reset-button" type="button">
       <span class="country-filter__toggle-text">Показать все</span>
       <span class="country-filter__toggle-text country-filter__toggle-text--active">Свернуть</span>
     </button>
 
-    <ul class="country-filter__letters country-filter__letters--active">
+    <ul class="country-filter__letters country-filter__letters--active reset-ul">
       <li class="country-filter__letter">
-        <a class="country-filter__letter-button country-filter__letter-button--active">а</a>
-        <ul class="country-filter__countries country-filter__countries--active">
+        <a class="country-filter__letter-button country-filter__letter-button--active reset-a">а</a>
+        <ul class="country-filter__countries country-filter__countries--active reset-ul">
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/australia">Австралия</a>
+            <a class="country-filter__country-link reset-a" href="europe/australia">Австралия</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/austria">Австрия</a>
+            <a class="country-filter__country-link reset-a" href="europe/austria">Австрия</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/azerbaijan">Азербайджан</a>
+            <a class="country-filter__country-link reset-a" href="europe/azerbaijan">Азербайджан</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/albania">Албания</a>
+            <a class="country-filter__country-link reset-a" href="europe/albania">Албания</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/algeria">Алжир</a>
+            <a class="country-filter__country-link reset-a" href="europe/algeria">Алжир</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/angola">Ангола</a>
+            <a class="country-filter__country-link reset-a" href="europe/angola">Ангола</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/andorra">Андорра</a>
+            <a class="country-filter__country-link reset-a" href="europe/andorra">Андорра</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/antigua-and-barbuda">Антигуа и Барбуда</a>
+            <a class="country-filter__country-link reset-a" href="europe/antigua-and-barbuda">Антигуа и Барбуда</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/argentina">Аргентина</a>
+            <a class="country-filter__country-link reset-a" href="europe/argentina">Аргентина</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/armenia">Армения</a>
+            <a class="country-filter__country-link reset-a" href="europe/armenia">Армения</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/afghanistan">Афганистан</a>
+            <a class="country-filter__country-link reset-a" href="europe/afghanistan">Афганистан</a>
           </li>
         </ul>
       </li>
 
       <li class="country-filter__letter">
-        <a class="country-filter__letter-button" href="#">б</a>
-        <ul class="country-filter__countries">
+        <a class="country-filter__letter-button reset-a" href="#">б</a>
+        <ul class="country-filter__countries reset-ul">
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Багамские Острова</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Багамские Острова</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Бангладеш</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Бангладеш</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Барбадос</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Барбадос</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Бахрейн</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Бахрейн</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Белоруссия</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Белоруссия</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Белиз</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Белиз</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Бельгия</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Бельгия</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Бенин</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Бенин</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Болгария</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Болгария</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Боливия</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Боливия</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/bih">Босния и Герцеговина и Босния и Герцеговина и Босния и Герцеговина и Босния и Герцеговина</a>
+            <a class="country-filter__country-link reset-a" href="europe/bih">Босния и Герцеговина и Босния и Герцеговина и Босния и Герцеговина и Босния и Герцеговина</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Ботсвана</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Ботсвана</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Бразилия</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Бразилия</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Бруней</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Бруней</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Буркина-Фасо</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Буркина-Фасо</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Бурунди</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Бурунди</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Бутан</a>
-          </li>
-        </ul>
-      </li>
-
-      <li class="country-filter__letter">
-        <a class="country-filter__letter-button" href="#">в</a>
-        <ul class="country-filter__countries">
-          <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Вануату</a>
-          </li>
-
-          <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Великобритания</a>
-          </li>
-
-          <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Венгрия</a>
-          </li>
-
-          <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Венесуэла</a>
-          </li>
-
-          <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Восточный Тимор</a>
-          </li>
-
-          <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Вьетнам</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Бутан</a>
           </li>
         </ul>
       </li>
 
       <li class="country-filter__letter">
-        <a class="country-filter__letter-button" href="#">г</a>
-        <ul class="country-filter__countries">
+        <a class="country-filter__letter-button reset-a" href="#">в</a>
+        <ul class="country-filter__countries reset-ul">
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Габон</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Вануату</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Гаити</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Великобритания</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Гайана</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Венгрия</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Гамбия</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Венесуэла</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Гана</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Восточный Тимор</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Гватемала</a>
-          </li>
-
-          <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Гвинея</a>
-          </li>
-
-          <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Гвинея-Бисау</a>
-          </li>
-
-          <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Германия</a>
-          </li>
-
-          <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Гондурас</a>
-          </li>
-
-          <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Гренада</a>
-          </li>
-
-          <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Греция</a>
-          </li>
-
-          <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Грузия</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Вьетнам</a>
           </li>
         </ul>
       </li>
 
       <li class="country-filter__letter">
-        <a class="country-filter__letter-button" href="#">д</a>
-        <ul class="country-filter__countries">
+        <a class="country-filter__letter-button reset-a" href="#">г</a>
+        <ul class="country-filter__countries reset-ul">
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Дания</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Габон</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Джибути</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Гаити</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Доминика</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Гайана</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Доминикана</a>
-          </li>
-        </ul>
-      </li>
-
-      <li class="country-filter__letter">
-        <a class="country-filter__letter-button" href="#">е</a>
-        <ul class="country-filter__countries">
-          <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Египет</a>
-          </li>
-        </ul>
-      </li>
-
-      <li class="country-filter__letter">
-        <a class="country-filter__letter-button" href="#">з</a>
-        <ul class="country-filter__countries">
-          <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Замбия</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Гамбия</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Зимбабве</a>
-          </li>
-        </ul>
-      </li>
-
-      <li class="country-filter__letter">
-        <a class="country-filter__letter-button" href="#">и</a>
-        <ul class="country-filter__countries">
-          <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Израиль</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Гана</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Индия</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Гватемала</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Индонезия</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Гвинея</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Иордания</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Гвинея-Бисау</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Ирак</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Германия</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Иран</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Гондурас</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Ирландия</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Гренада</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Исландия</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Греция</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Испания</a>
-          </li>
-
-          <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Италия</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Грузия</a>
           </li>
         </ul>
       </li>
 
       <li class="country-filter__letter">
-        <a class="country-filter__letter-button" href="#">к</a>
-        <ul class="country-filter__countries">
+        <a class="country-filter__letter-button reset-a" href="#">д</a>
+        <ul class="country-filter__countries reset-ul">
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Кабо-Верде</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Дания</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Казахстан</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Джибути</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Камбоджа</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Доминика</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Камерун</a>
-          </li>
-
-          <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Канада</a>
-          </li>
-
-          <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Катар</a>
-          </li>
-
-          <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Кения</a>
-          </li>
-
-          <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Кипр</a>
-          </li>
-
-          <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Киргизия</a>
-          </li>
-
-          <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Кирибати</a>
-          </li>
-
-          <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Китай</a>
-          </li>
-
-          <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Колумбия</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Доминикана</a>
           </li>
         </ul>
       </li>
 
       <li class="country-filter__letter">
-        <a class="country-filter__letter-button" href="#">л</a>
-        <ul class="country-filter__countries">
+        <a class="country-filter__letter-button reset-a" href="#">е</a>
+        <ul class="country-filter__countries reset-ul">
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Лаос</a>
-          </li>
-
-          <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Латвия</a>
-          </li>
-
-          <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Лесото</a>
-          </li>
-
-          <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Либерия</a>
-          </li>
-
-          <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Ливан</a>
-          </li>
-
-          <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Ливия</a>
-          </li>
-
-          <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Литва</a>
-          </li>
-
-          <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Лихтенштейн</a>
-          </li>
-
-          <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Люксембург</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Египет</a>
           </li>
         </ul>
       </li>
 
       <li class="country-filter__letter">
-        <a class="country-filter__letter-button" href="#">м</a>
-        <ul class="country-filter__countries">
+        <a class="country-filter__letter-button reset-a" href="#">з</a>
+        <ul class="country-filter__countries reset-ul">
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Маврикий</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Замбия</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Мавритания</a>
-          </li>
-
-          <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Мадагаскар</a>
-          </li>
-
-          <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Малави</a>
-          </li>
-
-          <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Малайзия</a>
-          </li>
-
-          <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Мали</a>
-          </li>
-
-          <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Мальдивы</a>
-          </li>
-
-          <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Мальта</a>
-          </li>
-
-          <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Марокко</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Зимбабве</a>
           </li>
         </ul>
       </li>
 
       <li class="country-filter__letter">
-        <a class="country-filter__letter-button" href="#">н</a>
-        <ul class="country-filter__countries">
+        <a class="country-filter__letter-button reset-a" href="#">и</a>
+        <ul class="country-filter__countries reset-ul">
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Намибия</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Израиль</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Науру</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Индия</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Непал</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Индонезия</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Нигер</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Иордания</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Нигерия</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Ирак</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Нидерланды</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Иран</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Никарагуа</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Ирландия</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Новая Зеландия</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Исландия</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Норвегия</a>
-          </li>
-        </ul>
-      </li>
-
-      <li class="country-filter__letter">
-        <a class="country-filter__letter-button" href="#">о</a>
-        <ul class="country-filter__countries">
-          <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">ОАЭ</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Испания</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Оман</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Италия</a>
           </li>
         </ul>
       </li>
 
       <li class="country-filter__letter">
-        <a class="country-filter__letter-button" href="#">п</a>
-        <ul class="country-filter__countries">
+        <a class="country-filter__letter-button reset-a" href="#">к</a>
+        <ul class="country-filter__countries reset-ul">
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Пакистан</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Кабо-Верде</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Палау</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Казахстан</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Панама</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Камбоджа</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Папуа - Новая Гвинея</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Камерун</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Парагвай</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Канада</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Перу</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Катар</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Польша</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Кения</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Португалия</a>
-          </li>
-        </ul>
-      </li>
-
-      <li class="country-filter__letter">
-        <a class="country-filter__letter-button" href="#">р</a>
-        <ul class="country-filter__countries">
-          <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Руанда</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Кипр</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Румыния</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Киргизия</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Россия</a>
-          </li>
-        </ul>
-      </li>
-
-      <li class="country-filter__letter">
-        <a class="country-filter__letter-button" href="#">с</a>
-        <ul class="country-filter__countries">
-          <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Сальвадор</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Кирибати</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Самоа</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Китай</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Сан-Марино</a>
-          </li>
-
-          <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Саудовская Аравия</a>
-          </li>
-
-          <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Сейшелы</a>
-          </li>
-
-          <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Сенегал</a>
-          </li>
-
-          <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Сербия</a>
-          </li>
-
-          <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Сингапур</a>
-          </li>
-
-          <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Сирия</a>
-          </li>
-
-          <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Словакия</a>
-          </li>
-
-          <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Словения</a>
-          </li>
-
-          <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">США</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Колумбия</a>
           </li>
         </ul>
       </li>
 
       <li class="country-filter__letter">
-        <a class="country-filter__letter-button" href="#">т</a>
-        <ul class="country-filter__countries">
+        <a class="country-filter__letter-button reset-a" href="#">л</a>
+        <ul class="country-filter__countries reset-ul">
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Таджикистан</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Лаос</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Тайланд</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Латвия</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Танзания</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Лесото</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Того</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Либерия</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Тонга</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Ливан</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Тринидад и Тобаго</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Ливия</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Тувалу</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Литва</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Тунис</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Лихтенштейн</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Туркмения</a>
-          </li>
-
-          <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Турция</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Люксембург</a>
           </li>
         </ul>
       </li>
 
       <li class="country-filter__letter">
-        <a class="country-filter__letter-button" href="#">у</a>
-        <ul class="country-filter__countries">
+        <a class="country-filter__letter-button reset-a" href="#">м</a>
+        <ul class="country-filter__countries reset-ul">
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Уганда</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Маврикий</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Узбекистан</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Мавритания</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Украина</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Мадагаскар</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Уругвай</a>
-          </li>
-        </ul>
-      </li>
-
-      <li class="country-filter__letter">
-        <a class="country-filter__letter-button" href="#">ф</a>
-        <ul class="country-filter__countries">
-          <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Фиджи</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Малави</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Филиппины</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Малайзия</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Финляндия</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Мали</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Франция</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Мальдивы</a>
           </li>
-        </ul>
-      </li>
 
-      <li class="country-filter__letter">
-        <a class="country-filter__letter-button" href="#">х</a>
-        <ul class="country-filter__countries">
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Хорватия</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Мальта</a>
+          </li>
+
+          <li class="country-filter__country">
+            <a class="country-filter__country-link reset-a" href="europe/">Марокко</a>
           </li>
         </ul>
       </li>
 
       <li class="country-filter__letter">
-        <a class="country-filter__letter-button" href="#">ч</a>
-        <ul class="country-filter__countries">
+        <a class="country-filter__letter-button reset-a" href="#">н</a>
+        <ul class="country-filter__countries reset-ul">
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Чад</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Намибия</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Черногория</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Науру</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/cze">Чехия</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Непал</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Чили</a>
-          </li>
-        </ul>
-      </li>
-
-      <li class="country-filter__letter">
-        <a class="country-filter__letter-button" href="#">ш</a>
-        <ul class="country-filter__countries">
-          <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Швейцария</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Нигер</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Швеция</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Нигерия</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Шри-Ланка</a>
-          </li>
-        </ul>
-      </li>
-
-      <li class="country-filter__letter">
-        <a class="country-filter__letter-button" href="#">э</a>
-        <ul class="country-filter__countries">
-          <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Эквадор</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Нидерланды</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Эритрея</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Никарагуа</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Эсватини</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Новая Зеландия</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Эстония</a>
-          </li>
-
-          <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Эфиопия</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Норвегия</a>
           </li>
         </ul>
       </li>
 
       <li class="country-filter__letter">
-        <a class="country-filter__letter-button" href="#">ю</a>
-        <ul class="country-filter__countries">
+        <a class="country-filter__letter-button reset-a" href="#">о</a>
+        <ul class="country-filter__countries reset-ul">
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">ЮАР</a>
+            <a class="country-filter__country-link reset-a" href="europe/">ОАЭ</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Южный Судан</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Оман</a>
           </li>
         </ul>
       </li>
 
       <li class="country-filter__letter">
-        <a class="country-filter__letter-button" href="#">я</a>
-        <ul class="country-filter__countries">
+        <a class="country-filter__letter-button reset-a" href="#">п</a>
+        <ul class="country-filter__countries reset-ul">
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Ямайка</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Пакистан</a>
           </li>
 
           <li class="country-filter__country">
-            <a class="country-filter__country-link" href="europe/">Япония</a>
+            <a class="country-filter__country-link reset-a" href="europe/">Палау</a>
+          </li>
+
+          <li class="country-filter__country">
+            <a class="country-filter__country-link reset-a" href="europe/">Панама</a>
+          </li>
+
+          <li class="country-filter__country">
+            <a class="country-filter__country-link reset-a" href="europe/">Папуа - Новая Гвинея</a>
+          </li>
+
+          <li class="country-filter__country">
+            <a class="country-filter__country-link reset-a" href="europe/">Парагвай</a>
+          </li>
+
+          <li class="country-filter__country">
+            <a class="country-filter__country-link reset-a" href="europe/">Перу</a>
+          </li>
+
+          <li class="country-filter__country">
+            <a class="country-filter__country-link reset-a" href="europe/">Польша</a>
+          </li>
+
+          <li class="country-filter__country">
+            <a class="country-filter__country-link reset-a" href="europe/">Португалия</a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="country-filter__letter">
+        <a class="country-filter__letter-button reset-a" href="#">р</a>
+        <ul class="country-filter__countries reset-ul">
+          <li class="country-filter__country">
+            <a class="country-filter__country-link reset-a" href="europe/">Руанда</a>
+          </li>
+
+          <li class="country-filter__country">
+            <a class="country-filter__country-link reset-a" href="europe/">Румыния</a>
+          </li>
+
+          <li class="country-filter__country">
+            <a class="country-filter__country-link reset-a" href="europe/">Россия</a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="country-filter__letter">
+        <a class="country-filter__letter-button reset-a" href="#">с</a>
+        <ul class="country-filter__countries reset-ul">
+          <li class="country-filter__country">
+            <a class="country-filter__country-link reset-a" href="europe/">Сальвадор</a>
+          </li>
+
+          <li class="country-filter__country">
+            <a class="country-filter__country-link reset-a" href="europe/">Самоа</a>
+          </li>
+
+          <li class="country-filter__country">
+            <a class="country-filter__country-link reset-a" href="europe/">Сан-Марино</a>
+          </li>
+
+          <li class="country-filter__country">
+            <a class="country-filter__country-link reset-a" href="europe/">Саудовская Аравия</a>
+          </li>
+
+          <li class="country-filter__country">
+            <a class="country-filter__country-link reset-a" href="europe/">Сейшелы</a>
+          </li>
+
+          <li class="country-filter__country">
+            <a class="country-filter__country-link reset-a" href="europe/">Сенегал</a>
+          </li>
+
+          <li class="country-filter__country">
+            <a class="country-filter__country-link reset-a" href="europe/">Сербия</a>
+          </li>
+
+          <li class="country-filter__country">
+            <a class="country-filter__country-link reset-a" href="europe/">Сингапур</a>
+          </li>
+
+          <li class="country-filter__country">
+            <a class="country-filter__country-link reset-a" href="europe/">Сирия</a>
+          </li>
+
+          <li class="country-filter__country">
+            <a class="country-filter__country-link reset-a" href="europe/">Словакия</a>
+          </li>
+
+          <li class="country-filter__country">
+            <a class="country-filter__country-link reset-a" href="europe/">Словения</a>
+          </li>
+
+          <li class="country-filter__country">
+            <a class="country-filter__country-link reset-a" href="europe/">США</a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="country-filter__letter">
+        <a class="country-filter__letter-button reset-a" href="#">т</a>
+        <ul class="country-filter__countries reset-ul">
+          <li class="country-filter__country">
+            <a class="country-filter__country-link reset-a" href="europe/">Таджикистан</a>
+          </li>
+
+          <li class="country-filter__country">
+            <a class="country-filter__country-link reset-a" href="europe/">Тайланд</a>
+          </li>
+
+          <li class="country-filter__country">
+            <a class="country-filter__country-link reset-a" href="europe/">Танзания</a>
+          </li>
+
+          <li class="country-filter__country">
+            <a class="country-filter__country-link reset-a" href="europe/">Того</a>
+          </li>
+
+          <li class="country-filter__country">
+            <a class="country-filter__country-link reset-a" href="europe/">Тонга</a>
+          </li>
+
+          <li class="country-filter__country">
+            <a class="country-filter__country-link reset-a" href="europe/">Тринидад и Тобаго</a>
+          </li>
+
+          <li class="country-filter__country">
+            <a class="country-filter__country-link reset-a" href="europe/">Тувалу</a>
+          </li>
+
+          <li class="country-filter__country">
+            <a class="country-filter__country-link reset-a" href="europe/">Тунис</a>
+          </li>
+
+          <li class="country-filter__country">
+            <a class="country-filter__country-link reset-a" href="europe/">Туркмения</a>
+          </li>
+
+          <li class="country-filter__country">
+            <a class="country-filter__country-link reset-a" href="europe/">Турция</a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="country-filter__letter">
+        <a class="country-filter__letter-button reset-a" href="#">у</a>
+        <ul class="country-filter__countries reset-ul">
+          <li class="country-filter__country">
+            <a class="country-filter__country-link reset-a" href="europe/">Уганда</a>
+          </li>
+
+          <li class="country-filter__country">
+            <a class="country-filter__country-link reset-a" href="europe/">Узбекистан</a>
+          </li>
+
+          <li class="country-filter__country">
+            <a class="country-filter__country-link reset-a" href="europe/">Украина</a>
+          </li>
+
+          <li class="country-filter__country">
+            <a class="country-filter__country-link reset-a" href="europe/">Уругвай</a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="country-filter__letter">
+        <a class="country-filter__letter-button reset-a" href="#">ф</a>
+        <ul class="country-filter__countries reset-ul">
+          <li class="country-filter__country">
+            <a class="country-filter__country-link reset-a" href="europe/">Фиджи</a>
+          </li>
+
+          <li class="country-filter__country">
+            <a class="country-filter__country-link reset-a" href="europe/">Филиппины</a>
+          </li>
+
+          <li class="country-filter__country">
+            <a class="country-filter__country-link reset-a" href="europe/">Финляндия</a>
+          </li>
+
+          <li class="country-filter__country">
+            <a class="country-filter__country-link reset-a" href="europe/">Франция</a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="country-filter__letter">
+        <a class="country-filter__letter-button reset-a" href="#">х</a>
+        <ul class="country-filter__countries reset-ul">
+          <li class="country-filter__country">
+            <a class="country-filter__country-link reset-a" href="europe/">Хорватия</a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="country-filter__letter">
+        <a class="country-filter__letter-button reset-a" href="#">ч</a>
+        <ul class="country-filter__countries reset-ul">
+          <li class="country-filter__country">
+            <a class="country-filter__country-link reset-a" href="europe/">Чад</a>
+          </li>
+
+          <li class="country-filter__country">
+            <a class="country-filter__country-link reset-a" href="europe/">Черногория</a>
+          </li>
+
+          <li class="country-filter__country">
+            <a class="country-filter__country-link reset-a" href="europe/cze">Чехия</a>
+          </li>
+
+          <li class="country-filter__country">
+            <a class="country-filter__country-link reset-a" href="europe/">Чили</a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="country-filter__letter">
+        <a class="country-filter__letter-button reset-a" href="#">ш</a>
+        <ul class="country-filter__countries reset-ul">
+          <li class="country-filter__country">
+            <a class="country-filter__country-link reset-a" href="europe/">Швейцария</a>
+          </li>
+
+          <li class="country-filter__country">
+            <a class="country-filter__country-link reset-a" href="europe/">Швеция</a>
+          </li>
+
+          <li class="country-filter__country">
+            <a class="country-filter__country-link reset-a" href="europe/">Шри-Ланка</a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="country-filter__letter">
+        <a class="country-filter__letter-button reset-a" href="#">э</a>
+        <ul class="country-filter__countries reset-ul">
+          <li class="country-filter__country">
+            <a class="country-filter__country-link reset-a" href="europe/">Эквадор</a>
+          </li>
+
+          <li class="country-filter__country">
+            <a class="country-filter__country-link reset-a" href="europe/">Эритрея</a>
+          </li>
+
+          <li class="country-filter__country">
+            <a class="country-filter__country-link reset-a" href="europe/">Эсватини</a>
+          </li>
+
+          <li class="country-filter__country">
+            <a class="country-filter__country-link reset-a" href="europe/">Эстония</a>
+          </li>
+
+          <li class="country-filter__country">
+            <a class="country-filter__country-link reset-a" href="europe/">Эфиопия</a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="country-filter__letter">
+        <a class="country-filter__letter-button reset-a" href="#">ю</a>
+        <ul class="country-filter__countries reset-ul">
+          <li class="country-filter__country">
+            <a class="country-filter__country-link reset-a" href="europe/">ЮАР</a>
+          </li>
+
+          <li class="country-filter__country">
+            <a class="country-filter__country-link reset-a" href="europe/">Южный Судан</a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="country-filter__letter">
+        <a class="country-filter__letter-button reset-a" href="#">я</a>
+        <ul class="country-filter__countries reset-ul">
+          <li class="country-filter__country">
+            <a class="country-filter__country-link reset-a" href="europe/">Ямайка</a>
+          </li>
+
+          <li class="country-filter__country">
+            <a class="country-filter__country-link reset-a" href="europe/">Япония</a>
           </li>
         </ul>
       </li>
     </ul>
 
-    <button class="country-filter__toggle country-filter__toggle--nojs country-filter__toggle--temporary country-filter__toggle--temporary-active" type="button">Свернуть</button>
+    <button class="country-filter__toggle country-filter__toggle--nojs country-filter__toggle--temporary country-filter__toggle--temporary-active reset-button" type="button">Свернуть</button>
   </section>
 
   <div class="page__columns page__columns--catalog">
-    <form method="get" action="https://echo.htmlacademy.ru/">
+    <form method="get" action="https://echo.htmlacademy.ru/" class="reset-form">
       <section class="filter">
-        <h2 class="visually-hidden">Фильтрация по попутчикам</h2>
-        <p class="filter__slogan">Подберите
+        <h2 class="visually-hidden reset-h2">Фильтрация по попутчикам</h2>
+        <p class="filter__slogan reset-p">Подберите
           идеального
           попутчика</p>
 
-        <fieldset class="filter__fieldset">
+        <fieldset class="filter__fieldset reset-fieldset">
           <legend class="filter__legend">Хобби</legend>
-          <button class="filter__fieldset-toggle filter__fieldset-toggle--nojs filter__fieldset-toggle--active" type="button">
+          <button class="filter__fieldset-toggle filter__fieldset-toggle--nojs filter__fieldset-toggle--active reset-button" type="button">
             <span class="visually-hidden">Скрыть</span>
           </button>
           <div class="filter__fieldset-inner filter__fieldset-inner--active">
@@ -930,9 +933,9 @@
           </div>
         </fieldset>
 
-        <fieldset class="filter__fieldset">
+        <fieldset class="filter__fieldset reset-fieldset">
           <legend class="filter__legend">Музыка</legend>
-          <button class="filter__fieldset-toggle filter__fieldset-toggle--nojs filter__fieldset-toggle--active" type="button">
+          <button class="filter__fieldset-toggle filter__fieldset-toggle--nojs filter__fieldset-toggle--active reset-button" type="button">
             <span class="visually-hidden">Скрыть</span>
           </button>
           <div class="filter__fieldset-inner filter__fieldset-inner--active">
@@ -951,9 +954,9 @@
           </div>
         </fieldset>
 
-        <fieldset class="filter__fieldset">
+        <fieldset class="filter__fieldset reset-fieldset">
           <legend class="filter__legend">Еда</legend>
-          <button class="filter__fieldset-toggle filter__fieldset-toggle--nojs filter__fieldset-toggle--active" type="button">
+          <button class="filter__fieldset-toggle filter__fieldset-toggle--nojs filter__fieldset-toggle--active reset-button" type="button">
             <span class="visually-hidden">Скрыть</span>
           </button>
           <div class="filter__fieldset-inner filter__fieldset-inner--active">
@@ -972,10 +975,10 @@
           </div>
         </fieldset>
 
-        <fieldset class="filter__fieldset transports">
+        <fieldset class="filter__fieldset transports reset-fieldset">
           <legend class="transports__legend filter__legend">Транспорт</legend>
 
-          <button class="filter__fieldset-toggle filter__fieldset-toggle--nojs filter__fieldset-toggle--active" type="button">
+          <button class="filter__fieldset-toggle filter__fieldset-toggle--nojs filter__fieldset-toggle--active reset-button" type="button">
             <span class="visually-hidden">Скрыть</span>
           </button>
           <div class="transports__list filter__fieldset-inner filter__fieldset-inner--horizontal filter__fieldset-inner--active">
@@ -1009,9 +1012,9 @@
           </div>
         </fieldset>
 
-        <fieldset class="filter__fieldset">
+        <fieldset class="filter__fieldset reset-fieldset">
           <legend class="filter__legend">Левел</legend>
-          <button class="filter__fieldset-toggle filter__fieldset-toggle--nojs filter__fieldset-toggle--active" type="button">
+          <button class="filter__fieldset-toggle filter__fieldset-toggle--nojs filter__fieldset-toggle--active reset-button" type="button">
             <span class="visually-hidden">Скрыть</span>
           </button>
           <div class="filter__fieldset-inner filter__fieldset-inner--active">
@@ -1027,10 +1030,10 @@
             <div class="filter__range-slider range-slider">
               <div class="range-slider__inner" style="--min-value:30%; --max-value:100%;">
                 <div class="range-slider__bar">
-                  <button class="range-slider__handle range-slider__handle--min" type="button">
+                  <button class="range-slider__handle range-slider__handle--min reset-button" type="button">
                     <span class="visually-hidden">минимум</span>
                   </button>
-                  <button class="range-slider__handle range-slider__handle--max" type="button">
+                  <button class="range-slider__handle range-slider__handle--max reset-button" type="button">
                     <span class="visually-hidden">максимум</span>
                   </button>
                 </div>
@@ -1039,34 +1042,34 @@
           </div>
         </fieldset>
 
-        <button class="filter__submit" type="submit">Показать</button>
+        <button class="filter__submit reset-button" type="submit">Показать</button>
       </section>
     </form>
 
-    <section class="data page__inner">
-      <h2 class="visually-hidden">Список попутчиков</h2>
-      <ul class="data__list">
+    <section class="data">
+      <h2 class="visually-hidden reset-h2">Список попутчиков</h2>
+      <ul class="data__list reset-ul">
         <li class="user-actions data__item">
-          <h3 class="user-actions__name">
-            <a class="user-actions__title" href="#">Таня Фирсова</a>
+          <h3 class="user-actions__name reset-h3">
+            <a class="user-actions__title reset-a" href="#">Таня Фирсова</a>
             <b class="user-actions__status user-actions__status--offline">
               <span class="visually-hidden">offline</span>
             </b>
           </h3>
 
-          <a class="avatar user-actions__avatar" href="#">
+          <a class="avatar user-actions__avatar reset-a" href="#">
             <picture>
               <source srcset="img/firsova-tablet@1x.jpg" media="(min-width: 768px)">
 
               <source srcset="img/firsova-desktop@1x.jpg" media="(min-width: 1440px)">
 
-              <img class="avatar__image user-actions__avatar-image" src="img/firsova-mobile@1x.jpg" alt="Аватар «Таня Фирсова»">
+              <img class="avatar__image user-actions__avatar-image reset-img" src="img/firsova-mobile@1x.jpg" alt="Аватар «Таня Фирсова»">
             </picture>
           </a>
 
           <span class="user-actions__like-counter">1,5 M</span>
-          <form class="user-actions__like-action" method="post" action="https://echo.htmlacademy.ru/">
-            <button class="user-actions__like-submit" type="submit">
+          <form class="user-actions__like-action reset-form" method="post" action="https://echo.htmlacademy.ru/">
+            <button class="user-actions__like-submit reset-button" type="submit">
               <span class="user-actions__like-text user-actions__like-text--like">
                 <span class="visually-hidden">Нравится!</span>
               </span>
@@ -1078,101 +1081,105 @@
 
           <div class="user-actions__level user-actions__section">
             <div class="level level--sm level--inverse">
+              <svg class="level__svg" width="45" height="45">
+                <circle class="level__ring" cx="22.5" cy="22.5" r="21" fill="transparent" stroke-width="3" stroke-linecap="round" stroke-dashoffset="32" stroke-dasharray="130 1"></circle>
+              </svg>
+
               <span class="level__title user-actions__label user-actions__level-title">Левел</span>
               <span class="level__value">99</span>
             </div>
           </div>
 
           <div class="countries user-actions__countries user-actions__section">
-            <p class="countries__title user-actions__countries-title user-actions__label">Хочет посетить</p>
-            <ul class="countries__list user-actions__countries-list">
+            <p class="countries__title user-actions__countries-title user-actions__label reset-p">Хочет посетить</p>
+            <ul class="countries__list user-actions__countries-list reset-ul">
               <li class="countries__item">
-                <a class="country country--lka user-actions__country" href="#">
+                <a class="country country--lka user-actions__country reset-a" href="#">
                   <span class="country__title user-actions__country-title">Шри-Ланка</span>
                 </a>
               </li>
 
               <li class="countries__item">
-                <a class="country country--tha user-actions__country" href="#">
+                <a class="country country--tha user-actions__country reset-a" href="#">
                   <span class="country__title user-actions__country-title">Тайланд</span>
                 </a>
               </li>
 
               <li class="countries__item">
-                <a class="country country--syc user-actions__country" href="#">
+                <a class="country country--syc user-actions__country reset-a" href="#">
                   <span class="country__title user-actions__country-title">Сейшелы</span>
                 </a>
               </li>
             </ul>
           </div>
 
-          <p class="user-actions__tags">
-            <a class="user-actions__tag" href="#">#ЗОЖ</a>
+          <p class="user-actions__tags reset-p">
+            <a class="user-actions__tag reset-a" href="#">#ЗОЖ</a>
 
-            <a class="user-actions__tag" href="#">#ПП</a>
+            <a class="user-actions__tag reset-a" href="#">#ПП</a>
 
-            <a class="user-actions__tag" href="#">#Фитнес</a>
+            <a class="user-actions__tag reset-a" href="#">#Фитнес</a>
 
-            <a class="user-actions__tag" href="#">#пляж</a>
+            <a class="user-actions__tag reset-a" href="#">#пляж</a>
 
-            <a class="user-actions__tag" href="#">#авокадо</a>
+            <a class="user-actions__tag reset-a" href="#">#авокадо</a>
 
-            <a class="user-actions__tag" href="#">#смузи</a>
+            <a class="user-actions__tag reset-a" href="#">#смузи</a>
           </p>
 
           <div class="transports user-actions__transports user-actions__section">
-            <p class="transports__title user-actions__transports-title user-actions__label">Транспорт</p>
-            <ul class="transports__list user-actions__transports-list">
+            <p class="transports__title user-actions__transports-title user-actions__label reset-p">Транспорт</p>
+            <ul class="transports__list user-actions__transports-list reset-ul">
               <li class="transports__item">
-                <a class="transports__icon transports__icon--plane transports__icon--active transports__icon--blue" href="#">
+                <a class="transports__icon transports__icon--plane transports__icon--active transports__icon--blue reset-a" href="#">
                   <span class="transports__text transports__text--iconic">Авиаперелет</span>
                 </a>
               </li>
 
               <li class="transports__item">
-                <a class="transports__icon transports__icon--bus transports__icon--blue" href="#">
+                <a class="transports__icon transports__icon--bus transports__icon--blue reset-a" href="#">
                   <span class="transports__text transports__text--iconic">Автотранспорт</span>
                 </a>
               </li>
 
               <li class="transports__item">
-                <a class="transports__icon transports__icon--bike transports__icon--blue" href="#">
+                <a class="transports__icon transports__icon--bike transports__icon--blue reset-a" href="#">
                   <span class="transports__text transports__text--iconic">Велосипед</span>
                 </a>
               </li>
 
               <li class="transports__item">
-                <a class="transports__icon transports__icon--walk transports__icon--blue" href="#">
+                <a class="transports__icon transports__icon--walk transports__icon--blue reset-a" href="#">
                   <span class="transports__text transports__text--iconic">Пешком</span>
                 </a>
               </li>
             </ul>
           </div>
 
-          <a class="user-actions__invite" href="#">Позвать!</a>
+          <a class="user-actions__invite reset-a" href="#">Позвать!</a>
         </li>
 
         <li class="user-actions data__item">
-          <h3 class="user-actions__name">
-            <a class="user-actions__title" href="#">Петя Демин</a>
+          <h3 class="user-actions__name reset-h3">
+            <a class="user-actions__title reset-a" href="#">Петя Демин</a>
             <b class="user-actions__status user-actions__status--online">
               <span class="visually-hidden">online</span>
             </b>
           </h3>
 
-          <a class="avatar user-actions__avatar" href="#">
+          <a class="avatar user-actions__avatar reset-a" href="#">
             <picture>
               <source srcset="img/demin-tablet@1x.jpg" media="(min-width: 768px)">
 
               <source srcset="img/demin-desktop@1x.jpg" media="(min-width: 1440px)">
 
-              <img class="avatar__image user-actions__avatar-image" src="img/demin-mobile@1x.jpg" alt="Аватар «Петя Демин»">
+              <img class="avatar__image user-actions__avatar-image reset-img" src="img/demin-mobile@1x.jpg" alt="Аватар «Петя Демин»">
             </picture>
           </a>
 
           <span class="user-actions__like-counter">1500</span>
-          <form class="user-actions__like-action" method="post" action="https://echo.htmlacademy.ru/">
-            <button class="user-actions__like-submit" type="submit">
+          <form class="user-actions__like-action reset-form" method="post" action="https://echo.htmlacademy.ru/">
+            <button class="user-actions__like-submit reset-button" type="submit">
               <span class="user-actions__like-text user-actions__like-text--like user-actions__like-text--active">
                 <span class="visually-hidden">Нравится!</span>
               </span>
@@ -1184,93 +1191,97 @@
 
           <div class="user-actions__level user-actions__section">
             <div class="level level--sm level--inverse">
+              <svg class="level__svg" width="45" height="45">
+                <circle class="level__ring" cx="22.5" cy="22.5" r="21" fill="transparent" stroke-width="3" stroke-linecap="round" stroke-dashoffset="32" stroke-dasharray="105 26"></circle>
+              </svg>
+
               <span class="level__title user-actions__label user-actions__level-title">Левел</span>
               <span class="level__value">80</span>
             </div>
           </div>
 
           <div class="countries user-actions__countries user-actions__section">
-            <p class="countries__title user-actions__countries-title user-actions__label">Хочет посетить</p>
-            <ul class="countries__list user-actions__countries-list">
+            <p class="countries__title user-actions__countries-title user-actions__label reset-p">Хочет посетить</p>
+            <ul class="countries__list user-actions__countries-list reset-ul">
               <li class="countries__item">
-                <a class="country country--bel user-actions__country" href="#">
+                <a class="country country--bel user-actions__country reset-a" href="#">
                   <span class="country__title user-actions__country-title">Бельгия</span>
                 </a>
               </li>
 
               <li class="countries__item">
-                <a class="country country--cze user-actions__country" href="#">
+                <a class="country country--cze user-actions__country reset-a" href="#">
                   <span class="country__title user-actions__country-title">Чехия</span>
                 </a>
               </li>
             </ul>
           </div>
 
-          <p class="user-actions__tags">
-            <a class="user-actions__tag" href="#">#бургер</a>
+          <p class="user-actions__tags reset-p">
+            <a class="user-actions__tag reset-a" href="#">#бургер</a>
 
-            <a class="user-actions__tag" href="#">#бар</a>
+            <a class="user-actions__tag reset-a" href="#">#бар</a>
 
-            <a class="user-actions__tag" href="#">#футбол</a>
+            <a class="user-actions__tag reset-a" href="#">#футбол</a>
 
-            <a class="user-actions__tag" href="#">#концерт</a>
+            <a class="user-actions__tag reset-a" href="#">#концерт</a>
 
-            <a class="user-actions__tag" href="#">#крафт</a>
+            <a class="user-actions__tag reset-a" href="#">#крафт</a>
           </p>
 
           <div class="transports user-actions__transports user-actions__section">
-            <p class="transports__title user-actions__transports-title user-actions__label">Транспорт</p>
-            <ul class="transports__list user-actions__transports-list">
+            <p class="transports__title user-actions__transports-title user-actions__label reset-p">Транспорт</p>
+            <ul class="transports__list user-actions__transports-list reset-ul">
               <li class="transports__item">
-                <a class="transports__icon transports__icon--plane transports__icon--active transports__icon--blue" href="#">
+                <a class="transports__icon transports__icon--plane transports__icon--active transports__icon--blue reset-a" href="#">
                   <span class="transports__text transports__text--iconic">Авиаперелет</span>
                 </a>
               </li>
 
               <li class="transports__item">
-                <a class="transports__icon transports__icon--bus transports__icon--active transports__icon--blue" href="#">
+                <a class="transports__icon transports__icon--bus transports__icon--active transports__icon--blue reset-a" href="#">
                   <span class="transports__text transports__text--iconic">Автотранспорт</span>
                 </a>
               </li>
 
               <li class="transports__item">
-                <a class="transports__icon transports__icon--bike transports__icon--blue" href="#">
+                <a class="transports__icon transports__icon--bike transports__icon--blue reset-a" href="#">
                   <span class="transports__text transports__text--iconic">Велосипед</span>
                 </a>
               </li>
 
               <li class="transports__item">
-                <a class="transports__icon transports__icon--walk transports__icon--active transports__icon--blue" href="#">
+                <a class="transports__icon transports__icon--walk transports__icon--active transports__icon--blue reset-a" href="#">
                   <span class="transports__text transports__text--iconic">Пешком</span>
                 </a>
               </li>
             </ul>
           </div>
 
-          <a class="user-actions__invite" href="#">Позвать!</a>
+          <a class="user-actions__invite reset-a" href="#">Позвать!</a>
         </li>
 
         <li class="user-actions data__item">
-          <h3 class="user-actions__name">
-            <a class="user-actions__title" href="#">Марк Смолов</a>
+          <h3 class="user-actions__name reset-h3">
+            <a class="user-actions__title reset-a" href="#">Марк Смолов</a>
             <b class="user-actions__status user-actions__status--offline">
               <span class="visually-hidden">offline</span>
             </b>
           </h3>
 
-          <a class="avatar user-actions__avatar" href="#">
+          <a class="avatar user-actions__avatar reset-a" href="#">
             <picture>
               <source srcset="img/smolov-tablet@1x.jpg" media="(min-width: 768px)">
 
               <source srcset="img/smolov-desktop@1x.jpg" media="(min-width: 1440px)">
 
-              <img class="avatar__image user-actions__avatar-image" src="img/smolov-mobile@1x.jpg" alt="Аватар «Марк Смолов»">
+              <img class="avatar__image user-actions__avatar-image reset-img" src="img/smolov-mobile@1x.jpg" alt="Аватар «Марк Смолов»">
             </picture>
           </a>
 
           <span class="user-actions__like-counter">170</span>
-          <form class="user-actions__like-action" method="post" action="https://echo.htmlacademy.ru/">
-            <button class="user-actions__like-submit" type="submit">
+          <form class="user-actions__like-action reset-form" method="post" action="https://echo.htmlacademy.ru/">
+            <button class="user-actions__like-submit reset-button" type="submit">
               <span class="user-actions__like-text user-actions__like-text--like user-actions__like-text--active">
                 <span class="visually-hidden">Нравится!</span>
               </span>
@@ -1282,99 +1293,103 @@
 
           <div class="user-actions__level user-actions__section">
             <div class="level level--sm level--inverse">
+              <svg class="level__svg" width="45" height="45">
+                <circle class="level__ring" cx="22.5" cy="22.5" r="21" fill="transparent" stroke-width="3" stroke-linecap="round" stroke-dashoffset="32" stroke-dasharray="32 98"></circle>
+              </svg>
+
               <span class="level__title user-actions__label user-actions__level-title">Левел</span>
               <span class="level__value">25</span>
             </div>
           </div>
 
           <div class="countries user-actions__countries user-actions__section">
-            <p class="countries__title user-actions__countries-title user-actions__label">Хочет посетить</p>
-            <ul class="countries__list user-actions__countries-list">
+            <p class="countries__title user-actions__countries-title user-actions__label reset-p">Хочет посетить</p>
+            <ul class="countries__list user-actions__countries-list reset-ul">
               <li class="countries__item">
-                <a class="country country--usa user-actions__country" href="#">
+                <a class="country country--usa user-actions__country reset-a" href="#">
                   <span class="country__title user-actions__country-title">США</span>
                 </a>
               </li>
 
               <li class="countries__item">
-                <a class="country country--au user-actions__country" href="#">
+                <a class="country country--au user-actions__country reset-a" href="#">
                   <span class="country__title user-actions__country-title">Австралия</span>
                 </a>
               </li>
 
               <li class="countries__item">
-                <a class="country country--dma user-actions__country" href="#">
+                <a class="country country--dma user-actions__country reset-a" href="#">
                   <span class="country__title user-actions__country-title">Доминика</span>
                 </a>
               </li>
             </ul>
           </div>
 
-          <p class="user-actions__tags">
-            <a class="user-actions__tag" href="#">#рэп</a>
+          <p class="user-actions__tags reset-p">
+            <a class="user-actions__tag reset-a" href="#">#рэп</a>
 
-            <a class="user-actions__tag" href="#">#тату</a>
+            <a class="user-actions__tag reset-a" href="#">#тату</a>
 
-            <a class="user-actions__tag" href="#">#хайпбист</a>
+            <a class="user-actions__tag reset-a" href="#">#хайпбист</a>
 
-            <a class="user-actions__tag" href="#">#кроссовки</a>
+            <a class="user-actions__tag reset-a" href="#">#кроссовки</a>
 
-            <a class="user-actions__tag" href="#">#суприм</a>
+            <a class="user-actions__tag reset-a" href="#">#суприм</a>
           </p>
 
           <div class="transports user-actions__transports user-actions__section">
-            <p class="transports__title user-actions__transports-title user-actions__label">Транспорт</p>
-            <ul class="transports__list user-actions__transports-list">
+            <p class="transports__title user-actions__transports-title user-actions__label reset-p">Транспорт</p>
+            <ul class="transports__list user-actions__transports-list reset-ul">
               <li class="transports__item">
-                <a class="transports__icon transports__icon--plane transports__icon--active transports__icon--blue" href="#">
+                <a class="transports__icon transports__icon--plane transports__icon--active transports__icon--blue reset-a" href="#">
                   <span class="transports__text transports__text--iconic">Авиаперелет</span>
                 </a>
               </li>
 
               <li class="transports__item">
-                <a class="transports__icon transports__icon--bus transports__icon--blue" href="#">
+                <a class="transports__icon transports__icon--bus transports__icon--blue reset-a" href="#">
                   <span class="transports__text transports__text--iconic">Автотранспорт</span>
                 </a>
               </li>
 
               <li class="transports__item">
-                <a class="transports__icon transports__icon--bike transports__icon--active transports__icon--blue" href="#">
+                <a class="transports__icon transports__icon--bike transports__icon--active transports__icon--blue reset-a" href="#">
                   <span class="transports__text transports__text--iconic">Велосипед</span>
                 </a>
               </li>
 
               <li class="transports__item">
-                <a class="transports__icon transports__icon--walk transports__icon--blue" href="#">
+                <a class="transports__icon transports__icon--walk transports__icon--blue reset-a" href="#">
                   <span class="transports__text transports__text--iconic">Пешком</span>
                 </a>
               </li>
             </ul>
           </div>
 
-          <a class="user-actions__invite" href="#">Позвать!</a>
+          <a class="user-actions__invite reset-a" href="#">Позвать!</a>
         </li>
 
         <li class="user-actions data__item">
-          <h3 class="user-actions__name">
-            <a class="user-actions__title" href="#">Лариса Роговая</a>
+          <h3 class="user-actions__name reset-h3">
+            <a class="user-actions__title reset-a" href="#">Лариса Роговая</a>
             <b class="user-actions__status user-actions__status--offline">
               <span class="visually-hidden">offline</span>
             </b>
           </h3>
 
-          <a class="avatar user-actions__avatar" href="#">
+          <a class="avatar user-actions__avatar reset-a" href="#">
             <picture>
               <source srcset="img/rogovaya-tablet@1x.jpg" media="(min-width: 768px)">
 
               <source srcset="img/rogovaya-desktop@1x.jpg" media="(min-width: 1440px)">
 
-              <img class="avatar__image user-actions__avatar-image" src="img/rogovaya-mobile@1x.jpg" alt="Аватар «Лариса Роговая»">
+              <img class="avatar__image user-actions__avatar-image reset-img" src="img/rogovaya-mobile@1x.jpg" alt="Аватар «Лариса Роговая»">
             </picture>
           </a>
 
           <span class="user-actions__like-counter">23</span>
-          <form class="user-actions__like-action" method="post" action="https://echo.htmlacademy.ru/">
-            <button class="user-actions__like-submit" type="submit">
+          <form class="user-actions__like-action reset-form" method="post" action="https://echo.htmlacademy.ru/">
+            <button class="user-actions__like-submit reset-button" type="submit">
               <span class="user-actions__like-text user-actions__like-text--like user-actions__like-text--active">
                 <span class="visually-hidden">Нравится!</span>
               </span>
@@ -1386,85 +1401,89 @@
 
           <div class="user-actions__level user-actions__section">
             <div class="level level--sm level--inverse">
+              <svg class="level__svg" width="45" height="45">
+                <circle class="level__ring" cx="22.5" cy="22.5" r="21" fill="transparent" stroke-width="3" stroke-linecap="round" stroke-dashoffset="32" stroke-dasharray="65 65"></circle>
+              </svg>
+
               <span class="level__title user-actions__label user-actions__level-title">Левел</span>
               <span class="level__value">50</span>
             </div>
           </div>
 
           <div class="countries user-actions__countries user-actions__section">
-            <p class="countries__title user-actions__countries-title user-actions__label">Хочет посетить</p>
-            <ul class="countries__list user-actions__countries-list">
+            <p class="countries__title user-actions__countries-title user-actions__label reset-p">Хочет посетить</p>
+            <ul class="countries__list user-actions__countries-list reset-ul">
               <li class="countries__item">
-                <a class="country country--uk user-actions__country" href="#">
+                <a class="country country--uk user-actions__country reset-a" href="#">
                   <span class="country__title user-actions__country-title">Великобритания</span>
                 </a>
               </li>
 
               <li class="countries__item">
-                <a class="country country--deu user-actions__country" href="#">
+                <a class="country country--deu user-actions__country reset-a" href="#">
                   <span class="country__title user-actions__country-title">Германия</span>
                 </a>
               </li>
             </ul>
           </div>
 
-          <p class="user-actions__tags">
-            <a class="user-actions__tag" href="#">#образование</a>
+          <p class="user-actions__tags reset-p">
+            <a class="user-actions__tag reset-a" href="#">#образование</a>
 
-            <a class="user-actions__tag" href="#">#карьера</a>
+            <a class="user-actions__tag reset-a" href="#">#карьера</a>
 
-            <a class="user-actions__tag" href="#">#учеба</a>
+            <a class="user-actions__tag reset-a" href="#">#учеба</a>
 
-            <a class="user-actions__tag" href="#">#линкедин</a>
+            <a class="user-actions__tag reset-a" href="#">#линкедин</a>
           </p>
 
           <div class="transports user-actions__transports user-actions__section">
-            <p class="transports__title user-actions__transports-title user-actions__label">Транспорт</p>
-            <ul class="transports__list user-actions__transports-list">
+            <p class="transports__title user-actions__transports-title user-actions__label reset-p">Транспорт</p>
+            <ul class="transports__list user-actions__transports-list reset-ul">
               <li class="transports__item">
-                <a class="transports__icon transports__icon--plane transports__icon--active transports__icon--blue" href="#">
+                <a class="transports__icon transports__icon--plane transports__icon--active transports__icon--blue reset-a" href="#">
                   <span class="transports__text transports__text--iconic">Авиаперелет</span>
                 </a>
               </li>
 
               <li class="transports__item">
-                <a class="transports__icon transports__icon--bus transports__icon--active transports__icon--blue" href="#">
+                <a class="transports__icon transports__icon--bus transports__icon--active transports__icon--blue reset-a" href="#">
                   <span class="transports__text transports__text--iconic">Автотранспорт</span>
                 </a>
               </li>
 
               <li class="transports__item">
-                <a class="transports__icon transports__icon--bike transports__icon--blue" href="#">
+                <a class="transports__icon transports__icon--bike transports__icon--blue reset-a" href="#">
                   <span class="transports__text transports__text--iconic">Велосипед</span>
                 </a>
               </li>
 
               <li class="transports__item">
-                <a class="transports__icon transports__icon--walk transports__icon--blue" href="#">
+                <a class="transports__icon transports__icon--walk transports__icon--blue reset-a" href="#">
                   <span class="transports__text transports__text--iconic">Пешком</span>
                 </a>
               </li>
             </ul>
           </div>
 
-          <a class="user-actions__invite" href="#">Позвать!</a>
+          <a class="user-actions__invite reset-a" href="#">Позвать!</a>
         </li>
       </ul>
     </section>
 
-    <section class="pagination page__inner">
-      <h2 class="visually-hidden">Постраничная навигация</h2>
-      <a class="pagination__more" href="#">Показать ещё</a>
+    <section class="pagination">
+      <h2 class="visually-hidden reset-h2">Постраничная навигация</h2>
+      <a class="pagination__more reset-a" href="#">Показать ещё</a>
 
       <div class="pagination__inner">
-        <a class="pagination__prev" href="#">
+        <a class="pagination__prev reset-a" href="#">
           <span class="visually-hidden">Предыдущая страница</span>
         </a>
-        <a class="pagination__page pagination__page--active">1</a>
-        <a class="pagination__page" href="#">2</a>
-        <a class="pagination__page" href="#">3</a>
-        <a class="pagination__page" href="#">4</a>
-        <a class="pagination__next" href="#">
+        <a class="pagination__page pagination__page--active reset-a">1</a>
+        <a class="pagination__page reset-a" href="#">2</a>
+        <a class="pagination__page reset-a" href="#">3</a>
+        <a class="pagination__page reset-a" href="#">4</a>
+        <a class="pagination__next reset-a" href="#">
           <span class="visually-hidden">Следующая страница</span>
         </a>
       </div>
@@ -1472,38 +1491,38 @@
   </div>
 </main>
 
-<footer class="page__layer-9 page-footer page__container page__inner">
-  <a class="logo page-footer__logo" href="index.html">
+<footer class="page__layer-9 page-footer">
+  <a class="logo page-footer__logo reset-a" href="index.html">
     <picture>
       <source srcset="img/logo-desktop-blue@1x.png" media="(min-width: 1440px)">
       <source srcset="img/logo-tablet-blue@1x.png" media="(min-width: 768px) and (max-width: 1439px)">
-      <img class="logo__image page-footer__logo-image" src="img/logo-mobile-blue@1x.png" alt="Логотип «Погнали?»">
+      <img class="logo__image page-footer__logo-image reset-img" src="img/logo-mobile-blue@1x.png" alt="Логотип «Погнали?»">
     </picture>
   </a>
 
-  <ul class="socials page-footer__socials">
+  <ul class="socials page-footer__socials reset-ul">
     <li class="socials__item page-footer__socials-item">
-      <a class="socials__link socials__link--fb page-footer__socials-link" href="#">
+      <a class="socials__link socials__link--fb page-footer__socials-link reset-a" href="#">
         <span class="visually-hidden">Facebook</span>
       </a>
     </li>
 
     <li class="socials__item page-footer__socials-item">
-      <a class="socials__link socials__link--vk page-footer__socials-link" href="#">
+      <a class="socials__link socials__link--vk page-footer__socials-link reset-a" href="#">
         <span class="visually-hidden">ВКонтакте</span>
       </a>
     </li>
 
     <li class="socials__item page-footer__socials-item">
-      <a class="socials__link socials__link--in page-footer__socials-link" href="#">
+      <a class="socials__link socials__link--in page-footer__socials-link reset-a" href="#">
         <span class="visually-hidden">Instagram</span>
       </a>
     </li>
   </ul>
 
-  <p class="page-footer__copyright">Разработано
-    <a class="page-footer__academy-link" href="https://htmlacademy.ru/intensive/adaptive">
-      <img class="page-footer__academy-image" src="img/htmlacademy.svg" width="27" height="33" alt="Логотип «HTML Academy»">
+  <p class="page-footer__copyright reset-p">Разработано
+    <a class="page-footer__academy-link reset-a" href="https://htmlacademy.ru/intensive/adaptive">
+      <img class="page-footer__academy-image reset-img" src="img/htmlacademy.svg" width="27" height="33" alt="Логотип «HTML Academy»">
     </a>
   </p>
 </footer>

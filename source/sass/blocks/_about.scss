@@ -1,21 +1,32 @@
 .about {
+  @include page__container();
+  @include page__inner();
+  @include adaptive-overlap();
+  @include adaptive-border-radius();
+
   position: relative;
+  padding-top: 33px;
+  padding-bottom: 33px;
+  min-height: 353px;
+
   color: $white;
-  background-color: $more-dark-blue;
+  background: $much-darker-blue url("../img/about-mobile@1x.png") no-repeat center top / 292px 352px;
+
+  @include tablet-desktop() {
+    padding-top: 41px;
+    padding-bottom: 89px;
+
+    background: url("../img/about-tablet@1x.png") no-repeat right 48px / 376px 548px, url("data:image/svg+xml,%3Csvg width='688' height='212' viewBox='0 0 688 212' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='688' height='212' rx='20' fill='%23141B3B'/%3E%3C/svg%3E%0A") no-repeat 40px top / 688px 212px, $darker-blue;
+  }
+
+  @include desktop() {
+    padding-top: 132px;
+    padding-bottom: 163px;
+
+    background: url("../img/about-desktop@1x.png") no-repeat right 85px / 630px 665px, $more-dark-blue;
+  }
 
   &::before {
-    @include tablet() {
-      content: "";
-      position: absolute;
-      z-index: -1;
-      margin: 0 40px;
-      width: calc(100% - 80px);
-      height: 212px;
-
-      border-radius: 20px;
-      background-color: $more-darker-blue;
-    }
-
     @include desktop() {
       content: "";
       position: absolute;
@@ -32,43 +43,64 @@
 }
 
 .about__inner {
-  padding: 33px (27px + 25px) 33px (29px + 25px);
-  min-height: 353px;
+  padding-left: 24px;
+  padding-right: 24px;
 
-  background: url("../img/about-mobile@1x.png") no-repeat center top / 292px 252px;
-
-  @include tablet() {
-    padding: 41px 385px 89px 75px;
-
-    background: url("../img/about-tablet@1x.png") no-repeat right 48px / 376px 548px;
+  @include tablet-desktop() {
+    padding-left: 34px;
+    padding-right: 34px;
+    width: #{309px + 68px};
   }
 
   @include desktop() {
-    padding: 132px (691px - 60px + $padding--desktop) 163px (130px - 60px + $padding--desktop);
-
-    background: url("../img/about-desktop@1x.png") no-repeat right 85px / 630px 665px;
+    padding-left: 70px;
+    padding-right: 70px;
+    width: auto;
   }
 }
 
 .about__title {
+  margin-bottom: 19px;
+
   font: 700 24px/24px $font-family;
 
   color: $orange;
 
   @include tablet-desktop() {
+    margin-bottom: 40px;
+
     font: 700 45px/45px $font-family;
+  }
+
+  @include desktop() {
+    margin-bottom: 57px;
   }
 }
 
 .about__text {
+  margin-bottom: 20px;
+
   font: 300 16px/22px $font-family;
 
   @include tablet() {
+    margin-bottom: 31px;
+
     font: 300 28px/33px $font-family;
   }
 
   @include desktop() {
+    width: 619px;
+    margin-bottom: 38px;
+
     font: 300 28px/34px $font-family;
+  }
+}
+
+.about__text-typography {
+  white-space: normal;
+
+  @include tablet-desktop() {
+    white-space: nowrap;
   }
 }
 
@@ -92,6 +124,7 @@
   @include tablet() {
     display: flex;
     width: 276px;
+    margin-top: 52px;
 
     font: 700 24px/24px $font-family;
   }
@@ -99,7 +132,14 @@
   @include desktop() {
     display: flex;
     width: 274px;
+    margin-top: 85px;
 
     font: 700 24px/24px $font-family;
+  }
+}
+
+.about__more-text {
+  @include desktop() {
+    padding: 29px 33px 27px;
   }
 }

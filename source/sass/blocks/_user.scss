@@ -1,18 +1,45 @@
 .user {
+  position: relative;
+  width: 270px;
+  padding-bottom: 20px;
+  display: grid;
+  justify-content: center;
+  align-content: start;
+  grid-template-areas:
+    "avatar"
+    "level"
+    "countries"
+    "name"
+    "tags"
+    "transports"
+    "invite";
+
   text-align: center;
+
+  border-radius: 10px;
   color: $blue;
   background: $white;
+
+  @include tablet-desktop() {
+    width: 285px;
+  }
 }
 
 .user__name {
+  grid-area: name;
   position: relative;
   display: flex;
+  flex-flow: row-reverse;
   justify-content: center;
   align-items: center;
+  margin-bottom: 15px;
 }
 
 .user__title {
   display: block;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-right: 6px;
 
   font: 700 21px/21px $font-family;
 
@@ -47,7 +74,33 @@
   }
 }
 
+.user__countries {
+  grid-area: countries;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+.user__country {
+  @include country--md();
+
+  justify-content: center;
+}
+
+.user__country-title {
+  @include country__title--iconic();
+}
+
+.user__tags {
+  position: relative;
+  grid-area: tags;
+  padding: 0 45px;
+  margin-bottom: 14px;
+}
+
 .user__transports {
+  grid-area: transports;
+  justify-content: center;
+
   @include tablet-desktop() {
     border: none;
   }
@@ -55,4 +108,19 @@
 
 .user__transports-title {
   @include visually-hidden();
+}
+
+.user__level {
+  grid-area: level;
+  position: absolute;
+  left: 16px;
+  top: -(193px + 60px);
+}
+
+.user__avatar {
+  grid-area: avatar;
+}
+
+.user__avatar-image {
+  border-radius: 10px 10px 0 0;
 }

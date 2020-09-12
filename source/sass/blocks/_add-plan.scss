@@ -1,6 +1,14 @@
 .add-plan {
+  @include page__container();
+  @include adaptive-overlap();
+  @include adaptive-border-radius(top);
+
   padding-top: 30px;
   padding-bottom: 43px + $radius;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-between;
+  align-items: center;
   color: $blue;
   background: $much-more-light-blue;
 
@@ -16,12 +24,21 @@
 }
 
 .add-plan__title {
+  margin-bottom: 29px;
+
   font: 700 24px/24px $font-family;
 
   color: $blue;
 
   @include tablet-desktop() {
+    margin-bottom: 35px;
+
     font: 700 36px/36px $font-family;
+  }
+
+  @include desktop() {
+    padding-left: 69px;
+    margin-bottom: 33px;
   }
 
   &::after {
@@ -30,14 +47,49 @@
 }
 
 .add-plan__menu {
+  grid-column: -2;
+  grid-row: 1 / span 2;
+  display: flex;
+  flex-flow: wrap;
+  margin-right: 10px;
+  margin-bottom: 29px;
+
   @include desktop() {
+    flex-flow: column;
+    margin-bottom: -20px + 29px;
+
     font: 400 20px/24px $font-family;
     text-transform: uppercase;
+  }
+
+  &--nojs {
+    display: none;
+  }
+
+  &--dynamic {
+    display: flex;
+
+    @include desktop() {
+      display: none;
+    }
+  }
+
+  &--static {
+    display: none;
+
+    @include desktop() {
+      display: flex;
+    }
   }
 }
 
 .add-plan__menu-item {
+  display: flex;
   opacity: 0.6;
+
+  @include desktop() {
+    margin-bottom: 20px;
+  }
 
   &::before {
     content: "";
@@ -45,6 +97,7 @@
     box-sizing: content-box;
     width: 5px;
     height: 5px;
+    margin: 6px;
 
     border-radius: 50%;
     background-color: $blue;
@@ -63,6 +116,7 @@
 
 .add-plan__menu-item-text {
   display: none;
+  margin-left: 30px;
 
   color: $black;
 
@@ -71,17 +125,53 @@
   }
 }
 
+.add-plan__steps {
+  min-width: 100%;
+  margin-bottom: -10px;
+
+  @include tablet-desktop() {
+    margin-bottom: -39px;
+  }
+
+  @include desktop() {
+    margin-bottom: -44px;
+  }
+}
+
 .add-plan__step {
+  padding: 24px 25px 23px;
+  margin-bottom: 10px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: start;
+  border-radius: 10px;
   background-color: $white;
+
+  @include tablet-desktop() {
+    padding: 48px 43px 56px;
+    margin-bottom: 39px;
+    border-radius: 30px;
+  }
+
+  @include desktop() {
+    padding: 98px 159px 105px;
+    margin-bottom: 44px;
+    border-radius: 60px;
+  }
 }
 
 .add-plan__step-title {
+  grid-column: 1;
+  margin-bottom: 16px;
+
   font: 700 20px/20px $font-family;
   white-space: pre-line;
 
   color: $blue;
 
   @include tablet-desktop() {
+    margin-bottom: 35px;
+
     font: 700 36px/36px $font-family;
   }
 
@@ -91,17 +181,32 @@
 }
 
 .add-plan__step-intro {
+  grid-column: 1 / -1;
+  margin-bottom: 20px;
+
   font: 400 16px/22px $font-family;
 
   color: $grey;
 
   @include tablet-desktop() {
+    margin-bottom: 38px;
+    max-width: 505px;
+
     font: 400 20px/24px $font-family;
+  }
+
+  @include desktop() {
+    grid-column-end: unset;
+    margin-bottom: 55px;
+    max-width: 474px;
   }
 }
 
 .add-plan__group {
   display: block;
+  grid-column: 1 / -1;
+  position: relative;
+  margin-bottom: 20px;
 
   font: 500 16px/16px $font-family;
   letter-spacing: 0.09em;
@@ -110,18 +215,32 @@
   color: $blue;
 
   @include tablet-desktop() {
+    margin-bottom: 25px;
+
     font: 500 20px/20px $font-family;
     letter-spacing: 0.1em;
   }
 }
 
 .add-plan__legend {
+  display: block;
+  width: 100%;
+  padding-right: 50px;
+  margin-bottom: 8px;
+
   @include tablet-desktop() {
+    padding-top: 26px;
+
     border-top: 1px solid $much-more-lighter-grey;
   }
 }
 
 .add-plan__unit {
+  position: absolute;
+  right: 0;
+  margin-top: -(8px + 16px);
+  width: 50px;
+
   text-align: right;
 
   opacity: 0.3;
@@ -129,6 +248,8 @@
 
 .add-plan__input {
   display: block;
+  padding: 16px 14px*3 13px;
+  width: 100%;
 
   font: 500 15px/16px $font-family;
   text-align: center;
@@ -151,6 +272,9 @@
 }
 
 .add-plan__decr {
+  position: absolute;
+  left: 14px;
+  bottom: 18px;
   width: 14px;
   height: 14px;
 
@@ -163,6 +287,9 @@
 }
 
 .add-plan__incr {
+  position: absolute;
+  right: 14px;
+  bottom: 18px;
   width: 14px;
   height: 14px;
 
@@ -177,6 +304,7 @@
 .add-plan__check-text {
   display: flex;
   align-items: center;
+  margin-right: auto;
 
   font: 400 15px/15px $font-family;
   text-transform: none;
@@ -193,12 +321,15 @@
     content: "";
     width: 26px;
     height: 26px;
+    margin-right: 9px;
+    margin-top: -1px;
 
     border-radius: 4px;
     background-color: $white;
     border: 1px solid $much-light-blue;
 
     @include tablet-desktop() {
+      margin-right: 22px;
       width: 36px;
       height: 36px;
     }
@@ -218,13 +349,44 @@
   }
 }
 
-.add-plan__countries {
+.add-plan__calendar {
+  grid-column: 1 / -1;
+  margin-bottom: 22px;
+
   @include tablet-desktop() {
+    margin-bottom: 47px;
+  }
+
+  @include desktop() {
+    margin-bottom: 57px;
+  }
+}
+
+.add-plan__countries {
+  grid-column: 1 / -1;
+  position: relative;
+  margin-bottom: -22px;
+  padding-bottom: 26px;
+  display: flex;
+  flex-flow: column;
+
+  @include tablet-desktop() {
+    padding-bottom: 50px;
+    padding-top: 42px;
+
     border-top: 1px solid $much-more-lighter-grey;
+  }
+
+  @include desktop() {
+    padding-bottom: 56px;
   }
 
   &::before {
     content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: calc(100% - #{$flag-width});
     display: block;
     width: 1px;
     height: 100%;
@@ -232,12 +394,14 @@
     pointer-events: none;
 
     @include tablet-desktop() {
+      left: calc(100% - #{$flag-width--tablet});
       height: calc(100% - 22px);
 
       background: linear-gradient(0deg, transparent, $much-more-lighter-grey 70px);
     }
 
     @include desktop() {
+      left: calc(100% - #{$flag-width--desktop});
       height: calc(100% - 22px + 153px);
 
       background: $much-more-lighter-grey;
@@ -246,6 +410,8 @@
 }
 
 .add-plan__countries-item {
+  margin-bottom: 22px;
+
   &--add {
     &::after {
       background: $ring-blue-background;
@@ -321,8 +487,78 @@
 }
 
 .add-plan__comments {
+  grid-column: 1 / -1;
+  margin-bottom: 22px - 27px;
+
   @include tablet-desktop() {
+    padding-top: 36px;
+
     border-top: 1px solid $much-more-lighter-grey;
+  }
+}
+
+.add-plan__comment {
+  position: relative;
+  margin-bottom: 27px;
+
+  @include tablet-desktop() {
+    margin-bottom: 53px;
+  }
+}
+
+.add-plan__comment-route {
+  position: absolute;
+  top: 10px;
+  left: -15px;
+  width: 15px;
+  height: calc(100% + 27px + 2px);
+  border: 2px solid $blue;
+  border-right: none;
+
+  @include tablet-desktop() {
+    left: unset;
+    top: 18px;
+    right: -25px;
+    width: unset;
+    height: calc(100% + 53px + 3px);
+  }
+
+  &::before {
+    position: absolute;
+    right: -3px;
+    top: -4px;
+    content: "";
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+    background-color: $blue;
+
+    @include tablet-desktop() {
+      width: 14px;
+      height: 14px;
+      right: #{-(14px - 2px) / 2};
+      top: -6px;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    right: -3px;
+    bottom: -4px;
+    content: "";
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+    background-color: $blue;
+
+    @include tablet-desktop() {
+      width: 14px;
+      height: 14px;
+      right: #{-(14px - 2px) / 2};
+      bottom: -9px;
+    }
   }
 }
 
@@ -331,13 +567,54 @@
 }
 
 .add-plan__comment-country {
+  @include country--md();
+
+  padding-left: 8px;
+  margin-bottom: 18px;
+  width: 220px;
+  min-height: 24px;
+  overflow: hidden;
+
   font: 500 18px/18px $font-family;
   white-space: nowrap;
   text-transform: none;
 
   @include tablet-desktop() {
+    @include country--lg();
+    padding-left: 0;
+    margin-bottom: 38px;
+    width: 600px;
+    min-height: 47px;
+
     font: 700 30px/30px $font-family;
     text-transform: none;
+  }
+
+  @include desktop() {
+    width: 1000px;
+  }
+
+  &::before {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 24px;
+    width: 50px;
+    height: 20px;
+
+    background: url("../img/country-fade-light-mobile@1x.png") no-repeat right center / 50px 20px;
+
+    @include tablet-desktop() {
+      width: 100px;
+      height: 40px;
+
+      background: url("../img/country-fade-light-mobile@1x.png") no-repeat right center / 100px 40px;
+    }
   }
 }
 
@@ -346,6 +623,7 @@
   resize: none;
   width: 100%;
   height: 220px;
+  padding: 11px 19px 11px 14px;
 
   font: 400 16px/22px $font-family;
 
@@ -363,8 +641,10 @@
 }
 
 .add-plan__prev-step {
+  grid-column: 1 / -1;
   display: block;
   padding: 7px 7px 4px;
+  margin-top: 13px;
 
   font: 700 17px/30px $font-family;
   text-transform: uppercase;
@@ -375,7 +655,9 @@
   background-color: transparent;
 
   @include tablet-desktop() {
+    grid-column: unset;
     padding: 29px 0 27px 35px;
+    margin-top: 0;
 
     font: 700 24px/24px $font-family;
     text-transform: none;
@@ -387,6 +669,7 @@
 
 .add-plan__next-step,
 .add-plan__submit {
+  grid-column: 1 / -1;
   display: block;
   padding: 7px 7px 4px;
 
@@ -399,6 +682,8 @@
   background-color: $yellow;
 
   @include tablet-desktop() {
+    grid-column: unset;
+    width: 286px;
     padding: 29px 77px 27px 34px;
 
     font: 700 24px/24px $font-family;

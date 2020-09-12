@@ -6,10 +6,10 @@
 .logo__image {
   display: block;
   width: 100px;
-  height: 15px;
+  height: 19px;
 
   @include tablet-desktop() {
-    width: 164px;
+    width: 166px;
     height: 42px;
   }
 

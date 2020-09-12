@@ -1,10 +1,21 @@
 .page-footer {
+  @include page__container();
+  @include page__inner();
+
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-between;
   padding-top: 37px;
   padding-bottom: 19px;
+
   color: $grey;
   background-color: $white;
 
+  @include adaptive-border-radius(top);
+
   @include tablet-desktop() {
+    flex-flow: wrap;
     padding-top: 46px;
     padding-bottom: 32px;
   }
@@ -15,12 +26,30 @@
   }
 }
 
+.page-footer__logo {
+  flex: 1;
+  margin-bottom: 40px;
+
+  @include tablet-desktop() {
+    margin-bottom: 0;
+  }
+}
+
 .page-footer__copyright {
+  flex: 1;
+  align-self: stretch;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-top: 13px;
+
   font: 400 16px/16px $font-family;
 
   border-top: 1px solid $lightest-grey;
 
   @include tablet-desktop() {
+    padding: 0;
+
     font: 400 20px/20px $font-family;
 
     border: none;
@@ -29,12 +58,25 @@
 
 .page-footer__academy-link {
   display: block;
+  margin-left: auto;
+
+  @include tablet-desktop() {
+    margin-left: 23px;
+  }
 }
 
 .page-footer__academy-image {
   display: block;
   width: 27px;
   height: 33px;
+}
+
+.page-footer__socials {
+  margin-bottom: 37px;
+
+  @include tablet-desktop() {
+    margin-bottom: 0;
+  }
 }
 
 .page-footer__socials-link {

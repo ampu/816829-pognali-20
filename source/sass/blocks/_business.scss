@@ -1,20 +1,50 @@
+.business {
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  margin-top: 15px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  &--active {
+    display: flex;
+  }
+
+  @include tablet() {
+    margin-top: 54px;
+  }
+
+  @include desktop() {
+    margin-top: 109px + 60px;
+  }
+}
+
 .business__inner {
+  width: $width - 2 * $padding;
   padding-top: 34px;
+  border-radius: 20px;
   background: $white;
   box-shadow: 0 2px 8px $modal-shadow;
 
   @include tablet-desktop() {
+    width: $width--tablet - 2 * $padding--tablet;
     padding-top: 54px;
 
     box-shadow: 0 4px 22px $modal-shadow;
   }
 
   @include desktop() {
+    width: 750px;
+
     border-radius: 30px;
   }
 }
 
 .business__title {
+  margin-bottom: 28px;
+
   font: 700 24px/24px $font-family;
   white-space: pre-line;
   text-align: center;
@@ -22,19 +52,50 @@
   color: $orange;
 
   @include tablet-desktop() {
+    margin-bottom: 47px;
+
     font: 700 45px/45px $font-family;
     white-space: normal;
     text-align: center;
   }
+
+  @include desktop() {
+    margin-bottom: 46px;
+  }
 }
 
 .business__list {
+  margin-bottom: 34px;
+  padding: 0 50px;
+
   font: 300 16px/22px $font-family;
 
   color: $grey;
 
   @include tablet-desktop() {
+    margin-bottom: 52px;
+
     font: 300 22px/28px $font-family;
+  }
+
+  @include desktop() {
+    margin-bottom: 53px;
+  }
+}
+
+.business__item {
+  padding: 11px 0;
+  border-top: 1px solid rgba($black, 0.05);
+
+  &:last-of-type {
+    border-bottom: 1px solid rgba($black, 0.05);
+  }
+
+  @include tablet-desktop() {
+    padding: 14px 0;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
   }
 }
 
@@ -47,6 +108,7 @@
 
   font: 700 16px/24px $font-family;
   text-transform: uppercase;
+  border-radius: 0 0 20px 20px;
   background: $most-lightest-blue;
 
   @include tablet-desktop() {
@@ -54,5 +116,9 @@
 
     font: 700 24px/24px $font-family;
     text-transform: none;
+  }
+
+  @include desktop() {
+    border-radius: 0 0 30px 30px;
   }
 }

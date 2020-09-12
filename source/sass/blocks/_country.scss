@@ -6,4 +6,15 @@
   align-items: center;
 
   color: $blue;
+
+  /* stylelint-disable */
+  @each $country in au, bel, bih, cze, deu, dma, fra, lka, syc, tha, uk, usa {
+    &--#{$country}::before {
+      content: "";
+      flex-shrink: 0;
+
+      background: url("../img/flags/70x47/" + $country + ".png") no-repeat center center;
+    }
+  }
+  /* stylelint-enable */
 }
