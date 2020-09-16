@@ -182,7 +182,7 @@
   }
 
   @include desktop() {
-    padding: 101px 160px 105px;
+    padding: 101px 160px 105px 160px;
     margin-bottom: 44px;
     grid-template-columns: 1fr 230px;
 
@@ -270,7 +270,7 @@
   }
 
   @include desktop() {
-    grid-column: unset;
+    grid-column: 1;
     width: 510px;
     margin-bottom: 12px;
 
@@ -290,10 +290,13 @@
 
   &--with-children {
     @include desktop() {
+      width: auto;
       position: relative;
       top: 17px;
       left: -16px;
       margin: 0;
+      margin-right: -100px;
+      grid-column: 2;
     }
   }
 }

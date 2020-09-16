@@ -2,7 +2,7 @@
   padding-top: #{94px - 73px};
   padding-bottom: 39px;
 
-  background: url("../img/traveller-illustration-mobile@1x.png") no-repeat calc(50% + 16px) #{221px - 73px} / 192px 255px, url("../img/globe-back-mobile@1x.jpg") no-repeat center top / 320px 569px;
+  background: url("../img/traveller-illustration-mobile@1x.png") no-repeat calc(50% + 16px) #{221px - 73px} / 192px 255px, url("../img/globe-back-mobile@1x.jpg") no-repeat center top / 100% 569px;
   background-color: $much-darker-blue;
   color: $white;
 
@@ -155,6 +155,7 @@
 .promo__review {
   @include page__outer();
 
+  position: relative;
   margin-bottom: 29px;
   padding-top: 48px;
   padding-left: 50px;
@@ -162,15 +163,28 @@
   display: flex;
   flex-flow: column;
 
-  background-color: $much-darker-blue;
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: -1000px;
+    right: -1000px;
+    height: 100%;
+
+    background-color: $much-darker-blue;
+
+    @include tablet-desktop() {
+      content: unset;
+    }
+  }
 
   @include tablet-desktop() {
     margin: 0;
     margin-bottom: 211px;
     padding: 0;
     padding-left: #{72px - $padding--tablet};
-
-    background: none;
   }
 
   @include desktop() {
@@ -180,8 +194,6 @@
     margin-right: 23px;
     padding: 0;
     padding-top: 12px;
-
-    background: none;
   }
 }
 
