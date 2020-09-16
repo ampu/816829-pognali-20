@@ -459,8 +459,12 @@
     border-color: $much-darker-blue;
   }
 
-  &::-webkit-inner-spin-button,
-  &::-webkit-outer-spin-button {
+  /* stylelint-disable */
+  -moz-appearance: textfield;
+  /* stylelint-enable */
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
     display: none;
   }
 }
