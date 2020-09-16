@@ -1,9 +1,16 @@
 $range-slider__handle-radius: 10px;
+$range-slider__handle-radius--tablet: 13px;
+
 $range-slider__bar-height: 2px;
+$range-slider__bar-height--tablet: 3px;
 
 .range-slider {
   width: 100%;
   height: $range-slider__bar-height;
+
+  @include tablet-desktop() {
+    height: $range-slider__bar-height--tablet;
+  }
 }
 
 .range-slider__inner {
@@ -13,6 +20,10 @@ $range-slider__bar-height: 2px;
   padding: 0 $range-slider__handle-radius;
 
   background-color: rgba($blue, 0.2);
+
+  @include tablet-desktop() {
+    padding: 0 $range-slider__handle-radius--tablet;
+  }
 }
 
 .range-slider__bar {
@@ -28,6 +39,11 @@ $range-slider__bar-height: 2px;
 
   background-color: $blue;
   background-clip: content-box;
+
+  @include tablet-desktop() {
+    margin: 0 -1 * $range-slider__handle-radius--tablet;
+    min-width: 2 * $range-slider__handle-radius--tablet;
+  }
 }
 
 .range-slider__handle {
@@ -41,6 +57,11 @@ $range-slider__bar-height: 2px;
   cursor: pointer;
 
   transition: transform 0.3s;
+
+  @include tablet-desktop() {
+    width: $range-slider__handle-radius--tablet;
+    height: $range-slider__handle-radius--tablet;
+  }
 
   &:hover,
   &:focus,

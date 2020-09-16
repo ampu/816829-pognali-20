@@ -1,41 +1,34 @@
 .user-actions {
   position: relative;
   width: 270px;
-  padding: 15px 20px 22px;
+  padding: 15px 22px 22px 26px;
   display: grid;
   justify-content: start;
   align-content: start;
   align-items: start;
-  grid-column-gap: 16px;
 
   grid-template-columns: auto 1fr auto;
-
   grid-template-rows:
-    auto
-    auto
-    13px
-    auto
-    16px
-    auto
-    18px
-    auto
-    13px;
-
+    min-content 1px
+    min-content 13px
+    min-content 16px
+    min-content 13px
+    min-content 9px
+    min-content;
   grid-template-areas:
     "avatar name name"
-    "avatar like-counter like-action"
-    ". . ."
-    "tags tags ."
-    ". . ."
-    "countries countries countries"
-    ". . ."
-    "transports transports level"
-    ". . ."
-    ". . ."
+    "avatar . ."
+    "avatar like-counter like-action" ". . ."
+    "tags tags ." ". . ."
+    "countries countries countries" ". . ."
+    "transports transports level" ". . ."
     "invite invite invite";
+  grid-column-gap: 8px;
+
   border-radius: 20px;
   color: $blue;
   background: $white;
+
 
   @include tablet-desktop() {
     width: auto;
@@ -46,9 +39,12 @@
     grid-template-columns: auto 29px auto auto auto 1fr auto;
 
     grid-template-rows:
-      auto 19px
-      auto 46px
-      auto 22px
+      auto
+      19px
+      auto
+      40px
+      auto
+      20px
       auto;
 
     grid-template-areas:
@@ -61,16 +57,17 @@
       "countries countries countries countries countries countries countries";
   }
 
+
   @include desktop() {
     padding: 0;
     align-items: center;
-    grid-template-columns: auto 62px min-content min-content 114px 13px auto 13px min-content;
+    grid-template-columns: auto 62px min-content min-content 114px 13px 1fr 13px min-content 43px;
 
     grid-template-rows:
       46px
       min-content 20px
       min-content 40px
-      min-content 46px;
+      min-content 42px;
 
     grid-template-areas:
       "avatar . . . . . . . ."
@@ -81,25 +78,28 @@
       "avatar . invite like-action like-counter . transports . level"
       "avatar . . . . . . . .";
   }
+
+  &:hover {
+    box-shadow: 0 4px 9px rgba($black, 0.16);
+  }
 }
 
 .user-actions__section {
   position: relative;
-  margin: 0 -20px;
-  padding: 8px 20px 0;
-  border-top: 1px solid $much-lighter-blue;
+  padding-top: 35px;
 
   @include tablet-desktop() {
-    border: none;
     padding: 0;
-    margin: 0;
   }
 }
 
 .user-actions__label {
   position: absolute;
-  top: -8px;
-  padding: 0 10px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
 
   font: 400 15px/16px $font-family;
   text-transform: lowercase;
@@ -107,10 +107,41 @@
 
   border: none;
   color: $grey;
-  background-color: $white;
+
+  @include tablet-desktop() {
+    position: static;
+  }
+
+  &::before {
+    content: "";
+    flex: 0 0 auto;
+    display: block;
+    width: 15px;
+    height: 1px;
+    margin-left: -26px;
+    margin-right: 11px;
+
+    background-color: $lightest-blue;
+
+    @include tablet() {
+      width: 71px;
+      margin-left: -35px;
+    }
+  }
 
   &::after {
-    content: ":";
+    content: "";
+    flex: 1;
+    height: 1px;
+    margin-left: 11px;
+    margin-right: -22px;
+
+    background-color: $lightest-blue;
+
+    @include tablet() {
+      width: 71px;
+      margin-right: -25px;
+    }
   }
 }
 
@@ -118,24 +149,18 @@
   grid-area: name;
   position: relative;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: -(6px + 16px);
+  flex-flow: row-reverse;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  @include tablet() {
+    min-width: 252px;
+  }
 
   @include desktop() {
+    flex-flow: row;
     justify-content: flex-start;
-  }
-}
-
-.user-actions__title {
-  display: block;
-  padding: 0 16px;
-
-  font: 700 21px/21px $font-family;
-
-  @include tablet-desktop() {
-    font: 700 30px/30px $font-family;
-    white-space: normal;
+    align-items: center;
   }
 
   &:hover,
@@ -148,16 +173,41 @@
   }
 }
 
+.user-actions__title {
+  display: block;
+
+  font: 700 20px/20px $font-family;
+  white-space: pre-line;
+
+  @include tablet-desktop() {
+    font: 700 30px/30px $font-family;
+    white-space: normal;
+  }
+}
+
 .user-actions__status {
   order: -1;
   display: block;
   width: 6px;
   height: 6px;
+  margin-top: 7px;
+
   border-radius: 6px;
-  margin-top: -3px;
+
+  @include tablet-desktop() {
+    width: 8px;
+    height: 8px;
+    margin-top: 10px;
+  }
+
+  @include desktop() {
+    margin-top: -3px;
+    margin-left: #{-(6px + 18px)};
+    margin-right: 18px;
+  }
 
   &--offline {
-    background: $red;
+    background: $red-1;
   }
 
   &--online {
@@ -167,10 +217,21 @@
 
 .user-actions__countries {
   grid-area: countries;
+
+  @include desktop() {
+    padding-top: 6px;
+    align-self: start;
+  }
 }
 
 .user-actions__countries-title {
-  @include visually-hidden();
+  @include tablet-desktop() {
+    margin-bottom: 15px;
+  }
+
+  @include desktop() {
+    @include visually-hidden();
+  }
 }
 
 .user-actions__countries-list {
@@ -188,9 +249,15 @@
 }
 
 .user-actions__country {
-  @include country--md();
+  @include country--sm();
 
   justify-content: center;
+
+  text-transform: uppercase;
+
+  @include tablet-desktop() {
+    @include country--md();
+  }
 }
 
 .user-actions__tags {
@@ -203,6 +270,10 @@
     max-width: 220px;
 
     font: 400 20px/23px $font-family;
+  }
+
+  @include desktop() {
+    max-width: 250px;
   }
 }
 
@@ -219,6 +290,10 @@
   @include tablet-desktop() {
     display: none;
   }
+
+  &::after {
+    margin-right: 0;
+  }
 }
 
 .user-actions__transports-legend {
@@ -234,11 +309,9 @@
 }
 
 .user-actions__transports-list {
-  margin-top: 8px;
   justify-content: flex-start;
 
   @include tablet-desktop() {
-    margin-top: 0;
     flex-flow: column;
     align-items: center;
   }
@@ -248,36 +321,153 @@
   }
 }
 
+.user-actions__transports-item {
+  @include tablet() {
+    margin-bottom: 0;
+  }
+}
+
+.user-actions__transports-icon {
+  color: $blue;
+  background-color: $lightest-blue;
+  opacity: 1;
+
+  @include tablet-desktop() {
+    background-color: transparent;
+  }
+}
+
+.user-actions__transports-svg {
+  opacity: 0.15;
+
+  &--active {
+    opacity: 1;
+  }
+
+  &--plane {
+    width: 14px;
+    height: 16px;
+  }
+
+  &--bus {
+    width: 13px;
+    height: 16px;
+  }
+
+  &--bike {
+    width: 15px;
+    height: 17px;
+  }
+
+  &--walk {
+    width: 13px;
+    height: 17px;
+  }
+
+  @include tablet-desktop() {
+    &--plane {
+      width: 23px;
+      height: 22px;
+    }
+
+    &--bus {
+      width: 19px;
+      height: 20px;
+    }
+
+    &--bike {
+      width: 26px;
+      height: 25px;
+    }
+
+    &--walk {
+      width: 23px;
+      height: 24px;
+    }
+  }
+
+  @include desktop() {
+    &--plane {
+      width: 22px;
+      height: 22px;
+    }
+
+    &--bus {
+      width: 18px;
+      height: 20px;
+    }
+
+    &--bike {
+      width: 25px;
+      height: 25px;
+    }
+
+    &--walk {
+      width: 22px;
+      height: 24px;
+    }
+  }
+}
+
 .user-actions__level {
   grid-area: level;
+  padding-top: 28px;
+
+  color: $blue;
+
+  @include level(45px, 3px);
 
   @include tablet-desktop() {
     align-self: center;
+    padding: 0;
     border-top: none;
+
+    @include level(60px, 3px);
   }
 }
 
 .user-actions__level-title {
+  padding: 0;
+  margin: 0;
+
+  &::before {
+    margin-right: 14px;
+  }
+
   @include tablet-desktop() {
     display: none;
   }
 }
 
-.user-actions__avatar {
-  grid-area: avatar;
+.user-actions__level-text {
+  display: none;
 
-  @include desktop() {
-    width: 285px;
+  @include tablet-desktop() {
+    display: block;
+
+    border-top: 1px solid rgba($black, 0.1);
+    color: rgba($black, 0.4);
   }
 }
 
-.user-actions__avatar-image {
+.user-actions__level-svg {
+  @include tablet-desktop() {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.user-actions__avatar {
+  grid-area: avatar;
   width: 70px;
   height: 70px;
+  position: relative;
+  left: -8px;
 
   border-radius: 50%;
 
   @include tablet-desktop() {
+    left: 0;
     width: 190px;
     height: 190px;
 
@@ -285,10 +475,27 @@
   }
 
   @include desktop() {
+    align-self: start;
     width: 285px;
     height: 285px;
 
     border-radius: 20px 0 0 20px;
+  }
+}
+
+.user-actions__avatar-image {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  max-width: unset;
+
+  transition: width 0.25s, height 0.25s, margin 0.25s;
+
+  .user-actions:hover & {
+    width: 120%;
+    height: 120%;
+    margin-left: -10%;
+    margin-top: -10%;
   }
 }
 
@@ -308,6 +515,10 @@
     padding: 16px 32px 13px;
 
     font: 700 20px/20px $font-family;
+  }
+
+  &::after {
+    content: unset;
   }
 }
 
@@ -351,10 +562,13 @@
 
 .user-actions__like-text {
   display: none;
+  justify-content: center;
+  align-items: center;
   width: 30px;
   height: 30px;
 
   border-radius: 15px;
+  cursor: pointer;
 
   @include tablet-desktop() {
     width: 50px;
@@ -364,25 +578,66 @@
   }
 
   &--active {
+    display: flex;
+  }
+
+  &::before {
+    content: "";
     display: block;
+    width: 13px;
+    height: 11px;
+
+    background-size: 13px 11px;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    @include tablet-desktop() {
+      width: 20px;
+      height: 17px;
+
+      background-size: 20px 17px;
+    }
   }
 
   &--like {
-    background: $much-light-blue url("../img/heart.svg") no-repeat center center;
-    background-size: 13px 11px;
+    background-color: $much-light-blue;
 
     @include tablet-desktop() {
-      background-size: 20px 17px;
       background-color: $lightest-blue;
+    }
+
+    &::before {
+      background-image: url("data:image/svg+xml,%3Csvg%20version%3D%221.1%22%20id%3D%22heart%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2020%2017%22%20opacity%3D%221.0%22%3E%0A%20%20%3Cg%20fill%3D%22%23192144%22%3E%0A%20%20%20%20%3Cpath%20d%3D%22M18.5%2C1.5c-2-2-5.3-2-7.3%2C0L10%2C2.7L8.8%2C1.5c-2-2-5.3-2-7.3%2C0c-2%2C2-2%2C5.2%2C0%2C7.2l1.2%2C1.2L10%2C17l7.3-7.2l1.2-1.2%20C20.5%2C6.7%2C20.5%2C3.5%2C18.5%2C1.5z%20M14.9%2C9.8L10%2C14.6L5.1%2C9.8L2.7%2C7.5C1.4%2C6.1%2C1.4%2C4%2C2.7%2C2.7c1.3-1.3%2C3.5-1.3%2C4.9%2C0L10%2C5.1l2.4-2.4%20c1.3-1.3%2C3.5-1.3%2C4.9%2C0c1.3%2C1.3%2C1.3%2C3.5%2C0%2C4.8L14.9%2C9.8z%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E%0A");
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $more-lighter-blue-2;
+    }
+
+    &:active {
+      &::before {
+        opacity: 0.1;
+      }
     }
   }
 
   &--dislike {
-    background: $light-red url("../img/heart-active.svg") no-repeat center center;
-    background-size: 13px 11px;
+    background-color: $pink-2;
 
-    @include tablet-desktop() {
-      background-size: 20px 17px;
+    &::before {
+      background-image: url("data:image/svg+xml,%3Csvg%20version%3D%221.1%22%20id%3D%22heart%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2013%2011%22%20opacity%3D%221.0%22%3E%0A%20%20%3Cg%20fill%3D%22%23f02323%22%3E%0A%20%20%20%20%3Cpath%20d%3D%22M12%2C1c-1.3-1.3-3.4-1.3-4.7%2C0L6.5%2C1.7L5.7%2C1C4.4-0.3%2C2.3-0.3%2C1%2C1c-1.3%2C1.3-1.3%2C3.4%2C0%2C4.6l0.8%2C0.8L6.5%2C11l4.7-4.6L12%2C5.6%20C13.3%2C4.3%2C13.3%2C2.2%2C12%2C1z%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E%0A");
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $pink-3;
+    }
+
+    &:active {
+      &::before {
+        opacity: 0.3;
+      }
     }
   }
 }

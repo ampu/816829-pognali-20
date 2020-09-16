@@ -1,37 +1,52 @@
-$button-next-url: url("../img/triangle-arrow-right.svg");
-$button-prev-url: url("../img/triangle-arrow-left.svg");
+$button-url--next: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2010%2014%22%20opacity%3D%221.0%22%3E%0A%20%20%3Cg%20fill%3D%22%231d2e5b%22%3E%0A%20%20%20%20%3Cpolygon%20points%3D%220%2C14%200%2C0.1%2010%2C7.1%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E%0A%0A");
+$button-url--next-inverse: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2010%2014%22%20opacity%3D%221.0%22%3E%0A%20%20%3Cg%20fill%3D%22%23ffffff%22%3E%0A%20%20%20%20%3Cpolygon%20points%3D%220%2C14%200%2C0.1%2010%2C7.1%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E%0A%0A");
+$button-url--next-inverse-active: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2010%2014%22%20opacity%3D%220.3%22%3E%0A%20%20%3Cg%20fill%3D%22%23ffffff%22%3E%0A%20%20%20%20%3Cpolygon%20points%3D%220%2C14%200%2C0.1%2010%2C7.1%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E%0A%0A");
+$button-url--prev: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2010%2014%22%20opacity%3D%221.0%22%3E%0A%20%20%3Cg%20fill%3D%22%231d2e5b%22%3E%0A%20%20%20%20%3Cpolygon%20points%3D%220%2C7.1%2010%2C0.1%2010%2C14%22%20%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E%0A");
 
 .button {
   display: flex;
   align-items: center;
-  box-sizing: content-box;
-  min-height: 16px + 2 * 22px;
-  min-width: 16px + 2 * 22px;
+  justify-content: space-between;
+  padding: 18px 22px 15px;
 
   font: 700 18px/18px $font-family;
 
   border-radius: 10px;
   color: $blue;
-  background: $yellow $button-next-url no-repeat calc(100% - 22px) center / 14px 16px;
+  background-color: $yellow;
 
   @include tablet-desktop() {
     border-radius: 15px;
+  }
+
+  &--bordered {
+    border: 3px solid $more-dark-blue;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 14px;
+    height: 14px;
+    margin-left: 15px;
+
+    background: $button-url--next no-repeat center center / 14px 14px;
   }
 
   &:focus {
     outline: none;
   }
 
-  &--bordered {
-    border: 3px solid $blue;
+  &:hover,
+  &:focus {
+    background-color: $dark-yellow;
   }
 
-  &--iconic {
-    background-position: center center;
-  }
-}
+  &:active {
+    color: rgba($blue, 0.3);
 
-.button__text {
-  padding-left: 22px;
-  padding-right: 16px + 2 * 22px;
+    &::after {
+      opacity: 0.3;
+    }
+  }
 }

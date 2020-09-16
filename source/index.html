@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Погнали?</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body class="page page--index">
 <header class="page__layer-9 page-header--index page-header--active page-header">
@@ -12,25 +12,27 @@
     <div class="page-header__inner page-header__inner--active page-header__inner--nojs">
       <a class="logo page-header__logo reset-a">
         <picture>
-          <source srcset="img/logo-desktop-white@1x.png" media="(min-width: 1440px)">
-          <source srcset="img/logo-tablet-white@1x.png" media="(min-width: 768px) and (max-width: 1439px)">
-          <img class="logo__image page-header__logo-image page-header__logo-image--light reset-img" src="img/logo-mobile-white@1x.png" alt="Логотип «Погнали?»">
+          <source srcset="img/logo-desktop-white@2x.png 2x, img/logo-desktop-white@1x.png 1x" media="(min-width: 1440px)">
+          <source srcset="img/logo-tablet-white@2x.png 2x, img/logo-tablet-white@1x.png 1x" media="(min-width: 768px) and (max-width: 1439px)">
+          <img class="logo__image page-header__logo-image page-header__logo-image--light reset-img" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x, img/logo-mobile-white@1x.png 1x" alt="Логотип «Погнали?»">
         </picture>
         <picture>
-          <source srcset="img/logo-desktop-blue@1x.png" media="(min-width: 1440px)">
-          <source srcset="img/logo-tablet-blue@1x.png" media="(min-width: 768px) and (max-width: 1439px)">
-          <img class="logo__image page-header__logo-image page-header__logo-image--active page-header__logo-image--dark reset-img" src="img/logo-mobile-blue@1x.png" alt="Логотип «Погнали?»">
+          <source srcset="img/logo-desktop-blue@2x.png 2x, img/logo-desktop-blue@1x.png" media="(min-width: 1440px)">
+          <source srcset="img/logo-tablet-blue@2x.png 2x, img/logo-tablet-blue@1x.png" media="(min-width: 768px) and (max-width: 1439px)">
+          <img class="logo__image page-header__logo-image page-header__logo-image--active page-header__logo-image--dark reset-img" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x, img/logo-mobile-blue@1x.png" alt="Логотип «Погнали?»">
         </picture>
       </a>
 
-      <button class="page-header__toggle page-header__toggle--nojs reset-button">
-        <span class="page-header__toggle-inner page-header__toggle-inner--open">
-          <span class="visually-hidden">Открыть меню</span>
-        </span>
-        <span class="page-header__toggle-inner page-header__toggle-inner--close page-header__toggle-inner--active">
-          <span class="visually-hidden">Закрыть меню</span>
-        </span>
-      </button>
+      <div class="page-header__toggle">
+        <button class="page-header__toggle-button page-header__toggle-button--nojs reset-button">
+          <span class="page-header__toggle-inner page-header__toggle-inner--open">
+            <span class="visually-hidden">Открыть меню</span>
+          </span>
+          <span class="page-header__toggle-inner page-header__toggle-inner--close page-header__toggle-inner--active">
+            <span class="visually-hidden">Закрыть меню</span>
+          </span>
+        </button>
+      </div>
 
       <ul class="page-header__site-nav page-header__site-nav--active reset-ul">
         <li class="page-header__site-nav-item">
@@ -54,13 +56,13 @@
 
       <ul class="contacts page-header__contacts page-header__contacts--active reset-ul">
         <li class="contacts__item page-header__contacts-item">
-          <a class="contacts__link contacts__link--tel page-header__contacts-link page-header__contacts-link--tel reset-a" href="tel:+78005558628">
+          <a class="contacts__link contacts__link--phone page-header__contacts-link page-header__contacts-link--phone reset-a" href="tel:+78005558628">
             <span class="contacts__text page-header__contacts-text">8 800 555-86-28</span>
           </a>
         </li>
 
         <li class="contacts__item page-header__contacts-item">
-          <a class="contacts__link contacts__link--email page-header__contacts-link page-header__contacts-link--email reset-a" href="mailto:mail@htmlacademy.ru">
+          <a class="contacts__link contacts__link--mail page-header__contacts-link page-header__contacts-link--mail reset-a" href="mailto:mail@htmlacademy.ru">
             <span class="contacts__text page-header__contacts-text">mail@htmlacademy.ru</span>
           </a>
         </li>
@@ -68,19 +70,34 @@
 
       <ul class="socials page-header__socials page-header__socials--active reset-ul">
         <li class="socials__item page-header__socials-item">
-          <a class="socials__link socials__link--fb page-header__socials-link reset-a" href="#">
+          <a class="socials__link page-header__socials-link reset-a" href="#">
+            <span class="socials__icon">
+              <svg class="socials__svg socials__svg--facebook">
+                <use xlink:href="img/sprite.svg#facebook"></use>
+              </svg>
+            </span>
             <span class="visually-hidden">Facebook</span>
           </a>
         </li>
 
         <li class="socials__item page-header__socials-item">
-          <a class="socials__link socials__link--vk page-header__socials-link reset-a" href="#">
+          <a class="socials__link page-header__socials-link reset-a" href="#">
+            <span class="socials__icon">
+              <svg class="socials__svg socials__svg--vk">
+                <use xlink:href="img/sprite.svg#vk"></use>
+              </svg>
+            </span>
             <span class="visually-hidden">ВКонтакте</span>
           </a>
         </li>
 
         <li class="socials__item page-header__socials-item">
-          <a class="socials__link socials__link--in page-header__socials-link reset-a" href="#">
+          <a class="socials__link page-header__socials-link reset-a" href="#">
+            <span class="socials__icon">
+              <svg class="socials__svg socials__svg--instagram">
+                <use xlink:href="img/sprite.svg#instagram"></use>
+              </svg>
+            </span>
             <span class="visually-hidden">Instagram</span>
           </a>
         </li>
@@ -102,13 +119,13 @@
       <div class="promo__contacts-wrapper">
         <ul class="contacts promo__contacts reset-ul">
           <li class="contacts__item promo__contacts-item">
-            <a class="contacts__link contacts__link--tel promo__contacts-link promo__contacts-link--tel reset-a" href="tel:+78005558628">
+            <a class="contacts__link contacts__link--phone promo__contacts-link promo__contacts-link--phone reset-a" href="tel:+78005558628">
               <span class="contacts__text promo__contacts-text">8 800 555-86-28</span>
             </a>
           </li>
 
           <li class="contacts__item promo__contacts-item">
-            <a class="contacts__link contacts__link--email promo__contacts-link promo__contacts-link--email reset-a" href="mailto:mail@htmlacademy.ru">
+            <a class="contacts__link contacts__link--mail promo__contacts-link promo__contacts-link--mail reset-a" href="mailto:mail@htmlacademy.ru">
               <span class="contacts__text promo__contacts-text">mail@htmlacademy.ru</span>
             </a>
           </li>
@@ -123,8 +140,7 @@
 
       <blockquote class="promo__review reset-blockquote">
         <cite class="promo__review-author reset-cite">Мурат Эльтазин
-          главный редактор
-          газеты «гаджетлайф»</cite>
+          главный редактор газеты «гаджетлайф»</cite>
         <p class="promo__review-text reset-p">«Лучшее приложение,
           что я видел в жизни!»</p>
       </blockquote>
@@ -145,248 +161,290 @@
   <section class="page__layer-6 about">
     <div class="about__inner">
       <h2 class="about__title reset-h2">О сервисе</h2>
+
       <p class="about__text reset-p">Любое путешествие веселее
         с&nbsp;попутчиками, которые на одной волне с&nbsp;тобой!
         Делитесь своими идеями путешествий
         <span class="about__text-typography">и черпайте</span>
         вдохновение в&nbsp;чужих.
       </p>
+
       <p class="about__note reset-p">А если найдете кого-то
         близкого по духу — скорее
         зовите в совместный трип!</p>
-      <a class="about__more button reset-a" href="#">
-        <span class="about__more-text button__text">Подробнее</span>
-      </a>
+
+      <a class="about__more button reset-a" href="#">Подробнее</a>
     </div>
   </section>
 
-  <section class="page__layer-5 directions page__container">
-    <h2 class="directions__title reset-h2">Направления</h2>
-    <p class="directions__text reset-p">Мы не продаем туры
-      и ничего не рекламируем.
-      Люди сами пишут о странах,
-      куда хотели бы отправиться
-      и чем можно там заняться.</p>
+  <section class="page__layer-5 directions">
+    <div class="directions__inner">
+      <h2 class="directions__title reset-h2">Направления</h2>
+      <p class="directions__text reset-p">Мы не продаем туры
+        и ничего не рекламируем.
+        Люди сами пишут о странах,
+        куда хотели бы отправиться
+        и чем можно там заняться.</p>
 
-    <ul class="directions__list reset-ul">
-      <li class="directions__item">
-        <h3 class="directions__item-title country country--tha reset-h3">Тайланд</h3>
-        <picture>
-          <source srcset="img/thailand-desktop@1x.jpg" media="(min-width: 768px)">
-          <img class="directions__item-image reset-img" src="img/thailand-mobile@1x.jpg" alt="Тайские острова">
-        </picture>
-        <p class="directions__item-slogan reset-p">Джунгли зовут!</p>
-        <span class="directions__item-counter">18321</span>
-      </li>
-      <li class="directions__item">
-        <h3 class="directions__item-title country country--adaptive country--fra reset-h3">Франция</h3>
-        <picture>
-          <source srcset="img/france-desktop@1x.jpg" media="(min-width: 768px)">
-          <img class="directions__item-image reset-img" src="img/france-mobile@1x.jpg" alt="Архитектура Франции">
-        </picture>
-        <p class="directions__item-slogan reset-p">Трэ бьен, манифик!</p>
-        <span class="directions__item-counter">12518</span>
-      </li>
-      <li class="directions__item">
-        <h3 class="directions__item-title country country--adaptive country--cze reset-h3">Чехия</h3>
-        <picture>
-          <source srcset="img/czech-desktop@1x.jpg" media="(min-width: 768px)">
-          <img class="directions__item-image reset-img" src="img/czech-mobile@1x.jpg" alt="Круиз по Чехии">
-        </picture>
-        <p class="directions__item-slogan reset-p">Закоулки старой Европы</p>
-        <span class="directions__item-counter">5326</span>
-      </li>
-    </ul>
+      <ul class="directions__list reset-ul">
+        <li class="directions__item">
+          <h3 class="directions__item-title country country--tha reset-h3">Тайланд</h3>
+          <picture>
+            <source srcset="img/thailand-desktop@2x.jpg 2x, img/thailand-desktop@1x.jpg 1x" media="(min-width: 768px)">
+            <img class="directions__item-image reset-img" src="img/thailand-mobile@1x.jpg" srcset="img/thailand-mobile@2x.jpg 2x, img/thailand-mobile@1x.jpg 1x" alt="Тайские острова">
+          </picture>
+          <p class="directions__item-slogan reset-p">Джунгли зовут!</p>
+          <span class="directions__item-counter">18321</span>
+        </li>
+        <li class="directions__item">
+          <h3 class="directions__item-title country country--adaptive country--fra reset-h3">Франция</h3>
+          <picture>
+            <source srcset="img/france-desktop@2x.jpg 2x, img/france-desktop@1x.jpg 1x" media="(min-width: 768px)">
+            <img class="directions__item-image reset-img" src="img/france-mobile@1x.jpg" srcset="img/france-mobile@2x.jpg 2x, img/france-mobile@1x.jpg 1x" alt="Архитектура Франции">
+          </picture>
+          <p class="directions__item-slogan reset-p">Трэ бьен, манифик!</p>
+          <span class="directions__item-counter">12518</span>
+        </li>
+        <li class="directions__item">
+          <h3 class="directions__item-title country country--adaptive country--cze reset-h3">Чехия</h3>
+          <picture>
+            <source srcset="img/czech-desktop@2x.jpg 2x, img/czech-desktop@1x.jpg 1x" media="(min-width: 768px)">
+            <img class="directions__item-image reset-img" src="img/czech-mobile@1x.jpg" srcset="img/czech-mobile@2x.jpg 2x, img/czech-mobile@1x.jpg 1x" alt="Круиз по Чехии">
+          </picture>
+          <p class="directions__item-slogan reset-p">Закоулки старой Европы</p>
+          <span class="directions__item-counter">5326</span>
+        </li>
+      </ul>
 
-    <a class="directions__more button reset-a" href="form.html">
-      <span class="button__text">Показать все</span>
-    </a>
+      <a class="directions__more button reset-a" href="form.html">Показать все</a>
+    </div>
   </section>
 
-  <section class="page__layer-3 travellers page__container page__inner">
-    <h2 class="travellers__title reset-h2">Попутчики</h2>
-    <p class="travellers__text reset-p">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
-    <p class="travellers__note reset-p">Теперь можно легко найти
-      единомышленников!</p>
-    <ul class="travellers__list reset-ul">
-      <li class="user travellers__item">
-        <h3 class="user__name reset-h3">
-          <a class="user__title reset-a" href="#">Таня Фирсова</a>
-          <b class="user__status user__status--offline">
-            <span class="visually-hidden">offline</span>
-          </b>
-        </h3>
+  <section class="page__layer-3 travellers">
+    <div class="travellers__inner">
+      <h2 class="travellers__title reset-h2">Попутчики</h2>
+      <p class="travellers__text reset-p">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а&nbsp;другому маршрут для хайкинга.</p>
+      <p class="travellers__note reset-p">Теперь можно легко найти&nbsp;единомышленников!</p>
 
-        <a class="avatar user__avatar reset-a" href="#">
-          <picture>
-            <img class="avatar__image user__avatar-image reset-img" src="img/firsova-desktop@1x.jpg" alt="Аватар «Таня Фирсова»">
-          </picture>
-        </a>
+      <ul class="travellers__list reset-ul">
+        <li class="user travellers__item">
+          <a class="user__name reset-a" href="#">
+            <h3 class="user__title reset-h3">Таня Фирсова</h3>
+            <b class="user__status user__status--offline">
+              <span class="visually-hidden">offline</span>
+            </b>
+          </a>
 
-        <div class="level user__level">
-          <svg class="level__svg" width="60" height="60">
-            <circle class="level__ring" cx="30" cy="30" r="28" fill="transparent" stroke-width="4" stroke-linecap="round" stroke-dashoffset="43" stroke-dasharray="174 1"></circle>
-          </svg>
+          <a class="avatar user__avatar reset-a" href="#">
+            <picture>
+              <img class="avatar__image user__avatar-image reset-img" src="img/firsova-desktop@1x.jpg" srcset="img/firsova-desktop@2x.jpg 2x, img/firsova-desktop@1x.jpg 1x" alt="Аватар «Таня Фирсова»">
+            </picture>
+          </a>
 
-          <span class="level__title">level</span>
-          <span class="level__value">99</span>
-        </div>
+          <div class="level user__level">
+            <p class="level__title user__level-title reset-p">Левел:</p>
 
-        <div class="countries user__countries">
-          <p class="countries__title visually-hidden reset-p">Хочет посетить</p>
-          <ul class="countries__list user__countries-list reset-ul">
-            <li class="countries__item">
-              <a class="country country--lka user__country reset-a" href="#">
-                <span class="country__title user__country-title">Шри-Ланка</span>
-              </a>
-            </li>
+            <div class="level__inner user__level-inner" style="--level:99">
+              <svg class="level__svg user__level-svg" width="60" height="60">
+                <circle r="30" class="level__ring user__level-ring"></circle>
+              </svg>
 
-            <li class="countries__item">
-              <a class="country country--tha user__country reset-a" href="#">
-                <span class="country__title user__country-title">Тайланд</span>
-              </a>
-            </li>
+              <span class="level__value user__level-value">99</span>
+              <span class="level__text user__level-text">level</span>
+            </div>
+          </div>
 
-            <li class="countries__item">
-              <a class="country country--syc user__country reset-a" href="#">
-                <span class="country__title user__country-title">Сейшелы</span>
-              </a>
-            </li>
-          </ul>
-        </div>
+          <div class="countries user__countries">
+            <p class="countries__title visually-hidden reset-p">Хочет посетить:</p>
+            <ul class="countries__list user__countries-list reset-ul">
+              <li class="countries__item">
+                <a class="country country--lka user__country reset-a" href="#">
+                  <span class="country__title user__country-title">Шри-Ланка</span>
+                </a>
+              </li>
 
-        <p class="user__tags reset-p">
-          <a class="user__tag reset-a" href="#">#ЗОЖ</a>
+              <li class="countries__item">
+                <a class="country country--tha user__country reset-a" href="#">
+                  <span class="country__title user__country-title">Тайланд</span>
+                </a>
+              </li>
 
-          <a class="user__tag reset-a" href="#">#ПП</a>
+              <li class="countries__item">
+                <a class="country country--syc user__country reset-a" href="#">
+                  <span class="country__title user__country-title">Сейшелы</span>
+                </a>
+              </li>
+            </ul>
+          </div>
 
-          <a class="user__tag reset-a" href="#">#Фитнес</a>
+          <p class="user__tags reset-p">
+            <a class="user__tag reset-a" href="#">#ЗОЖ</a>
 
-          <a class="user__tag reset-a" href="#">#пляж</a>
+            <a class="user__tag reset-a" href="#">#ПП</a>
 
-          <a class="user__tag reset-a" href="#">#авокадо</a>
+            <a class="user__tag reset-a" href="#">#Фитнес</a>
 
-          <a class="user__tag reset-a" href="#">#смузи</a>
-        </p>
+            <a class="user__tag reset-a" href="#">#пляж</a>
 
-        <div class="transports user__transports">
-          <p class="transports__title user__transports-title reset-p">Транспорт</p>
-          <ul class="transports__list user__transports-list reset-ul">
-            <li class="transports__item">
-              <a class="transports__icon transports__icon--plane transports__icon--active reset-a" href="#">
+            <a class="user__tag reset-a" href="#">#авокадо</a>
+
+            <a class="user__tag reset-a" href="#">#смузи</a>
+          </p>
+
+          <div class="transports user__transports">
+            <p class="transports__title user__transports-title reset-p">Транспорт:</p>
+            <ul class="transports__list user__transports-list reset-ul">
+              <li class="transports__item">
+                <a class="transports__icon transports__icon--active reset-a" href="#">
+                  <svg class="transports__svg transports__svg--active transports__svg--plane">
+                    <use xlink:href="img/sprite.svg#plane"></use>
+                  </svg>
+                </a>
+
                 <span class="transports__text transports__text--iconic">Авиаперелет</span>
-              </a>
-            </li>
+              </li>
 
-            <li class="transports__item">
-              <a class="transports__icon transports__icon--bus reset-a" href="#">
+              <li class="transports__item">
+                <a class="transports__icon reset-a" href="#">
+                  <svg class="transports__svg transports__svg--bus">
+                    <use xlink:href="img/sprite.svg#bus"></use>
+                  </svg>
+                </a>
+
                 <span class="transports__text transports__text--iconic">Автотранспорт</span>
-              </a>
-            </li>
+              </li>
 
-            <li class="transports__item">
-              <a class="transports__icon transports__icon--bike reset-a" href="#">
+              <li class="transports__item">
+                <a class="transports__icon reset-a" href="#">
+                  <svg class="transports__svg transports__svg--bike">
+                    <use xlink:href="img/sprite.svg#bike"></use>
+                  </svg>
+                </a>
+
                 <span class="transports__text transports__text--iconic">Велосипед</span>
-              </a>
-            </li>
+              </li>
 
-            <li class="transports__item">
-              <a class="transports__icon transports__icon--walk reset-a" href="#">
+              <li class="transports__item">
+                <a class="transports__icon reset-a" href="#">
+                  <svg class="transports__svg transports__svg--walk">
+                    <use xlink:href="img/sprite.svg#walk"></use>
+                  </svg>
+                </a>
+
                 <span class="transports__text transports__text--iconic">Пешком</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </li>
+              </li>
+            </ul>
+          </div>
+        </li>
 
-      <li class="user travellers__item">
-        <h3 class="user__name reset-h3">
-          <a class="user__title reset-a" href="#">Петя Демин</a>
-          <b class="user__status user__status--online">
-            <span class="visually-hidden">online</span>
-          </b>
-        </h3>
+        <li class="user travellers__item">
+          <a class="user__name reset-a" href="#">
+            <h3 class="user__title reset-h3">Петя Демин</h3>
+            <b class="user__status user__status--online">
+              <span class="visually-hidden">online</span>
+            </b>
+          </a>
 
-        <a class="avatar user__avatar reset-a" href="#">
-          <picture>
-            <img class="avatar__image user__avatar-image reset-img" src="img/demin-desktop@1x.jpg" alt="Аватар «Петя Демин»">
-          </picture>
-        </a>
+          <a class="avatar user__avatar reset-a" href="#">
+            <picture>
+              <img class="avatar__image user__avatar-image reset-img" src="img/demin-desktop@1x.jpg" srcset="img/demin-desktop@2x.jpg 2x, img/demin-desktop@1x.jpg 1x" alt="Аватар «Петя Демин»">
+            </picture>
+          </a>
 
-        <div class="level user__level">
-          <svg class="level__svg" width="60" height="60">
-            <circle class="level__ring" cx="30" cy="30" r="28" fill="transparent" stroke-width="4" stroke-linecap="round" stroke-dashoffset="43" stroke-dasharray="140 35"></circle>
-          </svg>
+          <div class="level user__level">
+            <p class="level__title user__level-title reset-p">Левел:</p>
 
-          <span class="level__title">level</span>
-          <span class="level__value">80</span>
-        </div>
+            <div class="level__inner user__level-inner" style="--level:80">
+              <svg class="level__svg user__level-svg" width="60" height="60">
+                <circle r="30" class="level__ring user__level-ring"></circle>
+              </svg>
 
-        <div class="countries user__countries">
-          <p class="countries__title visually-hidden reset-p">Хочет посетить</p>
-          <ul class="countries__list user__countries-list reset-ul">
-            <li class="countries__item">
-              <a class="country country--bel user__country reset-a" href="#">
-                <span class="country__title user__country-title">Бельгия</span>
-              </a>
-            </li>
+              <span class="level__value user__level-value">80</span>
+              <span class="level__text user__level-text">level</span>
+            </div>
+          </div>
 
-            <li class="countries__item">
-              <a class="country country--cze user__country reset-a" href="#">
-                <span class="country__title user__country-title">Чехия</span>
-              </a>
-            </li>
-          </ul>
-        </div>
+          <div class="countries user__countries">
+            <p class="countries__title visually-hidden reset-p">Хочет посетить:</p>
+            <ul class="countries__list user__countries-list reset-ul">
+              <li class="countries__item">
+                <a class="country country--bel user__country reset-a" href="#">
+                  <span class="country__title user__country-title">Бельгия</span>
+                </a>
+              </li>
 
-        <p class="user__tags reset-p">
-          <a class="user__tag reset-a" href="#">#бургер</a>
+              <li class="countries__item">
+                <a class="country country--cze user__country reset-a" href="#">
+                  <span class="country__title user__country-title">Чехия</span>
+                </a>
+              </li>
+            </ul>
+          </div>
 
-          <a class="user__tag reset-a" href="#">#бар</a>
+          <p class="user__tags reset-p">
+            <a class="user__tag reset-a" href="#">#бургер</a>
 
-          <a class="user__tag reset-a" href="#">#футбол</a>
+            <a class="user__tag reset-a" href="#">#бар</a>
 
-          <a class="user__tag reset-a" href="#">#концерт</a>
+            <a class="user__tag reset-a" href="#">#футбол</a>
 
-          <a class="user__tag reset-a" href="#">#крафт</a>
-        </p>
+            <a class="user__tag reset-a" href="#">#концерт</a>
 
-        <div class="transports user__transports">
-          <p class="transports__title user__transports-title reset-p">Транспорт</p>
-          <ul class="transports__list user__transports-list reset-ul">
-            <li class="transports__item">
-              <a class="transports__icon transports__icon--plane transports__icon--active reset-a" href="#">
+            <a class="user__tag reset-a" href="#">#крафт</a>
+          </p>
+
+          <div class="transports user__transports">
+            <p class="transports__title user__transports-title reset-p">Транспорт:</p>
+            <ul class="transports__list user__transports-list reset-ul">
+              <li class="transports__item">
+                <a class="transports__icon transports__icon--active reset-a" href="#">
+                  <svg class="transports__svg transports__svg--active transports__svg--plane">
+                    <use xlink:href="img/sprite.svg#plane"></use>
+                  </svg>
+                </a>
+
                 <span class="transports__text transports__text--iconic">Авиаперелет</span>
-              </a>
-            </li>
+              </li>
 
-            <li class="transports__item">
-              <a class="transports__icon transports__icon--bus transports__icon--active reset-a" href="#">
+              <li class="transports__item">
+                <a class="transports__icon transports__icon--active reset-a" href="#">
+                  <svg class="transports__svg transports__svg--active transports__svg--bus">
+                    <use xlink:href="img/sprite.svg#bus"></use>
+                  </svg>
+                </a>
+
                 <span class="transports__text transports__text--iconic">Автотранспорт</span>
-              </a>
-            </li>
+              </li>
 
-            <li class="transports__item">
-              <a class="transports__icon transports__icon--bike reset-a" href="#">
+              <li class="transports__item">
+                <a class="transports__icon reset-a" href="#">
+                  <svg class="transports__svg transports__svg--bike">
+                    <use xlink:href="img/sprite.svg#bike"></use>
+                  </svg>
+                </a>
+
                 <span class="transports__text transports__text--iconic">Велосипед</span>
-              </a>
-            </li>
+              </li>
 
-            <li class="transports__item">
-              <a class="transports__icon transports__icon--walk transports__icon--active reset-a" href="#">
+              <li class="transports__item">
+                <a class="transports__icon transports__icon--active reset-a" href="#">
+                  <svg class="transports__svg transports__svg--active transports__svg--walk">
+                    <use xlink:href="img/sprite.svg#walk"></use>
+                  </svg>
+                </a>
+
                 <span class="transports__text transports__text--iconic">Пешком</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </li>
-    </ul>
-    <a class="travellers__more button reset-a" href="catalog.html">
-      <span class="button__text">Показать всех</span>
-    </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+
+      <a class="travellers__more button reset-a" href="catalog.html">Показать всех</a>
+    </div>
   </section>
 
-  <section class="page__layer-4 business page__container">
+  <section class="page__layer-4 business">
     <div class="business__inner">
       <h2 class="business__title reset-h2">Бизнес-тарифы</h2>
       <dl class="business__list reset-dl">
@@ -411,7 +469,7 @@
     </div>
   </section>
 
-  <section class="page__layer-2 rates page__container page__inner">
+  <section class="page__layer-2 rates">
     <div class="rates__inner">
       <h2 class="rates__title reset-h2">Добавьте
         свой
@@ -440,56 +498,59 @@
     </div>
   </section>
 
-  <section class="page__layer-1 feedback page__container page__inner">
-    <h2 class="visually-hidden reset-h2">Напишите нам</h2>
-    <p class="feedback__question reset-p">Заинтересовались?</p>
-    <p class="feedback__answer reset-p">Зарегистрируйтесь,
-      это быстро и бесплатно!<br>Уже зарегистрированы? Тогда
-      скорее <a class="feedback__signin reset-a" href="#">авторизуйтесь</a>.</p>
+  <section class="page__layer-1 feedback">
+    <div class="feedback__inner">
+      <h2 class="visually-hidden reset-h2">Напишите нам</h2>
+      <p class="feedback__question reset-p">Заинтересовались?</p>
+      <p class="feedback__answer reset-p">Зарегистрируйтесь,
+        это быстро и бесплатно!<br>Уже зарегистрированы? Тогда
+        скорее <a class="feedback__signin reset-a" href="#">авторизуйтесь</a>.</p>
 
-    <form class="feedback__signin-form reset-form" method="post" action="https://echo.htmlacademy.ru/">
-      <label class="feedback__signin-label">
-        <input class="feedback__signin-input" type="email" name="email" placeholder="E-mail" required>
-      </label>
-      <button class="feedback__signin-submit button reset-button" type="submit">
-        <span class="feedback__signin-submit-text button__text">Регистрация</span>
-      </button>
-    </form>
+      <form class="feedback__signup-form reset-form" method="post" action="https://echo.htmlacademy.ru/">
+        <label class="feedback__signup-label">
+          <input class="feedback__signup-input" type="email" name="email" placeholder="E-mail" required>
+        </label>
+        <button class="feedback__signup-submit button reset-button" type="submit">
+          <span class="feedback__signup-submit-text">Регистрация</span>
+        </button>
+      </form>
 
-    <p class="feedback__postscript reset-p">Остались вопросы?
-      Мы с радостью на них ответим!</p>
+      <p class="feedback__postscript reset-p">Остались вопросы?
+        Мы с радостью на них ответим!</p>
 
-    <ul class="contacts feedback__contacts reset-ul">
-      <li class="contacts__item feedback__contacts-item">
-        <a class="contacts__link contacts__link--tel feedback__contacts-link reset-a" href="tel:+78005558628">
-          <span class="contacts__text feedback__contacts-text">8 800 555-86-28</span>
-        </a>
-      </li>
+      <ul class="contacts feedback__contacts reset-ul">
+        <li class="contacts__item feedback__contacts-item">
+          <a class="contacts__link contacts__link--phone feedback__contacts-link reset-a" href="tel:+78005558628">
+            <span class="contacts__text feedback__contacts-text">8 800 555-86-28</span>
+          </a>
+        </li>
 
-      <li class="contacts__item feedback__contacts-item">
-        <a class="contacts__link contacts__link--email feedback__contacts-link reset-a" href="mailto:mail@htmlacademy.ru">
-          <span class="contacts__text feedback__contacts-text">mail@htmlacademy.ru</span>
-        </a>
-      </li>
-    </ul>
+        <li class="contacts__item feedback__contacts-item">
+          <a class="contacts__link contacts__link--mail feedback__contacts-link reset-a" href="mailto:mail@htmlacademy.ru">
+            <span class="contacts__text feedback__contacts-text">mail@htmlacademy.ru</span>
+          </a>
+        </li>
+      </ul>
+    </div>
   </section>
 
   <section class="page__layer-0 office">
-    <div class="office__inner page__inner">
-      <h2 class="visually-hidden reset-h2">Адрес офиса</h2>
-      <address class="office__address">ул. Большая
-        Конюшенная, 19/8</address>
-      <a class="office__map-button button button--bordered reset-a" href="https://www.google.com/maps/dir/%D0%91%D0%BE%D0%BB%D1%8C%D1%88%D0%B0%D1%8F+%D0%9A%D0%BE%D0%BD%D1%8E%D1%88%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F+%D1%83%D0%BB.,+19%2F8,+%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3,+191186/%D0%90%D1%8D%D1%80%D0%BE%D0%BF%D0%BE%D1%80%D1%82+%D0%9F%D1%83%D0%BB%D0%BA%D0%BE%D0%B2%D0%BE+(LED),+%D0%9F%D1%83%D0%BB%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B5+%D1%88%D0%BE%D1%81%D1%81%D0%B5,+%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3/@59.9388184,30.3221483,15.18z/">
-        <span class="button__text">Проложить маршрут</span>
-      </a>
+    <h2 class="visually-hidden reset-h2">Наш офис</h2>
+
+    <div class="office__address">
+      <div class="office__address-inner">
+        <address class="office__address-text">ул. Большая
+          Конюшенная, 19/8</address>
+        <a class="office__address-route button button--bordered reset-a" href="https://www.google.com/maps/dir/%D0%91%D0%BE%D0%BB%D1%8C%D1%88%D0%B0%D1%8F+%D0%9A%D0%BE%D0%BD%D1%8E%D1%88%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F+%D1%83%D0%BB.,+19%2F8,+%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3,+191186/%D0%90%D1%8D%D1%80%D0%BE%D0%BF%D0%BE%D1%80%D1%82+%D0%9F%D1%83%D0%BB%D0%BA%D0%BE%D0%B2%D0%BE+(LED),+%D0%9F%D1%83%D0%BB%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B5+%D1%88%D0%BE%D1%81%D1%81%D0%B5,+%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3/@59.9388184,30.3221483,15.18z/">Проложить маршрут</a>
+      </div>
     </div>
 
     <div class="office__map">
       <a class="office__map-link reset-a" href="https://www.google.com/maps/place/%D0%91%D0%BE%D0%BB%D1%8C%D1%88%D0%B0%D1%8F+%D0%9A%D0%BE%D0%BD%D1%8E%D1%88%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F+%D1%83%D0%BB.,+19%2F8,+%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3,+191186/@59.9388184,30.3221483,15.18z/">
         <picture>
-          <source srcset="img/map-desktop@1x.jpg" media="(min-width: 1440px)">
-          <source srcset="img/map-tablet@1x.jpg" media="(min-width: 768px) and (max-width: 1439px)">
-          <img class="office__map-image reset-img" src="img/map-mobile@1x.jpg" alt="Карта офиса по адресу г. Санкт-Петербург ул. Большая Конюшенная, 19/8">
+          <source srcset="img/map-desktop@2x.jpg 2x, img/map-desktop@1x.jpg 1x" media="(min-width: 1440px)">
+          <source srcset="img/map-tablet@2x.jpg 2x, img/map-tablet@1x.jpg 1x" media="(min-width: 768px) and (max-width: 1439px)">
+          <img class="office__map-image reset-img" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x, img/map-mobile@1x.jpg 1x" alt="Карта офиса по адресу г. Санкт-Петербург ул. Большая Конюшенная, 19/8">
         </picture>
 
         <b class="office__map-marker">
@@ -503,39 +564,64 @@
 </main>
 
 <footer class="page__layer-9 page-footer">
-  <a class="logo page-footer__logo reset-a">
-    <picture>
-      <source srcset="img/logo-desktop-blue@1x.png" media="(min-width: 1440px)">
-      <source srcset="img/logo-tablet-blue@1x.png" media="(min-width: 768px) and (max-width: 1439px)">
-      <img class="logo__image page-footer__logo-image reset-img" src="img/logo-mobile-blue@1x.png" alt="Логотип «Погнали?»">
-    </picture>
-  </a>
-
-  <ul class="socials page-footer__socials reset-ul">
-    <li class="socials__item page-footer__socials-item">
-      <a class="socials__link socials__link--fb page-footer__socials-link reset-a" href="#">
-        <span class="visually-hidden">Facebook</span>
+  <div class="page-footer__inner">
+    <p class="page-footer__logo-wrapper reset-p">
+      <a class="logo page-footer__logo reset-a">
+        <picture>
+          <source srcset="img/logo-desktop-blue@2x.png 2x, img/logo-desktop-blue@1x.png" media="(min-width: 1440px)">
+          <source srcset="img/logo-tablet-blue@2x.png 2x, img/logo-tablet-blue@1x.png" media="(min-width: 768px) and (max-width: 1439px)">
+          <img class="logo__image page-footer__logo-image reset-img" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x, img/logo-mobile-blue@1x.png" alt="Логотип «Погнали?»">
+        </picture>
       </a>
-    </li>
+    </p>
 
-    <li class="socials__item page-footer__socials-item">
-      <a class="socials__link socials__link--vk page-footer__socials-link reset-a" href="#">
-        <span class="visually-hidden">ВКонтакте</span>
+    <ul class="socials page-footer__socials reset-ul">
+      <li class="socials__item page-footer__socials-item">
+        <a class="socials__link page-footer__socials-link reset-a" href="#">
+          <span class="socials__icon page-footer__socials-icon">
+            <svg class="socials__svg page-footer__socials-svg socials__svg--facebook">
+              <use xlink:href="img/sprite.svg#facebook"></use>
+            </svg>
+          </span>
+          <span class="visually-hidden">Facebook</span>
+        </a>
+      </li>
+
+      <li class="socials__item page-footer__socials-item">
+        <a class="socials__link page-footer__socials-link reset-a" href="#">
+          <span class="socials__icon page-footer__socials-icon">
+            <svg class="socials__svg page-footer__socials-svg socials__svg--vk">
+              <use xlink:href="img/sprite.svg#vk"></use>
+            </svg>
+          </span>
+          <span class="visually-hidden">ВКонтакте</span>
+        </a>
+      </li>
+
+      <li class="socials__item page-footer__socials-item">
+        <a class="socials__link page-footer__socials-link reset-a" href="#">
+          <span class="socials__icon page-footer__socials-icon">
+            <svg class="socials__svg page-footer__socials-svg socials__svg--instagram">
+              <use xlink:href="img/sprite.svg#instagram"></use>
+            </svg>
+          </span>
+          <span class="visually-hidden">Instagram</span>
+        </a>
+      </li>
+    </ul>
+
+    <p class="page-footer__academy reset-p">
+      <a class="page-footer__academy-link reset-a" href="https://htmlacademy.ru/intensive/adaptive">
+        Разработано
+
+        <svg class="page-footer__academy-image" width="27" height="33" role="img" aria-label="Логотип «HTML Academy»">
+          <use xlink:href="img/sprite.svg#htmlacademy"></use>
+        </svg>
       </a>
-    </li>
-
-    <li class="socials__item page-footer__socials-item">
-      <a class="socials__link socials__link--in page-footer__socials-link reset-a" href="#">
-        <span class="visually-hidden">Instagram</span>
-      </a>
-    </li>
-  </ul>
-
-  <p class="page-footer__copyright reset-p">Разработано
-    <a class="page-footer__academy-link reset-a" href="https://htmlacademy.ru/intensive/adaptive">
-      <img class="page-footer__academy-image reset-img" src="img/htmlacademy.svg" width="27" height="33" alt="Логотип «HTML Academy»">
-    </a>
-  </p>
+    </p>
+  </div>
 </footer>
+
+<script src="js/script.min.js"></script>
 </body>
 </html>

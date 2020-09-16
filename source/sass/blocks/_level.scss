@@ -1,76 +1,57 @@
-.level {
-  display: flex;
-  flex-flow: column-reverse;
-  justify-content: center;
-  align-items: center;
-  width: 60px;
-  height: 60px;
-
-  border-radius: 50%;
-
-  background-color: rgba($black, 0.6);
-  color: $white;
-
-  &--sm {
-    width: 45px;
-    height: 45px;
+@mixin level($size, $stroke-width:3px, $stroke-linecap:butt) {
+  .level__inner {
+    width: $size;
+    height: $size;
   }
 
-  &--lg {
-    width: 95px;
-    height: 95px;
+  .level__svg {
+    width: $size;
+    height: $size;
   }
 
-  &--xl {
-    width: 100px;
-    height: 100px;
-  }
+  .level__ring {
+    $value: var(--level, 0);
+    $radius: ($size - $stroke-width) / 2;
+    $perimeter: 2 * 3.1415926536 * $radius;
+    $perimeterPercentage: $perimeter / 100;
 
-  &--dark {
-    background-color: transparent;
-    color: $much-darker-blue;
-  }
-
-  &--inverse {
-    background-color: transparent;
-    color: $blue;
+    cx: #{$size / 2};
+    cy: #{$size / 2};
+    r: #{($size - $stroke-width) / 2};
+    stroke-width: $stroke-width;
+    stroke-linecap: $stroke-linecap;
+    stroke-dashoffset: #{2*3.1415926536*($size - $stroke-width)/2/4};
+    stroke-dasharray: calc(#{$value} * #{$perimeterPercentage}) calc(#{$perimeter} - #{$value} * #{$perimeterPercentage});
   }
 }
 
 .level__title {
-  min-width: 50%;
-  padding-top: 2px;
-  margin-top: -2px;
-
   font: 400 14px/14px $font-family;
+}
+
+.level__inner {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+
   text-align: center;
 
-  border-top: 1px solid rgba($white, 0.3);
-
-  &--lg {
-    font-size: 18px;
-    line-height: 18px;
-  }
-
-  &--separator-x2 {
-    border-width: 2px;
-  }
-
-  &--inverse {
-    color: $grey;
-    border-top-color: rgba($grey, 0.3);
-  }
+  border-radius: 50%;
 }
 
 .level__value {
-  padding-top: 10%;
-
   font: 700 24px/24px $font-family;
+}
 
-  &--lg {
-    font-size: 38px;
-    line-height: 38px;
-  }
+.level__text {
+  padding-top: 2px;
+  margin-top: -2px;
+  min-width: 50%;
+
+  font: 400 14px/14px $font-family;
+
+  border-top: 1px solid rgba($black, 0.3);
 }
 
 .level__svg {
@@ -79,4 +60,5 @@
 
 .level__ring {
   stroke: $orange;
+  fill: transparent;
 }

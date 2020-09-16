@@ -1,22 +1,28 @@
 .office {
-  @include page__container();
+  background: $light-grey-3;
 }
 
-.office__inner {
+.office__address {
   @include adaptive-border-radius();
 
   position: relative;
   z-index: 2;
+
+  color: $blue;
+  background-color: $yellow;
+}
+
+.office__address-inner {
+  @include page__container();
+  @include page__inner();
+
   display: flex;
   flex-flow: column;
   padding-top: 31px + 25px;
   padding-bottom: 35px;
-  color: $blue;
-  background-color: $yellow;
 
-  @include tablet() {
-    flex-flow: wrap;
-    padding-top: 70px + 54px;
+  @include tablet-desktop() {
+    padding-top: #{$radius--tablet + 50px};
     padding-bottom: 84px;
     padding-left: $padding--tablet + 35px;
     padding-right: $padding--tablet + 35px;
@@ -26,12 +32,14 @@
     flex-flow: wrap;
     justify-content: space-between;
     align-items: center;
-    padding-top: 55px + 54px;
+    padding-top: $radius--desktop + 55px;
     padding-bottom: 56px;
+    padding-left: $padding--desktop;
+    padding-right: $padding--desktop;
   }
 }
 
-.office__address {
+.office__address-text {
   display: flex;
   align-items: center;
   margin-bottom: 33px;
@@ -41,7 +49,7 @@
   white-space: pre-line;
 
   @include tablet-desktop() {
-    margin-bottom: 44px;
+    margin-bottom: 42px;
 
     font: 700 28px/28px $font-family;
     white-space: normal;
@@ -50,7 +58,7 @@
   @include desktop() {
     margin-bottom: 0;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: 147px;
   }
 
   &::before {
@@ -61,7 +69,7 @@
     height: 45px;
 
     border-radius: 50%;
-    background: $much-more-darker-blue url("../img/contacts-location.svg") no-repeat center center;
+    background: $much-more-darker-blue url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2028%2043%22%20opacity%3D%221.0%22%3E%0A%20%20%3Cg%20fill%3D%22%23ffd74b%22%3E%0A%20%20%20%20%3Cpath%0A%20%20%20%20%20%20d%3D%22M11.7%2C13.9c0-1.2%2C1-2.2%2C2.3-2.2s2.3%2C1%2C2.3%2C2.2c0%2C1.2-1%2C2.2-2.3%2C2.2C12.8%2C16.1%2C11.7%2C15.1%2C11.7%2C13.9z%20M14%2C8.1%20c-3.2%2C0-5.9%2C2.6-5.9%2C5.8s2.6%2C5.8%2C5.9%2C5.8c3.2%2C0%2C5.9-2.6%2C5.9-5.8C19.9%2C10.7%2C17.2%2C8.1%2C14%2C8.1z%20M0%2C13.6c0%2C9.1%2C10.9%2C16.2%2C11.7%2C26.7v0.4%20c0%2C1.2%2C1%2C2.2%2C2.3%2C2.2s2.3-1%2C2.3-2.2v-0.4C17.2%2C29.8%2C28%2C22.8%2C28%2C13.6C28%2C6.1%2C21.7%2C0%2C14%2C0C6.3%2C0%2C0%2C6.1%2C0%2C13.6z%20M14%2C4.5%20c5.2%2C0%2C9.5%2C4.2%2C9.5%2C9.4c0%2C5.2-4.2%2C9.4-9.5%2C9.4s-9.5-4.2-9.5-9.4C4.5%2C8.7%2C8.8%2C4.5%2C14%2C4.5z%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E%0A") no-repeat center center;
     background-size: 21px 21px;
 
     @include tablet() {
@@ -82,63 +90,97 @@
   }
 }
 
-.office__map-button {
+.office__address-route {
   flex: 1 1 auto;
+  padding: 19px 19px;
 
   font: 700 18px/18px $font-family;
 
-  @include tablet() {
+  @include tablet-desktop() {
+    padding: 25px 34px;
+
     font: 700 24px/24px $font-family;
+
+    border-radius: 20px;
   }
 
   @include desktop() {
     flex: 0 1 auto;
     margin-right: 75px;
+    padding: 25px 34px;
 
     font: 700 24px/24px $font-family;
   }
-}
 
-.office__map-link {
-  position: relative;
-  z-index: 0;
-  display: block;
-  margin-top: -52px;
-  margin-bottom: -110px;
+  &:hover,
+  &:focus {
+    outline: none;
+    color: $white;
+    background-color: $more-dark-blue;
 
-  @include tablet() {
-    margin-top: -54px;
+    &::after {
+      background-image: $button-url--next-inverse;
+    }
   }
 
-  @include desktop() {
-    margin-top: -60px;
+  &:active {
+    color: rgba($white, 0.3);
+
+    &::after {
+      background-image: $button-url--next-inverse-active;
+    }
   }
 }
 
 .office__map {
+  @include adaptive-overlap();
+
+  overflow: hidden;
+
   position: relative;
+  height: #{48px + 262px + $radius};
+  margin-top: #{-(48px - $radius)};
+
+  @include tablet-desktop() {
+    height: #{80px + 464px + $radius--tablet};
+    margin-top: #{-(80px - $radius--tablet)};
+  }
+
+  @include desktop() {
+    height: #{122px + 394px + $radius--desktop};
+    margin-top: #{-(270px - $radius--desktop)};
+  }
+}
+
+.office__map-link {
+  @include page__container();
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  align-items: center;
 }
 
 .office__map-image {
   display: block;
   width: 320px;
-  height: 424px;
+  height: 546px;
 
-  @include tablet() {
+  @include tablet-desktop() {
     width: 768px;
-    height: 581px;
+    height: 700px;
   }
 
   @include desktop() {
     width: 1440px;
-    height: 584px;
+    height: 750px;
   }
 }
 
 .office__map-marker {
   content: "";
   position: absolute;
-  top: 158px;
+  top: 147px;
   left: calc(50% - 40px / 2);
   width: 40px;
   height: 40px;
@@ -147,8 +189,8 @@
   background: $black url("../img/map-marker.svg") no-repeat center center;
   background-size: 40px 40px;
 
-  @include tablet() {
-    top: 234px;
+  @include tablet-desktop() {
+    top: 255px;
     left: calc(50% - 54px / 2);
     width: 54px;
     height: 54px;
@@ -157,7 +199,7 @@
   }
 
   @include desktop() {
-    top: 267px;
+    top: 340px;
     left: calc(50% - 54px / 2);
     width: 54px;
     height: 54px;
@@ -175,19 +217,8 @@
   bottom: 0;
   display: block;
   margin: auto;
+  width: 100%;
+  height: 100%;
 
   border: none;
-
-  width: 320px;
-  height: 424px;
-
-  @include tablet() {
-    width: 768px;
-    height: 581px;
-  }
-
-  @include desktop() {
-    width: 1440px;
-    height: 584px;
-  }
 }
