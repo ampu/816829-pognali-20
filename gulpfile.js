@@ -71,7 +71,7 @@ const img = exports.img = () => {
     .pipe(gulp.dest(`build/img`));
 };
 
-const webp = exports.webp = () => gulp.src([`src/img/**/*.png`])
+const webp = exports.webp = () => gulp.src([`source/img/**/*.png`])
   .pipe(plumber())
   .pipe(gulpWebp())
   .pipe(gulp.dest(`build/img`));
