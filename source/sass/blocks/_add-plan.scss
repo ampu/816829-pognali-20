@@ -290,13 +290,13 @@
 
   &--with-children {
     @include desktop() {
-      width: auto;
       position: relative;
       top: 17px;
       left: -16px;
       margin: 0;
       margin-right: -100px;
       grid-column: 2;
+      width: auto;
     }
   }
 }
