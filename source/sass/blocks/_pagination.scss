@@ -1,5 +1,5 @@
 .pagination {
-  padding-top: 18px;
+  padding-top: 8px;
   padding-bottom: 46px + 25px;
 
   font: 700 17px/17px $font-family;
@@ -9,7 +9,7 @@
   color: $blue;
 
   @include tablet() {
-    padding-top: 53px;
+    padding-top: 27px;
     padding-bottom: #{62px + $radius--tablet};
 
     font: 700 20px/20px $font-family;
@@ -18,7 +18,7 @@
   }
 
   @include desktop() {
-    padding-top: 62px;
+    padding-top: 58px;
     padding-bottom: 75px + 60px;
 
     font: 700 20px/20px $font-family;
@@ -41,6 +41,7 @@
 
   @include desktop() {
     margin-bottom: 71px;
+    margin-right: 71px;
   }
 
   &::before {
@@ -55,6 +56,7 @@
     @include tablet-desktop() {
       width: 26px;
       height: 26px;
+      margin-right: 25px;
 
       background-size: 26px 26px;
     }

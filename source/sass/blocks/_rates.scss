@@ -24,14 +24,14 @@
 
   @include desktop() {
     padding-top: $radius--desktop + 107px;
-    padding-bottom: 165px;
+    padding-bottom: 162px;
     padding-left: #{130px - 60px + $padding--desktop};
     padding-right: #{244px - 60px + $padding--desktop};
   }
 }
 
 .rates__title {
-  margin-bottom: 44px;
+  margin-bottom: 51px;
 
   font: 700 24px/24px $font-family;
   white-space: pre-line;
@@ -96,7 +96,7 @@
 
 .rates__list {
   counter-reset: rate;
-  margin-bottom: -0 + 46px;
+  margin-bottom: -0 + 40px;
 
   font: 300 16px/22px $font-family;
 
@@ -120,7 +120,7 @@
   &::before {
     content: counter(rate);
     position: absolute;
-    top: 0;
+    top: -6px;
     right: 0;
     display: flex;
     justify-content: center;

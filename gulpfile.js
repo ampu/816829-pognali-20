@@ -64,17 +64,17 @@ const img = exports.img = () => {
         ],
       }),
     ]))
-    .pipe(gulp.dest(`build/img`))
+    .pipe(gulp.dest('build/img'))
 
     .pipe(svgstore({inlineSvg: true}))
-    .pipe(rename(`sprite.svg`))
-    .pipe(gulp.dest(`build/img`));
+    .pipe(rename('sprite.svg'))
+    .pipe(gulp.dest('build/img'));
 };
 
-const webp = exports.webp = () => gulp.src([`source/img/**/*.png`])
+const webp = exports.webp = () => gulp.src(['source/img/**/*.png'])
   .pipe(plumber())
   .pipe(gulpWebp())
-  .pipe(gulp.dest(`build/img`));
+  .pipe(gulp.dest('build/img'));
 
 const fonts = exports.fonts = () => {
   return gulp.src(['source/fonts/*.woff', 'source/fonts/*.woff2'])

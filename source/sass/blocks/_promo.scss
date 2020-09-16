@@ -176,7 +176,7 @@
   @include desktop() {
     width: 270px;
     margin: 0;
-    margin-bottom: 116px;
+    margin-bottom: 100px;
     margin-right: 23px;
     padding: 0;
     padding-top: 12px;
@@ -332,13 +332,21 @@
     &:nth-of-type(4n+1),
     &:nth-of-type(4n+2),
     &:nth-of-type(4n+3) {
-      flex-basis: calc(25% + 20px);
-
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
     }
 
+    &:nth-of-type(4n+1) {
+      flex-basis: 335px;
+    }
+
+    &:nth-of-type(4n+2),
+    &:nth-of-type(4n+3) {
+      flex-basis: 365px;
+    }
+
     &:nth-of-type(4n+4) {
+      flex-basis: 315px;
       padding-right: 32px;
     }
 

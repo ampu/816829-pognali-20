@@ -138,17 +138,17 @@
   overflow: hidden;
 
   position: relative;
-  height: #{48px + 262px + $radius};
-  margin-top: #{-(48px - $radius)};
+  height: #{40px + 262px + $radius};
+  margin-top: #{-(66px - $radius)};
 
   @include tablet-desktop() {
-    height: #{80px + 464px + $radius--tablet};
-    margin-top: #{-(80px - $radius--tablet)};
+    height: #{66px + 464px + $radius--tablet};
+    margin-top: #{-(120px - $radius--tablet)};
   }
 
   @include desktop() {
-    height: #{122px + 394px + $radius--desktop};
-    margin-top: #{-(270px - $radius--desktop)};
+    height: #{196px + 394px + $radius--desktop};
+    margin-top: #{-(255px - $radius--desktop)};
   }
 }
 
@@ -190,7 +190,7 @@
   background-size: 40px 40px;
 
   @include tablet-desktop() {
-    top: 255px;
+    top: 253px;
     left: calc(50% - 54px / 2);
     width: 54px;
     height: 54px;

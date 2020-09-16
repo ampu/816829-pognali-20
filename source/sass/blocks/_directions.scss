@@ -63,7 +63,7 @@
 }
 
 .directions__text {
-  margin-bottom: 50px;
+  margin-bottom: 62px;
   padding-left: 25px;
 
   font: 300 16px/22px $font-family;
@@ -79,7 +79,7 @@
   }
 
   @include desktop() {
-    margin-bottom: 97px;
+    margin-bottom: 95px;
     padding-left: 0;
 
     font: 300 28px/34px $font-family;
@@ -89,19 +89,19 @@
 .directions__list {
   display: flex;
   flex-flow: column;
-  margin-bottom: 20px;
+  margin-bottom: #{25px - 8px};
   padding-top: 1px;
 
   @include tablet-desktop() {
-    margin-bottom: 50px;
+    margin-bottom: #{50px - 14px};
   }
 
   @include desktop() {
     position: absolute;
     left: $padding--desktop + 71px;
-    top: 161px + 60px;
+    top: 156px + 60px;
     width: 559px;
-    margin-bottom: 44px;
+    margin-bottom: #{44px - 11px};
   }
 }
 
@@ -109,8 +109,8 @@
   position: relative;
   display: flex;
   flex-flow: column;
-  margin-top: 110px;
-  margin-bottom: 11px;
+  margin-top: 99px;
+  margin-bottom: 8px;
   padding: 25px 24px;
 
   border-radius: 10px;
@@ -126,7 +126,7 @@
   }
 
   @include desktop() {
-    margin-bottom: 11px;
+    margin-bottom: 8px;
   }
 
   &:last-of-type {
@@ -191,6 +191,12 @@
     font: 700 24px/24px $font-family;
   }
 
+  @include desktop() {
+    &::before {
+      margin-top: 11px;
+    }
+  }
+
   &::before {
     margin-bottom: 15px;
 
@@ -213,6 +219,10 @@
     margin-bottom: 17px;
 
     font: 500 20px/20px $font-family;
+  }
+
+  @include desktop() {
+    margin-bottom: 24px;
   }
 }
 

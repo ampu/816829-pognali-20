@@ -4,6 +4,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Погнали?</title>
+
+  <link rel="preload" href="fonts/bloggersans.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/bloggersans-bold.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/bloggersans-bolditalic.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/bloggersans-italic.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/bloggersans-lightitalic.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/bloggersans-medium.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/bloggersans-mediumitalic.woff2" as="font" type="font/woff2">
+
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body class="page page--form">
@@ -78,7 +87,7 @@
         <li class="socials__item page-header__socials-item">
           <a class="socials__link page-header__socials-link reset-a" href="#">
             <span class="socials__icon">
-              <svg class="socials__svg socials__svg--facebook">
+              <svg class="socials__svg socials__svg--facebook" width="16" height="16">
                 <use xlink:href="img/sprite.svg#facebook"></use>
               </svg>
             </span>
@@ -89,7 +98,7 @@
         <li class="socials__item page-header__socials-item">
           <a class="socials__link page-header__socials-link reset-a" href="#">
             <span class="socials__icon">
-              <svg class="socials__svg socials__svg--vk">
+              <svg class="socials__svg socials__svg--vk" width="16" height="16">
                 <use xlink:href="img/sprite.svg#vk"></use>
               </svg>
             </span>
@@ -100,7 +109,7 @@
         <li class="socials__item page-header__socials-item">
           <a class="socials__link page-header__socials-link reset-a" href="#">
             <span class="socials__icon">
-              <svg class="socials__svg socials__svg--instagram">
+              <svg class="socials__svg socials__svg--instagram" width="16" height="16">
                 <use xlink:href="img/sprite.svg#instagram"></use>
               </svg>
             </span>
@@ -166,7 +175,7 @@
           <label class="transports__item">
             <input class="transports__check user-profile__transports-check visually-hidden" type="checkbox" name="transports" value="plane" checked>
             <span class="transports__icon user-profile__transports-icon">
-              <svg class="transports__svg transports__svg--plane user-profile__transports-svg user-profile__transports-svg--plane">
+              <svg class="transports__svg transports__svg--plane user-profile__transports-svg user-profile__transports-svg--plane" width="16" height="16">
                 <use xlink:href="img/sprite.svg#plane"></use>
               </svg>
             </span>
@@ -177,7 +186,7 @@
           <label class="transports__item">
             <input class="transports__check user-profile__transports-check visually-hidden" type="checkbox" name="transports" value="bus" checked>
             <span class="transports__icon user-profile__transports-icon">
-              <svg class="transports__svg transports__svg--bus user-profile__transports-svg user-profile__transports-svg--bus">
+              <svg class="transports__svg transports__svg--bus user-profile__transports-svg user-profile__transports-svg--bus" width="16" height="16">
                 <use xlink:href="img/sprite.svg#bus"></use>
               </svg>
             </span>
@@ -188,7 +197,7 @@
           <label class="transports__item">
             <input class="transports__check user-profile__transports-check visually-hidden" type="checkbox" name="transports" value="bike">
             <span class="transports__icon user-profile__transports-icon">
-              <svg class="transports__svg transports__svg--bike user-profile__transports-svg user-profile__transports-svg--bike">
+              <svg class="transports__svg transports__svg--bike user-profile__transports-svg user-profile__transports-svg--bike" width="16" height="16">
                 <use xlink:href="img/sprite.svg#bike"></use>
               </svg>
             </span>
@@ -199,7 +208,7 @@
           <label class="transports__item">
             <input class="transports__check user-profile__transports-check visually-hidden" type="checkbox" name="transports" value="walk" checked>
             <span class="transports__icon user-profile__transports-icon">
-              <svg class="transports__svg transports__svg--walk user-profile__transports-svg user-profile__transports-svg--walk">
+              <svg class="transports__svg transports__svg--walk user-profile__transports-svg user-profile__transports-svg--walk" width="16" height="16">
                 <use xlink:href="img/sprite.svg#walk"></use>
               </svg>
             </span>
@@ -308,12 +317,12 @@
               <div class="add-plan__input-wrapper">
                 <input class="add-plan__input" id="add-plan__duration" type="number" name="duration" min="0" step="1" value="2">
                 <button class="add-plan__increase reset-button" type="button" aria-label="Увеличить">
-                  <svg class="add-plan__increase-icon">
+                  <svg class="add-plan__increase-icon" width="20" height="20">
                     <use xlink:href="img/sprite.svg#qty-plus"></use>
                   </svg>
                 </button>
                 <button class="add-plan__decrease reset-button" type="button" aria-label="Уменьшить">
-                  <svg class="add-plan__decrease-icon">
+                  <svg class="add-plan__decrease-icon" width="20" height="2">
                     <use xlink:href="img/sprite.svg#qty-minus"></use>
                   </svg>
                 </button>
@@ -2143,7 +2152,7 @@
       <li class="socials__item page-footer__socials-item">
         <a class="socials__link page-footer__socials-link reset-a" href="#">
           <span class="socials__icon page-footer__socials-icon">
-            <svg class="socials__svg page-footer__socials-svg socials__svg--facebook">
+            <svg class="socials__svg page-footer__socials-svg socials__svg--facebook" width="16" height="16">
               <use xlink:href="img/sprite.svg#facebook"></use>
             </svg>
           </span>
@@ -2154,7 +2163,7 @@
       <li class="socials__item page-footer__socials-item">
         <a class="socials__link page-footer__socials-link reset-a" href="#">
           <span class="socials__icon page-footer__socials-icon">
-            <svg class="socials__svg page-footer__socials-svg socials__svg--vk">
+            <svg class="socials__svg page-footer__socials-svg socials__svg--vk" width="16" height="16">
               <use xlink:href="img/sprite.svg#vk"></use>
             </svg>
           </span>
@@ -2165,7 +2174,7 @@
       <li class="socials__item page-footer__socials-item">
         <a class="socials__link page-footer__socials-link reset-a" href="#">
           <span class="socials__icon page-footer__socials-icon">
-            <svg class="socials__svg page-footer__socials-svg socials__svg--instagram">
+            <svg class="socials__svg page-footer__socials-svg socials__svg--instagram" width="16" height="16">
               <use xlink:href="img/sprite.svg#instagram"></use>
             </svg>
           </span>

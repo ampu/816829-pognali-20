@@ -4,6 +4,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Погнали?</title>
+
+  <link rel="preload" href="fonts/bloggersans.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/bloggersans-bold.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/bloggersans-bolditalic.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/bloggersans-italic.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/bloggersans-lightitalic.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/bloggersans-medium.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/bloggersans-mediumitalic.woff2" as="font" type="font/woff2">
+
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body class="page page--catalog">
@@ -78,7 +87,7 @@
         <li class="socials__item page-header__socials-item">
           <a class="socials__link page-header__socials-link reset-a" href="#">
             <span class="socials__icon">
-              <svg class="socials__svg socials__svg--facebook">
+              <svg class="socials__svg socials__svg--facebook" width="16" height="16">
                 <use xlink:href="img/sprite.svg#facebook"></use>
               </svg>
             </span>
@@ -89,7 +98,7 @@
         <li class="socials__item page-header__socials-item">
           <a class="socials__link page-header__socials-link reset-a" href="#">
             <span class="socials__icon">
-              <svg class="socials__svg socials__svg--vk">
+              <svg class="socials__svg socials__svg--vk" width="16" height="16">
                 <use xlink:href="img/sprite.svg#vk"></use>
               </svg>
             </span>
@@ -100,7 +109,7 @@
         <li class="socials__item page-header__socials-item">
           <a class="socials__link page-header__socials-link reset-a" href="#">
             <span class="socials__icon">
-              <svg class="socials__svg socials__svg--instagram">
+              <svg class="socials__svg socials__svg--instagram" width="16" height="16">
                 <use xlink:href="img/sprite.svg#instagram"></use>
               </svg>
             </span>
@@ -1009,7 +1018,7 @@
               <label class="transports__item">
                 <input class="transports__check filter__transports-check visually-hidden" type="checkbox" name="transports" value="plane" checked>
                 <span class="transports__icon filter__transports-icon">
-                  <svg class="transports__svg transports__svg--plane filter__transports-svg filter__transports-svg--plane">
+                  <svg class="transports__svg transports__svg--plane filter__transports-svg filter__transports-svg--plane" width="16" height="16">
                     <use xlink:href="img/sprite.svg#plane"></use>
                   </svg>
                 </span>
@@ -1020,7 +1029,7 @@
               <label class="transports__item">
                 <input class="transports__check filter__transports-check visually-hidden" type="checkbox" name="transports" value="bus" checked>
                 <span class="transports__icon filter__transports-icon">
-                  <svg class="transports__svg transports__svg--bus filter__transports-svg filter__transports-svg--bus">
+                  <svg class="transports__svg transports__svg--bus filter__transports-svg filter__transports-svg--bus" width="16" height="16">
                     <use xlink:href="img/sprite.svg#bus"></use>
                   </svg>
                 </span>
@@ -1031,7 +1040,7 @@
               <label class="transports__item">
                 <input class="transports__check filter__transports-check visually-hidden" type="checkbox" name="transports" value="bike">
                 <span class="transports__icon filter__transports-icon">
-                  <svg class="transports__svg transports__svg--bike filter__transports-svg filter__transports-svg--bike">
+                  <svg class="transports__svg transports__svg--bike filter__transports-svg filter__transports-svg--bike" width="16" height="16">
                     <use xlink:href="img/sprite.svg#bike"></use>
                   </svg>
                 </span>
@@ -1042,7 +1051,7 @@
               <label class="transports__item">
                 <input class="transports__check filter__transports-check visually-hidden" type="checkbox" name="transports" value="walk" checked>
                 <span class="transports__icon filter__transports-icon">
-                  <svg class="transports__svg transports__svg--walk filter__transports-svg filter__transports-svg--walk">
+                  <svg class="transports__svg transports__svg--walk filter__transports-svg filter__transports-svg--walk" width="16" height="16">
                     <use xlink:href="img/sprite.svg#walk"></use>
                   </svg>
                 </span>
@@ -1133,19 +1142,19 @@
           <div class="countries user-actions__countries user-actions__section">
             <p class="countries__title user-actions__countries-title user-actions__label reset-p">Хочет посетить:</p>
             <ul class="countries__list user-actions__countries-list reset-ul">
-              <li class="countries__item">
+              <li class="countries__item user-actions__countries-item">
                 <a class="country country--lka user-actions__country reset-a" href="#">
                   <span class="country__title user-actions__country-title">Шри-Ланка</span>
                 </a>
               </li>
 
-              <li class="countries__item">
+              <li class="countries__item user-actions__countries-item">
                 <a class="country country--tha user-actions__country reset-a" href="#">
                   <span class="country__title user-actions__country-title">Тайланд</span>
                 </a>
               </li>
 
-              <li class="countries__item">
+              <li class="countries__item user-actions__countries-item">
                 <a class="country country--syc user-actions__country reset-a" href="#">
                   <span class="country__title user-actions__country-title">Сейшелы</span>
                 </a>
@@ -1172,7 +1181,7 @@
             <ul class="transports__list user-actions__transports-list reset-ul">
               <li class="transports__item user-actions__transports-item">
                 <a class="transports__icon transports__icon--active user-actions__transports-icon--active user-actions__transports-icon reset-a" href="#">
-                  <svg class="transports__svg transports__svg--active user-actions__transports-svg--active transports__svg--plane user-actions__transports-svg user-actions__transports-svg--plane">
+                  <svg class="transports__svg transports__svg--active user-actions__transports-svg--active transports__svg--plane user-actions__transports-svg user-actions__transports-svg--plane" width="16" height="16">
                     <use xlink:href="img/sprite.svg#plane"></use>
                   </svg>
                 </a>
@@ -1182,7 +1191,7 @@
 
               <li class="transports__item user-actions__transports-item">
                 <a class="transports__icon user-actions__transports-icon reset-a" href="#">
-                  <svg class="transports__svg transports__svg--bus user-actions__transports-svg user-actions__transports-svg--bus">
+                  <svg class="transports__svg transports__svg--bus user-actions__transports-svg user-actions__transports-svg--bus" width="16" height="16">
                     <use xlink:href="img/sprite.svg#bus"></use>
                   </svg>
                 </a>
@@ -1192,7 +1201,7 @@
 
               <li class="transports__item user-actions__transports-item">
                 <a class="transports__icon user-actions__transports-icon reset-a" href="#">
-                  <svg class="transports__svg transports__svg--bike user-actions__transports-svg user-actions__transports-svg--bike">
+                  <svg class="transports__svg transports__svg--bike user-actions__transports-svg user-actions__transports-svg--bike" width="16" height="16">
                     <use xlink:href="img/sprite.svg#bike"></use>
                   </svg>
                 </a>
@@ -1202,7 +1211,7 @@
 
               <li class="transports__item user-actions__transports-item">
                 <a class="transports__icon user-actions__transports-icon reset-a" href="#">
-                  <svg class="transports__svg transports__svg--walk user-actions__transports-svg user-actions__transports-svg--walk">
+                  <svg class="transports__svg transports__svg--walk user-actions__transports-svg user-actions__transports-svg--walk" width="16" height="16">
                     <use xlink:href="img/sprite.svg#walk"></use>
                   </svg>
                 </a>
@@ -1262,13 +1271,13 @@
           <div class="countries user-actions__countries user-actions__section">
             <p class="countries__title user-actions__countries-title user-actions__label reset-p">Хочет посетить:</p>
             <ul class="countries__list user-actions__countries-list reset-ul">
-              <li class="countries__item">
+              <li class="countries__item user-actions__countries-item">
                 <a class="country country--bel user-actions__country reset-a" href="#">
                   <span class="country__title user-actions__country-title">Бельгия</span>
                 </a>
               </li>
 
-              <li class="countries__item">
+              <li class="countries__item user-actions__countries-item">
                 <a class="country country--cze user-actions__country reset-a" href="#">
                   <span class="country__title user-actions__country-title">Чехия</span>
                 </a>
@@ -1293,7 +1302,7 @@
             <ul class="transports__list user-actions__transports-list reset-ul">
               <li class="transports__item user-actions__transports-item">
                 <a class="transports__icon transports__icon--active user-actions__transports-icon--active user-actions__transports-icon reset-a" href="#">
-                  <svg class="transports__svg transports__svg--active user-actions__transports-svg--active transports__svg--plane user-actions__transports-svg user-actions__transports-svg--plane">
+                  <svg class="transports__svg transports__svg--active user-actions__transports-svg--active transports__svg--plane user-actions__transports-svg user-actions__transports-svg--plane" width="16" height="16">
                     <use xlink:href="img/sprite.svg#plane"></use>
                   </svg>
                 </a>
@@ -1303,7 +1312,7 @@
 
               <li class="transports__item user-actions__transports-item">
                 <a class="transports__icon transports__icon--active user-actions__transports-icon--active user-actions__transports-icon reset-a" href="#">
-                  <svg class="transports__svg transports__svg--active user-actions__transports-svg--active transports__svg--bus user-actions__transports-svg user-actions__transports-svg--bus">
+                  <svg class="transports__svg transports__svg--active user-actions__transports-svg--active transports__svg--bus user-actions__transports-svg user-actions__transports-svg--bus" width="16" height="16">
                     <use xlink:href="img/sprite.svg#bus"></use>
                   </svg>
                 </a>
@@ -1313,7 +1322,7 @@
 
               <li class="transports__item user-actions__transports-item">
                 <a class="transports__icon user-actions__transports-icon reset-a" href="#">
-                  <svg class="transports__svg transports__svg--bike user-actions__transports-svg user-actions__transports-svg--bike">
+                  <svg class="transports__svg transports__svg--bike user-actions__transports-svg user-actions__transports-svg--bike" width="16" height="16">
                     <use xlink:href="img/sprite.svg#bike"></use>
                   </svg>
                 </a>
@@ -1323,7 +1332,7 @@
 
               <li class="transports__item user-actions__transports-item">
                 <a class="transports__icon transports__icon--active user-actions__transports-icon--active user-actions__transports-icon reset-a" href="#">
-                  <svg class="transports__svg transports__svg--active user-actions__transports-svg--active transports__svg--walk user-actions__transports-svg user-actions__transports-svg--walk">
+                  <svg class="transports__svg transports__svg--active user-actions__transports-svg--active transports__svg--walk user-actions__transports-svg user-actions__transports-svg--walk" width="16" height="16">
                     <use xlink:href="img/sprite.svg#walk"></use>
                   </svg>
                 </a>
@@ -1383,19 +1392,19 @@
           <div class="countries user-actions__countries user-actions__section">
             <p class="countries__title user-actions__countries-title user-actions__label reset-p">Хочет посетить:</p>
             <ul class="countries__list user-actions__countries-list reset-ul">
-              <li class="countries__item">
+              <li class="countries__item user-actions__countries-item">
                 <a class="country country--usa user-actions__country reset-a" href="#">
                   <span class="country__title user-actions__country-title">США</span>
                 </a>
               </li>
 
-              <li class="countries__item">
+              <li class="countries__item user-actions__countries-item">
                 <a class="country country--au user-actions__country reset-a" href="#">
                   <span class="country__title user-actions__country-title">Австралия</span>
                 </a>
               </li>
 
-              <li class="countries__item">
+              <li class="countries__item user-actions__countries-item">
                 <a class="country country--dma user-actions__country reset-a" href="#">
                   <span class="country__title user-actions__country-title">Доминика</span>
                 </a>
@@ -1420,7 +1429,7 @@
             <ul class="transports__list user-actions__transports-list reset-ul">
               <li class="transports__item user-actions__transports-item">
                 <a class="transports__icon transports__icon--active user-actions__transports-icon--active user-actions__transports-icon reset-a" href="#">
-                  <svg class="transports__svg transports__svg--active user-actions__transports-svg--active transports__svg--plane user-actions__transports-svg user-actions__transports-svg--plane">
+                  <svg class="transports__svg transports__svg--active user-actions__transports-svg--active transports__svg--plane user-actions__transports-svg user-actions__transports-svg--plane" width="16" height="16">
                     <use xlink:href="img/sprite.svg#plane"></use>
                   </svg>
                 </a>
@@ -1430,7 +1439,7 @@
 
               <li class="transports__item user-actions__transports-item">
                 <a class="transports__icon user-actions__transports-icon reset-a" href="#">
-                  <svg class="transports__svg transports__svg--bus user-actions__transports-svg user-actions__transports-svg--bus">
+                  <svg class="transports__svg transports__svg--bus user-actions__transports-svg user-actions__transports-svg--bus" width="16" height="16">
                     <use xlink:href="img/sprite.svg#bus"></use>
                   </svg>
                 </a>
@@ -1440,7 +1449,7 @@
 
               <li class="transports__item user-actions__transports-item">
                 <a class="transports__icon transports__icon--active user-actions__transports-icon--active user-actions__transports-icon reset-a" href="#">
-                  <svg class="transports__svg transports__svg--active user-actions__transports-svg--active transports__svg--bike user-actions__transports-svg user-actions__transports-svg--bike">
+                  <svg class="transports__svg transports__svg--active user-actions__transports-svg--active transports__svg--bike user-actions__transports-svg user-actions__transports-svg--bike" width="16" height="16">
                     <use xlink:href="img/sprite.svg#bike"></use>
                   </svg>
                 </a>
@@ -1450,7 +1459,7 @@
 
               <li class="transports__item user-actions__transports-item">
                 <a class="transports__icon user-actions__transports-icon reset-a" href="#">
-                  <svg class="transports__svg transports__svg--walk user-actions__transports-svg user-actions__transports-svg--walk">
+                  <svg class="transports__svg transports__svg--walk user-actions__transports-svg user-actions__transports-svg--walk" width="16" height="16">
                     <use xlink:href="img/sprite.svg#walk"></use>
                   </svg>
                 </a>
@@ -1510,13 +1519,13 @@
           <div class="countries user-actions__countries user-actions__section">
             <p class="countries__title user-actions__countries-title user-actions__label reset-p">Хочет посетить:</p>
             <ul class="countries__list user-actions__countries-list reset-ul">
-              <li class="countries__item">
+              <li class="countries__item user-actions__countries-item">
                 <a class="country country--uk user-actions__country reset-a" href="#">
                   <span class="country__title user-actions__country-title">Великобритания</span>
                 </a>
               </li>
 
-              <li class="countries__item">
+              <li class="countries__item user-actions__countries-item">
                 <a class="country country--deu user-actions__country reset-a" href="#">
                   <span class="country__title user-actions__country-title">Германия</span>
                 </a>
@@ -1539,7 +1548,7 @@
             <ul class="transports__list user-actions__transports-list reset-ul">
               <li class="transports__item user-actions__transports-item">
                 <a class="transports__icon transports__icon--active user-actions__transports-icon--active user-actions__transports-icon reset-a" href="#">
-                  <svg class="transports__svg transports__svg--active user-actions__transports-svg--active transports__svg--plane user-actions__transports-svg user-actions__transports-svg--plane">
+                  <svg class="transports__svg transports__svg--active user-actions__transports-svg--active transports__svg--plane user-actions__transports-svg user-actions__transports-svg--plane" width="16" height="16">
                     <use xlink:href="img/sprite.svg#plane"></use>
                   </svg>
                 </a>
@@ -1549,7 +1558,7 @@
 
               <li class="transports__item user-actions__transports-item">
                 <a class="transports__icon transports__icon--active user-actions__transports-icon--active user-actions__transports-icon reset-a" href="#">
-                  <svg class="transports__svg transports__svg--active user-actions__transports-svg--active transports__svg--bus user-actions__transports-svg user-actions__transports-svg--bus">
+                  <svg class="transports__svg transports__svg--active user-actions__transports-svg--active transports__svg--bus user-actions__transports-svg user-actions__transports-svg--bus" width="16" height="16">
                     <use xlink:href="img/sprite.svg#bus"></use>
                   </svg>
                 </a>
@@ -1559,7 +1568,7 @@
 
               <li class="transports__item user-actions__transports-item">
                 <a class="transports__icon user-actions__transports-icon reset-a" href="#">
-                  <svg class="transports__svg transports__svg--bike user-actions__transports-svg user-actions__transports-svg--bike">
+                  <svg class="transports__svg transports__svg--bike user-actions__transports-svg user-actions__transports-svg--bike" width="16" height="16">
                     <use xlink:href="img/sprite.svg#bike"></use>
                   </svg>
                 </a>
@@ -1569,7 +1578,7 @@
 
               <li class="transports__item user-actions__transports-item">
                 <a class="transports__icon user-actions__transports-icon reset-a" href="#">
-                  <svg class="transports__svg transports__svg--walk user-actions__transports-svg user-actions__transports-svg--walk">
+                  <svg class="transports__svg transports__svg--walk user-actions__transports-svg user-actions__transports-svg--walk" width="16" height="16">
                     <use xlink:href="img/sprite.svg#walk"></use>
                   </svg>
                 </a>
@@ -1624,7 +1633,7 @@
       <li class="socials__item page-footer__socials-item">
         <a class="socials__link page-footer__socials-link reset-a" href="#">
           <span class="socials__icon page-footer__socials-icon">
-            <svg class="socials__svg page-footer__socials-svg socials__svg--facebook">
+            <svg class="socials__svg page-footer__socials-svg socials__svg--facebook" width="16" height="16">
               <use xlink:href="img/sprite.svg#facebook"></use>
             </svg>
           </span>
@@ -1635,7 +1644,7 @@
       <li class="socials__item page-footer__socials-item">
         <a class="socials__link page-footer__socials-link reset-a" href="#">
           <span class="socials__icon page-footer__socials-icon">
-            <svg class="socials__svg page-footer__socials-svg socials__svg--vk">
+            <svg class="socials__svg page-footer__socials-svg socials__svg--vk" width="16" height="16">
               <use xlink:href="img/sprite.svg#vk"></use>
             </svg>
           </span>
@@ -1646,7 +1655,7 @@
       <li class="socials__item page-footer__socials-item">
         <a class="socials__link page-footer__socials-link reset-a" href="#">
           <span class="socials__icon page-footer__socials-icon">
-            <svg class="socials__svg page-footer__socials-svg socials__svg--instagram">
+            <svg class="socials__svg page-footer__socials-svg socials__svg--instagram" width="16" height="16">
               <use xlink:href="img/sprite.svg#instagram"></use>
             </svg>
           </span>

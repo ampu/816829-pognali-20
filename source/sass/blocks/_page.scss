@@ -149,7 +149,7 @@
     }
 
     @include desktop() {
-      padding-top: 48px;
+      padding-top: 100px;
       display: grid;
       grid-template-columns: 1fr 285px;
       grid-column-gap: 85px;

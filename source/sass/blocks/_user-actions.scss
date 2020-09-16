@@ -32,7 +32,7 @@
 
   @include tablet-desktop() {
     width: auto;
-    padding: 35px 25px 25px 35px;
+    padding: 35px 25px 26px 35px;
     justify-content: start;
     grid-gap: 0;
 
@@ -42,9 +42,9 @@
       auto
       19px
       auto
-      40px
+      42px
       auto
-      20px
+      16px
       auto;
 
     grid-template-areas:
@@ -218,6 +218,10 @@
 .user-actions__countries {
   grid-area: countries;
 
+  @include tablet-desktop() {
+    padding-top: 3px;
+  }
+
   @include desktop() {
     padding-top: 6px;
     align-self: start;
@@ -246,6 +250,10 @@
   @include desktop() {
     flex-flow: column;
   }
+}
+
+.user-actions__countries-item {
+  margin-right: 27px;
 }
 
 .user-actions__country {

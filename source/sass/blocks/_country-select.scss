@@ -384,6 +384,7 @@ $delete-background--desktop: url("../img/small-cross.svg") no-repeat center cent
 
   @include desktop() {
     grid-gap: 16px;
+    padding-right: 102px;
   }
 }
 
@@ -447,7 +448,8 @@ $delete-background--desktop: url("../img/small-cross.svg") no-repeat center cent
   }
 
   @include desktop() {
-    width: auto;
+    width: 240px;
+    padding-left: 26px;
   }
 }
 

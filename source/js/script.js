@@ -57,7 +57,7 @@ const activateSticky = (minScrollY, classList, status = 'sticky') => {
   });
 };
 
-function activateToggle(toggleClass, activeClassList, inactiveClassList = [], toggle = false, status = `active`) {
+function activateToggle(toggleClass, activeClassList, inactiveClassList = [], toggle = false, status = 'active') {
   const toggleList = [];
   (Array.isArray(toggleClass) ? toggleClass : [toggleClass]).forEach((toggleClass) => {
     if (typeof (toggleClass) === 'string') {
@@ -142,6 +142,18 @@ document.querySelectorAll('.add-plan__form').forEach((form) => {
 jsEnabled && activateToggle(['rates__business', 'business__close'], ['business'], [], false);
 
 
+activateJs(['country-filter__popup', 'country-filter__toggle']);
+
+activateToggle('country-filter__toggle', [
+  'country-filter__toggle--permanent',
+  'country-filter__toggle-text',
+  'country-filter__inner',
+  'country-filter__continents',
+  'country-filter__letters',
+  'country-filter__countries',
+  'country-filter__toggle--temporary',
+], [], toggleAtStartup);
+
 activateJs(['country-select__select-item']);
 
 jsEnabled && document.querySelectorAll('.country-select').forEach((block) => {
@@ -172,11 +184,11 @@ document.querySelectorAll('.feedback__signup-form').forEach((form) => {
   form.addEventListener('submit', (evt) => {
     let ok = true;
     input.classList.remove('feedback__signup-input--error');
-    input.placeholder = input.getAttribute(`placeholder`);
+    input.placeholder = input.getAttribute('placeholder');
 
     if (!input.value) {
       input.classList.add('feedback__signup-input--error');
-      input.placeholder = `Введите e-mail`;
+      input.placeholder = 'Введите e-mail';
       input.focus();
       ok = false;
     }
@@ -198,18 +210,6 @@ document.querySelectorAll('.filter__fieldset').forEach((fieldset) => {
     {node: inner, klass: 'filter__fieldset-inner'},
   ], [], toggleAtStartup);
 });
-
-activateJs(['country-filter__popup', 'country-filter__toggle']);
-
-activateToggle('country-filter__toggle', [
-  'country-filter__toggle--permanent',
-  'country-filter__toggle-text',
-  'country-filter__inner',
-  'country-filter__continents',
-  'country-filter__letters',
-  'country-filter__countries',
-  'country-filter__toggle--temporary',
-], [], toggleAtStartup);
 
 activateJs([
   'page-header__nav',

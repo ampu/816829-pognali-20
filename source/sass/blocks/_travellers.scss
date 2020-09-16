@@ -36,7 +36,7 @@
   }
 
   @include desktop() {
-    padding-top: 130px + 60px;
+    padding-top: 128px + 60px;
     padding-bottom: 134px;
     padding-left: 129px - 60px + $padding--desktop;
     padding-right: 750px - 60px + $padding--desktop;
@@ -97,7 +97,7 @@
   }
 
   @include desktop() {
-    margin-bottom: 87px;
+    margin-bottom: 84px;
   }
 }
 

@@ -216,7 +216,9 @@
     }
 
     @include desktop() {
+      padding: 44px 0 36px;
       margin-top: 67px;
+      margin-left: -25px;
     }
 
     &::before {
@@ -360,6 +362,10 @@
   @include desktop() {
     display: flex;
     flex-flow: column;
+
+    &:nth-child(11) {
+      padding-bottom: 40px;
+    }
   }
 }
 
