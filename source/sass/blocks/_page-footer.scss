@@ -1,4 +1,13 @@
 .page-footer {
+  @include adaptive-border-radius(top);
+
+  margin-top: auto;
+
+  color: $grey;
+  background-color: $white;
+}
+
+.page-footer__inner {
   @include page__container();
   @include page__inner();
 
@@ -9,10 +18,6 @@
   padding-top: 37px;
   padding-bottom: 19px;
 
-  color: $grey;
-  background-color: $white;
-
-  @include adaptive-border-radius(top);
 
   @include tablet-desktop() {
     flex-flow: wrap;
@@ -26,42 +31,60 @@
   }
 }
 
-.page-footer__logo {
+.page-footer__logo-wrapper {
   flex: 1;
-  margin-bottom: 40px;
+}
+
+.page-footer__logo {
+  display: table;
+  margin-bottom: 36px;
 
   @include tablet-desktop() {
+    margin-right: auto;
     margin-bottom: 0;
   }
 }
 
-.page-footer__copyright {
+.page-footer__academy {
   flex: 1;
   align-self: stretch;
   display: flex;
-  justify-content: flex-end;
+
+  @include tablet-desktop() {
+    align-self: center;
+    justify-content: flex-end;
+  }
+}
+
+.page-footer__academy-link {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
   padding-top: 13px;
+  width: 100%;
 
   font: 400 16px/16px $font-family;
 
   border-top: 1px solid $lightest-grey;
+  color: $grey;
 
   @include tablet-desktop() {
+    justify-content: flex-end;
     padding: 0;
+    width: auto;
 
     font: 400 20px/20px $font-family;
 
     border: none;
   }
-}
 
-.page-footer__academy-link {
-  display: block;
-  margin-left: auto;
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
 
-  @include tablet-desktop() {
-    margin-left: 23px;
+  &:active {
+    opacity: 0.3;
   }
 }
 
@@ -69,6 +92,9 @@
   display: block;
   width: 27px;
   height: 33px;
+  margin-left: 23px;
+
+  color: $more-dark-blue;
 }
 
 .page-footer__socials {
@@ -82,5 +108,24 @@
 .page-footer__socials-link {
   &::before {
     background-color: $yellow;
+  }
+}
+
+.page-footer__socials-icon {
+  background-color: $yellow;
+
+  .page-footer__socials-link:hover &,
+  .page-footer__socials-link:focus & {
+    background-color: $dark-yellow;
+  }
+
+  .page-footer__socials-link:active & {
+    background-color: $dark-yellow;
+  }
+}
+
+.page-footer__socials-svg {
+  .page-footer__socials-link:active & {
+    opacity: 0.3;
   }
 }

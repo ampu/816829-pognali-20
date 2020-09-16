@@ -1,47 +1,72 @@
 .user-profile {
-  @include page__container();
   @include adaptive-overlap();
-
-  position: relative;
-  padding-top: 24px + $radius;
-  padding-bottom: 34px + $radius;
-  display: grid;
-  align-content: start;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 18px 35px;
-  grid-template-areas:
-    "level avatar"
-    "upload-avatar upload-avatar"
-    "tags tags"
-    "transports transports"
-    "save save";
-
-  text-align: center;
 
   color: $blue;
   background: $lightest-blue;
+}
+
+.user-profile__inner {
+  @include page__container();
+  @include page__inner();
+
+  position: relative;
+  padding-top: 24px + $radius;
+  padding-bottom: 31px + $radius;
+  display: grid;
+  align-content: start;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows:
+    min-content 18px
+    min-content 30px
+    min-content 18px
+    min-content 0
+    min-content;
+  grid-template-areas:
+    "level avatar" ". ."
+    "upload-avatar upload-avatar" ". ."
+    "tags tags" ". ."
+    "transports transports" ". ."
+    "save save";
+  grid-column-gap: 35px;
+
+  text-align: center;
 
   @include tablet-desktop() {
-    padding-top: 65px + $radius--tablet;
-    padding-bottom: 48px + $radius--tablet;
+    padding-top: 64px + $radius--tablet;
+    padding-bottom: 57px + $radius--tablet;
+    padding-left: 75px;
+    padding-right: 75px;
     grid-template-columns: 1fr auto 1fr;
+    grid-template-rows:
+      min-content 48px
+      min-content 52px
+      min-content 0
+      min-content;
     grid-template-areas:
-      "level transports avatar"
-      "upload-avatar upload-avatar upload-avatar"
-      "tags tags tags"
+      "level transports avatar" ". . ."
+      "upload-avatar upload-avatar upload-avatar" ". . ."
+      "tags tags tags" ". . ."
       "save save save";
+    grid-gap: 0;
   }
 
   @include desktop() {
-    padding-top: 73px + $radius--desktop;
-    padding-bottom: 54 + $radius--desktop;
+    margin-top: -#{190px + $radius--desktop};
+    padding-top: $radius--desktop;
+    padding-bottom: 63 + $radius--desktop;
     padding-left: 124px;
+    padding-right: $padding--desktop;
     grid-column-gap: 0;
-    grid-template-columns: 1fr 100px 45px 50px 44px 190px 95px;
+    grid-template-columns: 1fr 100px 40px 55px 45px 190px 95px;
+    grid-template-rows:
+      190px 0
+      min-content 26px
+      min-content 0
+      min-content;
     grid-template-areas:
-      ". . level level . avatar ."
-      ". . . . . upload-avatar ."
-      "tags . . transports transports transports transports"
+      ". . level level . avatar ." ". . . . . . ."
+      ". . . . . upload-avatar ." ". . . . . . ."
+      "tags . . transports transports transports transports" ". . . . . . ."
       ". . . . . save .";
   }
 }
@@ -52,23 +77,6 @@
   width: 100%;
   display: flex;
   flex-flow: column;
-  padding: 25px 25px;
-  border-radius: 10px;
-  border: 1px solid $much-light-blue;
-
-  @include tablet-desktop() {
-    padding: 35px 40px;
-  }
-
-  &:hover {
-    border-color: $light-blue;
-  }
-
-  &:focus {
-    border-color: $much-darker-blue;
-    color: $grey;
-    outline: none;
-  }
 }
 
 .user-profile__tags-legend {
@@ -83,22 +91,47 @@
   background: $lightest-blue;
 
   @include tablet-desktop() {
+    top: unset;
+    bottom: -8px;
+
     font: 500 20px/20px $font-family;
+    letter-spacing: 0.1em;
+  }
+
+  @include desktop() {
+    left: 20px;
   }
 }
 
 .user-profile__tags-input {
   display: block;
+  padding: 25px 25px;
   width: 100%;
-  font: 400 16px/18px $font-family;
-
-  border: none;
-  color: rgba($grey, 0.6);
-  background: transparent;
+  height: 100%;
   resize: none;
 
+  font: 400 16px/18px $font-family;
+
+  border-radius: 10px;
+  border: 1px solid $much-light-blue;
+  color: rgba($grey, 0.6);
+  background: transparent;
+
   @include tablet-desktop() {
+    padding: 35px 40px;
+    height: 95px;
+
     font: 400 20px/22px $font-family;
+  }
+
+  &:hover {
+    border-color: $light-blue;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $much-darker-blue;
+    color: $grey;
   }
 
   &::placeholder {
@@ -108,7 +141,102 @@
 
 .user-profile__transports {
   grid-area: transports;
+  position: relative;
   justify-content: center;
+  padding: 10px 16px 16px;
+
+  border-radius: 10px;
+  border: 1px solid $much-light-blue;
+
+  @include tablet-desktop() {
+    padding: 24px 64px 28px;
+  }
+
+  &:hover {
+    border-color: $light-blue;
+  }
+}
+
+.user-profile__transports-icon {
+  color: $light-grey-3;
+  background-color: $white;
+  opacity: 1;
+
+  @include tablet-desktop() {
+    width: 43px;
+    height: 43px;
+  }
+
+  .user-profile__transports-check:hover ~ &,
+  .user-profile__transports-check:focus ~ & {
+    color: $light-grey-1;
+    box-shadow: 0 2px 6px rgba($much-darker-blue, 0.17);
+  }
+
+  .user-profile__transports-check:active ~ & {
+    color: $blue;
+    background-color: $more-lighter-blue-1;
+  }
+
+  .user-profile__transports-check:checked ~ & {
+    color: $blue;
+  }
+}
+
+.user-profile__transports-svg {
+  &--plane {
+    width: 17px;
+    height: 16px;
+  }
+
+  &--bus {
+    width: 17px;
+    height: 16px;
+  }
+
+  &--bike {
+    width: 17px;
+    height: 16px;
+  }
+
+  &--walk {
+    width: 17px;
+    height: 16px;
+  }
+
+  @include tablet-desktop() {
+    &--plane {
+      width: 23px;
+      height: 22px;
+    }
+
+    &--bus {
+      width: 23px;
+      height: 22px;
+    }
+
+    &--bike {
+      width: 23px;
+      height: 22px;
+    }
+
+    &--walk {
+      width: 23px;
+      height: 22px;
+    }
+  }
+
+  .user-profile__transports-check:active ~ .user-profile__transports-icon & {
+    opacity: 0.1;
+  }
+
+  .user-profile__transports-check:checked:hover ~ .user-profile__transports-icon & {
+    opacity: 0.7;
+  }
+
+  .user-profile__transports-check:checked:active ~ .user-profile__transports-icon & {
+    opacity: 0.3;
+  }
 }
 
 .user-profile__transports-title {
@@ -123,19 +251,71 @@
   background-color: $lightest-blue;
 
   @include tablet-desktop() {
+    position: absolute;
+    z-index: 1;
+    left: 90px;
+    bottom: -8px;
     padding: 0 20px;
 
     font: 500 20px/20px $font-family;
+  }
+
+  @include desktop() {
+    left: 118px;
   }
 }
 
 .user-profile__level {
   grid-area: level;
+  align-self: center;
   margin-left: auto;
+
+  @include level(100px, 3px);
 
   @include tablet-desktop() {
     margin-left: 0;
     margin-right: auto;
+
+    @include level(94px, 3px);
+  }
+
+  @include desktop() {
+    position: absolute;
+    z-index: 2;
+
+    @include level(95px, 3px);
+  }
+}
+
+.user-profile__level-title {
+  display: none;
+}
+
+.user-profile__level-inner {
+  @include desktop() {
+    background-color: $more-dark-blue;
+  }
+}
+
+.user-profile__level-value {
+  font: 700 38px/38px $font-family;
+
+  color: $much-darker-blue;
+
+  @include desktop() {
+    color: $white;
+  }
+}
+
+.user-profile__level-text {
+  font: 400 18px/18px $font-family;
+
+  border-top: 1px solid rgba($grey, 0.3);
+  color: $grey;
+
+  @include desktop() {
+    border-top: 2px solid rgba($white, 0.3);
+    color: $white;
   }
 }
 
@@ -146,6 +326,12 @@
   @include tablet-desktop() {
     margin-right: 0;
     margin-left: auto;
+  }
+
+  @include desktop() {
+    position: absolute;
+    z-index: 2;
+    margin: 0;
   }
 }
 
@@ -173,7 +359,6 @@
 .user-profile__upload-avatar {
   display: block;
   grid-area: upload-avatar;
-  margin-bottom: 7px;
 }
 
 .user-profile__upload-avatar-button {
@@ -187,6 +372,24 @@
   border-radius: 20px;
   color: $much-darker-blue;
   background-color: $much-lighter-blue;
+  cursor: pointer;
+
+  @include tablet-desktop() {
+    padding: 22px 22px 20px;
+
+    font: 500 20px/20px $font-family;
+    letter-spacing: 0.09em;
+
+    border-radius: 10px;
+  }
+
+  @include desktop() {
+    padding: 15px 12px 12px;
+
+    letter-spacing: 0;
+
+    border-radius: 0 0 10px 10px;
+  }
 
   .user-profile__upload-avatar-input:focus + & {
     background-color: $more-light-blue;
@@ -202,11 +405,18 @@
   }
 }
 
+.user-profile__upload-avatar-typography {
+  @include desktop() {
+    display: none;
+  }
+}
+
 .user-profile__save-button {
   grid-area: save;
-  padding: 12px 12px 9px;
   width: 100%;
   display: none;
+  padding: 12px 12px 9px;
+  margin-top: 18px;
 
   font: 500 20px/20px $font-family;
   text-transform: uppercase;
@@ -214,6 +424,20 @@
   border-radius: 20px;
   color: $much-darker-blue;
   background-color: $much-lighter-blue;
+  cursor: pointer;
+
+  @include tablet-desktop() {
+    padding: 22px 22px 20px;
+    margin-top: 41px;
+
+    border-radius: 10px;
+  }
+
+  @include desktop() {
+    padding: 12px 12px 9px;
+
+    margin-top: 27px;
+  }
 
   &--nojs {
     display: block;

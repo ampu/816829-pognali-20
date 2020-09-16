@@ -2,15 +2,23 @@
   @include adaptive-overlap();
   @include adaptive-border-radius();
 
-  position: relative;
-  padding: 71px 25px 34px;
-
   background-color: $lightest-blue;
+}
+
+.directions__inner {
+  @include page__container();
+
+  position: relative;
+  padding: #{71px + $radius} $padding 34px;
 
   @include tablet-desktop() {
-    padding: (73px + 54px) 76px 80px 75px;
+    padding: #{73px + $radius--tablet} 76px 80px 75px;
 
-    background: url("../img/flags-back@1x.png") no-repeat calc(100% - 40px) #{54px + 80px} / 289px 575px, $lightest-blue;
+    background: url("../img/flags-back@1x.png") no-repeat calc(100% - 40px) #{54px + 80px} / 289px 575px;
+
+    @include retina() {
+      background-image: url("../img/flags-back@2x.png");
+    }
   }
 
   @include desktop() {
@@ -28,7 +36,7 @@
       height: 141px;
 
       border-radius: 20px;
-      background-color: $more-lighter-blue;
+      background-color: $more-lighter-blue-2;
     }
 
     @include desktop() {
@@ -55,7 +63,7 @@
 }
 
 .directions__text {
-  margin-bottom: 60px;
+  margin-bottom: 50px;
   padding-left: 25px;
 
   font: 300 16px/22px $font-family;
@@ -69,14 +77,23 @@
 
     font: 300 28px/33px $font-family;
   }
+
+  @include desktop() {
+    margin-bottom: 97px;
+    padding-left: 0;
+
+    font: 300 28px/34px $font-family;
+  }
 }
 
 .directions__list {
-  margin-bottom: 27px;
+  display: flex;
+  flex-flow: column;
+  margin-bottom: 20px;
   padding-top: 1px;
 
-  @include tablet() {
-    margin-bottom: 44px;
+  @include tablet-desktop() {
+    margin-bottom: 50px;
   }
 
   @include desktop() {
@@ -84,6 +101,7 @@
     left: $padding--desktop + 71px;
     top: 161px + 60px;
     width: 559px;
+    margin-bottom: 44px;
   }
 }
 
@@ -100,10 +118,15 @@
 
   @include tablet-desktop() {
     margin-top: 0;
+    margin-bottom: 14px;
     padding: 30px 29px 20px;
     overflow: hidden;
 
     border-radius: 20px;
+  }
+
+  @include desktop() {
+    margin-bottom: 11px;
   }
 
   &:last-of-type {
@@ -229,10 +252,12 @@
 }
 
 .directions__more {
+  padding: 22px 24px 22px;
+
   font: 700 18px/18px $font-family;
 
   @include tablet-desktop() {
-    padding: 0 10px;
+    padding: 0 33px;
     min-height: 82px;
 
     font: 700 24px/24px $font-family;

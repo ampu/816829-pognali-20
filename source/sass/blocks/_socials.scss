@@ -10,7 +10,6 @@
   align-items: center;
 
   &::before {
-    content: "";
     width: 45px;
     height: 45px;
     margin-right: 0;
@@ -26,7 +25,7 @@
     }
   }
 
-  &--fb {
+  &--facebook {
     &::before {
       background-image: url("../img/facebook.svg");
       background-size: 11px 21px;
@@ -56,18 +55,88 @@
     }
   }
 
-  &--in {
+  &--instagram {
     &::before {
       background-image: url("../img/instagram.svg");
       background-size: 18px 18px;
+
+      @include tablet-desktop() {
+        background-size: 22px 22px;
+      }
+
+      @include desktop() {
+        background-size: 24px 24px;
+      }
     }
+  }
+}
+
+.socials__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  margin-right: 0;
+
+  border-radius: 50%;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: $more-dark-blue;
+
+  @include tablet-desktop() {
+    width: 62px;
+    height: 62px;
+  }
+}
+
+.socials__svg {
+  width: 20px;
+  height: auto;
+
+  &--facebook {
+    width: 11px;
+    height: 21px;
 
     @include tablet-desktop() {
-      background-size: 22px 22px;
+      width: 14px;
+      height: 26px;
     }
 
     @include desktop() {
-      background-size: 24px 24px;
+      width: 14px;
+      height: 28px;
+    }
+  }
+
+  &--vk {
+    width: 23px;
+    height: 12px;
+
+    @include tablet-desktop() {
+      width: 28px;
+      height: 18px;
+    }
+
+    @include desktop() {
+      width: 31px;
+      height: 16px;
+    }
+  }
+
+  &--instagram {
+    width: 18px;
+    height: 18px;
+
+    @include tablet-desktop() {
+      width: 22px;
+      height: 22px;
+    }
+
+    @include desktop() {
+      width: 24px;
+      height: 24px;
     }
   }
 }

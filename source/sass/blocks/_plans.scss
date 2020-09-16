@@ -1,17 +1,21 @@
 .plans {
-  @include page__container();
   @include adaptive-overlap();
   @include adaptive-border-radius(top);
 
-  padding: 28px 25px (30px + $radius);
   background: $much-lighter-blue;
+}
+
+.plans__inner {
+  @include page__container();
+
+  padding: 28px $padding #{30px + $radius};
 
   @include tablet-desktop() {
-    padding: 57px 75px (76px + $radius--tablet);
+    padding: 57px #{$padding--tablet + 33px} #{76px + $radius--tablet};
   }
 
   @include desktop() {
-    padding: 54px $padding--desktop (64px + $radius--desktop) 124px;
+    padding: 55px $padding--desktop #{64px + $radius--desktop} 132px;
   }
 }
 
@@ -29,7 +33,7 @@
   }
 
   @include desktop() {
-    margin-bottom: 54px;
+    margin-bottom: 48px;
   }
 
   &::after {

@@ -1,7 +1,14 @@
 .add-plan {
-  @include page__container();
   @include adaptive-overlap();
   @include adaptive-border-radius(top);
+
+  color: $blue;
+  background: $much-more-light-blue;
+}
+
+.add-plan__inner {
+  @include page__container();
+  @include page__inner();
 
   padding-top: 30px;
   padding-bottom: 43px + $radius;
@@ -9,36 +16,31 @@
   flex-flow: wrap;
   justify-content: space-between;
   align-items: center;
-  color: $blue;
-  background: $much-more-light-blue;
 
   @include tablet-desktop() {
     padding-top: 53px;
-    padding-bottom: 63px + $radius--tablet;
+    padding-bottom: 57px + $radius--tablet;
   }
 
   @include desktop() {
     padding-top: 55px;
-    padding-bottom: 70px + $radius--tablet;
+    padding-bottom: 78px + $radius--tablet;
   }
 }
 
 .add-plan__title {
-  margin-bottom: 29px;
-
   font: 700 24px/24px $font-family;
 
   color: $blue;
 
   @include tablet-desktop() {
-    margin-bottom: 35px;
+    padding-left: #{75px - $padding--tablet};
 
     font: 700 36px/36px $font-family;
   }
 
   @include desktop() {
     padding-left: 69px;
-    margin-bottom: 33px;
   }
 
   &::after {
@@ -51,15 +53,21 @@
   grid-row: 1 / span 2;
   display: flex;
   flex-flow: wrap;
-  margin-right: 10px;
-  margin-bottom: 29px;
+  justify-content: flex-end;
+  margin-right: #{16px - 6px};
+
+  @include tablet-desktop() {
+    margin-right: #{33px - 29px};
+  }
 
   @include desktop() {
     flex-flow: column;
-    margin-bottom: -20px + 29px;
+    margin-bottom: #{29px - 20px};
+    padding-top: 7px;
 
     font: 400 20px/24px $font-family;
     text-transform: uppercase;
+    letter-spacing: 0.11em;
   }
 
   &--nojs {
@@ -85,6 +93,7 @@
 
 .add-plan__menu-item {
   display: flex;
+  align-items: center;
   opacity: 0.6;
 
   @include desktop() {
@@ -97,12 +106,24 @@
     box-sizing: content-box;
     width: 5px;
     height: 5px;
-    margin: 6px;
+    margin-right: 6px;
+    margin-left: 11px;
 
     border-radius: 50%;
     background-color: $blue;
     background-clip: content-box;
     opacity: 0.3;
+
+    @include tablet-desktop() {
+      width: 6px;
+      height: 6px;
+      margin-left: 0;
+      margin-right: 29px;
+    }
+
+    @include desktop() {
+      margin-right: 10px;
+    }
   }
 
   &--active {
@@ -127,14 +148,20 @@
 
 .add-plan__steps {
   min-width: 100%;
+  padding-top: 29px;
   margin-bottom: -10px;
 
   @include tablet-desktop() {
     margin-bottom: -39px;
+    padding-top: 56px;
+    padding-left: #{75px - $padding--tablet};
+    padding-right: #{75px - $padding--tablet};
   }
 
   @include desktop() {
     margin-bottom: -44px;
+    padding: 0;
+    padding-top: 55px;
   }
 }
 
@@ -148,14 +175,17 @@
   background-color: $white;
 
   @include tablet-desktop() {
-    padding: 48px 43px 56px;
-    margin-bottom: 39px;
+    padding: 48px 43px 52px;
+    margin-bottom: 42px;
+
     border-radius: 30px;
   }
 
   @include desktop() {
-    padding: 98px 159px 105px;
+    padding: 101px 160px 105px;
     margin-bottom: 44px;
+    grid-template-columns: 1fr 230px;
+
     border-radius: 60px;
   }
 }
@@ -182,31 +212,49 @@
 
 .add-plan__step-intro {
   grid-column: 1 / -1;
-  margin-bottom: 20px;
+  padding-bottom: 20px;
 
   font: 400 16px/22px $font-family;
 
   color: $grey;
 
   @include tablet-desktop() {
-    margin-bottom: 38px;
+    padding-bottom: 37px;
     max-width: 505px;
 
     font: 400 20px/24px $font-family;
+    white-space: pre-line;
   }
 
   @include desktop() {
     grid-column-end: unset;
-    margin-bottom: 55px;
-    max-width: 474px;
+    padding-bottom: 55px;
+    max-width: 577px;
+  }
+
+  &--first {
+    position: relative;
+
+    @include desktop() {
+      margin-bottom: 30px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        width: 998px;
+        height: 1px;
+
+        background-color: $much-more-lighter-grey;
+      }
+    }
   }
 }
 
 .add-plan__group {
-  display: block;
   grid-column: 1 / -1;
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 21px;
 
   font: 500 16px/16px $font-family;
   letter-spacing: 0.09em;
@@ -215,44 +263,109 @@
   color: $blue;
 
   @include tablet-desktop() {
-    margin-bottom: 25px;
+    margin-bottom: 26px;
 
     font: 500 20px/20px $font-family;
     letter-spacing: 0.1em;
   }
+
+  @include desktop() {
+    grid-column: unset;
+    width: 510px;
+    margin-bottom: 12px;
+
+    letter-spacing: 0;
+  }
+
+  &--duration {
+    @include tablet-desktop() {
+      order: 1;
+      margin-bottom: 58px;
+    }
+
+    @include desktop() {
+      margin-bottom: 33px;
+    }
+  }
+
+  &--with-children {
+    @include desktop() {
+      position: relative;
+      top: 17px;
+      left: -16px;
+      margin: 0;
+    }
+  }
 }
 
 .add-plan__legend {
-  display: block;
-  width: 100%;
-  padding-right: 50px;
-  margin-bottom: 8px;
+  position: absolute;
+  width: 196px;
 
-  @include tablet-desktop() {
-    padding-top: 26px;
+  @include tablet() {
+    top: 25px;
+  }
+
+  @include desktop() {
+    top: calc(50% - 9px);
+  }
+}
+
+.add-plan__group-inner {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-end;
+
+  @include tablet() {
+    padding-top: 25px;
 
     border-top: 1px solid $much-more-lighter-grey;
+  }
+
+  @include desktop() {
+    flex-flow: row-reverse;
+
+    border: none;
   }
 }
 
 .add-plan__unit {
-  position: absolute;
-  right: 0;
-  margin-top: -(8px + 16px);
-  width: 50px;
+  display: block;
+  width: 74px;
+  margin-bottom: 8px;
 
   text-align: right;
 
   opacity: 0.3;
+
+  @include tablet-desktop() {
+    margin-bottom: 24px;
+  }
+
+  @include desktop() {
+    text-align: left;
+    margin-left: 35px;
+  }
+}
+
+.add-plan__input-wrapper {
+  position: relative;
+  width: 100%;
+
+  @include desktop() {
+    width: 180px;
+  }
 }
 
 .add-plan__input {
   display: block;
-  padding: 16px 14px*3 13px;
+  padding: 14px #{14px*3} 11px;
   width: 100%;
 
   font: 500 15px/16px $font-family;
   text-align: center;
+
+  color: $blue;
 
   /* stylelint-disable */
   -moz-appearance: textfield;
@@ -267,37 +380,89 @@
   border: 1px solid $much-light-blue;
 
   @include tablet-desktop() {
+    padding: 24px #{14px*3} 22px;
+
     font: 500 20px/20px $font-family;
   }
-}
 
-.add-plan__decr {
-  position: absolute;
-  left: 14px;
-  bottom: 18px;
-  width: 14px;
-  height: 14px;
+  &:hover {
+    border-color: $light-grey-1;
+  }
 
-  background: url("../img/qty-minus.svg") no-repeat center center;
-  background-size: 14px 2px;
-
-  @include tablet-desktop() {
-    background-size: 20px 2px;
+  &:focus {
+    outline: none;
+    border-color: $much-darker-blue;
   }
 }
 
-.add-plan__incr {
+.add-plan__decrease,
+.add-plan__increase {
   position: absolute;
-  right: 14px;
-  bottom: 18px;
+  bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 14px;
   height: 14px;
 
-  background: url("../img/qty-plus.svg") no-repeat center center;
-  background-size: 14px 14px;
+  color: $lighter-grey;
+  cursor: pointer;
 
   @include tablet-desktop() {
-    background-size: 20px 20px;
+    bottom: 25px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .add-plan__input ~ &:hover,
+  .add-plan__input:hover ~ & {
+    color: $light-grey-1;
+  }
+
+  .add-plan__input ~ &:focus,
+  .add-plan__input:focus ~ & {
+    color: $much-darker-blue;
+    outline: none;
+  }
+
+  .add-plan__input ~ &:active {
+    color: $light-grey-3;
+  }
+}
+
+.add-plan__decrease {
+  left: 14px;
+
+  @include tablet-desktop() {
+    left: 20px;
+  }
+}
+
+.add-plan__decrease-icon {
+  width: 14px;
+  height: 2px;
+
+  @include tablet-desktop() {
+    width: 20px;
+    height: 2px;
+  }
+}
+
+.add-plan__increase {
+  right: 14px;
+
+  @include tablet-desktop() {
+    right: 20px;
+  }
+}
+
+.add-plan__increase-icon {
+  width: 14px;
+  height: 14px;
+
+  @include tablet-desktop() {
+    width: 20px;
+    height: 20px;
   }
 }
 
@@ -307,6 +472,7 @@
   margin-right: auto;
 
   font: 400 15px/15px $font-family;
+  letter-spacing: 0;
   text-transform: none;
 
   cursor: pointer;
@@ -321,7 +487,7 @@
     content: "";
     width: 26px;
     height: 26px;
-    margin-right: 9px;
+    margin-right: 12px;
     margin-top: -1px;
 
     border-radius: 4px;
@@ -335,9 +501,23 @@
     }
   }
 
+  .add-plan__check:hover + &,
+  .add-plan__check:focus + & {
+    &::before {
+      border-color: $light-grey-1;
+    }
+  }
+
+  .add-plan__check:active + & {
+    &::before {
+      border-color: $more-lighter-blue-1;
+      background-color: $more-lighter-blue-1;
+    }
+  }
+
   .add-plan__check:checked + & {
     &::before {
-      background-image: url("../img/tick.svg");
+      background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2012%2012%22%20opacity%3D%221.0%22%3E%0A%20%20%3Cg%20fill%3D%22%23161c35%22%3E%0A%20%20%20%20%3Cpolygon%20points%3D%2212%2C0%203.8%2C8%200%2C4.3%200%2C8.3%203.8%2C12%2012%2C4%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E%0A");
       background-repeat: no-repeat;
       background-size: 9px 9px;
       background-position: calc(50% + 1px) calc(50% - 1px);
@@ -347,14 +527,21 @@
       }
     }
   }
+
+  .add-plan__check:checked:active + & {
+    &::before {
+      background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2012%2012%22%20opacity%3D%220.3%22%3E%0A%20%20%3Cg%20fill%3D%22%23161c35%22%3E%0A%20%20%20%20%3Cpolygon%20points%3D%2212%2C0%203.8%2C8%200%2C4.3%200%2C8.3%203.8%2C12%2012%2C4%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E%0A");
+    }
+  }
 }
 
 .add-plan__calendar {
   grid-column: 1 / -1;
-  margin-bottom: 22px;
+  margin-bottom: 23px;
 
   @include tablet-desktop() {
-    margin-bottom: 47px;
+    order: 1;
+    margin-bottom: 50px;
   }
 
   @include desktop() {
@@ -366,19 +553,20 @@
   grid-column: 1 / -1;
   position: relative;
   margin-bottom: -22px;
-  padding-bottom: 26px;
+  padding-bottom: 24px;
   display: flex;
   flex-flow: column;
 
   @include tablet-desktop() {
-    padding-bottom: 50px;
+    padding-bottom: 57px;
     padding-top: 42px;
 
     border-top: 1px solid $much-more-lighter-grey;
   }
 
   @include desktop() {
-    padding-bottom: 56px;
+    padding-bottom: 63px;
+    padding-top: 62px;
   }
 
   &::before {
@@ -402,7 +590,7 @@
 
     @include desktop() {
       left: calc(100% - #{$flag-width--desktop});
-      height: calc(100% - 22px + 153px);
+      height: calc(100% + 70px);
 
       background: $much-more-lighter-grey;
     }
@@ -411,6 +599,10 @@
 
 .add-plan__countries-item {
   margin-bottom: 22px;
+
+  @include tablet-desktop() {
+    margin-bottom: 15px;
+  }
 
   &--add {
     &::after {
@@ -452,10 +644,11 @@
 
   border-radius: 4px;
   color: $blue;
-  background-color: $much-lighter-blue;
+  background-color: $lightest-blue;
+  cursor: pointer;
 
   @include tablet-desktop() {
-    padding: 24px 25px;
+    padding: 26px 25px 24px;
 
     font: 500 20px/20px $font-family;
     letter-spacing: 0.09em;
@@ -474,6 +667,7 @@
     height: 100%;
 
     background: $plus-background;
+    opacity: 0.2;
     pointer-events: none;
 
     @include tablet-desktop() {
@@ -484,43 +678,77 @@
       background: $plus-background--desktop;
     }
   }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    background-color: $much-lighter-blue;
+
+    &::after {
+      opacity: 0.3;
+    }
+  }
+
+  &:active {
+    &::after {
+      opacity: 0.1;
+    }
+  }
 }
 
 .add-plan__comments {
   grid-column: 1 / -1;
-  margin-bottom: 22px - 27px;
+  margin-bottom: #{26px - 27px};
 
   @include tablet-desktop() {
-    padding-top: 36px;
+    padding-top: 26px;
+    margin-bottom: #{52px - 44px};
 
     border-top: 1px solid $much-more-lighter-grey;
+  }
+
+  @include desktop() {
+    padding-top: 72px;
+    margin-bottom: #{58px - 44px};
   }
 }
 
 .add-plan__comment {
   position: relative;
-  margin-bottom: 27px;
+  margin-bottom: 24px;
 
   @include tablet-desktop() {
-    margin-bottom: 53px;
+    margin-bottom: 44px;
+  }
+
+  @include desktop() {
+    width: 893px;
   }
 }
 
 .add-plan__comment-route {
   position: absolute;
   top: 10px;
-  left: -15px;
-  width: 15px;
-  height: calc(100% + 27px + 2px);
+  left: -14px;
+  width: 14px;
+  height: calc(100% + 25px + 2px);
   border: 2px solid $blue;
   border-right: none;
 
   @include tablet-desktop() {
     left: unset;
-    top: 18px;
-    right: -25px;
+    top: 22px;
+    right: 2px;
     width: unset;
-    height: calc(100% + 53px + 3px);
+    height: calc(100% + 46px);
+  }
+
+  @include desktop() {
+    left: unset;
+    top: 20px;
+    right: 117px;
+    width: unset;
+    height: calc(100% + 47px);
   }
 
   &::before {
@@ -564,16 +792,19 @@
 
 .add-plan__comment-title {
   display: block;
+
+  @include desktop() {
+    width: 730px;
+  }
 }
 
 .add-plan__comment-country {
   @include country--md();
 
   padding-left: 8px;
-  margin-bottom: 18px;
+  margin-bottom: 12px;
   width: 220px;
   min-height: 24px;
-  overflow: hidden;
 
   font: 500 18px/18px $font-family;
   white-space: nowrap;
@@ -581,9 +812,10 @@
 
   @include tablet-desktop() {
     @include country--lg();
+
     padding-left: 0;
-    margin-bottom: 38px;
-    width: 600px;
+    margin-bottom: 30px;
+    width: 500px;
     min-height: 47px;
 
     font: 700 30px/30px $font-family;
@@ -591,13 +823,24 @@
   }
 
   @include desktop() {
-    width: 1000px;
+    width: 885px;
   }
 
   &::before {
     position: absolute;
     z-index: 1;
     right: 0;
+  }
+}
+
+.add-plan__comment-country-title {
+  position: relative;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+
+  @include desktop() {
+    width: 730px;
   }
 
   &::after {
@@ -615,10 +858,16 @@
 
       background: url("../img/country-fade-light-mobile@1x.png") no-repeat right center / 100px 40px;
     }
+
+    @include desktop() {
+      right: 0;
+    }
   }
 }
 
 .add-plan__comment-text {
+  position: relative;
+  z-index: 1;
   display: block;
   resize: none;
   width: 100%;
@@ -627,24 +876,78 @@
 
   font: 400 16px/22px $font-family;
 
+  background-color: transparent;
   border: 1px solid $much-light-blue;
   border-radius: 4px;
   color: $grey;
 
   @include tablet-desktop() {
+    padding: 17px 29px 17px 19px;
+    height: 140px;
+    width: 500px;
+
     font: 400 20px/23px $font-family;
+  }
+
+  @include desktop() {
+    padding: 22px 15px 22px 25px;
+    width: 730px;
   }
 
   &::placeholder {
     opacity: 0.3;
+  }
+
+  &:hover {
+    border-color: $light-grey-1;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $much-darker-blue;
+
+    &::placeholder {
+      opacity: 1;
+    }
+  }
+
+  &.add-plan__comment-text--error {
+    border-color: $red-2;
+
+    & ~ .add-plan__comment-error {
+      display: block;
+    }
+  }
+}
+
+.add-plan__comment-error {
+  position: absolute;
+  z-index: 0;
+  left: 0;
+  bottom: 0;
+  display: none;
+  padding: 20px 21px 16px;
+  width: 100%;
+
+  border-radius: 0 0 4px 4px;
+  color: $red;
+  background-color: $pink-1;
+
+  @include tablet-desktop() {
+    width: 500px;
+  }
+
+  @include desktop() {
+    width: 730px;
   }
 }
 
 .add-plan__prev-step {
   grid-column: 1 / -1;
   display: block;
-  padding: 7px 7px 4px;
-  margin-top: 13px;
+  padding: 7px 7px 0;
+  margin-top: 7px;
+  margin-bottom: -15px;
 
   font: 700 17px/30px $font-family;
   text-transform: uppercase;
@@ -655,23 +958,42 @@
   background-color: transparent;
 
   @include tablet-desktop() {
+    order: 1;
     grid-column: unset;
-    padding: 29px 0 27px 35px;
-    margin-top: 0;
+    padding-top: 29px;
+    padding-bottom: 27px;
+    padding-left: 35px;
+    padding-right: 0;
+    margin: 0;
 
     font: 700 24px/24px $font-family;
     text-transform: none;
     text-align: left;
 
-    background: $button-prev-url no-repeat left center / 16px 16px;
+    background: $button-url--prev no-repeat left center / 16px 16px;
+  }
+
+  @include desktop() {
+    margin-left: 45px;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
 .add-plan__next-step,
 .add-plan__submit {
   grid-column: 1 / -1;
-  display: block;
-  padding: 7px 7px 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 7px 7px 3px;
 
   font: 700 17px/30px $font-family;
   text-transform: uppercase;
@@ -681,15 +1003,40 @@
   color: $blue;
   background-color: $yellow;
 
+  &::after {
+    display: none;
+  }
+
   @include tablet-desktop() {
+    order: 1;
     grid-column: unset;
+    justify-content: space-between;
     width: 286px;
-    padding: 29px 77px 27px 34px;
+    padding: 29px 34px 27px;
 
     font: 700 24px/24px $font-family;
     text-transform: none;
     text-align: left;
 
-    background: $yellow $button-next-url no-repeat calc(100% - 33px) center / 14px 14px;
+    &::after {
+      display: block;
+    }
   }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $dark-yellow;
+  }
+
+  &:active {
+    color: rgba($blue, 0.3);
+  }
+}
+
+.add-plan__submit {
+  cursor: pointer;
 }

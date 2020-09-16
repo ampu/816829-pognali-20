@@ -4,7 +4,7 @@ $flag-height: 42px;
 $flag-width--tablet: 25px + 70px + 41px;
 $flag-height--tablet: 70px;
 
-$flag-width--desktop: 85px + 70px + 112px;
+$flag-width--desktop: 225px;
 $flag-height--desktop: 70px;
 
 $empty-background: url("data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\"%3E%3C/svg%3E");
@@ -14,9 +14,9 @@ $ring-background: url("../img/ring.svg") no-repeat calc(100% - #{$flag-width} + 
 $ring-background--tablet: url("../img/ring.svg") no-repeat calc(100% - #{$flag-width--tablet} + 7px) #{$flag-height--tablet / 2 - 7px} / 14px 14px;
 $ring-background--desktop: url("../img/ring.svg") no-repeat calc(100% - #{$flag-width--desktop} + 7px) #{$flag-height--desktop / 2 - 7px} / 14px 14px;
 
-$ring-blue-background: url("../img/ring-blue.svg") no-repeat calc(100% - #{$flag-width} + 4px) #{$flag-height / 2 - 4px} / 8px 8px;
-$ring-blue-background--tablet: url("../img/ring-blue.svg") no-repeat calc(100% - #{$flag-width--tablet} + 7px) #{$flag-height--tablet / 2 - 7px} / 14px 14px;
-$ring-blue-background--desktop: url("../img/ring-blue.svg") no-repeat calc(100% - #{$flag-width--desktop} + 7px) #{$flag-height--desktop / 2 - 7px} / 14px 14px;
+$ring-blue-background: url("../img/ring--blue.svg") no-repeat calc(100% - #{$flag-width} + 4px) #{$flag-height / 2 - 4px} / 8px 8px;
+$ring-blue-background--tablet: url("../img/ring--blue.svg") no-repeat calc(100% - #{$flag-width--tablet} + 7px) #{$flag-height--tablet / 2 - 7px} / 14px 14px;
+$ring-blue-background--desktop: url("../img/ring--blue.svg") no-repeat calc(100% - #{$flag-width--desktop} + 7px) #{$flag-height--desktop / 2 - 7px} / 14px 14px;
 
 $ring-background--active: url("../img/circle.svg") no-repeat calc(100% - #{$flag-width} + 4px) #{$flag-height / 2 - 4px} / 8px 8px;
 $ring-background--active-tablet: url("../img/circle.svg") no-repeat calc(100% - #{$flag-width--tablet} + 7px) #{$flag-height--tablet / 2 - 7px} / 14px 14px;
@@ -30,9 +30,9 @@ $select-background: url("../img/select.svg") no-repeat calc(100% - 15px) center 
 $select-background--tablet: url("../img/select.svg") no-repeat calc(100% - 25px) center / 20px 17px;
 $select-background--desktop: url("../img/select.svg") no-repeat calc(100% - 25px) center / 20px 17px;
 
-$select-background--active: url("../img/small-cross.svg") no-repeat calc(100% - 17px) center / 9px 9px;
-$select-background--active-tablet: url("../img/small-cross.svg") no-repeat calc(100% - 25px) center / 20px 17px;
-$select-background--active-desktop: url("../img/small-cross.svg") no-repeat calc(100% - 25px) center / 20px 17px;
+$select-background--active: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%209%209%22%20opacity%3D%221.0%22%3E%0A%20%20%3Cg%20fill%3D%22%23ffffff%22%3E%0A%20%20%20%20%3Cpath%20d%3D%22M5.2%2C4.5l3.7-3.7C9%2C0.6%2C9%2C0.3%2C8.9%2C0.1S8.4%2C0%2C8.2%2C0.1L4.5%2C3.8L0.8%2C0.1C0.6%2C0%2C0.3%2C0%2C0.1%2C0.1S0%2C0.6%2C0.1%2C0.8l3.7%2C3.7L0.1%2C8.2%20C0%2C8.4%2C0%2C8.7%2C0.1%2C8.9C0.2%2C9%2C0.4%2C9%2C0.5%2C9s0.2%2C0%2C0.3-0.1l3.7-3.7l3.7%2C3.7C8.3%2C9%2C8.4%2C9%2C8.5%2C9s0.2%2C0%2C0.3-0.1C9%2C8.7%2C9%2C8.4%2C8.9%2C8.2%20L5.2%2C4.5z%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E%0A") no-repeat calc(100% - 17px) center / 9px 9px;
+$select-background--active-tablet: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%209%209%22%20opacity%3D%221.0%22%3E%0A%20%20%3Cg%20fill%3D%22%23ffffff%22%3E%0A%20%20%20%20%3Cpath%20d%3D%22M5.2%2C4.5l3.7-3.7C9%2C0.6%2C9%2C0.3%2C8.9%2C0.1S8.4%2C0%2C8.2%2C0.1L4.5%2C3.8L0.8%2C0.1C0.6%2C0%2C0.3%2C0%2C0.1%2C0.1S0%2C0.6%2C0.1%2C0.8l3.7%2C3.7L0.1%2C8.2%20C0%2C8.4%2C0%2C8.7%2C0.1%2C8.9C0.2%2C9%2C0.4%2C9%2C0.5%2C9s0.2%2C0%2C0.3-0.1l3.7-3.7l3.7%2C3.7C8.3%2C9%2C8.4%2C9%2C8.5%2C9s0.2%2C0%2C0.3-0.1C9%2C8.7%2C9%2C8.4%2C8.9%2C8.2%20L5.2%2C4.5z%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E%0A") no-repeat calc(100% - 25px) center / 20px 17px;
+$select-background--active-desktop: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%209%209%22%20opacity%3D%221.0%22%3E%0A%20%20%3Cg%20fill%3D%22%23ffffff%22%3E%0A%20%20%20%20%3Cpath%20d%3D%22M5.2%2C4.5l3.7-3.7C9%2C0.6%2C9%2C0.3%2C8.9%2C0.1S8.4%2C0%2C8.2%2C0.1L4.5%2C3.8L0.8%2C0.1C0.6%2C0%2C0.3%2C0%2C0.1%2C0.1S0%2C0.6%2C0.1%2C0.8l3.7%2C3.7L0.1%2C8.2%20C0%2C8.4%2C0%2C8.7%2C0.1%2C8.9C0.2%2C9%2C0.4%2C9%2C0.5%2C9s0.2%2C0%2C0.3-0.1l3.7-3.7l3.7%2C3.7C8.3%2C9%2C8.4%2C9%2C8.5%2C9s0.2%2C0%2C0.3-0.1C9%2C8.7%2C9%2C8.4%2C8.9%2C8.2%20L5.2%2C4.5z%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E%0A") no-repeat calc(100% - 25px) center / 20px 17px;
 
 $fade-background: url("../img/country-fade-light-mobile@1x.png") no-repeat calc(100% - 4px) center / 50px 20px;
 $fade-background--tablet: url("../img/country-fade-light-mobile@1x.png") no-repeat calc(100% - 4px) center / 100px 40px;
@@ -154,10 +154,8 @@ $delete-background--desktop: url("../img/small-cross.svg") no-repeat center cent
     }
 
     &::after {
-      background: $arrow-background;
-
-      @include tablet-desktop() {
-        background: none;
+      @include mobile() {
+        background: $arrow-background;
       }
     }
   }
@@ -176,6 +174,7 @@ $delete-background--desktop: url("../img/small-cross.svg") no-repeat center cent
     margin-right: 45px;
   }
 
+  &::before,
   &::after {
     content: "";
     position: absolute;
@@ -186,29 +185,75 @@ $delete-background--desktop: url("../img/small-cross.svg") no-repeat center cent
     width: 100%;
     height: 100%;
 
-    background: $select-background, $fade-background;
     pointer-events: none;
+  }
+
+  &::before {
+    background: $fade-background;
 
     @include tablet-desktop() {
-      background: $select-background--tablet, $fade-background--tablet;
+      background: $fade-background--tablet;
     }
 
     @include desktop() {
-      background: $select-background--desktop, $fade-background--desktop;
+      background: $fade-background--desktop;
     }
   }
 
+  &::after {
+    background: $select-background;
+    opacity: 0.3;
+
+    @include tablet-desktop() {
+      background: $select-background--tablet;
+    }
+
+    @include desktop() {
+      background: $select-background--desktop;
+    }
+  }
+
+  &:hover::after,
+  &:focus::after {
+    opacity: 1;
+  }
+
+  &:active::after {
+    opacity: 0.1;
+  }
+
   &--active {
-    &::after {
-      background: $select-background--active, $fade-background--active;
+    &::before {
+      background: $fade-background--active;
 
       @include tablet-desktop() {
-        background: $select-background--active-tablet, $fade-background--active-tablet;
+        background: $fade-background--active-tablet;
       }
 
       @include desktop() {
-        background: $select-background--active-desktop, $fade-background--active-desktop;
+        background: $fade-background--active-desktop;
       }
+    }
+
+    &::after {
+      background: $select-background--active;
+
+      @include tablet-desktop() {
+        background: $select-background--active-tablet;
+      }
+
+      @include desktop() {
+        background: $select-background--active-desktop;
+      }
+    }
+
+    &:hover::after,
+    &:focus::after {
+      opacity: 1;
+    }
+
+    &:active::after {
+      opacity: 0.1;
     }
   }
 }
@@ -218,21 +263,28 @@ $delete-background--desktop: url("../img/small-cross.svg") no-repeat center cent
   padding: 0 11px;
   width: 100%;
   height: 100%;
+
   border-radius: 4px;
   border: 1px solid $much-light-blue;
-  color: $blue;
-  background: $white;
+  cursor: pointer;
   appearance: none;
+  color: $blue;
+  background-color: $white;
 
   @include tablet-desktop() {
-    padding: 24px 25px;
+    padding: 27px 25px 23px;
+  }
+
+  &:hover,
+  &:focus {
+    border-color: $light-grey-1;
   }
 
   &--active {
     border-color: $blue;
     border-radius: 4px 4px 0 0;
-    background-color: $blue;
     color: $white;
+    background-color: $blue;
   }
 }
 
@@ -256,6 +308,7 @@ $delete-background--desktop: url("../img/small-cross.svg") no-repeat center cent
   border-radius: 50%;
   background: $delete-background;
   cursor: pointer;
+  opacity: 0.6;
 
   @include tablet-desktop() {
     top: 23px;
@@ -271,12 +324,18 @@ $delete-background--desktop: url("../img/small-cross.svg") no-repeat center cent
     background: $delete-background--desktop;
   }
 
+  &:hover,
   &:focus {
     outline: none;
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.1;
   }
 
   &--active {
-    display: unset;
+    display: block;
   }
 }
 
@@ -291,12 +350,18 @@ $delete-background--desktop: url("../img/small-cross.svg") no-repeat center cent
   margin-top: -1px;
 
   border-radius: 0 0 4px 4px;
-  border: 1px solid $much-light-blue;
   background-color: $white;
+  box-shadow: 0 8px 16px $popup-shadow;
 
   @include tablet-desktop() {
-    flex-flow: wrap;
+    flex-flow: row;
     padding: 35px 23px 33px 27px;
+    width: 575px;
+  }
+
+  @include desktop() {
+    flex-flow: wrap;
+    width: calc(100% - #{$flag-width--desktop + 45px - 1px});
   }
 
   &--active {
@@ -312,9 +377,9 @@ $delete-background--desktop: url("../img/small-cross.svg") no-repeat center cent
   grid-template-columns: repeat(5, auto);
 
   @include tablet-desktop() {
+    margin: 0;
     width: auto;
-    margin-bottom: 0;
-    margin-right: 80px;
+    padding-right: 80px;
   }
 
   @include desktop() {
@@ -338,6 +403,7 @@ $delete-background--desktop: url("../img/small-cross.svg") no-repeat center cent
   color: $blue;
   background: $white;
   border: 1px solid $much-light-blue;
+  cursor: pointer;
 
   @include tablet-desktop() {
     min-height: 70px;
@@ -345,10 +411,19 @@ $delete-background--desktop: url("../img/small-cross.svg") no-repeat center cent
     font: 500 20px/20px $font-family;
   }
 
-  &:focus {
-    position: relative;
+  @include desktop() {
+    border-radius: 4px;
   }
 
+  &:hover,
+  &:focus {
+    position: relative;
+
+    outline: none;
+    border-color: $light-grey-1;
+  }
+
+  &:active,
   &--active {
     background: $blue;
     color: $white;
@@ -370,6 +445,10 @@ $delete-background--desktop: url("../img/small-cross.svg") no-repeat center cent
 
     border-left: 1px solid rgba($lighter-blue, 0.5);
   }
+
+  @include desktop() {
+    width: auto;
+  }
 }
 
 .country-select__countries-list {
@@ -378,6 +457,7 @@ $delete-background--desktop: url("../img/small-cross.svg") no-repeat center cent
   align-items: flex-start;
 
   font: 400 16px/22px $font-family;
+  letter-spacing: 0;
   text-transform: none;
 
   color: $grey;
@@ -390,5 +470,16 @@ $delete-background--desktop: url("../img/small-cross.svg") no-repeat center cent
 .country-select__country {
   text-align: left;
 
+  color: $grey;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    color: rgba($blue, 0.6);
+  }
+
+  &:active {
+    color: rgba($blue, 0.3);
+  }
 }

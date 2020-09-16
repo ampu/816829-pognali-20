@@ -2,14 +2,25 @@
   @include adaptive-overlap();
   @include adaptive-border-radius();
 
+  color: $white;
+  background: $more-dark-blue;
+}
+
+.travellers__inner {
+  @include page__container();
+  @include page__inner();
+
   position: relative;
   display: flex;
   flex-flow: column;
-  padding-top: 102px;
+  padding-top: #{68px + $radius};
   padding-bottom: 31px;
 
-  color: $white;
-  background: $more-dark-blue url("../img/travellers-back-mobile@1x.png") no-repeat calc(100% - 25px) #{34px + 25px} / 295px 344px;
+  background: url("../img/travellers-back-mobile@1x.png") no-repeat calc(100% - 25px) #{34px + 25px} / 295px 344px;
+
+  @include retina() {
+    background-image: url("../img/travellers-back-mobile@2x.png");
+  }
 
   @include tablet-desktop() {
     padding-top: 141px + 54px;
@@ -17,7 +28,11 @@
     padding-left: 76px;
     padding-right: 76px;
 
-    background: $more-dark-blue url("../img/travellers-back-tablet@1x.png") no-repeat calc(100% - 74px) #{71px + 54px} / 654px 498px;
+    background: url("../img/travellers-back-tablet@1x.png") no-repeat calc(100% - 74px) #{71px + 54px} / 654px 498px;
+
+    @include retina() {
+      background-image: url("../img/travellers-back-tablet@2x.png");
+    }
   }
 
   @include desktop() {
@@ -27,7 +42,11 @@
     padding-right: 750px - 60px + $padding--desktop;
     min-height: 130px + 60px + 134px + 285px;
 
-    background: $more-dark-blue url("../img/travellers-back-desktop@1x.png") no-repeat #{60px - $padding--desktop} #{70px + 60px} / 630px 601px;
+    background: url("../img/travellers-back-desktop@1x.png") no-repeat #{60px - $padding--desktop} #{70px + 60px} / 630px 601px;
+
+    @include retina() {
+      background-image: url("../img/travellers-back-desktop@2x.png");
+    }
   }
 }
 
@@ -48,15 +67,16 @@
 }
 
 .travellers__text {
-  padding: 0 25px;
-  margin-bottom: 25px;
+  padding-left: 25px;
+  padding-right: 20px;
+  margin-bottom: 22px;
 
   font: 300 16px/22px $font-family;
 
   @include tablet-desktop() {
     padding: 0;
     margin-bottom: 39px;
-    width: 427px;
+    width: 450px;
 
     font: 300 28px/34px $font-family;
   }
@@ -71,43 +91,63 @@
   @include tablet-desktop() {
     padding: 0;
     width: 260px;
+    margin-bottom: 58px;
 
     font: 700 21px/24px $font-family;
+  }
+
+  @include desktop() {
+    margin-bottom: 87px;
   }
 }
 
 .travellers__list {
   display: flex;
   flex-flow: wrap;
-  margin-bottom: 20px;
+  margin-bottom: #{21px - 9px};
   margin-left: -46px;
 
   @include tablet-desktop() {
-    margin-bottom: 81px - 9px;
+    margin-left: -46px;
+    margin-bottom: #{81px - 9px};
   }
 
   @include desktop() {
     position: absolute;
-    top: 134px + 60px;
+    top: #{134px + 60px};
     right: $padding--desktop;
+    margin-left: -60px;
   }
 }
 
 .travellers__item {
   margin-bottom: 9px;
   margin-left: 46px;
+
+  @include tablet-desktop() {
+    margin-left: 46px;
+  }
+
+  @include desktop() {
+    margin-left: 60px;
+  }
 }
 
 .travellers__more {
-  display: flex;
+  padding: 22px 22px 21px;
 
   font: 700 18px/18px $font-family;
 
   @include tablet-desktop() {
+    padding: 28px 32px;
+
     font: 700 24px/24px $font-family;
+
+    border-radius: 20px;
   }
 
   @include desktop() {
     width: 280px;
+    padding: 28px 32px;
   }
 }

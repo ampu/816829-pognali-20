@@ -4,11 +4,18 @@
 
   @include desktop() {
     grid-row: 1;
+    margin-bottom: 4px;
   }
 }
 
 .data__list {
+  display: flex;
+  flex-flow: column;
   margin-bottom: -10px;
+
+  @include tablet-desktop() {
+    margin-bottom: -40px;
+  }
 
   @include desktop() {
     margin-bottom: -30px;
@@ -17,6 +24,10 @@
 
 .data__item {
   margin-bottom: 10px;
+
+  @include tablet-desktop() {
+    margin-bottom: 40px;
+  }
 
   @include desktop() {
     margin-bottom: 30px;

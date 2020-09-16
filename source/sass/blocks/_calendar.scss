@@ -20,7 +20,7 @@
 
   @include tablet-desktop() {
     padding: 27px (17px + 19px +17px) 23px;
-    margin-bottom: 39px;
+    margin-bottom: 22px;
 
     font: 700 36px/36px $font-family;
   }
@@ -39,6 +39,10 @@
 
   @include tablet-desktop() {
     right: 17px;
+  }
+
+  @include desktop() {
+    right: 0;
   }
 
   &::after {
@@ -72,6 +76,10 @@
     left: 17px;
   }
 
+  @include desktop() {
+    left: 0;
+  }
+
   &::before {
     content: "";
     width: 15px;
@@ -92,9 +100,27 @@
   }
 }
 
+.calendar__next-month,
+.calendar__prev-month {
+  cursor: pointer;
+  opacity: 0.3;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
+}
+
 .calendar__dates {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
+  justify-content: center;
+  align-items: center;
 
   font: 400 14px/18px $font-family;
   text-align: center;
@@ -109,13 +135,39 @@
 }
 
 .calendar__day-of-week {
-  min-height: 9px + 18px + 9px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+  left: 4px;
+  padding-top: 9px;
+  padding-bottom: 7px;
+  height: 9px + 18px + 7px;
+  display: inline-block;
+  vertical-align: middle;
+
+  color: $grey;
+  visibility: hidden;
+
+  &::first-letter {
+    visibility: visible;
+  }
 
   &--weekend {
     color: $dark-red;
+  }
+
+  @include tablet-desktop() {
+    padding-top: 14px;
+    padding-bottom: 7px;
+    height: 14px + 18px + 7px;
+
+    visibility: visible;
+  }
+
+  @include desktop() {
+    justify-self: start;
+    height: 18px + 18px;
+    padding-top: 0;
+    padding-bottom: 18px;
+    padding-left: 12px;
   }
 }
 
@@ -123,117 +175,79 @@
   position: relative;
   margin-bottom: -1px;
   margin-right: -1px;
-  min-width: 100%;
-  height: 31px;
+  height: 32px;
   display: flex;
-  flex-flow: column;
+  flex-flow: wrap;
   justify-content: center;
   align-items: center;
 
-  border: 1px solid $lighter-blue;
-  color: rgba($grey, 0.3);
+  font: 500 14px/18px $font-family;
 
+  border: 1px solid $much-light-blue;
+  background-color: $lightest-blue;
+  color: $grey;
   cursor: pointer;
   user-select: none;
 
   @include tablet-desktop() {
-    height: 69px;
+    height: 70px;
+
+    font: 500 20px/20px $font-family;
   }
 
   @include desktop() {
-    height: 70px;
+    height: 72px;
     padding: 15px;
     justify-content: start;
     align-items: start;
 
+    font: 500 18px/18px $font-family;
+
     &--arrival {
       &::after {
         content: "Заезд";
-        margin-top: 4px;
+        margin-top: 8px;
+        width: 100%;
+
+        text-align: left;
       }
     }
 
     &--departure {
       &::after {
         content: "Выезд";
-        margin-top: 4px;
+        margin-top: 8px;
+        width: 100%;
+
+        text-align: left;
       }
     }
   }
 
-  &:hover {
-    color: $grey;
+  .calendar__input:disabled + & {
+    color: rgba($grey, 0.3);
+    background-color: $white;
+    cursor: not-allowed;
   }
 
-  .calendar__input:checked + & {
-    font: 500 14px/18px $font-family;
-
-    border: 1px solid $much-light-blue;
-    color: $white;
-    background-color: $blue;
-
-    @include tablet-desktop() {
-      font: 500 20px/20px $font-family;
-    }
-
-    @include desktop() {
-      font: 500 18px/18px $font-family;
-    }
-  }
-
-  .calendar__input:checked ~ .calendar__input:not(:checked) + & {
-    font: 500 14px/18px $font-family;
-
-    border: 1px solid $much-light-blue;
-    color: $blue;
-    background-color: $much-lighter-blue;
-
-    @include tablet-desktop() {
-      font: 500 20px/20px $font-family;
-    }
-
-    @include desktop() {
-      font: 500 18px/18px $font-family;
-    }
-  }
-
+  .calendar__input:hover + &,
   .calendar__input:focus + & {
     z-index: 1;
 
-    font: 500 14px/18px $font-family;
-
-    outline: none;
-    box-shadow: none;
-    border: 2px solid $dark-red;
-    color: $blue;
-
-    @include tablet-desktop() {
-      font: 500 18px/18px $font-family;
-    }
+    box-shadow: inset 0 0 0 2px $dark-red;
   }
 
-  .calendar__input:focus:checked + & {
-    border: 2px solid $dark-red;
+  .calendar__input:checked + & {
     color: $white;
-
-    @include tablet-desktop() {
-      font: 500 20px/20px $font-family;
-    }
-
-    @include desktop() {
-      font: 500 18px/18px $font-family;
-    }
+    background-color: $blue;
   }
+}
 
-  .calendar__input:checked ~ .calendar__input:not(:checked):focus + & {
-    border: 2px solid $dark-red;
+.calendar__month-suffix {
+  display: none;
 
-    @include tablet-desktop() {
-      font: 500 20px/20px $font-family;
-    }
-
-    @include desktop() {
-      font: 500 18px/18px $font-family;
-    }
+  @include desktop() {
+    display: block;
+    margin-left: 4px;
   }
 }

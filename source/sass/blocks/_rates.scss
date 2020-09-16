@@ -7,24 +7,26 @@
 }
 
 .rates__inner {
-  position: relative;
-  padding-top: 25px + 53px;
-  padding-bottom: 38px;
-  padding-left: 25px;
-  padding-right: 0;
+  @include page__container();
 
-  @include tablet() {
-    padding-top: 74px + 54px;
+  position: relative;
+  padding-top: #{$radius + 53px};
+  padding-bottom: 38px;
+  padding-left: #{$padding + $padding};
+  padding-right: $padding;
+
+  @include tablet-desktop() {
+    padding-top: #{$radius--tablet + 74px};
     padding-bottom: 63px;
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: $padding--tablet;
+    padding-right: $padding--tablet;
   }
 
   @include desktop() {
-    padding-top: 60px + 107px;
+    padding-top: $radius--desktop + 107px;
     padding-bottom: 165px;
-    padding-left: 130px - 60px + $padding--desktop;
-    padding-right: 244px - 60px + $padding--desktop;
+    padding-left: #{130px - 60px + $padding--desktop};
+    padding-right: #{244px - 60px + $padding--desktop};
   }
 }
 
@@ -53,7 +55,7 @@
   position: absolute;
   z-index: 1;
   top: 37px + 25px;
-  right: 0;
+  right: $padding;
   display: flex;
   align-items: center;
 
@@ -62,12 +64,12 @@
   @include tablet() {
     top: unset;
     bottom: 45px;
-    right: 45px;
+    right: #{$padding--tablet + 45px};
   }
 
   @include desktop() {
     top: 287px + 60px;
-    right: 133px - $padding--desktop;
+    right: 133px - 60px + $padding--desktop;
   }
 
   &::before {
@@ -78,6 +80,10 @@
 
     background: url("../img/rates@1x.png") no-repeat center center;
     background-size: 100px 100px;
+
+    @include retina() {
+      background-image: url("../img/rates@2x.png");
+    }
 
     @include desktop() {
       width: 198px;
@@ -90,7 +96,7 @@
 
 .rates__list {
   counter-reset: rate;
-  margin-bottom: -32px + 46px;
+  margin-bottom: -0 + 46px;
 
   font: 300 16px/22px $font-family;
 
@@ -106,7 +112,7 @@
 .rates__item {
   counter-increment: rate;
   position: relative;
-  margin-bottom: 32px;
+  margin-bottom: 0;
   min-height: 68px;
 
   color: $grey;
@@ -173,7 +179,7 @@
     align-items: center;
     justify-content: flex-end;
 
-    background-color: $more-lighter-blue;
+    background-color: $more-lighter-blue-2;
   }
 
   @include desktop() {
@@ -216,8 +222,25 @@
       margin-right: 21px;
 
       border-radius: 50%;
-      background: $more-lighter-blue url("../img/business.svg") no-repeat center center;
+      background: $more-lighter-blue-2 url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2017%2021%22%20opacity%3D%221.0%22%3E%0A%20%20%3Cg%20fill%3D%22%23132576%22%3E%0A%20%20%20%20%3Cpath%20d%3D%22M16.4%2C15.1c-0.9-1.2-2-2-3.6-2.4l-1.5%2C5.2c0%2C0.5-0.4%2C0.9-0.9%2C0.9c-0.5%2C0-0.9-0.4-0.9-0.9v-4.2%20c0-0.6-0.5-1.1-1.1-1.1c-0.6%2C0-1.1%2C0.5-1.1%2C1.1v4.2c0%2C0.5-0.4%2C0.9-0.9%2C0.9c-0.5%2C0-0.9-0.4-0.9-0.9l-1.5-5.2%20c-1.6%2C0.4-2.7%2C1.2-3.6%2C2.4C0.2%2C15.6%2C0%2C16.6%2C0%2C17.1c0%2C0.1%2C0%2C0.3%2C0%2C0.4v0.9v0.9c0%2C1%2C0.8%2C1.7%2C1.7%2C1.7h13.5c1%2C0%2C1.7-0.8%2C1.7-1.7v-0.9%20v-0.9c0-0.2%2C0-0.3%2C0-0.4C17%2C16.6%2C16.8%2C15.6%2C16.4%2C15.1z%20M3.9%2C4.6c0%2C2.6%2C1.6%2C6.3%2C4.6%2C6.3c2.9%2C0%2C4.6-3.8%2C4.6-6.3c0-2.6-2-4.6-4.6-4.6%20C6%2C0%2C3.9%2C2.1%2C3.9%2C4.6z%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E%0A") no-repeat center center;
       background-size: 27px 27px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    color: rgba($dark-blue, 0.7);
+
+    &::before {
+      background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2017%2021%22%20opacity%3D%220.7%22%3E%0A%20%20%3Cg%20fill%3D%22%23132576%22%3E%0A%20%20%20%20%3Cpath%20d%3D%22M16.4%2C15.1c-0.9-1.2-2-2-3.6-2.4l-1.5%2C5.2c0%2C0.5-0.4%2C0.9-0.9%2C0.9c-0.5%2C0-0.9-0.4-0.9-0.9v-4.2%20c0-0.6-0.5-1.1-1.1-1.1c-0.6%2C0-1.1%2C0.5-1.1%2C1.1v4.2c0%2C0.5-0.4%2C0.9-0.9%2C0.9c-0.5%2C0-0.9-0.4-0.9-0.9l-1.5-5.2%20c-1.6%2C0.4-2.7%2C1.2-3.6%2C2.4C0.2%2C15.6%2C0%2C16.6%2C0%2C17.1c0%2C0.1%2C0%2C0.3%2C0%2C0.4v0.9v0.9c0%2C1%2C0.8%2C1.7%2C1.7%2C1.7h13.5c1%2C0%2C1.7-0.8%2C1.7-1.7v-0.9%20v-0.9c0-0.2%2C0-0.3%2C0-0.4C17%2C16.6%2C16.8%2C15.6%2C16.4%2C15.1z%20M3.9%2C4.6c0%2C2.6%2C1.6%2C6.3%2C4.6%2C6.3c2.9%2C0%2C4.6-3.8%2C4.6-6.3c0-2.6-2-4.6-4.6-4.6%20C6%2C0%2C3.9%2C2.1%2C3.9%2C4.6z%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E%0A");
+    }
+  }
+
+  &:active {
+    color: rgba($dark-blue, 0.3);
+
+    &::before {
+      background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2017%2021%22%20opacity%3D%220.3%22%3E%0A%20%20%3Cg%20fill%3D%22%23132576%22%3E%0A%20%20%20%20%3Cpath%20d%3D%22M16.4%2C15.1c-0.9-1.2-2-2-3.6-2.4l-1.5%2C5.2c0%2C0.5-0.4%2C0.9-0.9%2C0.9c-0.5%2C0-0.9-0.4-0.9-0.9v-4.2%20c0-0.6-0.5-1.1-1.1-1.1c-0.6%2C0-1.1%2C0.5-1.1%2C1.1v4.2c0%2C0.5-0.4%2C0.9-0.9%2C0.9c-0.5%2C0-0.9-0.4-0.9-0.9l-1.5-5.2%20c-1.6%2C0.4-2.7%2C1.2-3.6%2C2.4C0.2%2C15.6%2C0%2C16.6%2C0%2C17.1c0%2C0.1%2C0%2C0.3%2C0%2C0.4v0.9v0.9c0%2C1%2C0.8%2C1.7%2C1.7%2C1.7h13.5c1%2C0%2C1.7-0.8%2C1.7-1.7v-0.9%20v-0.9c0-0.2%2C0-0.3%2C0-0.4C17%2C16.6%2C16.8%2C15.6%2C16.4%2C15.1z%20M3.9%2C4.6c0%2C2.6%2C1.6%2C6.3%2C4.6%2C6.3c2.9%2C0%2C4.6-3.8%2C4.6-6.3c0-2.6-2-4.6-4.6-4.6%20C6%2C0%2C3.9%2C2.1%2C3.9%2C4.6z%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E%0A");
     }
   }
 }

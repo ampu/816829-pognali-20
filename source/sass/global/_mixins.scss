@@ -44,6 +44,12 @@
   }
 }
 
+@mixin retina {
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    @content;
+  }
+}
+
 @mixin adaptive-border-radius($top-or-bottom:bottom) {
   border-#{$top-or-bottom}-left-radius: $radius;
   border-#{$top-or-bottom}-right-radius: $radius;
@@ -71,18 +77,47 @@
   }
 }
 
-@mixin list($child-class, $color:$more-dark-blue) {
-  .#{$child-class}::before {
-    color: $color;
-    background-color: $yellow;
+@mixin interactive-list($button-class, $color:$more-dark-blue) {
+  .#{$button-class} {
+    &::before {
+      background-color: $yellow;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      &::before {
+        background-color: $orange;
+      }
+    }
   }
 
-  &:nth-of-type(3n+1) .#{$child-class}::before {
-    background-color: $orange;
+  &:nth-of-type(3n+1) .#{$button-class} {
+    &::before {
+      background-color: $orange;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      &::before {
+        background-color: $dark-orange;
+      }
+    }
   }
 
-  &:nth-of-type(3n+2) .#{$child-class}::before {
-    background-color: $dark-yellow;
+  &:nth-of-type(3n+2) .#{$button-class} {
+    &::before {
+      background-color: $dark-yellow;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      &::before {
+        background-color: $orange;
+      }
+    }
   }
 }
 
@@ -158,7 +193,7 @@
 }
 
 @mixin country--sm {
-  font: 500 15px/16px $font-family;
+  font: 500 15px/15px $font-family;
   white-space: nowrap;
 
   &::before {
@@ -221,46 +256,6 @@
     background-color: $darkest-blue;
 
     transform: rotate(45deg);
-  }
-}
-
-@mixin contacts__link--tel-xxs {
-  &::before {
-    width: 40px;
-    height: 40px;
-
-    background-image: url("../img/topmenu-phone.svg");
-    background-size: 18px 18px;
-  }
-}
-
-@mixin contacts__link--email-xxs {
-  &::before {
-    width: 40px;
-    height: 40px;
-
-    background-image: url("../img/topmenu-mail.svg");
-    background-size: 18px 16px;
-  }
-}
-
-@mixin contacts__link--tel-sm {
-  &::before {
-    width: 50px;
-    height: 50px;
-
-    background-image: url("../img/topmenu-phone.svg");
-    background-size: 18px 18px;
-  }
-}
-
-@mixin contacts__link--email-sm {
-  &::before {
-    width: 50px;
-    height: 50px;
-
-    background-image: url("../img/topmenu-mail.svg");
-    background-size: 16px 14px;
   }
 }
 

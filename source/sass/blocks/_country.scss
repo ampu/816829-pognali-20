@@ -12,9 +12,20 @@
     &--#{$country}::before {
       content: "";
       flex-shrink: 0;
-
-      background: url("../img/flags/70x47/" + $country + ".png") no-repeat center center;
+      background: url("../img/flags/svg/" + $country + ".svg") no-repeat center center;
     }
   }
   /* stylelint-enable */
+}
+
+.country__title {
+  padding-left: 14px;
+
+  @include tablet-desktop() {
+    padding-left: 12px;
+  }
+
+  @include desktop() {
+    padding-left: 18px;
+  }
 }

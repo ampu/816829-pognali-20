@@ -2,13 +2,19 @@
   @include adaptive-overlap();
   @include adaptive-border-radius();
 
+  color: $white;
+  background-color: $more-dark-blue;
+}
+
+.feedback__inner {
+  @include page__container();
+  @include page__inner();
+
   padding-top: 72px + 25px;
-  padding-bottom: 25px;
+  padding-bottom: 29px;
   overflow-x: hidden;
 
   text-align: center;
-  color: $white;
-  background-color: $more-dark-blue;
 
   @include tablet() {
     padding-top: 76px + 54px;
@@ -42,20 +48,20 @@
 }
 
 .feedback__answer {
-  margin-bottom: 29px;
+  margin-bottom: 26px;
 
-  font: 300 16px/24px $font-family;
+  font: 300 16px/23px $font-family;
   white-space: pre-line;
 
-  @include tablet() {
-    margin-bottom: 65px;
+  @include tablet-desktop() {
+    margin-bottom: 62px;
 
     font: 300 28px/32px $font-family;
     white-space: normal;
   }
 
   @include desktop() {
-    margin-bottom: 60px;
+    margin-bottom: 61px;
 
     font: 300 28px/31px $font-family;
     white-space: normal;
@@ -63,19 +69,33 @@
 }
 
 .feedback__signin {
-  text-decoration: underline;
+  text-decoration: none;
+  padding-bottom: 1px;
 
   color: $yellow;
+  border-bottom: 1px solid $yellow;
+
+  &:hover,
+  &:focus {
+    color: $orange;
+    border-color: $orange;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
-.feedback__signin-form {
+.feedback__signup-form {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
-  margin-bottom: 20px;
+  margin-bottom: 29px;
 
-  @include tablet() {
+  @include tablet-desktop() {
     margin-bottom: 60px;
+    padding-left: #{76px - $padding--tablet};
+    padding-right: #{76px - $padding--tablet};
   }
 
   @include desktop() {
@@ -85,7 +105,7 @@
   }
 }
 
-.feedback__signin-label {
+.feedback__signup-label {
   width: 100%;
   margin-right: -60px;
 
@@ -94,57 +114,102 @@
   }
 }
 
-.feedback__signin-input {
+.feedback__signup-input {
   display: block;
   width: 100%;
-  padding: 20px;
-  padding-right: 60px + 20px;
+  padding: 17px #{20px + 60px} 17px 20px;
 
-  border: none;
-  border-radius: 10px;
   font: 700 18px/18px $font-family;
 
-  @include tablet() {
-    padding: 28px 36px;
+  border: 4px solid $white;
+  border-radius: 10px;
+  background-color: $white;
+
+  @include tablet-desktop() {
+    padding: 23px 36px;
 
     font: 700 24px/24px $font-family;
 
-    border-radius: 15px 0 0 15px;
+    border-radius: 20px 0 0 20px;
   }
 
   @include desktop() {
-    padding: 28px 36px;
+    padding: 24px 36px;
 
-    font: 700 24px/24px $font-family;
-
-    border-radius: 15px 0 0 15px;
+    border-radius: 20px 0 0 20px;
   }
 
   &::placeholder {
     opacity: 0.3;
   }
 
+  &:hover {
+    border-color: $lightest-blue;
+    background-color: $lightest-blue;
+
+    &::placeholder {
+      opacity: 0.5;
+    }
+  }
+
   &:focus {
     outline: none;
+    border-color: $white;
+    color: $white;
+    background-color: $more-dark-blue;
+
+    &::placeholder {
+      color: $white;
+      opacity: 1;
+    }
+  }
+
+  &.feedback__signup-input--error {
+    border-color: $white;
+    color: $red;
+    background-color: $white;
+
+    &::placeholder {
+      color: $red;
+      opacity: 1;
+    }
   }
 }
 
-.feedback__signin-submit {
-  @include tablet() {
-    min-width: 80px;
+.feedback__signup-submit {
+  padding: 18px 21px 15px;
 
-    border-radius: 0 15px 15px 0;
+  cursor: pointer;
+
+  &::after {
+    margin-left: 5px;
+  }
+
+  @include tablet-desktop() {
+    min-width: 80px;
+    padding: 18px 22px 15px;
+
+    border-radius: 0 20px 20px 0;
     background-position: center center;
+
+    &::after {
+      margin-left: 10px;
+    }
   }
 
   @include desktop() {
-    min-width: 330px;
+    min-width: 325px;
+    padding: 20px 35px;
 
-    border-radius: 0 15px 15px 0;
+    border-radius: 0 20px 20px 0;
+
+    &::after {
+      margin-left: 15px;
+    }
   }
 }
 
-.feedback__signin-submit-text {
+.feedback__signup-submit-text {
   @include mobile-tablet() {
     @include visually-hidden();
   }
@@ -173,9 +238,18 @@
 }
 
 .feedback__contacts {
+  flex-flow: column;
+
   color: $yellow;
 
+  @include tablet-desktop() {
+    flex-flow: column;
+
+    padding-left: #{75px - $padding--tablet};
+  }
+
   @include desktop() {
+    flex-flow: wrap;
     justify-content: center;
     margin-right: -110px;
   }
@@ -184,5 +258,17 @@
 .feedback__contacts-item {
   @include desktop() {
     margin-right: 110px;
+  }
+}
+
+.feedback__contacts-text {
+  padding-left: 16px;
+
+  @include tablet-desktop() {
+    padding-left: 22px;
+  }
+
+  @include desktop() {
+    padding-left: 31px;
   }
 }
