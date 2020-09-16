@@ -1,6 +1,7 @@
 .promo {
   padding-top: #{94px - 73px};
   padding-bottom: 39px;
+  overflow-x: hidden;
 
   background: url("../img/traveller-illustration-mobile@1x.png") no-repeat calc(50% + 16px) #{221px - 73px} / 192px 255px, url("../img/globe-back-mobile@1x.jpg") no-repeat center top / 100% 569px;
   background-color: $much-darker-blue;
