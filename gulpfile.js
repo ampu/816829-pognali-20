@@ -10,6 +10,7 @@ const csso = require('gulp-csso');
 const imagemin = require('gulp-imagemin');
 const pngquant = require('imagemin-pngquant');
 const svgstore = require('gulp-svgstore');
+const gulpWebp = require('gulp-webp');
 
 const del = require('del');
 const sync = require('browser-sync').create();
@@ -70,6 +71,11 @@ const img = exports.img = () => {
     .pipe(gulp.dest(`build/img`));
 };
 
+const webp = exports.webp = () => gulp.src([`src/img/**/*.png`])
+  .pipe(plumber())
+  .pipe(gulpWebp())
+  .pipe(gulp.dest(`build/img`));
+
 const fonts = exports.fonts = () => {
   return gulp.src(['source/fonts/*.woff', 'source/fonts/*.woff2'])
     .pipe(plumber())
@@ -90,12 +96,17 @@ const server = exports.server = (done) => {
 
 const watcher = exports.watcher = () => {
   gulp.watch('source/sass/**/*.scss', gulp.series('css'));
-  gulp.watch('source/*.html').on('change', sync.reload);
-  gulp.watch('source/js/*.js').on('change', sync.reload);
-  gulp.watch('source/img/**/*').on('change', sync.reload);
-  gulp.watch('source/fonts/**/*').on('change', sync.reload);
+  gulp.watch('build/*.html', gulp.series('html'));
+  gulp.watch('build/js/*.js', gulp.series('js'));
+  gulp.watch('build/img/**/*', gulp.parallel('img', 'webp'));
+  gulp.watch('build/fonts/**/*', gulp.series('fonts'));
+
+  gulp.watch('build/*.html').on('change', sync.reload);
+  gulp.watch('build/js/*.js').on('change', sync.reload);
+  gulp.watch('build/img/**/*').on('change', sync.reload);
+  gulp.watch('build/fonts/**/*').on('change', sync.reload);
 };
 
-const build = exports.build = gulp.series(clean, gulp.parallel(css, html, js, img, fonts));
+const build = exports.build = gulp.series(clean, gulp.parallel(css, html, js, img, webp, fonts));
 
 exports.default = gulp.series(build, server, watcher);

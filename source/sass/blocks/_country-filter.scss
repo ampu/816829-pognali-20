@@ -12,7 +12,6 @@
 }
 
 .country-filter__popup {
-  @include adaptive-overlap();
   @include adaptive-border-radius();
 
   position: absolute;
