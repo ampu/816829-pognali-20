@@ -96,10 +96,10 @@ const server = exports.server = (done) => {
 
 const watcher = exports.watcher = () => {
   gulp.watch('source/sass/**/*.scss', gulp.series('css'));
-  gulp.watch('build/*.html', gulp.series('html'));
-  gulp.watch('build/js/*.js', gulp.series('js'));
-  gulp.watch('build/img/**/*', gulp.parallel('img', 'webp'));
-  gulp.watch('build/fonts/**/*', gulp.series('fonts'));
+  gulp.watch('source/*.html', gulp.series('html'));
+  gulp.watch('source/js/*.js', gulp.series('js'));
+  gulp.watch('source/img/**/*', gulp.parallel('img', 'webp'));
+  gulp.watch('source/fonts/**/*', gulp.series('fonts'));
 
   gulp.watch('build/*.html').on('change', sync.reload);
   gulp.watch('build/js/*.js').on('change', sync.reload);
