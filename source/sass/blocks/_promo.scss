@@ -14,6 +14,7 @@
   @include tablet-desktop() {
     padding-top: #{162px - 132px};
     padding-bottom: 96px;
+    overflow-x: visible;
 
     background: url("../img/traveller-illustration-tablet@1x.png") no-repeat calc(50% + 87px) #{404px - 132px} / 372px 451px, url("../img/globe-back-tablet@1x.jpg") no-repeat center #{382px - 132px} / 1479px 612px;
     background-color: $darker-blue;
