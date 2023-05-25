@@ -1,7 +1,8 @@
 const gulp = require('gulp');
 const plumber = require('gulp-plumber');
 const sourcemap = require('gulp-sourcemaps');
-const sass = require('gulp-sass');
+const gulpSass = require('gulp-sass');
+const sass = require('sass')
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const rename = require('gulp-rename');
@@ -22,7 +23,7 @@ const css = exports.css = () => {
     .pipe(plumber())
     .pipe(sourcemap.init())
 
-    .pipe(sass())
+    .pipe(gulpSass(sass)())
     .pipe(postcss([
       autoprefixer(),
     ]))
